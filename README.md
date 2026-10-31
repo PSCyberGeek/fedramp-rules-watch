@@ -6,7 +6,7 @@ and publishes a plain-English report of what changed: rules, definitions, Key Se
 control parameters/guidance that were **added, removed or changed**, with the rule ID and the before and after
 statement.
 
-**Read the archive:** https://pscybergeek.github.io/fedramp-rules-watch/ · **Subscribe:** [Atom feed](https://pscybergeek.github.io/fedramp-rules-watch/feed.xml) or *Watch → Custom → Issues* on this repo for an email per update.
+**Read the archive:** https://pscybergeek.github.io/fedramp-rules-watch/ · **Subscribe:** email newsletter (ask to be added), [Atom feed](https://pscybergeek.github.io/fedramp-rules-watch/feed.xml), or *Watch → Custom → Issues* on this repo.
 
 The archive was backfilled from FedRAMP's real commit history, so it starts with every update since the
 2026 Consolidated Rules launched on June 24, 2026.
@@ -42,7 +42,7 @@ cron (daily) ─► clone FedRAMP/rules ─► compare last-processed commit wit
                                          ▼
                docs/reports/<date>.{md,html,json} + docs/index.html + docs/feed.xml
                                          ▼
-               commit to this repo (GitHub Pages serves docs/) ─► open an issue labeled rules-change
+               commit to this repo (GitHub Pages serves docs/) ─► open an issue ─► email the newsletter
 ```
 
 - `scripts/fedwatch.py` does everything; Python standard library only, no dependencies.
@@ -54,6 +54,23 @@ cron (daily) ─► clone FedRAMP/rules ─► compare last-processed commit wit
   (GitHub turns off scheduled workflows after 60 days with no repository activity; FedRAMP once went 61 days
   between updates).
 - The JSON beside each report is the full structured diff, for anyone who wants to build on it.
+
+## Email newsletter
+
+When a change is found, the Action emails the report: an At a glance list, the top 12 changes with the
+changed words highlighted, and a link to the full report. Nothing is sent on days with no change.
+
+It sends through Gmail by default. Add three repository secrets under **Settings → Secrets and variables →
+Actions**:
+
+| Secret | Value |
+|---|---|
+| `SMTP_USERNAME` | The Gmail address that sends the newsletter |
+| `SMTP_PASSWORD` | A Gmail [app password](https://myaccount.google.com/apppasswords) for that address (requires 2-Step Verification), not your normal password |
+| `MAIL_TO` | Recipients, comma-separated. With more than one, everyone is Bcc'd so club members don't see each other's addresses |
+
+To use another provider, set repository *variables* `SMTP_HOST` and `SMTP_PORT` (SSL). To confirm the setup,
+run the workflow manually with **Email the latest report now** checked.
 
 ## Set it up in your own account
 
@@ -69,7 +86,7 @@ To start fresh instead of keeping the included archive, delete `docs/` and `stat
 git clone https://github.com/FedRAMP/rules.git /tmp/fedramp-rules && python3 scripts/fedwatch.py backfill --upstream /tmp/fedramp-rules
 ```
 
-Other commands: `check` (what the Action runs), `diff <old-ref> <new-ref>` (print Markdown for any two
+Other commands: `check` (what the Action runs), `send-email [--slug DATE] [--preview FILE]` (send or preview a newsletter), `diff <old-ref> <new-ref>` (print Markdown for any two
 upstream commits), `site` (rebuild the index and feed). Tests: `python -m unittest discover -s tests`.
 
 ## Limits

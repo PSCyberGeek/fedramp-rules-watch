@@ -9,6 +9,10 @@ on:
         description: "Open a GitHub issue if a change is found"
         type: boolean
         default: true
+      send_test_email:
+        description: "Email the latest report now, even if nothing changed (checks your email setup)"
+        type: boolean
+        default: false
 
 permissions:
   contents: write   # commit reports, feed and state back to the repo
@@ -60,3 +64,14 @@ jobs:
         run: |
           gh label create rules-change --color B60205 --description "FedRAMP rules changed upstream" --force
           gh issue create --title "$TITLE" --body-file "$RUNNER_TEMP/issue.md" --label rules-change
+
+      - name: Email newsletter
+        if: steps.check.outputs.changed == 'true' || inputs.send_test_email
+        env:
+          SITE_URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}
+          SMTP_USERNAME: ${{ secrets.SMTP_USERNAME }}
+          SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
+          MAIL_TO: ${{ secrets.MAIL_TO }}
+          SMTP_HOST: ${{ vars.SMTP_HOST }}
+          SMTP_PORT: ${{ vars.SMTP_PORT }}
+        run: python scripts/fedwatch.py send-email ${{ steps.check.outputs.slug && format('--slug {0}', steps.check.outputs.slug) || '' }}

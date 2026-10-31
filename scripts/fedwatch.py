@@ -15,6 +15,7 @@ Commands
   backfill  Rebuild one report per day of upstream history (portfolio archive).
   diff      Compare any two upstream refs and print Markdown to stdout.
   site      Rebuild docs/index.html and docs/feed.xml from existing reports.
+  send-email  Email a report as a newsletter (SMTP settings come from env).
 """
 from __future__ import annotations
 
@@ -813,6 +814,124 @@ def build_site() -> None:
 """)
 
 
+# ───────────────────────────── email newsletter ─────────────────────────────
+
+def render_email(rep: dict, max_items: int = 12) -> tuple[str, str, str]:
+    """(subject, html, text). Inline styles only, because mail clients strip <style>."""
+    d = rep["diff"]
+    url = f"{SITE_URL}/reports/{rep['slug']}.html"
+    subject = f"FedRAMP rules {rep['to']['version']}: {headline(d)}"
+    ink, muted, line, accent = "#1d1f21", "#62666d", "#e3e0d8", "#0b5cad"
+    font = "font-family:-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;"
+    code = "font-family:Menlo,Consolas,monospace;font-size:13px;background:#f1efe9;padding:1px 5px;border-radius:4px;"
+    ins = "background:#e3f4ea;color:#0f7a3d;text-decoration:none;"
+    dele = "background:#fde8e6;color:#b42318;text-decoration:line-through;"
+
+    def md(t: str) -> str:
+        t = e(t)
+        t = re.sub(r"\*\*(.+?)\*\*", r"<strong>\1</strong>", t)
+        return re.sub(r"`(.+?)`", rf"<span style='{code}'>\1</span>", t)
+
+    def wdiff(a: str, b: str) -> str:
+        return " ".join(e(t) if op == "=" else f"<del style='{dele}'>{e(t)}</del>" if op == "-" else f"<ins style='{ins}'>{e(t)}</ins>"
+                        for op, t in word_ops(a, b))
+
+    def card(title: str, meta: str, body: str) -> str:
+        return (f"<div style='border:1px solid {line};border-radius:8px;padding:14px 16px;margin:12px 0;background:#fff'>"
+                f"<div style='font-weight:600;font-size:15px'>{title}</div>"
+                f"<div style='color:{muted};font-size:12px;margin:2px 0 8px'>{meta}</div>{body}</div>")
+
+    H = [f"<div style='{font}color:{ink};background:#fbfaf7;padding:24px 12px'>"
+         f"<div style='max-width:640px;margin:0 auto'>"
+         f"<div style='font-size:13px;color:{muted}'>FedRAMP Rules Watch · {e(rep['date'])}</div>"
+         f"<h1 style='font-size:22px;margin:6px 0 4px'>{e(headline(d)).capitalize()}</h1>"
+         f"<div style='font-size:13px;color:{muted}'>Version <span style='{code}'>{e(rep['from']['version'])}</span> → "
+         f"<span style='{code}'>{e(rep['to']['version'])}</span></div>",
+         f"<h2 style='font-size:16px;margin:22px 0 8px'>At a glance</h2>"
+         f"<ul style='margin:0;padding-left:20px;line-height:1.55;font-size:14px'>"
+         + "".join(f"<li style='margin:4px 0'>{md(x)}</li>" for x in glance(d)[:20]) + "</ul>"]
+    T = [subject, f"Version {rep['from']['version']} -> {rep['to']['version']}", "", "AT A GLANCE"]
+    T += ["- " + re.sub(r"[*`]", "", x) for x in glance(d)[:20]]
+
+    shown = 0
+    full, mapping = sorted_changed(d)
+    items = ([("added", r) for r in d["added"]] + [("removed", r) for r in d["removed"]]
+             + [("changed", x) for x in full])
+    if items:
+        H.append("<h2 style='font-size:16px;margin:24px 0 4px'>Details</h2>")
+        T += ["", "DETAILS"]
+    for kind, x in items[:max_items]:
+        shown += 1
+        if kind == "added":
+            H.append(card(f"<span style='{code}'>{e(x['id'])}</span> {e(x['name'])} · <span style='color:#0f7a3d'>new</span>",
+                          f"{e(x['kind'])} · {e(x['path'])}", f"<div style='font-size:14px;line-height:1.5;white-space:pre-wrap'>{e(x['text'])}</div>"))
+            T += ["", f"NEW {x['id']} {x['name']}", x["text"]]
+        elif kind == "removed":
+            H.append(card(f"<span style='{code}'>{e(x['id'])}</span> {e(x['name'])} · <span style='color:#b42318'>removed</span>",
+                          f"{e(x['kind'])} · was at {e(x['path'])}",
+                          f"<div style='font-size:14px;line-height:1.5;color:{muted};white-space:pre-wrap'>{e(x['text'])}</div>"))
+            T += ["", f"REMOVED {x['id']} {x['name']}", x["text"]]
+        else:
+            body = "<ul style='margin:0 0 8px;padding-left:18px;font-size:14px;line-height:1.5'>" + "".join(
+                f"<li>{md(sx)}</li>" for sx in x["sentences"]) + "</ul>"
+            if norm(x["text_before"]) != norm(x["text_after"]):
+                body += (f"<div style='font-size:12px;color:{muted};text-transform:uppercase;letter-spacing:.04em'>What changed in the text</div>"
+                         f"<div style='font-size:14px;line-height:1.55;white-space:pre-wrap'>{wdiff(x['text_before'], x['text_after'])}</div>")
+            H.append(card(f"<span style='{code}'>{e(x['id'])}</span> {e(x['name'])} · {e(x['grade'])}",
+                          f"{e(x['kind'])} · {e(x['path'])}", body))
+            T += ["", f"CHANGED {x['id']} {x['name']} ({x['grade']})"] + ["- " + re.sub(r"[*`]", "", sx) for sx in x["sentences"]]
+            if norm(x["text_before"]) != norm(x["text_after"]):
+                T += ["BEFORE: " + x["text_before"], "AFTER:  " + x["text_after"]]
+    rest = len(items) - shown + len(mapping)
+    more = f"{plural(rest, 'more entry')} in the full report. ".replace("entrys", "entries") if rest else ""
+    H.append(f"<p style='margin:24px 0;font-size:14px'>{e(more)}<a href='{e(url)}' style='display:inline-block;background:{accent};"
+             f"color:#fff;padding:9px 16px;border-radius:6px;text-decoration:none;font-weight:600'>Read the full report</a></p>"
+             f"<p style='font-size:12px;color:{muted};border-top:1px solid {line};padding-top:12px'>Unofficial summary generated from "
+             f"<a href='{UPSTREAM_WEB}' style='color:{muted}'>FedRAMP/rules</a>. FedRAMP's published rules are authoritative. "
+             f"Archive: <a href='{SITE_URL}/' style='color:{muted}'>{SITE_URL.split('//')[-1]}</a></p></div></div>")
+    T += ["", more + "Full report: " + url, "", "Unofficial summary. FedRAMP's published rules are authoritative."]
+    return subject, "".join(H), "\n".join(T)
+
+
+def send_email(rep: dict) -> None:
+    import smtplib
+    import ssl
+    from email.message import EmailMessage
+    user, password = os.environ.get("SMTP_USERNAME"), os.environ.get("SMTP_PASSWORD")
+    recipients = [a.strip() for a in os.environ.get("MAIL_TO", "").replace(";", ",").split(",") if a.strip()]
+    if not (user and password and recipients):
+        print("Email skipped: set SMTP_USERNAME, SMTP_PASSWORD and MAIL_TO secrets to enable it.")
+        return
+    subject, html_body, text_body = render_email(rep)
+    msg = EmailMessage()
+    msg["Subject"] = subject
+    msg["From"] = f"{SITE_TITLE} <{os.environ.get('MAIL_FROM') or user}>"
+    msg["To"] = msg["From"] if len(recipients) > 1 else recipients[0]   # multiple recipients go in Bcc
+    msg.set_content(text_body)
+    msg.add_alternative(f"<!doctype html><html><body style='margin:0'>{html_body}</body></html>", subtype="html")
+    host, port = os.environ.get("SMTP_HOST") or "smtp.gmail.com", int(os.environ.get("SMTP_PORT") or 465)
+    with smtplib.SMTP_SSL(host, port, context=ssl.create_default_context(), timeout=30) as smtp:
+        smtp.login(user, password)
+        smtp.send_message(msg, to_addrs=recipients)
+    print(f"Emailed {len(recipients)} recipient(s): {subject}")
+
+
+def cmd_send_email(args) -> int:
+    reps = load_reports()
+    rep = next((r for r in reps if r["slug"] == args.slug), None) if args.slug else (reps[0] if reps else None)
+    if not rep:
+        print("No report found to send.")
+        return 1
+    if args.preview:
+        subject, html_body, _ = render_email(rep)
+        Path(args.preview).write_text(f"<!doctype html><html><head><meta charset='utf-8'><title>{e(subject)}</title></head>"
+                                      f"<body style='margin:0'>{html_body}</body></html>")
+        print(f"Preview written to {args.preview}")
+        return 0
+    send_email(rep)
+    return 0
+
+
 # ───────────────────────────── report I/O ─────────────────────────────
 
 def make_report(repo: Path, from_sha: str, to_sha: str) -> dict | None:
@@ -954,11 +1073,13 @@ def main() -> int:
     b = sub.add_parser("backfill"); b.add_argument("--upstream", required=True); b.add_argument("--since", default="2026-06-24")
     d = sub.add_parser("diff"); d.add_argument("--upstream", required=True); d.add_argument("old"); d.add_argument("new")
     sub.add_parser("site")
+    m = sub.add_parser("send-email", help="email a report (latest by default); add --preview FILE to render without sending")
+    m.add_argument("--slug"); m.add_argument("--preview")
     args = p.parse_args()
     if args.cmd == "site":
         build_site()
         return 0
-    return {"check": cmd_check, "backfill": cmd_backfill, "diff": cmd_diff}[args.cmd](args)
+    return {"check": cmd_check, "send-email": cmd_send_email, "backfill": cmd_backfill, "diff": cmd_diff}[args.cmd](args)
 
 
 if __name__ == "__main__":
