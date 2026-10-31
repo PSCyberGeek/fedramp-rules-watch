@@ -60,14 +60,17 @@ cron (daily) ─► clone FedRAMP/rules ─► compare last-processed commit wit
 When a change is found, the Action emails the report: an At a glance list, the top 12 changes with the
 changed words highlighted, and a link to the full report. Nothing is sent on days with no change.
 
-It sends through Gmail by default. Add three repository secrets under **Settings → Secrets and variables →
-Actions**:
+It sends through Gmail by default. Add two repository secrets under **Settings → Secrets and variables →
+Actions**, plus one variable for the recipients:
 
 | Secret | Value |
 |---|---|
 | `MAILBOX` | The Gmail address that sends the newsletter |
 | `SMTP` | A Gmail [app password](https://myaccount.google.com/apppasswords) for that address (requires 2-Step Verification), not your normal password |
-| `MAILTO` | Recipients, comma-separated. With more than one, everyone is Bcc'd so club members don't see each other's addresses |
+
+Recipients go in the repository **variable** `MAIL_TO` (Variables tab on the same page), comma-separated.
+Variables are visible only to people with access to the repo settings, and keeping the list there means it
+can be read and appended to; a secret would have to be retyped in full each time. Everyone is Bcc'd.
 
 To use another provider, set repository *variables* `SMTP_HOST` and `SMTP_PORT` (SSL). To confirm the setup,
 run the workflow manually with **Email the latest report now** checked.

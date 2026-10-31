@@ -69,11 +69,12 @@ jobs:
         if: steps.check.outputs.changed == 'true' || inputs.send_test_email
         env:
           SITE_URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}
-          # Secret names as configured in this repo: MAILBOX = sending Gmail address,
-          # SMTP = its Google app password, MAILTO = recipients (comma-separated).
+          # Secrets: MAILBOX = sending Gmail address, SMTP = its Google app password.
+          # Recipients live in the repository variable MAIL_TO (comma-separated) so the list
+          # can be read and appended to; the MAILTO secret is only a fallback.
           SMTP_USERNAME: ${{ secrets.MAILBOX }}
           SMTP_PASSWORD: ${{ secrets.SMTP }}
-          MAIL_TO: ${{ secrets.MAILTO }}
+          MAIL_TO: ${{ vars.MAIL_TO || secrets.MAILTO }}
           SMTP_HOST: ${{ vars.SMTP_HOST }}
           SMTP_PORT: ${{ vars.SMTP_PORT }}
         run: python scripts/fedwatch.py send-email ${{ steps.check.outputs.slug && format('--slug {0}', steps.check.outputs.slug) || '' }}
