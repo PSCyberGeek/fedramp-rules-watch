@@ -65,9 +65,9 @@ Actions**:
 
 | Secret | Value |
 |---|---|
-| `SMTP_USERNAME` | The Gmail address that sends the newsletter |
-| `SMTP_PASSWORD` | A Gmail [app password](https://myaccount.google.com/apppasswords) for that address (requires 2-Step Verification), not your normal password |
-| `MAIL_TO` | Recipients, comma-separated. With more than one, everyone is Bcc'd so club members don't see each other's addresses |
+| `MAILBOX` | The Gmail address that sends the newsletter |
+| `SMTP` | A Gmail [app password](https://myaccount.google.com/apppasswords) for that address (requires 2-Step Verification), not your normal password |
+| `MAILTO` | Recipients, comma-separated. With more than one, everyone is Bcc'd so club members don't see each other's addresses |
 
 To use another provider, set repository *variables* `SMTP_HOST` and `SMTP_PORT` (SSL). To confirm the setup,
 run the workflow manually with **Email the latest report now** checked.
