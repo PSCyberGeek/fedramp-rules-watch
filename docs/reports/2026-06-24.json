@@ -1,0 +1,1291 @@
+{
+ "slug": "2026-06-24",
+ "date": "2026-06-24",
+ "from": {
+  "sha": "c1219bb0065d2cafd5484101247227e4b41b675b",
+  "short": "c1219bb",
+  "date": "2026-06-21T11:00:45-04:00",
+  "version": "2026.06.21.01-preview"
+ },
+ "to": {
+  "sha": "7b9b5ea354714660eae63a40bae2833845915a11",
+  "short": "7b9b5ea",
+  "date": "2026-06-24T15:49:02-04:00",
+  "version": "2026.06.24.01"
+ },
+ "commits": [
+  {
+   "sha": "60c4ca4a0d8a76c877f2587eafb82f6f0d1d0258",
+   "short": "60c4ca4",
+   "date": "2026-06-24T12:00:33-04:00",
+   "subject": "Pwx 0623 (#24)",
+   "url": "https://github.com/FedRAMP/rules/commit/60c4ca4a0d8a76c877f2587eafb82f6f0d1d0258"
+  },
+  {
+   "sha": "7b9b5ea354714660eae63a40bae2833845915a11",
+   "short": "7b9b5ea",
+   "date": "2026-06-24T15:49:02-04:00",
+   "subject": "Update schema URLs for FedRAMP Certification, Significant Change Notifications, and Security Decision Record schemas to latest versions (2026-06-24)",
+   "url": "https://github.com/FedRAMP/rules/commit/7b9b5ea354714660eae63a40bae2833845915a11"
+  }
+ ],
+ "summary": {
+  "headline": "1 removed, 30 changed, 1 ruleset updated",
+  "glance": [
+   "This update has **1 removed**, **30 changed** (3 substantive, 27 minor, 0 editorial, 0 mapping-only).",
+   "Defined-term links changed on 1 entry.",
+   "`FRC-CSO-PKG` FedRAMP Certification Package: Obligation level changed from **unset** to **MUST** (stronger requirement).",
+   "`FRC-CSO-PKG` FedRAMP Certification Package: Normative keywords changed: MUST×8 → MUST×2.",
+   "`FRC-CSO-PKG` FedRAMP Certification Package: Class A obligation level removed.",
+   "`FRC-CSO-PKG` FedRAMP Certification Package: Class B obligation level removed.",
+   "`FRC-CSO-PKG` FedRAMP Certification Package: Class C obligation level removed.",
+   "`FRC-CSO-PKG` FedRAMP Certification Package: Class D obligation level removed.",
+   "Removed rule `SDR-CSF-ODP` Organization-Defined Parameters."
+  ]
+ },
+ "diff": {
+  "added": [],
+  "removed": [
+   {
+    "id": "SDR-CSF-ODP",
+    "kind": "Rule",
+    "family": "SDR",
+    "name": "Organization-Defined Parameters",
+    "path": "FRR/SDR/data/rev5/CSF",
+    "text": "Providers MUST define all required organization-defined parameters tied to all Rev5 Controls, following FedRAMP rules if applicable, UNLESS the parameter is assigned by FedRAMP.",
+    "force": "MUST",
+    "fedramp_notes": [
+     "2026-06-23: Official launch of the FedRAMP Consolidated Rules for 2026."
+    ]
+   }
+  ],
+  "renamed": [],
+  "changed": [
+   {
+    "id": "CCM-OCR-AVL",
+    "kind": "Rule",
+    "family": "CCM",
+    "name": "Report Availability",
+    "path_before": "FRR/CCM/data/all/OCR",
+    "path": "FRR/CCM/data/all/OCR",
+    "text_before": "Providers MUST supply an Ongoing Certification Report to all necessary parties every 3 months, covering the entire period since the previous summary, in a consistent format that is human readable; this report MUST include high-level summaries of at least the following information:",
+    "text_after": "Providers MUST supply an Ongoing Certification Report to all necessary parties every 3 months, covering the entire period since the previous summary, in a consistent format that is human readable; this report MUST include high-level summaries of at least the following information:",
+    "fields": [
+     {
+      "field": "schema.name",
+      "label": "Schema name",
+      "type": "text",
+      "before": null,
+      "after": "FedRAMP Ongoing Certification Report (CCM-OCR-AVL)"
+     },
+     {
+      "field": "schema.url",
+      "label": "Schema url",
+      "type": "text",
+      "before": null,
+      "after": "https://fedramp.gov/schemas/fedramp-ongoing-certification-report-schema-2026-06-24.json"
+     }
+    ],
+    "sentences": [
+     "Schema name added.",
+     "Schema url added."
+    ],
+    "grade": "minor",
+    "fedramp_notes": [
+     "2026-06-24: Official launch of the FedRAMP Consolidated Rules for 2026."
+    ]
+   },
+   {
+    "id": "CDS-CSO-PUB",
+    "kind": "Rule",
+    "family": "CDS",
+    "name": "Public Information",
+    "path_before": "FRR/CDS/data/all/CSO",
+    "path": "FRR/CDS/data/all/CSO",
+    "text_before": "Providers MUST publicly share up-to-date information about the cloud service offering in both human-readable and JSON formats, including at least the following information that is available and applicable:",
+    "text_after": "Providers MUST publicly share up-to-date information about the cloud service offering in both human-readable and JSON formats, including at least the following information that is available and applicable:",
+    "fields": [
+     {
+      "field": "schema.name",
+      "label": "Schema name",
+      "type": "text",
+      "before": "FedRAMP Public Marketplace Information Schema",
+      "after": "FedRAMP Certification Overview Package (FRC-CSO-PKG)",
+      "editorial": false
+     },
+     {
+      "field": "schema.url",
+      "label": "Schema url",
+      "type": "text",
+      "before": "https://fedramp.gov/schemas/fedramp-public-marketplace-information-schema-v2026.06.06.01.json",
+      "after": "https://fedramp.gov/schemas/fedramp-certification-overview-package-schema-2026-06-24.json",
+      "editorial": false
+     }
+    ],
+    "sentences": [
+     "Schema name changed from “FedRAMP Public Marketplace Information Schema” to “FedRAMP Certification Overview Package (FRC-CSO-PKG)”.",
+     "Schema url reworded (1 word removed, 1 word added)."
+    ],
+    "grade": "minor",
+    "fedramp_notes": [
+     "2026-06-24: Official launch of the FedRAMP Consolidated Rules for 2026."
+    ]
+   },
+   {
+    "id": "CDS-CSO-SVC",
+    "kind": "Rule",
+    "family": "CDS",
+    "name": "Public Service List",
+    "path_before": "FRR/CDS/data/all/CSO",
+    "path": "FRR/CDS/data/all/CSO",
+    "text_before": "Providers MUST publicly share a detailed list of specific services and their security categories that are included in the cloud service offering using clear feature or service names that align with standard public marketing materials; this list MUST be complete enough for a potential customer to determine which services are and are not included in the FedRAMP Minimum Assessment Scope without requesting access to underlying FedRAMP Certification Data.",
+    "text_after": "Providers MUST publicly share a detailed list of specific services and their security categories that are included in the cloud service offering using clear feature or service names that align with standard public marketing materials; this list MUST be complete enough for a potential customer to determine which services are and are not included in the FedRAMP Minimum Assessment Scope without requesting access to underlying FedRAMP Certification Data.",
+    "fields": [
+     {
+      "field": "schema.name",
+      "label": "Schema name",
+      "type": "text",
+      "before": null,
+      "after": "FedRAMP Certification Overview Package (FRC-CSO-PKG)"
+     },
+     {
+      "field": "schema.url",
+      "label": "Schema url",
+      "type": "text",
+      "before": null,
+      "after": "https://fedramp.gov/schemas/fedramp-certification-overview-package-schema-2026-06-24.json"
+     }
+    ],
+    "sentences": [
+     "Schema name added.",
+     "Schema url added."
+    ],
+    "grade": "minor",
+    "fedramp_notes": [
+     "2026-06-24: Official launch of the FedRAMP Consolidated Rules for 2026."
+    ]
+   },
+   {
+    "id": "CDS-CSO-UTC",
+    "kind": "Rule",
+    "family": "CDS",
+    "name": "Use Trust Centers",
+    "path_before": "FRR/CDS/data/all/CSO",
+    "path": "FRR/CDS/data/all/CSO",
+    "text_before": "Providers MUST use a FedRAMP-compatible trust center to store and share FedRAMP Certification Data with all necessary parties.",
+    "text_after": "Providers MUST use a FedRAMP-compatible trust center to store and share FedRAMP Certification Data with all necessary parties.",
+    "fields": [
+     {
+      "field": "schema.name",
+      "label": "Schema name",
+      "type": "text",
+      "before": null,
+      "after": "FedRAMP Certification Overview Package (FRC-CSO-PKG)"
+     },
+     {
+      "field": "schema.url",
+      "label": "Schema url",
+      "type": "text",
+      "before": null,
+      "after": "https://fedramp.gov/schemas/fedramp-certification-overview-package-schema-2026-06-24.json"
+     }
+    ],
+    "sentences": [
+     "Schema name added.",
+     "Schema url added."
+    ],
+    "grade": "minor",
+    "fedramp_notes": [
+     "2026-06-24: Official launch of the FedRAMP Consolidated Rules for 2026."
+    ]
+   },
+   {
+    "id": "CPO-CSO-OVR",
+    "kind": "Rule",
+    "family": "CPO",
+    "name": "Overview of the Cloud Service Offering",
+    "path_before": "FRR/CPO/data/all/CSO",
+    "path": "FRR/CPO/data/all/CSO",
+    "text_before": "Providers MUST supply a Certification Package Overview within their FedRAMP Certification Package, in both human-readable and JSON formats, that includes at least all of the information required by the following rules:",
+    "text_after": "Providers MUST supply a Certification Package Overview within their FedRAMP Certification Package, in both human-readable and JSON formats, that includes at least all of the information required by the following rules:",
+    "fields": [
+     {
+      "field": "schema.url",
+      "label": "Schema url",
+      "type": "text",
+      "before": "https://fedramp.gov/schemas/fedramp-certification-package-overview-schema-v2026.06.06.01.json",
+      "after": "https://fedramp.gov/schemas/fedramp-significant-change-notifications-schema-2026-06-24.json",
+      "editorial": false
+     }
+    ],
+    "sentences": [
+     "Schema url reworded (1 word removed, 1 word added)."
+    ],
+    "grade": "minor",
+    "fedramp_notes": [
+     "2026-06-24: Official launch of the FedRAMP Consolidated Rules for 2026."
+    ]
+   },
+   {
+    "id": "FRC-APP-AFC",
+    "kind": "Rule",
+    "family": "FRC",
+    "name": "Applying for FedRAMP Certification",
+    "path_before": "FRR/FRC/data/all/APP",
+    "path": "FRR/FRC/data/all/APP",
+    "text_before": "Providers MUST complete the FedRAMP Certification Application Form at https://fedramp.gov/forms/provider-listing-request/ in full to request an initial assessment by FedRAMP.",
+    "text_after": "Providers MUST complete the FedRAMP Certification Application Form in full to request an initial assessment by FedRAMP.",
+    "fields": [
+     {
+      "field": "notification[0].method",
+      "label": "Notification method 1 method",
+      "type": "text",
+      "before": null,
+      "after": "form"
+     },
+     {
+      "field": "notification[0].name",
+      "label": "Notification method 1 name",
+      "type": "text",
+      "before": null,
+      "after": "[For CSPs] FedRAMP Certification Application Form"
+     },
+     {
+      "field": "notification[0].party",
+      "label": "Notification method 1 party",
+      "type": "text",
+      "before": null,
+      "after": "FedRAMP"
+     },
+     {
+      "field": "notification[0].target",
+      "label": "Notification method 1 target",
+      "type": "text",
+      "before": null,
+      "after": "https://help.fedramp.gov/hc/en-us/requests/new?ticket_form_id=51137131584283"
+     },
+     {
+      "field": "reference",
+      "label": "Reference",
+      "type": "text",
+      "before": "FedRAMP Certification Application Form",
+      "after": null
+     },
+     {
+      "field": "reference_url",
+      "label": "Reference url",
+      "type": "text",
+      "before": "https://fedramp.gov/forms",
+      "after": null
+     },
+     {
+      "field": "statement",
+      "label": "Statement",
+      "type": "text",
+      "before": "Providers MUST complete the FedRAMP Certification Application Form at https://fedramp.gov/forms/provider-listing-request/ in full to request an initial assessment by FedRAMP.",
+      "after": "Providers MUST complete the FedRAMP Certification Application Form in full to request an initial assessment by FedRAMP.",
+      "editorial": false
+     }
+    ],
+    "sentences": [
+     "Statement reworded (2 words removed, 0 words added).",
+     "Notification method 1 method added.",
+     "Notification method 1 name added.",
+     "Notification method 1 party added.",
+     "Notification method 1 target added.",
+     "Reference removed.",
+     "Reference url removed."
+    ],
+    "grade": "minor",
+    "fedramp_notes": [
+     "2026-06-24: Official launch of the FedRAMP Consolidated Rules for 2026."
+    ]
+   },
+   {
+    "id": "FRC-CSF-RDY",
+    "kind": "Rule",
+    "family": "FRC",
+    "name": "FedRAMP Ready Conversion",
+    "path_before": "FRR/FRC/data/rev5/CSF",
+    "path": "FRR/FRC/data/rev5/CSF",
+    "text_before": "Providers with FedRAMP Rev5 Ready status MUST convert to a FedRAMP Certification before the furthest date of the expiration of their most recently yearly assessment or November 17, 2026; the legacy FedRAMP Ready status will be entirely removed on December 31, 2027.",
+    "text_after": "Providers with FedRAMP Rev5 Ready status MUST convert to a FedRAMP Certification by whichever of the follow dates is later: the expiration of their annual assessment or November 17, 2026 (the legacy FedRAMP Ready status will be entirely removed on December 31, 2027).",
+    "fields": [
+     {
+      "field": "statement",
+      "label": "Statement",
+      "type": "text",
+      "before": "Providers with FedRAMP Rev5 Ready status MUST convert to a FedRAMP Certification before the furthest date of the expiration of their most recently yearly assessment or November 17, 2026; the legacy FedRAMP Ready status will be entirely removed on December 31, 2027.",
+      "after": "Providers with FedRAMP Rev5 Ready status MUST convert to a FedRAMP Certification by whichever of the follow dates is later: the expiration of their annual assessment or November 17, 2026 (the legacy FedRAMP Ready status will be entirely removed on December 31, 2027).",
+      "editorial": false
+     }
+    ],
+    "sentences": [
+     "Statement reworded (10 words removed, 11 words added)."
+    ],
+    "grade": "substantive",
+    "fedramp_notes": [
+     "2026-06-24: Official launch of the FedRAMP Consolidated Rules for 2026."
+    ]
+   },
+   {
+    "id": "FRC-CSO-PKG",
+    "kind": "Rule",
+    "family": "FRC",
+    "name": "FedRAMP Certification Package",
+    "path_before": "FRR/FRC/data/all/CSO",
+    "path": "FRR/FRC/data/all/CSO",
+    "text_before": "Class A: Providers seeking a Class A Certification MUST supply a complete FedRAMP Certification Package to FedRAMP for initial certification; the FedRAMP Certification Package MUST include at least the following information:\nClass B: Providers seeking a Class B Certification MUST supply a complete FedRAMP Certification Package to FedRAMP for initial certification; the FedRAMP Certification Package MUST include at least the following information:\nClass C: Providers seeking a Class C Certification MUST supply a complete FedRAMP Certification Package to FedRAMP for initial certification; the FedRAMP Certification Package MUST include at least the following information:\nClass D: Providers seeking a Class D Certification MUST supply a complete FedRAMP Certification Package to FedRAMP for initial certification; the FedRAMP Certification Package MUST include at least the following information:",
+    "text_after": "Providers seeking a Class B Certification MUST supply a complete FedRAMP Certification Package to FedRAMP for initial certification; the FedRAMP Certification Package MUST include at least the following information:",
+    "fields": [
+     {
+      "field": "following_information",
+      "label": "Required information",
+      "type": "text",
+      "before": null,
+      "after": "A Certification Package Overview\nA Security Decision Record\nA real or example Ongoing Certification Report following CCM-OCR-AVL (Report Availability)"
+     },
+     {
+      "field": "force",
+      "label": "Obligation level",
+      "type": "text",
+      "before": null,
+      "after": "MUST"
+     },
+     {
+      "field": "schema.name",
+      "label": "Schema name",
+      "type": "text",
+      "before": null,
+      "after": "FedRAMP Certification Overview Package (FRC-CSO-PKG)"
+     },
+     {
+      "field": "schema.url",
+      "label": "Schema url",
+      "type": "text",
+      "before": null,
+      "after": "https://fedramp.gov/schemas/fedramp-certification-overview-package-schema-2026-06-24.json"
+     },
+     {
+      "field": "statement",
+      "label": "Statement",
+      "type": "text",
+      "before": null,
+      "after": "Providers seeking a Class B Certification MUST supply a complete FedRAMP Certification Package to FedRAMP for initial certification; the FedRAMP Certification Package MUST include at least the following information:"
+     },
+     {
+      "field": "terms",
+      "label": "Linked defined terms",
+      "type": "set",
+      "before": [
+       "Certification Package",
+       "Initial Certification",
+       "Provider"
+      ],
+      "after": [
+       "Certification Package",
+       "FedRAMP Certification Report",
+       "Initial Certification",
+       "Ongoing Certification",
+       "Ongoing Certification Report (OCR)",
+       "Provider",
+       "Security Decision Record (SDR)"
+      ],
+      "added_items": [
+       "FedRAMP Certification Report",
+       "Ongoing Certification",
+       "Ongoing Certification Report (OCR)",
+       "Security Decision Record (SDR)"
+      ],
+      "removed_items": []
+     },
+     {
+      "field": "varies_by_class.a.following_information",
+      "label": "Class A required information",
+      "type": "set",
+      "before": [
+       "A Certification Package Overview",
+       "An External Framework Mapping"
+      ],
+      "after": null
+     },
+     {
+      "field": "varies_by_class.a.force",
+      "label": "Class A obligation level",
+      "type": "text",
+      "before": "MUST",
+      "after": null
+     },
+     {
+      "field": "varies_by_class.a.statement",
+      "label": "Class A statement",
+      "type": "text",
+      "before": "Providers seeking a Class A Certification MUST supply a complete FedRAMP Certification Package to FedRAMP for initial certification; the FedRAMP Certification Package MUST include at least the following information:",
+      "after": null
+     },
+     {
+      "field": "varies_by_class.b.following_information",
+      "label": "Class B required information",
+      "type": "text",
+      "before": "A Certification Package Overview\nA Security Decision Record\nA real or example Ongoing Certification Report following CCM-OCR-AVL (Report Availability)",
+      "after": null
+     },
+     {
+      "field": "varies_by_class.b.force",
+      "label": "Class B obligation level",
+      "type": "text",
+      "before": "MUST",
+      "after": null
+     },
+     {
+      "field": "varies_by_class.b.statement",
+      "label": "Class B statement",
+      "type": "text",
+      "before": "Providers seeking a Class B Certification MUST supply a complete FedRAMP Certification Package to FedRAMP for initial certification; the FedRAMP Certification Package MUST include at least the following information:",
+      "after": null
+     },
+     {
+      "field": "varies_by_class.c.following_information",
+      "label": "Class C required information",
+      "type": "text",
+      "before": "A Certification Package Overview\nA Security Decision Record\nA real or example Ongoing Certification Report following CCM-OCR-AVL (Report Availability)",
+      "after": null
+     },
+     {
+      "field": "varies_by_class.c.force",
+      "label": "Class C obligation level",
+      "type": "text",
+      "before": "MUST",
+      "after": null
+     },
+     {
+      "field": "varies_by_class.c.statement",
+      "label": "Class C statement",
+      "type": "text",
+      "before": "Providers seeking a Class C Certification MUST supply a complete FedRAMP Certification Package to FedRAMP for initial certification; the FedRAMP Certification Package MUST include at least the following information:",
+      "after": null
+     },
+     {
+      "field": "varies_by_class.d.following_information",
+      "label": "Class D required information",
+      "type": "text",
+      "before": "A Certification Package Overview\nA Security Decision Record\nA real or example Ongoing Certification Report following CCM-OCR-AVL (Report Availability)",
+      "after": null
+     },
+     {
+      "field": "varies_by_class.d.force",
+      "label": "Class D obligation level",
+      "type": "text",
+      "before": "MUST",
+      "after": null
+     },
+     {
+      "field": "varies_by_class.d.statement",
+      "label": "Class D statement",
+      "type": "text",
+      "before": "Providers seeking a Class D Certification MUST supply a complete FedRAMP Certification Package to FedRAMP for initial certification; the FedRAMP Certification Package MUST include at least the following information:",
+      "after": null
+     }
+    ],
+    "sentences": [
+     "Obligation level changed from **unset** to **MUST** (stronger requirement).",
+     "Statement reworded (95 words removed, 0 words added).",
+     "Normative keywords changed: MUST×8 → MUST×2.",
+     "Required information added.",
+     "Schema name added.",
+     "Schema url added.",
+     "Linked defined terms: added `FedRAMP Certification Report`, `Ongoing Certification`, `Ongoing Certification Report (OCR)`, `Security Decision Record (SDR)`.",
+     "Class A required information removed.",
+     "Class A obligation level removed.",
+     "Class B required information removed.",
+     "Class B obligation level removed.",
+     "Class C required information removed.",
+     "Class C obligation level removed.",
+     "Class D required information removed.",
+     "Class D obligation level removed."
+    ],
+    "grade": "substantive",
+    "fedramp_notes": [
+     "2026-06-24: Official launch of the FedRAMP Consolidated Rules for 2026."
+    ]
+   },
+   {
+    "id": "IEC-CSO-EFI",
+    "kind": "Rule",
+    "family": "IEC",
+    "name": "Estimate Federal Impact",
+    "path_before": "FRR/IEC/data/all/CSO",
+    "path": "FRR/IEC/data/all/CSO",
+    "text_before": "Providers SHOULD promptly estimate the likely adverse impact of an incident on agency customers to assign a Potential Agency Impact N-rating; this step is called Incident Rating.",
+    "text_after": "Providers SHOULD promptly estimate the likely adverse impact of an incident on agency customers to assign a Potential Agency Impact N-rating; this step is called Incident Rating.",
+    "fields": [
+     {
+      "field": "schema.name",
+      "label": "Schema name",
+      "type": "text",
+      "before": null,
+      "after": "FedRAMP Incident Report (IEC-CSO-IIR / IEC-CSO-OIR / IEC-CSO-FIR)"
+     },
+     {
+      "field": "schema.url",
+      "label": "Schema url",
+      "type": "text",
+      "before": null,
+      "after": "https://fedramp.gov/schemas/fedramp-incident-report-schema-2026-06-24.json"
+     }
+    ],
+    "sentences": [
+     "Schema name added.",
+     "Schema url added."
+    ],
+    "grade": "minor",
+    "fedramp_notes": [
+     "2026-06-24: Official launch of the FedRAMP Consolidated Rules for 2026."
+    ]
+   },
+   {
+    "id": "IEC-CSO-FIR",
+    "kind": "Rule",
+    "family": "IEC",
+    "name": "Final Incident Report",
+    "path_before": "FRR/IEC/data/all/CSO",
+    "path": "FRR/IEC/data/all/CSO",
+    "text_before": "Class A: Providers with Class A Certifications MUST responsibly notify all affected parties by providing a Final Incident Report once the incident has been resolved and recovery is complete, including final updates to all previously reported information.\nClass B: Providers with Class B Certifications MUST responsibly notify all affected parties by providing a Final Incident Report once the incident has been resolved and recovery is complete, including final updates to all previously reported information.\nClass C: Providers with Class C Certifications MUST responsibly notify all affected parties by providing a Final Incident Report once the incident has been resolved and recovery is complete, including final updates to all previously reported information.\nClass D: Providers with Class D Certifications MUST responsibly notify all affected parties by providing a Final Incident Report once the incident has been resolved and recovery is complete, including final updates to all previously reported information.",
+    "text_after": "Class A: Providers with Class A Certifications MUST responsibly notify all affected parties by providing a Final Incident Report once the incident has been resolved and recovery is complete, including final updates to all previously reported information.\nClass B: Providers with Class B Certifications MUST responsibly notify all affected parties by providing a Final Incident Report once the incident has been resolved and recovery is complete, including final updates to all previously reported information.\nClass C: Providers with Class C Certifications MUST responsibly notify all affected parties by providing a Final Incident Report once the incident has been resolved and recovery is complete, including final updates to all previously reported information.\nClass D: Providers with Class D Certifications MUST responsibly notify all affected parties by providing a Final Incident Report once the incident has been resolved and recovery is complete, including final updates to all previously reported information.",
+    "fields": [
+     {
+      "field": "schema.name",
+      "label": "Schema name",
+      "type": "text",
+      "before": null,
+      "after": "FedRAMP Incident Report (IEC-CSO-IIR / IEC-CSO-OIR / IEC-CSO-FIR)"
+     },
+     {
+      "field": "schema.url",
+      "label": "Schema url",
+      "type": "text",
+      "before": null,
+      "after": "https://fedramp.gov/schemas/fedramp-incident-report-schema-2026-06-24.json"
+     }
+    ],
+    "sentences": [
+     "Schema name added.",
+     "Schema url added."
+    ],
+    "grade": "minor",
+    "fedramp_notes": [
+     "2026-06-24: Official launch of the FedRAMP Consolidated Rules for 2026."
+    ]
+   },
+   {
+    "id": "IEC-CSO-IIR",
+    "kind": "Rule",
+    "family": "IEC",
+    "name": "Initial Incident Report",
+    "path_before": "FRR/IEC/data/all/CSO",
+    "path": "FRR/IEC/data/all/CSO",
+    "text_before": "Class A: Providers with Class A Certifications SHOULD responsibly notify all affected parties after identifying FedRAMP Reportable Incidents by providing an Initial Incident Report with as much of the following information that is available at the time of reporting and/or the current relevant status for each item:\nClass B: Providers with Class B Certifications MUST responsibly notify all affected parties after identifying FedRAMP Reportable Incidents by providing an Initial Incident Report with as much of the following information that is available at the time of reporting and/or the current relevant status for each item:\nClass C: Providers with Class C Certifications MUST responsibly notify all affected parties after identifying FedRAMP Reportable Incidents by providing an Initial Incident Report with as much of the following information that is available at the time of reporting and/or the current relevant status for each item:\nClass D: Providers with Class D Certifications MUST responsibly notify all affected parties after identifying FedRAMP Reportable Incidents by providing an Initial Incident Report with as much of the following information that is available at the time of reporting and/or the current relevant status for each item:",
+    "text_after": "Class A: Providers with Class A Certifications SHOULD responsibly notify all affected parties after identifying FedRAMP Reportable Incidents by providing an Initial Incident Report with as much of the following information that is available at the time of reporting and/or the current relevant status for each item:\nClass B: Providers with Class B Certifications MUST responsibly notify all affected parties after identifying FedRAMP Reportable Incidents by providing an Initial Incident Report with as much of the following information that is available at the time of reporting and/or the current relevant status for each item:\nClass C: Providers with Class C Certifications MUST responsibly notify all affected parties after identifying FedRAMP Reportable Incidents by providing an Initial Incident Report with as much of the following information that is available at the time of reporting and/or the current relevant status for each item:\nClass D: Providers with Class D Certifications MUST responsibly notify all affected parties after identifying FedRAMP Reportable Incidents by providing an Initial Incident Report with as much of the following information that is available at the time of reporting and/or the current relevant status for each item:",
+    "fields": [
+     {
+      "field": "schema.name",
+      "label": "Schema name",
+      "type": "text",
+      "before": null,
+      "after": "FedRAMP Incident Report (IEC-CSO-IIR / IEC-CSO-OIR / IEC-CSO-FIR)"
+     },
+     {
+      "field": "schema.url",
+      "label": "Schema url",
+      "type": "text",
+      "before": null,
+      "after": "https://fedramp.gov/schemas/fedramp-incident-report-schema-2026-06-24.json"
+     }
+    ],
+    "sentences": [
+     "Schema name added.",
+     "Schema url added."
+    ],
+    "grade": "minor",
+    "fedramp_notes": [
+     "2026-06-24: Official launch of the FedRAMP Consolidated Rules for 2026."
+    ]
+   },
+   {
+    "id": "IEC-CSO-OIR",
+    "kind": "Rule",
+    "family": "IEC",
+    "name": "Ongoing Incident Reports",
+    "path_before": "FRR/IEC/data/all/CSO",
+    "path": "FRR/IEC/data/all/CSO",
+    "text_before": "Class A: Providers with Class A Certifications SHOULD responsibly notify all affected parties of ongoing activity as new information becomes available during incident response for FedRAMP Reportable Incidents, including updates (or lack of updates) to all previously reported information and as much of the the following additional information that is available and/or the current relevant status for each item:\nClass B: Providers with Class B Certifications MUST responsibly notify all affected parties of ongoing activity as new information becomes available during incident response for FedRAMP Reportable Incidents, including updates (or lack of updates) to all previously reported information and as much of the the following additional information that is available and/or the current relevant status for each item:\nClass C: Providers with Class C Certifications MUST responsibly notify all affected parties of ongoing activity as new information becomes available during incident response for FedRAMP Reportable Incidents, including updates (or lack of updates) to all previously reported information and as much of the the following additional information that is available and/or the current relevant status for each item:\nClass D: Providers with Class D Certifications MUST responsibly notify all affected parties of ongoing activity as new information becomes available during incident response for FedRAMP Reportable Incidents, including updates (or lack of updates) to all previously reported information and as much of the the following additional information that is available and/or the current relevant status for each item:",
+    "text_after": "Class A: Providers with Class A Certifications SHOULD responsibly notify all affected parties of ongoing activity as new information becomes available during incident response for FedRAMP Reportable Incidents, including updates (or lack of updates) to all previously reported information and as much of the the following additional information that is available and/or the current relevant status for each item:\nClass B: Providers with Class B Certifications MUST responsibly notify all affected parties of ongoing activity as new information becomes available during incident response for FedRAMP Reportable Incidents, including updates (or lack of updates) to all previously reported information and as much of the the following additional information that is available and/or the current relevant status for each item:\nClass C: Providers with Class C Certifications MUST responsibly notify all affected parties of ongoing activity as new information becomes available during incident response for FedRAMP Reportable Incidents, including updates (or lack of updates) to all previously reported information and as much of the the following additional information that is available and/or the current relevant status for each item:\nClass D: Providers with Class D Certifications MUST responsibly notify all affected parties of ongoing activity as new information becomes available during incident response for FedRAMP Reportable Incidents, including updates (or lack of updates) to all previously reported information and as much of the the following additional information that is available and/or the current relevant status for each item:",
+    "fields": [
+     {
+      "field": "schema.name",
+      "label": "Schema name",
+      "type": "text",
+      "before": null,
+      "after": "FedRAMP Incident Report (IEC-CSO-IIR / IEC-CSO-OIR / IEC-CSO-FIR)"
+     },
+     {
+      "field": "schema.url",
+      "label": "Schema url",
+      "type": "text",
+      "before": null,
+      "after": "https://fedramp.gov/schemas/fedramp-incident-report-schema-2026-06-24.json"
+     }
+    ],
+    "sentences": [
+     "Schema name added.",
+     "Schema url added."
+    ],
+    "grade": "minor",
+    "fedramp_notes": [
+     "2026-06-24: Official launch of the FedRAMP Consolidated Rules for 2026."
+    ]
+   },
+   {
+    "id": "IVV-CSX-AIA",
+    "kind": "Rule",
+    "family": "IVV",
+    "name": "Annual Independent Assessments for 20x",
+    "path_before": "FRR/IVV/data/20x/CSX",
+    "path": "FRR/IVV/data/20x/CSX",
+    "text_before": "Class A: Providers with 20x Class A Certifications MUST meet the expectations of their underlying alternative security framework as part of their persistent independent verification and validation assessment.\nClass B: Providers with 20x Class B Certifications MUST include all Key Security Indicators in a FedRAMP independent assessment at least one per year.\nClass C: Providers with 20x Class C Certifications MUST include all Key Security Indicators in a FedRAMP independent assessment at least one per year.\nClass D: Providers with 20x Class D Certifications MUST include all Key Security Indicators in a FedRAMP independent assessment at least one per year.",
+    "text_after": "Class A: Providers with 20x Class A Certifications MUST meet the expectations of their underlying alternative security framework as part of their persistent independent verification and validation assessment.\nClass B: Providers with 20x Class B Certifications MUST include all Key Security Indicators in a FedRAMP independent assessment at least once per year.\nClass C: Providers with 20x Class C Certifications MUST include all Key Security Indicators in a FedRAMP independent assessment at least once per year.\nClass D: Providers with 20x Class D Certifications MUST include all Key Security Indicators in a FedRAMP independent assessment at least once per year.",
+    "fields": [
+     {
+      "field": "varies_by_class.b.statement",
+      "label": "Class B statement",
+      "type": "text",
+      "before": "Providers with 20x Class B Certifications MUST include all Key Security Indicators in a FedRAMP independent assessment at least one per year.",
+      "after": "Providers with 20x Class B Certifications MUST include all Key Security Indicators in a FedRAMP independent assessment at least once per year.",
+      "editorial": false
+     },
+     {
+      "field": "varies_by_class.c.statement",
+      "label": "Class C statement",
+      "type": "text",
+      "before": "Providers with 20x Class C Certifications MUST include all Key Security Indicators in a FedRAMP independent assessment at least one per year.",
+      "after": "Providers with 20x Class C Certifications MUST include all Key Security Indicators in a FedRAMP independent assessment at least once per year.",
+      "editorial": false
+     },
+     {
+      "field": "varies_by_class.d.statement",
+      "label": "Class D statement",
+      "type": "text",
+      "before": "Providers with 20x Class D Certifications MUST include all Key Security Indicators in a FedRAMP independent assessment at least one per year.",
+      "after": "Providers with 20x Class D Certifications MUST include all Key Security Indicators in a FedRAMP independent assessment at least once per year.",
+      "editorial": false
+     }
+    ],
+    "sentences": [
+     "Statement reworded (3 words removed, 3 words added)."
+    ],
+    "grade": "substantive",
+    "fedramp_notes": [
+     "2026-06-24: Official launch of the FedRAMP Consolidated Rules for 2026."
+    ]
+   },
+   {
+    "id": "MAS-CSO-IIR",
+    "kind": "Rule",
+    "family": "MAS",
+    "name": "Identify Information Resources",
+    "path_before": "FRR/MAS/data/all/CSO",
+    "path": "FRR/MAS/data/all/CSO",
+    "text_before": "Providers MUST identify a set of information resources to assess for FedRAMP Certification that includes all information resources that are likely to handle federal customer data or likely to impact the confidentiality, integrity, or availability of federal customer data handled by the cloud service offering; this set of information resources is the cloud service offering.",
+    "text_after": "Providers MUST identify a set of information resources to assess for FedRAMP Certification that includes all information resources that are likely to handle federal customer data or likely to impact the confidentiality, integrity, or availability of federal customer data handled by the cloud service offering; this set of information resources is the cloud service offering.",
+    "fields": [
+     {
+      "field": "notes",
+      "label": "Notes",
+      "type": "text",
+      "before": "Certain categories of cloud computing products and services are specified as entirely outside the scope of FedRAMP by the Director of the Office of Management and Budget. All such products and services are therefore not included in the cloud service offering for FedRAMP. For more, see https://fedramp.gov/scope.\nSoftware produced by cloud service providers that is delivered separately for installation on agency systems and not operated in a shared responsibility model (typically including agents, application clients, mobile applications, etc. that are not fully managed by the cloud service provider) is not a cloud computing product or service and is entirely outside the scope of FedRAMP under the FedRAMP Certification Act. All such software is therefore not included in the cloud service offering for FedRAMP. For more, see fedramp.gov/scope.\nAll aspects of the cloud service offering are determined and maintained by the cloud service provider in accordance with related FedRAMP Certification rules and documented by the cloud service provider in their FedRAMP Certification Package.",
+      "after": "Certain categories of cloud computing products and services are specified as entirely outside the scope of FedRAMP by the Director of the Office of Management and Budget. All such products and services are therefore not included in the cloud service offering for FedRAMP. For more, see https://fedramp.gov/scope.\nSoftware produced by cloud service providers that is delivered separately for installation on agency systems and not operated in a shared responsibility model (typically including agents, application clients, mobile applications, etc. that are not fully managed by the cloud service provider) is not a cloud computing product or service and is entirely outside the scope of FedRAMP under the FedRAMP Certification Act. All such software is therefore not included in the cloud service offering for FedRAMP. For more, see https://fedramp.gov/scope.\nAll aspects of the cloud service offering are determined and maintained by the cloud service provider in accordance with related FedRAMP Certification rules and documented by the cloud service provider in their FedRAMP Certification Package.",
+      "editorial": false
+     }
+    ],
+    "sentences": [
+     "Notes reworded (1 word removed, 1 word added)."
+    ],
+    "grade": "minor",
+    "fedramp_notes": [
+     "2026-06-24: Official launch of the FedRAMP Consolidated Rules for 2026."
+    ]
+   },
+   {
+    "id": "MAS-CSO-TPR",
+    "kind": "Rule",
+    "family": "MAS",
+    "name": "Third-Party Information Resources",
+    "path_before": "FRR/MAS/data/all/CSO",
+    "path": "FRR/MAS/data/all/CSO",
+    "text_before": "Providers MUST address the potential impact to federal customer data from third-party information resources used by the cloud service offering, ONLY IF MAS-CSO-IIR (Identify Information Resources) APPLIES, by documenting the following information about each applicable third-party information resource:",
+    "text_after": "Providers MUST address the potential impact to federal customer data from third-party information resources used by the cloud service offering, ONLY IF MAS-CSO-IIR (Identify Information Resources) APPLIES, by documenting the following information about each applicable third-party information resource:",
+    "fields": [
+     {
+      "field": "schema.name",
+      "label": "Schema name",
+      "type": "text",
+      "before": null,
+      "after": "FedRAMP Certification Overview Package (FRC-CSO-PKG)"
+     },
+     {
+      "field": "schema.url",
+      "label": "Schema url",
+      "type": "text",
+      "before": null,
+      "after": "https://fedramp.gov/schemas/fedramp-certification-overview-package-schema-2026-06-24.json"
+     }
+    ],
+    "sentences": [
+     "Schema name added.",
+     "Schema url added."
+    ],
+    "grade": "minor",
+    "fedramp_notes": [
+     "2026-06-24: Official launch of the FedRAMP Consolidated Rules for 2026."
+    ]
+   },
+   {
+    "id": "MKT-CAS-LRQ",
+    "kind": "Rule",
+    "family": "MKT",
+    "name": "Listing Requests for Advisors",
+    "path_before": "FRR/MKT/data/all/CAS",
+    "path": "FRR/MKT/data/all/CAS",
+    "text_before": "Advisors MUST complete the Advisor Listing Request Form at https://fedramp.gov/forms/advisor-listing-request/ to request listing in the FedRAMP Marketplace.",
+    "text_after": "Advisors MUST complete the Advisor Listing Request Form to request listing in the FedRAMP Marketplace.",
+    "fields": [
+     {
+      "field": "notification[0].method",
+      "label": "Notification method 1 method",
+      "type": "text",
+      "before": null,
+      "after": "form"
+     },
+     {
+      "field": "notification[0].name",
+      "label": "Notification method 1 name",
+      "type": "text",
+      "before": null,
+      "after": "[For Assessors/Advisors] Marketplace Listing Form"
+     },
+     {
+      "field": "notification[0].party",
+      "label": "Notification method 1 party",
+      "type": "text",
+      "before": null,
+      "after": "FedRAMP"
+     },
+     {
+      "field": "notification[0].target",
+      "label": "Notification method 1 target",
+      "type": "text",
+      "before": null,
+      "after": "https://help.fedramp.gov/hc/en-us/requests/new?ticket_form_id=52060327520795"
+     },
+     {
+      "field": "statement",
+      "label": "Statement",
+      "type": "text",
+      "before": "Advisors MUST complete the Advisor Listing Request Form at https://fedramp.gov/forms/advisor-listing-request/ to request listing in the FedRAMP Marketplace.",
+      "after": "Advisors MUST complete the Advisor Listing Request Form to request listing in the FedRAMP Marketplace.",
+      "editorial": false
+     }
+    ],
+    "sentences": [
+     "Statement reworded (2 words removed, 0 words added).",
+     "Notification method 1 method added.",
+     "Notification method 1 name added.",
+     "Notification method 1 party added.",
+     "Notification method 1 target added."
+    ],
+    "grade": "minor",
+    "fedramp_notes": [
+     "2026-06-24: Official launch of the FedRAMP Consolidated Rules for 2026."
+    ]
+   },
+   {
+    "id": "MKT-FRP-SOF",
+    "kind": "Rule",
+    "family": "MKT",
+    "name": "Scope of FedRAMP",
+    "path_before": "FRR/MKT/data/all/FRP",
+    "path": "FRR/MKT/data/all/FRP",
+    "text_before": "FedRAMP MUST NOT list cloud service offerings in the Marketplace or perform any FedRAMP Certification activities unless it determines the cloud service offering is within the scope of FedRAMP.",
+    "text_after": "FedRAMP MUST NOT list cloud service offerings in the Marketplace or perform any FedRAMP Certification activities unless it determines the cloud service offering is within the scope of FedRAMP.",
+    "fields": [
+     {
+      "field": "reference_url",
+      "label": "Reference url",
+      "type": "text",
+      "before": "https://fedramp.gov/docs/authority/scope",
+      "after": "https://fedramp.gov/scope",
+      "editorial": false
+     }
+    ],
+    "sentences": [
+     "Reference url changed from “https://fedramp.gov/docs/authority/scope” to “https://fedramp.gov/scope”."
+    ],
+    "grade": "minor",
+    "fedramp_notes": [
+     "2026-06-24: Official launch of the FedRAMP Consolidated Rules for 2026."
+    ]
+   },
+   {
+    "id": "MKT-IAS-LRQ",
+    "kind": "Rule",
+    "family": "MKT",
+    "name": "Listing Requests for Assessors",
+    "path_before": "FRR/MKT/data/all/IAS",
+    "path": "FRR/MKT/data/all/IAS",
+    "text_before": "Assessors MUST complete the Assessor Listing Request Form at https://fedramp.gov/forms/assessor-listing-request/ to request listing in the FedRAMP Marketplace.",
+    "text_after": "Assessors MUST complete the Assessor Listing Request Form to request listing in the FedRAMP Marketplace.",
+    "fields": [
+     {
+      "field": "notification[0].method",
+      "label": "Notification method 1 method",
+      "type": "text",
+      "before": null,
+      "after": "form"
+     },
+     {
+      "field": "notification[0].name",
+      "label": "Notification method 1 name",
+      "type": "text",
+      "before": null,
+      "after": "[For Assessors/Advisors] Marketplace Listing Form"
+     },
+     {
+      "field": "notification[0].party",
+      "label": "Notification method 1 party",
+      "type": "text",
+      "before": null,
+      "after": "FedRAMP"
+     },
+     {
+      "field": "notification[0].target",
+      "label": "Notification method 1 target",
+      "type": "text",
+      "before": null,
+      "after": "https://help.fedramp.gov/hc/en-us/requests/new?ticket_form_id=52060327520795"
+     },
+     {
+      "field": "statement",
+      "label": "Statement",
+      "type": "text",
+      "before": "Assessors MUST complete the Assessor Listing Request Form at https://fedramp.gov/forms/assessor-listing-request/ to request listing in the FedRAMP Marketplace.",
+      "after": "Assessors MUST complete the Assessor Listing Request Form to request listing in the FedRAMP Marketplace.",
+      "editorial": false
+     }
+    ],
+    "sentences": [
+     "Statement reworded (2 words removed, 0 words added).",
+     "Notification method 1 method added.",
+     "Notification method 1 name added.",
+     "Notification method 1 party added.",
+     "Notification method 1 target added."
+    ],
+    "grade": "minor",
+    "fedramp_notes": [
+     "2026-06-24: Official launch of the FedRAMP Consolidated Rules for 2026."
+    ]
+   },
+   {
+    "id": "REC-IAS-AFI",
+    "kind": "Rule",
+    "family": "REC",
+    "name": "Annual Foreign Interest Reports",
+    "path_before": "FRR/REC/data/all/IAS",
+    "path": "FRR/REC/data/all/IAS",
+    "text_before": "Assessors MUST report information relating to any foreign interest, foreign influence, or foreign control of the independent assessment service to FedRAMP annually.",
+    "text_after": "Assessors MUST report information relating to any foreign interest, foreign influence, or foreign control of the independent assessment service to FedRAMP annually.",
+    "fields": [
+     {
+      "field": "notification[0].target",
+      "label": "Notification method 1 target",
+      "type": "text",
+      "before": "https://help.fedramp.gov/forms/assessors/foci-declaration",
+      "after": "https://help.fedramp.gov/hc/en-us/requests/new?ticket_form_id=52006681154587",
+      "editorial": false
+     }
+    ],
+    "sentences": [
+     "Notification method 1 target changed from “https://help.fedramp.gov/forms/assessors/foci-declaration” to “https://help.fedramp.gov/hc/en-us/requests/new?ticket_form_id=52006681154587”."
+    ],
+    "grade": "minor",
+    "fedramp_notes": [
+     "2026-06-24: Official launch of the FedRAMP Consolidated Rules for 2026."
+    ]
+   },
+   {
+    "id": "REC-IAS-CFI",
+    "kind": "Rule",
+    "family": "REC",
+    "name": "Changes in Foreign Interest",
+    "path_before": "FRR/REC/data/all/IAS",
+    "path": "FRR/REC/data/all/IAS",
+    "text_before": "Assessors MUST report updated information relating to any foreign interest, foreign influence, or foreign control of the independent assessment service within 48 hours of any change in foreign ownership or control.",
+    "text_after": "Assessors MUST report updated information relating to any foreign interest, foreign influence, or foreign control of the independent assessment service within 48 hours of any change in foreign ownership or control.",
+    "fields": [
+     {
+      "field": "notification[0].target",
+      "label": "Notification method 1 target",
+      "type": "text",
+      "before": "https://help.fedramp.gov/forms/assessors/foci-declaration",
+      "after": "https://help.fedramp.gov/hc/en-us/requests/new?ticket_form_id=52006681154587",
+      "editorial": false
+     }
+    ],
+    "sentences": [
+     "Notification method 1 target changed from “https://help.fedramp.gov/forms/assessors/foci-declaration” to “https://help.fedramp.gov/hc/en-us/requests/new?ticket_form_id=52006681154587”."
+    ],
+    "grade": "minor",
+    "fedramp_notes": [
+     "2026-06-24: Official launch of the FedRAMP Consolidated Rules for 2026."
+    ]
+   },
+   {
+    "id": "REC-IAS-PST",
+    "kind": "Rule",
+    "family": "REC",
+    "name": "Performance Standards",
+    "path_before": "FRR/REC/data/all/IAS",
+    "path": "FRR/REC/data/all/IAS",
+    "text_before": "Assessors MUST meet FedRAMP performance standards for assessor deliverables to support independent, risk-based reviews by FedRAMP and federal agencies, including at least:",
+    "text_after": "Assessors MUST meet FedRAMP performance standards for assessor deliverables to support independent, risk-based reviews by FedRAMP and federal agencies, including at least:",
+    "fields": [
+     {
+      "field": "following_information",
+      "label": "Required information",
+      "type": "text",
+      "before": "Complete Assessment Packages: Supplies complete and thoroughly prepared documents on the first submission.\nDeliverable Quality: Ensures documentation content is clear, complete, concise, and consistent.\nDeliverable Format: Uses current FedRAMP templates, procedures, and required formats for assessor-authored deliverables unless FedRAMP publishes an alternate format for a specific path, pilot, or process, and does not alter or delete required template content.\nTimeliness and Responsiveness: Delivers documents on time according to the schedule agreed to by the federal government, provider, and assessor.\nTesting Accuracy and Completeness: Ensures accurate and complete testing of a cloud service offering in accordance with ISO 17020 and FedRAMP security rules.\nAssessment Integrity: Submits independent assessments of provider security implementations that are not influenced by provider demands.\nChain of Custody: Preserves the integrity and chain of custody of assessor-authored documents and provider-supplied evidence used in FedRAMP assessments.",
+      "after": "Complete Assessment Packages: Supplies complete and thoroughly prepared documents on the first submission.\nDeliverable Quality: Ensures documentation content is clear, complete, concise, and consistent.\nDeliverable Format: Follows applicable FedRAMP rules.\nTimeliness and Responsiveness: Delivers documents on time according to the schedule agreed to by the federal government, provider, and assessor.\nTesting Accuracy and Completeness: Ensures accurate and complete testing of a cloud service offering in accordance with ISO 17020 and FedRAMP security rules.\nAssessment Integrity: Submits independent assessments of provider security implementations that are not influenced by provider demands.\nChain of Custody: Preserves the integrity and chain of custody of assessor-authored documents and provider-supplied evidence used in FedRAMP assessments.",
+      "editorial": false
+     }
+    ],
+    "sentences": [
+     "Required information reworded (32 words removed, 3 words added)."
+    ],
+    "grade": "minor",
+    "fedramp_notes": [
+     "2026-06-24: Official launch of the FedRAMP Consolidated Rules for 2026."
+    ]
+   },
+   {
+    "id": "SCG-CSO-RSC",
+    "kind": "Rule",
+    "family": "SCG",
+    "name": "Recommended Secure Configuration",
+    "path_before": "FRR/SCG/data/all/CSO",
+    "path": "FRR/SCG/data/all/CSO",
+    "text_before": "Providers MUST create, maintain, and make available recommendations for securely configuring their cloud services (the Secure Configuration Guide) that includes at least the following information:",
+    "text_after": "Providers MUST create, maintain, and make available recommendations for securely configuring their cloud services (the Secure Configuration Guide) that includes at least the following information:",
+    "fields": [
+     {
+      "field": "schema.name",
+      "label": "Schema name",
+      "type": "text",
+      "before": null,
+      "after": "FedRAMP Certification Overview Package (FRC-CSO-PKG)"
+     },
+     {
+      "field": "schema.url",
+      "label": "Schema url",
+      "type": "text",
+      "before": null,
+      "after": "https://fedramp.gov/schemas/fedramp-certification-overview-package-schema-2026-06-24.json"
+     }
+    ],
+    "sentences": [
+     "Schema name added.",
+     "Schema url added."
+    ],
+    "grade": "minor",
+    "fedramp_notes": [
+     "2026-06-24: Official launch of the FedRAMP Consolidated Rules for 2026."
+    ]
+   },
+   {
+    "id": "SCN-CSO-EVA",
+    "kind": "Rule",
+    "family": "SCN",
+    "name": "Evaluate Changes",
+    "path_before": "FRR/SCN/data/all/CSO",
+    "path": "FRR/SCN/data/all/CSO",
+    "text_before": "Providers MUST evaluate all potential significant changes to determine the type of significant change and follow the appropriate Significant Change Notification rules.",
+    "text_after": "Providers MUST evaluate all potential significant changes to determine the type of significant change and follow the appropriate Significant Change Notification rules.",
+    "fields": [
+     {
+      "field": "schema.name",
+      "label": "Schema name",
+      "type": "text",
+      "before": null,
+      "after": "FedRAMP Significant Change Notification (SCN-CSO-INF)"
+     },
+     {
+      "field": "schema.url",
+      "label": "Schema url",
+      "type": "text",
+      "before": null,
+      "after": "https://fedramp.gov/schemas/fedramp-significant-change-notification-schema-2026-06-24.json"
+     }
+    ],
+    "sentences": [
+     "Schema name added.",
+     "Schema url added."
+    ],
+    "grade": "minor",
+    "fedramp_notes": [
+     "2026-06-24: Official launch of the FedRAMP Consolidated Rules for 2026."
+    ]
+   },
+   {
+    "id": "SCN-CSO-HRM",
+    "kind": "Rule",
+    "family": "SCN",
+    "name": "Human and Machine-Readable Notifications",
+    "path_before": "FRR/SCN/data/all/CSO",
+    "path": "FRR/SCN/data/all/CSO",
+    "text_before": "Providers MUST make ALL Significant Change Notifications and related audit records available in human-readable and JSON formats.",
+    "text_after": "Providers MUST make ALL Significant Change Notifications and related audit records available in human-readable and JSON formats.",
+    "fields": [
+     {
+      "field": "schema.url",
+      "label": "Schema url",
+      "type": "text",
+      "before": "https://fedramp.gov/schemas/fedramp-significant-change-notifications-schema-v2026.06.06.01.json",
+      "after": "https://fedramp.gov/schemas/fedramp-significant-change-notifications-schema-2026-06-24.json",
+      "editorial": false
+     }
+    ],
+    "sentences": [
+     "Schema url reworded (1 word removed, 1 word added)."
+    ],
+    "grade": "minor",
+    "fedramp_notes": [
+     "2026-06-24: Official launch of the FedRAMP Consolidated Rules for 2026."
+    ]
+   },
+   {
+    "id": "SCN-CSO-INF",
+    "kind": "Rule",
+    "family": "SCN",
+    "name": "Required Information",
+    "path_before": "FRR/SCN/data/all/CSO",
+    "path": "FRR/SCN/data/all/CSO",
+    "text_before": "Providers MUST include at least the following information in Significant Change Notifications:",
+    "text_after": "Providers MUST include at least the following information in Significant Change Notifications:",
+    "fields": [
+     {
+      "field": "schema.name",
+      "label": "Schema name",
+      "type": "text",
+      "before": null,
+      "after": "FedRAMP Significant Change Notification (SCN-CSO-INF)"
+     },
+     {
+      "field": "schema.url",
+      "label": "Schema url",
+      "type": "text",
+      "before": null,
+      "after": "https://fedramp.gov/schemas/fedramp-significant-change-notification-schema-2026-06-24.json"
+     }
+    ],
+    "sentences": [
+     "Schema name added.",
+     "Schema url added."
+    ],
+    "grade": "minor",
+    "fedramp_notes": [
+     "2026-06-24: Official launch of the FedRAMP Consolidated Rules for 2026."
+    ]
+   },
+   {
+    "id": "SDR-CSO-FRR",
+    "kind": "Rule",
+    "family": "SDR",
+    "name": "FedRAMP Rules",
+    "path_before": "FRR/SDR/data/all/CSO",
+    "path": "FRR/SDR/data/all/CSO",
+    "text_before": "Providers MUST supply a Security Decision Record, in both human-readable and JSON formats, that includes at least all of the following information for each applicable FedRAMP rule:",
+    "text_after": "Providers MUST supply a Security Decision Record, in both human-readable and JSON formats, that includes at least all of the following information for each applicable FedRAMP rule:",
+    "fields": [
+     {
+      "field": "schema.url",
+      "label": "Schema url",
+      "type": "text",
+      "before": "https://fedramp.gov/schemas/fedramp-security-decision-record-schema-v2026.06.06.01.json",
+      "after": "https://fedramp.gov/schemas/fedramp-security-decision-record-schema-2026-06-24.json",
+      "editorial": false
+     }
+    ],
+    "sentences": [
+     "Schema url reworded (1 word removed, 1 word added)."
+    ],
+    "grade": "minor",
+    "fedramp_notes": [
+     "2026-06-24: Official launch of the FedRAMP Consolidated Rules for 2026."
+    ]
+   },
+   {
+    "id": "VER-RPT-AVI",
+    "kind": "Rule",
+    "family": "VER",
+    "name": "Accepted Vulnerability Info",
+    "path_before": "FRR/VER/data/all/RPT",
+    "path": "FRR/VER/data/all/RPT",
+    "text_before": "Providers MUST include the following information on accepted vulnerabilities when reporting on vulnerability detection and response activity:",
+    "text_after": "Providers MUST include the following information on accepted vulnerabilities when reporting on vulnerability detection and response activity:",
+    "fields": [
+     {
+      "field": "schema.name",
+      "label": "Schema name",
+      "type": "text",
+      "before": null,
+      "after": "FedRAMP Accepted Vulnerability Info (VER-RPT-AVI)"
+     },
+     {
+      "field": "schema.url",
+      "label": "Schema url",
+      "type": "text",
+      "before": null,
+      "after": "https://fedramp.gov/schemas/fedramp-accepted-vulnerability-info-schema-2026-06-24.json"
+     }
+    ],
+    "sentences": [
+     "Schema name added.",
+     "Schema url added."
+    ],
+    "grade": "minor",
+    "fedramp_notes": [
+     "2026-06-24: Official launch of the FedRAMP Consolidated Rules for 2026."
+    ]
+   },
+   {
+    "id": "VER-RPT-PER",
+    "kind": "Rule",
+    "family": "VER",
+    "name": "Persistent Reporting",
+    "path_before": "FRR/VER/data/all/RPT",
+    "path": "FRR/VER/data/all/RPT",
+    "text_before": "Providers MUST report vulnerability detection and response activity (including persistent verification and validation) to all necessary parties persistently, summarizing ALL activity since the previous report; these reports are FedRAMP Certification Data and are subject to FedRAMP Certification Data Sharing rules.",
+    "text_after": "Providers MUST report vulnerability detection and response activity (including persistent verification and validation) to all necessary parties persistently, summarizing ALL activity since the previous report; these reports are FedRAMP Certification Data and are subject to FedRAMP Certification Data Sharing rules.",
+    "fields": [
+     {
+      "field": "schema.name",
+      "label": "Schema name",
+      "type": "text",
+      "before": null,
+      "after": "FedRAMP Vulnerability Detail Report (VER-RPT-VDT)"
+     },
+     {
+      "field": "schema.url",
+      "label": "Schema url",
+      "type": "text",
+      "before": null,
+      "after": "https://fedramp.gov/schemas/fedramp-vulnerability-detail-report-schema-2026-06-24.json"
+     }
+    ],
+    "sentences": [
+     "Schema name added.",
+     "Schema url added."
+    ],
+    "grade": "minor",
+    "fedramp_notes": [
+     "2026-06-24: Official launch of the FedRAMP Consolidated Rules for 2026."
+    ]
+   },
+   {
+    "id": "VER-RPT-VDT",
+    "kind": "Rule",
+    "family": "VER",
+    "name": "Vulnerability Details",
+    "path_before": "FRR/VER/data/all/RPT",
+    "path": "FRR/VER/data/all/RPT",
+    "text_before": "Providers MUST include the following information (if applicable) on detected vulnerabilities when reporting on vulnerability detection and response activity, UNLESS it is an accepted vulnerability:",
+    "text_after": "Providers MUST include the following information (if applicable) on detected vulnerabilities when reporting on vulnerability detection and response activity, UNLESS it is an accepted vulnerability:",
+    "fields": [
+     {
+      "field": "schema.name",
+      "label": "Schema name",
+      "type": "text",
+      "before": null,
+      "after": "FedRAMP Vulnerability Detail Report (VER-RPT-VDT)"
+     },
+     {
+      "field": "schema.url",
+      "label": "Schema url",
+      "type": "text",
+      "before": null,
+      "after": "https://fedramp.gov/schemas/fedramp-vulnerability-detail-report-schema-2026-06-24.json"
+     }
+    ],
+    "sentences": [
+     "Schema name added.",
+     "Schema url added."
+    ],
+    "grade": "minor",
+    "fedramp_notes": [
+     "2026-06-24: Official launch of the FedRAMP Consolidated Rules for 2026."
+    ]
+   },
+   {
+    "id": "VER-TFR-MRH",
+    "kind": "Rule",
+    "family": "VER",
+    "name": "Historical Activity",
+    "path_before": "FRR/VER/data/all/TFR",
+    "path": "FRR/VER/data/all/TFR",
+    "text_before": "Class A: Providers with Class A Certifications MAY make all recent historical vulnerability detection and response activity available in JSON format for automated retrieval by all necessary parties (e.g. using an API service or similar); this information MAY be updated persistently, at least once every month.\nClass B: Providers with Class B Certifications SHOULD make all recent historical vulnerability detection and response activity available in JSON format for automated retrieval by all necessary parties (e.g. using an API service or similar); this information SHOULD be updated persistently, at least once every month.\nClass C: Providers with Class C Certifications SHOULD make all recent historical vulnerability detection and response activity available in JSON format for automated retrieval by all necessary parties (e.g. using an API service or similar); this information SHOULD be updated persistently, at least once every 14 days.\nClass D: Providers with Class D Certifications SHOULD make all recent historical vulnerability detection and response activity available in JSON format for automated retrieval by all necessary parties (e.g. using an API service or similar); this information SHOULD be updated persistently, at least once every 7 days.",
+    "text_after": "Class A: Providers with Class A Certifications MAY make all recent historical vulnerability detection and response activity available in JSON format for automated retrieval by all necessary parties (e.g. using an API service or similar); this information MAY be updated persistently, at least once every month.\nClass B: Providers with Class B Certifications SHOULD make all recent historical vulnerability detection and response activity available in JSON format for automated retrieval by all necessary parties (e.g. using an API service or similar); this information SHOULD be updated persistently, at least once every month.\nClass C: Providers with Class C Certifications SHOULD make all recent historical vulnerability detection and response activity available in JSON format for automated retrieval by all necessary parties (e.g. using an API service or similar); this information SHOULD be updated persistently, at least once every 14 days.\nClass D: Providers with Class D Certifications SHOULD make all recent historical vulnerability detection and response activity available in JSON format for automated retrieval by all necessary parties (e.g. using an API service or similar); this information SHOULD be updated persistently, at least once every 7 days.",
+    "fields": [
+     {
+      "field": "schema.name",
+      "label": "Schema name",
+      "type": "text",
+      "before": "FedRAMP Historical VDR Activity Schema",
+      "after": "FedRAMP Historical Vulnerability Evaluation and Reporting Activity (VER-TFR-MRH)",
+      "editorial": false
+     },
+     {
+      "field": "schema.url",
+      "label": "Schema url",
+      "type": "text",
+      "before": "https://fedramp.gov/schemas/fedramp-historical-VER-activity-schema-v2026.06.06.01.json",
+      "after": "https://fedramp.gov/schemas/fedramp-historical-ver-activity-schema-2026-06-24.json",
+      "editorial": false
+     }
+    ],
+    "sentences": [
+     "Schema name changed from “FedRAMP Historical VDR Activity Schema” to “FedRAMP Historical Vulnerability Evaluation and Reporting Activity (VER-TFR-MRH)”.",
+     "Schema url reworded (1 word removed, 1 word added)."
+    ],
+    "grade": "minor",
+    "fedramp_notes": [
+     "2026-06-24: Official launch of the FedRAMP Consolidated Rules for 2026."
+    ]
+   }
+  ],
+  "meta": [
+   {
+    "family": "(all)",
+    "name": "Ruleset-wide settings",
+    "status": "changed",
+    "fields": [
+     {
+      "field": "title",
+      "label": "Title",
+      "type": "text",
+      "before": "FedRAMP Consolidated Rules for 2026 Public Preview",
+      "after": "FedRAMP Consolidated Rules for 2026",
+      "editorial": false
+     }
+    ]
+   }
+  ]
+ }
+}

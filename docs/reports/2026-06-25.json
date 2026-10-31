@@ -1,0 +1,287 @@
+{
+ "slug": "2026-06-25",
+ "date": "2026-06-25",
+ "from": {
+  "sha": "7b9b5ea354714660eae63a40bae2833845915a11",
+  "short": "7b9b5ea",
+  "date": "2026-06-24T15:49:02-04:00",
+  "version": "2026.06.24.01"
+ },
+ "to": {
+  "sha": "6533c406c0f2a02ceefb6ec88c29ebd11cabd31a",
+  "short": "6533c40",
+  "date": "2026-06-25T19:59:55-04:00",
+  "version": "2026.06.25.01"
+ },
+ "commits": [
+  {
+   "sha": "79a9da0e1f2ae444f0ec4e77431923aa4e1b227d",
+   "short": "79a9da0",
+   "date": "2026-06-25T19:48:40-04:00",
+   "subject": "day 1 cleanup",
+   "url": "https://github.com/FedRAMP/rules/commit/79a9da0e1f2ae444f0ec4e77431923aa4e1b227d"
+  },
+  {
+   "sha": "f87fbe53c867f53aa07d6ab24f9a74b5eb9a6751",
+   "short": "f87fbe5",
+   "date": "2026-06-25T19:58:24-04:00",
+   "subject": "minor tuning",
+   "url": "https://github.com/FedRAMP/rules/commit/f87fbe53c867f53aa07d6ab24f9a74b5eb9a6751"
+  },
+  {
+   "sha": "6533c406c0f2a02ceefb6ec88c29ebd11cabd31a",
+   "short": "6533c40",
+   "date": "2026-06-25T19:59:55-04:00",
+   "subject": "changing name of fedramp_security to avoid confusion",
+   "url": "https://github.com/FedRAMP/rules/commit/6533c406c0f2a02ceefb6ec88c29ebd11cabd31a"
+  }
+ ],
+ "summary": {
+  "headline": "1 added, 4 removed, 5 changed, 1 ruleset updated",
+  "glance": [
+   "This update has **1 new entry**, **4 removed**, **5 changed** (1 substantive, 3 minor, 1 editorial, 0 mapping-only).",
+   "New rule `CPO-CSO-OSA` Overall Summary of Assessment in Certification Package.",
+   "Removed rule `CCM-AGM-NAR` No Additional Requirements.",
+   "Removed rule `CCM-AGM-NFA` Notify FedRAMP After Requests.",
+   "Removed rule `VER-AGM-DRE` Do Not Request Extra Info.",
+   "Removed rule `VER-AGM-NFR` Notify FedRAMP."
+  ]
+ },
+ "diff": {
+  "added": [
+   {
+    "id": "CPO-CSO-OSA",
+    "kind": "Rule",
+    "family": "CPO",
+    "name": "Overall Summary of Assessment in Certification Package",
+    "path": "FRR/CPO/data/all/CSO",
+    "text": "Class A: Providers seeking Class A Certification MAY also include an overall summary of their FedRAMP independent assessment in their Certification Package Overview.\nClass B: Providers seeking Class B Certification MUST also include the overall summary of their FedRAMP independent assessment, supplied by the assessor per IVV-IAS-OSA (Overall Summary of Assessment), in their Certification Package Overview.\nClass C: Providers seeking Class C Certification MUST also include the overall summary of their FedRAMP independent assessment, supplied by the assessor per IVV-IAS-OSA (Overall Summary of Assessment), in their Certification Package Overview.\nClass D: Providers seeking Class D Certification MUST also include the overall summary of their FedRAMP independent assessment, supplied by the assessor per IVV-IAS-OSA (Overall Summary of Assessment), in their Certification Package Overview.",
+    "force": null,
+    "fedramp_notes": [
+     "2026-06-25: Added after official launch to clarify that the provider is required to supply this artifact."
+    ]
+   }
+  ],
+  "removed": [
+   {
+    "id": "CCM-AGM-NAR",
+    "kind": "Rule",
+    "family": "CCM",
+    "name": "No Additional Requirements",
+    "path": "FRR/CCM/data/all/AGM",
+    "text": "Agencies MUST NOT place additional security requirements on cloud service providers beyond those required by FedRAMP UNLESS the head of the agency or an authorized delegate makes a determination that there is a demonstrable need for such; this does not apply to seeking clarification or asking general questions about FedRAMP Certification Data.",
+    "force": "MUST NOT",
+    "fedramp_notes": [
+     "2026-06-24: Official launch of the FedRAMP Consolidated Rules for 2026."
+    ]
+   },
+   {
+    "id": "CCM-AGM-NFA",
+    "kind": "Rule",
+    "family": "CCM",
+    "name": "Notify FedRAMP After Requests",
+    "path": "FRR/CCM/data/all/AGM",
+    "text": "Agencies MUST notify FedRAMP after requesting any additional information or materials from a cloud service provider beyond those FedRAMP requires by sending an email to info@fedramp.gov.",
+    "force": "MUST",
+    "fedramp_notes": [
+     "2026-06-24: Official launch of the FedRAMP Consolidated Rules for 2026."
+    ]
+   },
+   {
+    "id": "VER-AGM-DRE",
+    "kind": "Rule",
+    "family": "VER",
+    "name": "Do Not Request Extra Info",
+    "path": "FRR/VER/data/all/AGM",
+    "text": "Agencies SHOULD NOT request additional information from cloud service providers that is not required by the FedRAMP Vulnerability Detection and Response rules UNLESS the head of the agency or an authorized delegate makes a determination that there is a demonstrable need for such.",
+    "force": "SHOULD NOT",
+    "fedramp_notes": [
+     "2026-06-24: Official launch of the FedRAMP Consolidated Rules for 2026."
+    ]
+   },
+   {
+    "id": "VER-AGM-NFR",
+    "kind": "Rule",
+    "family": "VER",
+    "name": "Notify FedRAMP",
+    "path": "FRR/VER/data/all/AGM",
+    "text": "Agencies MUST notify FedRAMP after requesting any additional vulnerability information or materials from a cloud service provider beyond those FedRAMP requires by sending a notification to [info@fedramp.gov](mailto:info@fedramp.gov).",
+    "force": "MUST",
+    "fedramp_notes": [
+     "2026-06-24: Official launch of the FedRAMP Consolidated Rules for 2026."
+    ]
+   }
+  ],
+  "renamed": [],
+  "changed": [
+   {
+    "id": "FRC-CLA-MFR",
+    "kind": "Rule",
+    "family": "FRC",
+    "name": "Mandatory FedRAMP Rules for Class A",
+    "path_before": "FRR/FRC/data/all/CLA",
+    "path": "FRR/FRC/data/all/CLA",
+    "text_before": "Providers seeking a Class A FedRAMP Certification MUST address all rules in this FedRAMP Class A Certification subset (FRC-CLA) AND the following additional FedRAMP Class Arules; the appropriate artifacts or information mapping for all rules MUST be supplied in the FedRAMP Certification Package.",
+    "text_after": "Providers seeking a Class A FedRAMP Certification MUST address all rules in this FedRAMP Class A Certification subset (FRC-CLA) AND the following additional FedRAMP Class A rules; the appropriate artifacts or information mapping for all rules MUST be supplied in the FedRAMP Certification Package.",
+    "fields": [
+     {
+      "field": "statement",
+      "label": "Statement",
+      "type": "text",
+      "before": "Providers seeking a Class A FedRAMP Certification MUST address all rules in this FedRAMP Class A Certification subset (FRC-CLA) AND the following additional FedRAMP Class Arules; the appropriate artifacts or information mapping for all rules MUST be supplied in the FedRAMP Certification Package.",
+      "after": "Providers seeking a Class A FedRAMP Certification MUST address all rules in this FedRAMP Class A Certification subset (FRC-CLA) AND the following additional FedRAMP Class A rules; the appropriate artifacts or information mapping for all rules MUST be supplied in the FedRAMP Certification Package.",
+      "editorial": true
+     }
+    ],
+    "sentences": [
+     "Editorial fix to the wording (punctuation, capitalization or formatting only)."
+    ],
+    "grade": "editorial",
+    "fedramp_notes": []
+   },
+   {
+    "id": "FRC-CSO-PKG",
+    "kind": "Rule",
+    "family": "FRC",
+    "name": "FedRAMP Certification Package",
+    "path_before": "FRR/FRC/data/all/CSO",
+    "path": "FRR/FRC/data/all/CSO",
+    "text_before": "Providers seeking a Class B Certification MUST supply a complete FedRAMP Certification Package to FedRAMP for initial certification; the FedRAMP Certification Package MUST include at least the following information:",
+    "text_after": "Providers MUST supply a complete FedRAMP Certification Package to FedRAMP for initial certification; the FedRAMP Certification Package MUST include at least the following information:",
+    "fields": [
+     {
+      "field": "statement",
+      "label": "Statement",
+      "type": "text",
+      "before": "Providers seeking a Class B Certification MUST supply a complete FedRAMP Certification Package to FedRAMP for initial certification; the FedRAMP Certification Package MUST include at least the following information:",
+      "after": "Providers MUST supply a complete FedRAMP Certification Package to FedRAMP for initial certification; the FedRAMP Certification Package MUST include at least the following information:",
+      "editorial": false
+     }
+    ],
+    "sentences": [
+     "Statement reworded (5 words removed, 0 words added)."
+    ],
+    "grade": "substantive",
+    "fedramp_notes": [
+     "2026-06-25: Removed dangling mention of Class B from a last-minute merger of rules; apologies for confusion, this rule applies to all classes."
+    ]
+   },
+   {
+    "id": "IEC-CSO-FIR",
+    "kind": "Rule",
+    "family": "IEC",
+    "name": "Final Incident Report",
+    "path_before": "FRR/IEC/data/all/CSO",
+    "path": "FRR/IEC/data/all/CSO",
+    "text_before": "Class A: Providers with Class A Certifications MUST responsibly notify all affected parties by providing a Final Incident Report once the incident has been resolved and recovery is complete, including final updates to all previously reported information.\nClass B: Providers with Class B Certifications MUST responsibly notify all affected parties by providing a Final Incident Report once the incident has been resolved and recovery is complete, including final updates to all previously reported information.\nClass C: Providers with Class C Certifications MUST responsibly notify all affected parties by providing a Final Incident Report once the incident has been resolved and recovery is complete, including final updates to all previously reported information.\nClass D: Providers with Class D Certifications MUST responsibly notify all affected parties by providing a Final Incident Report once the incident has been resolved and recovery is complete, including final updates to all previously reported information.",
+    "text_after": "Class A: Providers with Class A Certifications MUST responsibly notify all affected parties by providing a Final Incident Report once the incident has been resolved and recovery is complete, including final updates to all previously reported information.\nClass B: Providers with Class B Certifications MUST responsibly notify all affected parties by providing a Final Incident Report once the incident has been resolved and recovery is complete, including final updates to all previously reported information.\nClass C: Providers with Class C Certifications MUST responsibly notify all affected parties by providing a Final Incident Report once the incident has been resolved and recovery is complete, including final updates to all previously reported information.\nClass D: Providers with Class D Certifications MUST responsibly notify all affected parties by providing a Final Incident Report once the incident has been resolved and recovery is complete, including final updates to all previously reported information.",
+    "fields": [
+     {
+      "field": "notification[0].name",
+      "label": "Notification method 1 name",
+      "type": "text",
+      "before": "FedRAMP Security Team",
+      "after": "fedramp_security@fedramp.gov",
+      "editorial": false
+     }
+    ],
+    "sentences": [
+     "Notification method 1 name changed from “FedRAMP Security Team” to “fedramp_security@fedramp.gov”."
+    ],
+    "grade": "minor",
+    "fedramp_notes": []
+   },
+   {
+    "id": "IEC-CSO-IIR",
+    "kind": "Rule",
+    "family": "IEC",
+    "name": "Initial Incident Report",
+    "path_before": "FRR/IEC/data/all/CSO",
+    "path": "FRR/IEC/data/all/CSO",
+    "text_before": "Class A: Providers with Class A Certifications SHOULD responsibly notify all affected parties after identifying FedRAMP Reportable Incidents by providing an Initial Incident Report with as much of the following information that is available at the time of reporting and/or the current relevant status for each item:\nClass B: Providers with Class B Certifications MUST responsibly notify all affected parties after identifying FedRAMP Reportable Incidents by providing an Initial Incident Report with as much of the following information that is available at the time of reporting and/or the current relevant status for each item:\nClass C: Providers with Class C Certifications MUST responsibly notify all affected parties after identifying FedRAMP Reportable Incidents by providing an Initial Incident Report with as much of the following information that is available at the time of reporting and/or the current relevant status for each item:\nClass D: Providers with Class D Certifications MUST responsibly notify all affected parties after identifying FedRAMP Reportable Incidents by providing an Initial Incident Report with as much of the following information that is available at the time of reporting and/or the current relevant status for each item:",
+    "text_after": "Class A: Providers with Class A Certifications SHOULD responsibly notify all affected parties after identifying FedRAMP Reportable Incidents by providing an Initial Incident Report with as much of the following information that is available at the time of reporting and/or the current relevant status for each item:\nClass B: Providers with Class B Certifications MUST responsibly notify all affected parties after identifying FedRAMP Reportable Incidents by providing an Initial Incident Report with as much of the following information that is available at the time of reporting and/or the current relevant status for each item:\nClass C: Providers with Class C Certifications MUST responsibly notify all affected parties after identifying FedRAMP Reportable Incidents by providing an Initial Incident Report with as much of the following information that is available at the time of reporting and/or the current relevant status for each item:\nClass D: Providers with Class D Certifications MUST responsibly notify all affected parties after identifying FedRAMP Reportable Incidents by providing an Initial Incident Report with as much of the following information that is available at the time of reporting and/or the current relevant status for each item:",
+    "fields": [
+     {
+      "field": "notification[0].name",
+      "label": "Notification method 1 name",
+      "type": "text",
+      "before": "FedRAMP Security Team",
+      "after": "fedramp_security@fedramp.gov",
+      "editorial": false
+     }
+    ],
+    "sentences": [
+     "Notification method 1 name changed from “FedRAMP Security Team” to “fedramp_security@fedramp.gov”."
+    ],
+    "grade": "minor",
+    "fedramp_notes": []
+   },
+   {
+    "id": "IEC-CSO-OIR",
+    "kind": "Rule",
+    "family": "IEC",
+    "name": "Ongoing Incident Reports",
+    "path_before": "FRR/IEC/data/all/CSO",
+    "path": "FRR/IEC/data/all/CSO",
+    "text_before": "Class A: Providers with Class A Certifications SHOULD responsibly notify all affected parties of ongoing activity as new information becomes available during incident response for FedRAMP Reportable Incidents, including updates (or lack of updates) to all previously reported information and as much of the the following additional information that is available and/or the current relevant status for each item:\nClass B: Providers with Class B Certifications MUST responsibly notify all affected parties of ongoing activity as new information becomes available during incident response for FedRAMP Reportable Incidents, including updates (or lack of updates) to all previously reported information and as much of the the following additional information that is available and/or the current relevant status for each item:\nClass C: Providers with Class C Certifications MUST responsibly notify all affected parties of ongoing activity as new information becomes available during incident response for FedRAMP Reportable Incidents, including updates (or lack of updates) to all previously reported information and as much of the the following additional information that is available and/or the current relevant status for each item:\nClass D: Providers with Class D Certifications MUST responsibly notify all affected parties of ongoing activity as new information becomes available during incident response for FedRAMP Reportable Incidents, including updates (or lack of updates) to all previously reported information and as much of the the following additional information that is available and/or the current relevant status for each item:",
+    "text_after": "Class A: Providers with Class A Certifications SHOULD responsibly notify all affected parties of ongoing activity as new information becomes available during incident response for FedRAMP Reportable Incidents, including updates (or lack of updates) to all previously reported information and as much of the the following additional information that is available and/or the current relevant status for each item:\nClass B: Providers with Class B Certifications MUST responsibly notify all affected parties of ongoing activity as new information becomes available during incident response for FedRAMP Reportable Incidents, including updates (or lack of updates) to all previously reported information and as much of the the following additional information that is available and/or the current relevant status for each item:\nClass C: Providers with Class C Certifications MUST responsibly notify all affected parties of ongoing activity as new information becomes available during incident response for FedRAMP Reportable Incidents, including updates (or lack of updates) to all previously reported information and as much of the the following additional information that is available and/or the current relevant status for each item:\nClass D: Providers with Class D Certifications MUST responsibly notify all affected parties of ongoing activity as new information becomes available during incident response for FedRAMP Reportable Incidents, including updates (or lack of updates) to all previously reported information and as much of the the following additional information that is available and/or the current relevant status for each item:",
+    "fields": [
+     {
+      "field": "notification[0].name",
+      "label": "Notification method 1 name",
+      "type": "text",
+      "before": "FedRAMP Security Team",
+      "after": "fedramp_security@fedramp.gov",
+      "editorial": false
+     }
+    ],
+    "sentences": [
+     "Notification method 1 name changed from “FedRAMP Security Team” to “fedramp_security@fedramp.gov”."
+    ],
+    "grade": "minor",
+    "fedramp_notes": []
+   }
+  ],
+  "meta": [
+   {
+    "family": "FRC",
+    "name": "FedRAMP Certification",
+    "status": "changed",
+    "fields": [
+     {
+      "field": "subsets.CLA.applicability.paths",
+      "label": "Subsets cla applicability paths",
+      "type": "set",
+      "before": [
+       "Agency",
+       "Program"
+      ],
+      "after": [
+       "Program"
+      ],
+      "added_items": [],
+      "removed_items": [
+       "Agency"
+      ]
+     },
+     {
+      "field": "subsets.CLA.applicability.types",
+      "label": "Subsets cla applicability types",
+      "type": "set",
+      "before": [
+       "20x",
+       "Rev5"
+      ],
+      "after": [
+       "20x"
+      ],
+      "added_items": [],
+      "removed_items": [
+       "Rev5"
+      ]
+     }
+    ]
+   }
+  ]
+ }
+}

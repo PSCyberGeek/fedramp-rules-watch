@@ -1,0 +1,164 @@
+{
+ "slug": "2026-10-08",
+ "date": "2026-10-08",
+ "from": {
+  "sha": "1c33385a06acf4faf50da2b9b4dc31cd826e5b91",
+  "short": "1c33385",
+  "date": "2026-10-05T13:22:05-04:00",
+  "version": "2026.10.05.01"
+ },
+ "to": {
+  "sha": "6eb376782a7ca9950d2f852b68fa05e8cdeb6e12",
+  "short": "6eb3767",
+  "date": "2026-10-08T13:52:29-04:00",
+  "version": "2026.10.08.01"
+ },
+ "commits": [
+  {
+   "sha": "2285dea99dd9344e11300bbe0a717ac12fb6acb3",
+   "short": "2285dea",
+   "date": "2026-10-08T10:30:12-04:00",
+   "subject": "travel back from the future",
+   "url": "https://github.com/FedRAMP/rules/commit/2285dea99dd9344e11300bbe0a717ac12fb6acb3"
+  },
+  {
+   "sha": "6eb376782a7ca9950d2f852b68fa05e8cdeb6e12",
+   "short": "6eb3767",
+   "date": "2026-10-08T13:52:29-04:00",
+   "subject": "October 8 fixes (#40)",
+   "url": "https://github.com/FedRAMP/rules/commit/6eb376782a7ca9950d2f852b68fa05e8cdeb6e12"
+  }
+ ],
+ "summary": {
+  "headline": "1 removed, 2 changed",
+  "glance": [
+   "This update has **1 removed**, **2 changed** (1 substantive, 1 minor, 0 editorial, 0 mapping-only).",
+   "Defined-term links changed on 1 entry.",
+   "`SDR-CSX-KMT` Key Security Indicator Metrics: Normative keywords changed: MAY, MUST×3 → MAY, MUST×2, SHOULD.",
+   "`SDR-CSX-KMT` Key Security Indicator Metrics: Class B obligation level changed from **MUST** to **SHOULD** (weaker requirement).",
+   "Removed rule `FRC-CSX-MOT` Metrics Over Time for Key Security Indicators."
+  ]
+ },
+ "diff": {
+  "added": [],
+  "removed": [
+   {
+    "id": "FRC-CSX-MOT",
+    "kind": "Rule",
+    "family": "FRC",
+    "name": "Metrics Over Time for Key Security Indicators",
+    "path": "FRR/FRC/data/20x/CSX",
+    "text": "Class A: Providers seeking 20x Class A Certification MAY supply historical metrics for Key Security Indicators.\nClass B: Providers seeking 20x Class B Certification SHOULD supply historical metrics for Key Security Indicators.\nClass C: Providers seeking 20x Class C Certification MUST supply historical metrics including status from persistent validation over at least the past 6 months for all Key Security Indicators.\nClass D: Providers seeking 20x Class D Certification MUST provide historical metrics including status from persistent validation over at least the past 18 months for all Key Security Indicators.",
+    "force": null,
+    "fedramp_notes": [
+     "2026-06-24: Official launch of the FedRAMP Consolidated Rules for 2026."
+    ]
+   }
+  ],
+  "renamed": [],
+  "changed": [
+   {
+    "id": "FRD-SNT",
+    "kind": "Definition",
+    "family": "FRD",
+    "name": "SHOULD NOT",
+    "path_before": "FRD/data/all",
+    "path": "FRD/data/all",
+    "text_before": "There may exist valid reasons in particular circumstances when the particular action is acceptable or even useful, but the full implications must be understand and carefully weighed. Parties MUST address such rules in their security documentation by explaining their decisions about how they handle such rules.",
+    "text_after": "There may exist valid reasons in particular circumstances when the particular action is acceptable or even useful, but the full implications must be understood and carefully weighed. Parties MUST address such rules in their security documentation by explaining their decisions about how they handle such rules.",
+    "fields": [
+     {
+      "field": "definition",
+      "label": "Definition",
+      "type": "text",
+      "before": "There may exist valid reasons in particular circumstances when the particular action is acceptable or even useful, but the full implications must be understand and carefully weighed. Parties MUST address such rules in their security documentation by explaining their decisions about how they handle such rules.",
+      "after": "There may exist valid reasons in particular circumstances when the particular action is acceptable or even useful, but the full implications must be understood and carefully weighed. Parties MUST address such rules in their security documentation by explaining their decisions about how they handle such rules.",
+      "editorial": false
+     }
+    ],
+    "sentences": [
+     "Statement reworded (1 word removed, 1 word added)."
+    ],
+    "grade": "minor",
+    "fedramp_notes": [
+     "2026-10-08: Fixed a typo - understood instead of understand."
+    ]
+   },
+   {
+    "id": "SDR-CSX-KMT",
+    "kind": "Rule",
+    "family": "SDR",
+    "name": "Key Security Indicator Metrics",
+    "path_before": "FRR/SDR/data/20x/CSX",
+    "path": "FRR/SDR/data/20x/CSX",
+    "text_before": "Class A: Providers with 20x Class A Certifications MAY also include historical metrics in their Security Decision Record.\nClass B: Providers with 20x Class B Certifications MUST also include historical metrics in their Security Decision Record, supplying at least the following information for each applicable Key Security Indicator:\nClass C: Providers with 20x Class C Certifications MUST also include historical metrics in their Security Decision Record, supplying at least the following information for each applicable Key Security Indicator:\nClass D: Providers with 20x Class D Certifications MUST significantly supersede the minimum requirements for lower Classes, with specifics to be set during the 20x Phase 4 Pilot.",
+    "text_after": "Class A: Providers with 20x Class A Certifications MAY also include historical metrics in their Security Decision Record.\nClass B: Providers with 20x Class B Certifications SHOULD also include historical metrics in their Security Decision Record, supplying at least the following information for each applicable Key Security Indicator:\nClass C: Providers with 20x Class C Certifications MUST also include historical metrics in their Security Decision Record, supplying at least the following information for each applicable Key Security Indicator:\nClass D: Providers with 20x Class D Certifications MUST significantly supersede the minimum requirements for lower Classes, with specifics to be set during the 20x Phase 4 Pilot.",
+    "fields": [
+     {
+      "field": "note",
+      "label": "Note",
+      "type": "text",
+      "before": null,
+      "after": "For initial FedRAMP Certification, providers will need to have mechanisms in place and agree to meet this requirement in the event the cloud service has not been operating with related metrics available for the required period prior to applying for initial certification."
+     },
+     {
+      "field": "terms",
+      "label": "Linked defined terms",
+      "type": "set",
+      "before": [
+       "Security Decision Record (SDR)"
+      ],
+      "after": [
+       "Initial Certification",
+       "Security Decision Record (SDR)"
+      ],
+      "added_items": [
+       "Initial Certification"
+      ],
+      "removed_items": []
+     },
+     {
+      "field": "varies_by_class.b.force",
+      "label": "Class B obligation level",
+      "type": "text",
+      "before": "MUST",
+      "after": "SHOULD",
+      "editorial": false
+     },
+     {
+      "field": "varies_by_class.b.statement",
+      "label": "Class B statement",
+      "type": "text",
+      "before": "Providers with 20x Class B Certifications MUST also include historical metrics in their Security Decision Record, supplying at least the following information for each applicable Key Security Indicator:",
+      "after": "Providers with 20x Class B Certifications SHOULD also include historical metrics in their Security Decision Record, supplying at least the following information for each applicable Key Security Indicator:",
+      "editorial": false
+     },
+     {
+      "field": "varies_by_class.c.following_information",
+      "label": "Class C required information",
+      "type": "text",
+      "before": [
+       "All daily metric data up to the past year (where available)",
+       "Summary of each metric over the past 30 days",
+       "Summary of metric up to the past year (where available)"
+      ],
+      "after": "Summary of each metric over the past 30 days\nSummary of metric up to the past year (where available)\nAll daily metric data (including status of persistent validation) up to the past year (where available)"
+     }
+    ],
+    "sentences": [
+     "Statement reworded (1 word removed, 1 word added).",
+     "Normative keywords changed: MAY, MUST×3 → MAY, MUST×2, SHOULD.",
+     "Note added.",
+     "Linked defined terms: added `Initial Certification`.",
+     "Class B obligation level changed from **MUST** to **SHOULD** (weaker requirement).",
+     "Class C required information reworded (15 words removed, 20 words added)."
+    ],
+    "grade": "substantive",
+    "fedramp_notes": [
+     "2026-10-08: Changed MUST to SHOULD for Class B, added note, clarified persistent validation status should be included."
+    ]
+   }
+  ],
+  "meta": []
+ }
+}

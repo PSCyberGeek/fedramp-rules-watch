@@ -1,0 +1,928 @@
+{
+ "slug": "2026-07-01",
+ "date": "2026-07-01",
+ "from": {
+  "sha": "38cebbd1cf3de248f76a4d0ae606a82fc777a1ba",
+  "short": "38cebbd",
+  "date": "2026-06-29T13:25:41-04:00",
+  "version": "2026.06.24.01"
+ },
+ "to": {
+  "sha": "cb3b2ff7eed075a6a565b0a5d62f28c2a47043d6",
+  "short": "cb3b2ff",
+  "date": "2026-07-01T17:18:54-04:00",
+  "version": "2026.07.01.01"
+ },
+ "commits": [
+  {
+   "sha": "544cbc5de5b2e877df5504e229e91fe0ceaf7204",
+   "short": "544cbc5",
+   "date": "2026-07-01T10:26:00-04:00",
+   "subject": "Remove IVV-CSF-AIA rule from class a requirements.",
+   "url": "https://github.com/FedRAMP/rules/commit/544cbc5de5b2e877df5504e229e91fe0ceaf7204"
+  },
+  {
+   "sha": "87704e5699adce2f7b7c836ff20cb1eb9d2bf9f2",
+   "short": "87704e5",
+   "date": "2026-07-01T10:29:04-04:00",
+   "subject": "Add comment for removal of IVV-CSF-AIA in FedRAMP consolidated rules.",
+   "url": "https://github.com/FedRAMP/rules/commit/87704e5699adce2f7b7c836ff20cb1eb9d2bf9f2"
+  },
+  {
+   "sha": "ecf41ede242a381a2150e31abb2180b187df778a",
+   "short": "ecf41ed",
+   "date": "2026-07-01T11:32:25-04:00",
+   "subject": "Update FRC-CSO-PKG statement to remove certification class reference; add new vulnerability terms to VDR-TFR-PVR.",
+   "url": "https://github.com/FedRAMP/rules/commit/ecf41ede242a381a2150e31abb2180b187df778a"
+  },
+  {
+   "sha": "ff77f4cd18892f89b85aac99ca540522f947b345",
+   "short": "ff77f4c",
+   "date": "2026-07-01T11:52:23-04:00",
+   "subject": "Add \"related\" reference in VDR-TFR-PVR to VER-EVA-EPA in FedRAMP consolidated rules.",
+   "url": "https://github.com/FedRAMP/rules/commit/ff77f4cd18892f89b85aac99ca540522f947b345"
+  },
+  {
+   "sha": "81d16a42eb829a8b0f4550f0f92f10e03b5d5b15",
+   "short": "81d16a4",
+   "date": "2026-07-01T12:00:27-04:00",
+   "subject": "Update metadata version and add \"related\" reference to VER-EVA-EPA in VDR-TFR-PVR; clarify N-rating definition in class certification requirements.",
+   "url": "https://github.com/FedRAMP/rules/commit/81d16a42eb829a8b0f4550f0f92f10e03b5d5b15"
+  },
+  {
+   "sha": "44781495cc1aa4b9f7de9b4680dded4f4502a67c",
+   "short": "4478149",
+   "date": "2026-07-01T12:14:11-04:00",
+   "subject": "Removed CDS-CSO-AVR (Availability Reporting) since this rule is defined as SHOULD and included in FRC-CLA-RFR (Recommended FedRAMP Rules for Class A)",
+   "url": "https://github.com/FedRAMP/rules/commit/44781495cc1aa4b9f7de9b4680dded4f4502a67c"
+  },
+  {
+   "sha": "cb3b2ff7eed075a6a565b0a5d62f28c2a47043d6",
+   "short": "cb3b2ff",
+   "date": "2026-07-01T17:18:54-04:00",
+   "subject": "Update terminology from \"Reporting\" to \"Communication\" in FedRAMP Incident Evaluation rules.",
+   "url": "https://github.com/FedRAMP/rules/commit/cb3b2ff7eed075a6a565b0a5d62f28c2a47043d6"
+  }
+ ],
+ "summary": {
+  "headline": "27 changed, 1 ruleset updated",
+  "glance": [
+   "This update has **27 changed** (1 substantive, 26 minor, 0 editorial, 0 mapping-only)."
+  ]
+ },
+ "diff": {
+  "added": [],
+  "removed": [],
+  "renamed": [],
+  "changed": [
+   {
+    "id": "FRC-CLA-MFR",
+    "kind": "Rule",
+    "family": "FRC",
+    "name": "Mandatory FedRAMP Rules for Class A",
+    "path_before": "FRR/FRC/data/all/CLA",
+    "path": "FRR/FRC/data/all/CLA",
+    "text_before": "Providers seeking a Class A FedRAMP Certification MUST address all rules in this FedRAMP Class A Certification subset (FRC-CLA) AND the following additional FedRAMP Class Arules; the appropriate artifacts or information mapping for all rules MUST be supplied in the FedRAMP Certification Package.",
+    "text_after": "Providers seeking a Class A FedRAMP Certification MUST address all rules in this FedRAMP Class A Certification subset (FRC-CLA) AND the following additional FedRAMP Class A rules; the appropriate artifacts or information mapping for all rules MUST be supplied in the FedRAMP Certification Package.",
+    "fields": [
+     {
+      "field": "following_information",
+      "label": "Required information",
+      "type": "text",
+      "before": "FedRAMP Certification: FRC-CSO-PKG (FedRAMP Certification Package)\nFedRAMP Certification: FRC-CSO-JSN (FedRAMP JSON Schemas)\nFedRAMP Certification: FRC-CSO-POP (Pick One Program Certification Type)\nMinimum Assessment Scope: MAS-CSO-IIR (Identify Information Resources)\nCertification Data Sharing: CDS-CSO-PUB (Public Information)\nCertification Data Sharing: CDS-CSO-UTC (Use Trust Centers)\nCertification Data Sharing: CDS-UTC-AAD (Agency Access Denial)\nCertification Data Sharing: CDS-CSO-AVR (Availability Reporting)\nAddressing FedRAMP Communication: AFC-CSO-INB (Maintain a FedRAMP Security Inbox)\nAddressing FedRAMP Communication: AFC-CSO-RCV (Receive Email Without Disruption)\nAddressing FedRAMP Communication: AFC-CSO-CRA (Complete Required Actions)\nIncident Evaluation and Communication: IEC-CSO-EFR (Evaluate FedRAMP Reportability)\nIncident Evaluation and Communication: IEC-CSO-FIR (Final Incident Report)\nVulnerability Detection and Response: VDR-CSO-DET (Vulnerability Detection)\nCollaborative Continuous Monitoring: CCM-OCR-AVL (Report Availability)\nCollaborative Continuous Monitoring: CCM-OCR-NRD (Next Report Date)\nIndependent Verification and Validation: IVV-CSX-AIA (Annual Independent Assessments for 20x)\nIndependent Verification and Validation: IVV-CSF-AIA (Annual Independent Assessments for Rev5)\nKey Security Indicators: KSI-CMT-LMC (Logging Changes)\nKey Security Indicators: KSI-CNA-RNT (Restricting Network Traffic)\nKey Security Indicators: KSI-CED-RAT (Reviewing All Training)\nKey Security Indicators: KSI-IAM-AAM (Automating Account Management)\nKey Security Indicators: KSI-IAM-APM (Adopting Passwordless Methods)\nKey Security Indicators: KSI-INR-RIR (Reviewing Incident Response Procedures)\nKey Security Indicators: KSI-SVC-SIN (Securing Information)",
+      "after": "FedRAMP Certification: FRC-CSO-PKG (FedRAMP Certification Package)\nFedRAMP Certification: FRC-CSO-JSN (FedRAMP JSON Schemas)\nFedRAMP Certification: FRC-CSO-POP (Pick One Program Certification Type)\nMinimum Assessment Scope: MAS-CSO-IIR (Identify Information Resources)\nCertification Data Sharing: CDS-CSO-PUB (Public Information)\nCertification Data Sharing: CDS-CSO-UTC (Use Trust Centers)\nCertification Data Sharing: CDS-UTC-AAD (Agency Access Denial)\nAddressing FedRAMP Communication: AFC-CSO-INB (Maintain a FedRAMP Security Inbox)\nAddressing FedRAMP Communication: AFC-CSO-RCV (Receive Email Without Disruption)\nAddressing FedRAMP Communication: AFC-CSO-CRA (Complete Required Actions)\nIncident Evaluation and Communication: IEC-CSO-EFR (Evaluate FedRAMP Reportability)\nIncident Evaluation and Communication: IEC-CSO-FIR (Final Incident Report)\nVulnerability Detection and Response: VDR-CSO-DET (Vulnerability Detection)\nCollaborative Continuous Monitoring: CCM-OCR-AVL (Report Availability)\nCollaborative Continuous Monitoring: CCM-OCR-NRD (Next Report Date)\nIndependent Verification and Validation: IVV-CSX-AIA (Annual Independent Assessments for 20x)\nKey Security Indicators: KSI-CMT-LMC (Logging Changes)\nKey Security Indicators: KSI-CNA-RNT (Restricting Network Traffic)\nKey Security Indicators: KSI-CED-RAT (Reviewing All Training)\nKey Security Indicators: KSI-IAM-AAM (Automating Account Management)\nKey Security Indicators: KSI-IAM-APM (Adopting Passwordless Methods)\nKey Security Indicators: KSI-INR-RIR (Reviewing Incident Response Procedures)\nKey Security Indicators: KSI-SVC-SIN (Securing Information)",
+      "editorial": false
+     },
+     {
+      "field": "related",
+      "label": "Related rules",
+      "type": "set",
+      "before": [
+       "AFC-CSO-CRA",
+       "AFC-CSO-INB",
+       "AFC-CSO-RCV",
+       "CCM-OCR-AVL",
+       "CCM-OCR-NRD",
+       "CDS-CSO-AVR",
+       "CDS-CSO-PUB",
+       "CDS-CSO-UTC",
+       "CDS-UTC-AAD",
+       "FRC-CSO-JSN",
+       "FRC-CSO-PKG",
+       "FRC-CSO-POP",
+       "IEC-CSO-EFR",
+       "IEC-CSO-FIR",
+       "IVV-CSF-AIA",
+       "IVV-CSX-AIA",
+       "KSI-CED-RAT",
+       "KSI-CMT-LMC",
+       "KSI-CNA-RNT",
+       "KSI-IAM-AAM",
+       "KSI-IAM-APM",
+       "KSI-INR-RIR",
+       "KSI-SVC-SIN",
+       "MAS-CSO-IIR",
+       "VDR-CSO-DET"
+      ],
+      "after": [
+       "AFC-CSO-CRA",
+       "AFC-CSO-INB",
+       "AFC-CSO-RCV",
+       "CCM-OCR-AVL",
+       "CCM-OCR-NRD",
+       "CDS-CSO-PUB",
+       "CDS-CSO-UTC",
+       "CDS-UTC-AAD",
+       "FRC-CSO-JSN",
+       "FRC-CSO-PKG",
+       "FRC-CSO-POP",
+       "IEC-CSO-EFR",
+       "IEC-CSO-FIR",
+       "IVV-CSX-AIA",
+       "KSI-CED-RAT",
+       "KSI-CMT-LMC",
+       "KSI-CNA-RNT",
+       "KSI-IAM-AAM",
+       "KSI-IAM-APM",
+       "KSI-INR-RIR",
+       "KSI-SVC-SIN",
+       "MAS-CSO-IIR",
+       "VDR-CSO-DET"
+      ],
+      "added_items": [],
+      "removed_items": [
+       "CDS-CSO-AVR",
+       "IVV-CSF-AIA"
+      ]
+     },
+     {
+      "field": "statement",
+      "label": "Statement",
+      "type": "text",
+      "before": "Providers seeking a Class A FedRAMP Certification MUST address all rules in this FedRAMP Class A Certification subset (FRC-CLA) AND the following additional FedRAMP Class Arules; the appropriate artifacts or information mapping for all rules MUST be supplied in the FedRAMP Certification Package.",
+      "after": "Providers seeking a Class A FedRAMP Certification MUST address all rules in this FedRAMP Class A Certification subset (FRC-CLA) AND the following additional FedRAMP Class A rules; the appropriate artifacts or information mapping for all rules MUST be supplied in the FedRAMP Certification Package.",
+      "editorial": true
+     }
+    ],
+    "sentences": [
+     "Editorial fix to the wording (punctuation, capitalization or formatting only).",
+     "Required information reworded (16 words removed, 0 words added).",
+     "Related rules: removed `CDS-CSO-AVR`, `IVV-CSF-AIA`."
+    ],
+    "grade": "minor",
+    "fedramp_notes": [
+     "2026-07-01: Removed reference to Independent Verification and Validation: IVV-CSF-AIA (Annual Independent Assessments for Rev5); Removed CDS-CSO-AVR (Availability Reporting) since this rule is defined as SHOULD and included in FRC-CLA-RFR (Recommended FedRAMP Rules for Class A)"
+    ]
+   },
+   {
+    "id": "FRC-CSO-PKG",
+    "kind": "Rule",
+    "family": "FRC",
+    "name": "FedRAMP Certification Package",
+    "path_before": "FRR/FRC/data/all/CSO",
+    "path": "FRR/FRC/data/all/CSO",
+    "text_before": "Providers seeking a Class B Certification MUST supply a complete FedRAMP Certification Package to FedRAMP for initial certification; the FedRAMP Certification Package MUST include at least the following information:",
+    "text_after": "Providers seeking a Certification MUST supply a complete FedRAMP Certification Package to FedRAMP for initial certification; the FedRAMP Certification Package MUST include at least the following information:",
+    "fields": [
+     {
+      "field": "statement",
+      "label": "Statement",
+      "type": "text",
+      "before": "Providers seeking a Class B Certification MUST supply a complete FedRAMP Certification Package to FedRAMP for initial certification; the FedRAMP Certification Package MUST include at least the following information:",
+      "after": "Providers seeking a Certification MUST supply a complete FedRAMP Certification Package to FedRAMP for initial certification; the FedRAMP Certification Package MUST include at least the following information:",
+      "editorial": false
+     }
+    ],
+    "sentences": [
+     "Statement reworded (2 words removed, 0 words added)."
+    ],
+    "grade": "minor",
+    "fedramp_notes": []
+   },
+   {
+    "id": "IR-01",
+    "kind": "Control parameter/guidance",
+    "family": "CTL IR",
+    "name": "",
+    "path_before": "CTL/IR",
+    "path": "CTL/IR",
+    "text_before": "Follow the FedRAMP Incident Evaluation and Reporting rules.",
+    "text_after": "Follow the FedRAMP Incident Evaluation and Communication rules.",
+    "fields": [
+     {
+      "field": "guidance",
+      "label": "Guidance",
+      "type": "text",
+      "before": [
+       "Follow the FedRAMP Incident Evaluation and Reporting rules."
+      ],
+      "after": "Follow the FedRAMP Incident Evaluation and Communication rules."
+     }
+    ],
+    "sentences": [
+     "Statement reworded (1 word removed, 1 word added)."
+    ],
+    "grade": "minor",
+    "fedramp_notes": []
+   },
+   {
+    "id": "IR-02",
+    "kind": "Control parameter/guidance",
+    "family": "CTL IR",
+    "name": "",
+    "path_before": "CTL/IR",
+    "path": "CTL/IR",
+    "text_before": "Follow the FedRAMP Incident Evaluation and Reporting rules.",
+    "text_after": "Follow the FedRAMP Incident Evaluation and Communication rules.",
+    "fields": [
+     {
+      "field": "guidance",
+      "label": "Guidance",
+      "type": "text",
+      "before": [
+       "Follow the FedRAMP Incident Evaluation and Reporting rules."
+      ],
+      "after": "Follow the FedRAMP Incident Evaluation and Communication rules."
+     }
+    ],
+    "sentences": [
+     "Statement reworded (1 word removed, 1 word added)."
+    ],
+    "grade": "minor",
+    "fedramp_notes": []
+   },
+   {
+    "id": "IR-02-01",
+    "kind": "Control parameter/guidance",
+    "family": "CTL IR",
+    "name": "",
+    "path_before": "CTL/IR",
+    "path": "CTL/IR",
+    "text_before": "Follow the FedRAMP Incident Evaluation and Reporting rules.",
+    "text_after": "Follow the FedRAMP Incident Evaluation and Communication rules.",
+    "fields": [
+     {
+      "field": "guidance",
+      "label": "Guidance",
+      "type": "text",
+      "before": [
+       "Follow the FedRAMP Incident Evaluation and Reporting rules."
+      ],
+      "after": "Follow the FedRAMP Incident Evaluation and Communication rules."
+     }
+    ],
+    "sentences": [
+     "Statement reworded (1 word removed, 1 word added)."
+    ],
+    "grade": "minor",
+    "fedramp_notes": []
+   },
+   {
+    "id": "IR-02-02",
+    "kind": "Control parameter/guidance",
+    "family": "CTL IR",
+    "name": "",
+    "path_before": "CTL/IR",
+    "path": "CTL/IR",
+    "text_before": "Follow the FedRAMP Incident Evaluation and Reporting rules.",
+    "text_after": "Follow the FedRAMP Incident Evaluation and Communication rules.",
+    "fields": [
+     {
+      "field": "guidance",
+      "label": "Guidance",
+      "type": "text",
+      "before": [
+       "Follow the FedRAMP Incident Evaluation and Reporting rules."
+      ],
+      "after": "Follow the FedRAMP Incident Evaluation and Communication rules."
+     }
+    ],
+    "sentences": [
+     "Statement reworded (1 word removed, 1 word added)."
+    ],
+    "grade": "minor",
+    "fedramp_notes": []
+   },
+   {
+    "id": "IR-03",
+    "kind": "Control parameter/guidance",
+    "family": "CTL IR",
+    "name": "",
+    "path_before": "CTL/IR",
+    "path": "CTL/IR",
+    "text_before": "Follow the FedRAMP Incident Evaluation and Reporting rules.",
+    "text_after": "Follow the FedRAMP Incident Evaluation and Communication rules.",
+    "fields": [
+     {
+      "field": "guidance",
+      "label": "Guidance",
+      "type": "text",
+      "before": [
+       "Follow the FedRAMP Incident Evaluation and Reporting rules."
+      ],
+      "after": "Follow the FedRAMP Incident Evaluation and Communication rules."
+     }
+    ],
+    "sentences": [
+     "Statement reworded (1 word removed, 1 word added)."
+    ],
+    "grade": "minor",
+    "fedramp_notes": []
+   },
+   {
+    "id": "IR-03-02",
+    "kind": "Control parameter/guidance",
+    "family": "CTL IR",
+    "name": "",
+    "path_before": "CTL/IR",
+    "path": "CTL/IR",
+    "text_before": "Follow the FedRAMP Incident Evaluation and Reporting rules.",
+    "text_after": "Follow the FedRAMP Incident Evaluation and Communication rules.",
+    "fields": [
+     {
+      "field": "guidance",
+      "label": "Guidance",
+      "type": "text",
+      "before": [
+       "Follow the FedRAMP Incident Evaluation and Reporting rules."
+      ],
+      "after": "Follow the FedRAMP Incident Evaluation and Communication rules."
+     }
+    ],
+    "sentences": [
+     "Statement reworded (1 word removed, 1 word added)."
+    ],
+    "grade": "minor",
+    "fedramp_notes": []
+   },
+   {
+    "id": "IR-04",
+    "kind": "Control parameter/guidance",
+    "family": "CTL IR",
+    "name": "",
+    "path_before": "CTL/IR",
+    "path": "CTL/IR",
+    "text_before": "Follow the FedRAMP Incident Evaluation and Reporting rules.",
+    "text_after": "Follow the FedRAMP Incident Evaluation and Communication rules.",
+    "fields": [
+     {
+      "field": "guidance",
+      "label": "Guidance",
+      "type": "text",
+      "before": [
+       "Follow the FedRAMP Incident Evaluation and Reporting rules."
+      ],
+      "after": "Follow the FedRAMP Incident Evaluation and Communication rules."
+     }
+    ],
+    "sentences": [
+     "Statement reworded (1 word removed, 1 word added)."
+    ],
+    "grade": "minor",
+    "fedramp_notes": []
+   },
+   {
+    "id": "IR-04-01",
+    "kind": "Control parameter/guidance",
+    "family": "CTL IR",
+    "name": "",
+    "path_before": "CTL/IR",
+    "path": "CTL/IR",
+    "text_before": "Follow the FedRAMP Incident Evaluation and Reporting rules.",
+    "text_after": "Follow the FedRAMP Incident Evaluation and Communication rules.",
+    "fields": [
+     {
+      "field": "guidance",
+      "label": "Guidance",
+      "type": "text",
+      "before": [
+       "Follow the FedRAMP Incident Evaluation and Reporting rules."
+      ],
+      "after": "Follow the FedRAMP Incident Evaluation and Communication rules."
+     }
+    ],
+    "sentences": [
+     "Statement reworded (1 word removed, 1 word added)."
+    ],
+    "grade": "minor",
+    "fedramp_notes": []
+   },
+   {
+    "id": "IR-04-02",
+    "kind": "Control parameter/guidance",
+    "family": "CTL IR",
+    "name": "",
+    "path_before": "CTL/IR",
+    "path": "CTL/IR",
+    "text_before": "Follow the FedRAMP Incident Evaluation and Reporting rules.",
+    "text_after": "Follow the FedRAMP Incident Evaluation and Communication rules.",
+    "fields": [
+     {
+      "field": "guidance",
+      "label": "Guidance",
+      "type": "text",
+      "before": [
+       "Follow the FedRAMP Incident Evaluation and Reporting rules."
+      ],
+      "after": "Follow the FedRAMP Incident Evaluation and Communication rules."
+     }
+    ],
+    "sentences": [
+     "Statement reworded (1 word removed, 1 word added)."
+    ],
+    "grade": "minor",
+    "fedramp_notes": []
+   },
+   {
+    "id": "IR-04-04",
+    "kind": "Control parameter/guidance",
+    "family": "CTL IR",
+    "name": "",
+    "path_before": "CTL/IR",
+    "path": "CTL/IR",
+    "text_before": "Follow the FedRAMP Incident Evaluation and Reporting rules.",
+    "text_after": "Follow the FedRAMP Incident Evaluation and Communication rules.",
+    "fields": [
+     {
+      "field": "guidance",
+      "label": "Guidance",
+      "type": "text",
+      "before": [
+       "Follow the FedRAMP Incident Evaluation and Reporting rules."
+      ],
+      "after": "Follow the FedRAMP Incident Evaluation and Communication rules."
+     }
+    ],
+    "sentences": [
+     "Statement reworded (1 word removed, 1 word added)."
+    ],
+    "grade": "minor",
+    "fedramp_notes": []
+   },
+   {
+    "id": "IR-04-06",
+    "kind": "Control parameter/guidance",
+    "family": "CTL IR",
+    "name": "",
+    "path_before": "CTL/IR",
+    "path": "CTL/IR",
+    "text_before": "Follow the FedRAMP Incident Evaluation and Reporting rules.",
+    "text_after": "Follow the FedRAMP Incident Evaluation and Communication rules.",
+    "fields": [
+     {
+      "field": "guidance",
+      "label": "Guidance",
+      "type": "text",
+      "before": [
+       "Follow the FedRAMP Incident Evaluation and Reporting rules."
+      ],
+      "after": "Follow the FedRAMP Incident Evaluation and Communication rules."
+     }
+    ],
+    "sentences": [
+     "Statement reworded (1 word removed, 1 word added)."
+    ],
+    "grade": "minor",
+    "fedramp_notes": []
+   },
+   {
+    "id": "IR-04-11",
+    "kind": "Control parameter/guidance",
+    "family": "CTL IR",
+    "name": "",
+    "path_before": "CTL/IR",
+    "path": "CTL/IR",
+    "text_before": "Follow the FedRAMP Incident Evaluation and Reporting rules.",
+    "text_after": "Follow the FedRAMP Incident Evaluation and Communication rules.",
+    "fields": [
+     {
+      "field": "guidance",
+      "label": "Guidance",
+      "type": "text",
+      "before": [
+       "Follow the FedRAMP Incident Evaluation and Reporting rules."
+      ],
+      "after": "Follow the FedRAMP Incident Evaluation and Communication rules."
+     }
+    ],
+    "sentences": [
+     "Statement reworded (1 word removed, 1 word added)."
+    ],
+    "grade": "minor",
+    "fedramp_notes": []
+   },
+   {
+    "id": "IR-05",
+    "kind": "Control parameter/guidance",
+    "family": "CTL IR",
+    "name": "",
+    "path_before": "CTL/IR",
+    "path": "CTL/IR",
+    "text_before": "Follow the FedRAMP Incident Evaluation and Reporting rules.",
+    "text_after": "Follow the FedRAMP Incident Evaluation and Communication rules.",
+    "fields": [
+     {
+      "field": "guidance",
+      "label": "Guidance",
+      "type": "text",
+      "before": [
+       "Follow the FedRAMP Incident Evaluation and Reporting rules."
+      ],
+      "after": "Follow the FedRAMP Incident Evaluation and Communication rules."
+     }
+    ],
+    "sentences": [
+     "Statement reworded (1 word removed, 1 word added)."
+    ],
+    "grade": "minor",
+    "fedramp_notes": []
+   },
+   {
+    "id": "IR-05-01",
+    "kind": "Control parameter/guidance",
+    "family": "CTL IR",
+    "name": "",
+    "path_before": "CTL/IR",
+    "path": "CTL/IR",
+    "text_before": "Follow the FedRAMP Incident Evaluation and Reporting rules.",
+    "text_after": "Follow the FedRAMP Incident Evaluation and Communication rules.",
+    "fields": [
+     {
+      "field": "guidance",
+      "label": "Guidance",
+      "type": "text",
+      "before": [
+       "Follow the FedRAMP Incident Evaluation and Reporting rules."
+      ],
+      "after": "Follow the FedRAMP Incident Evaluation and Communication rules."
+     }
+    ],
+    "sentences": [
+     "Statement reworded (1 word removed, 1 word added)."
+    ],
+    "grade": "minor",
+    "fedramp_notes": []
+   },
+   {
+    "id": "IR-06",
+    "kind": "Control parameter/guidance",
+    "family": "CTL IR",
+    "name": "",
+    "path_before": "CTL/IR",
+    "path": "CTL/IR",
+    "text_before": "Follow the FedRAMP Incident Evaluation and Reporting rules.",
+    "text_after": "Follow the FedRAMP Incident Evaluation and Communication rules.",
+    "fields": [
+     {
+      "field": "guidance",
+      "label": "Guidance",
+      "type": "text",
+      "before": [
+       "Follow the FedRAMP Incident Evaluation and Reporting rules."
+      ],
+      "after": "Follow the FedRAMP Incident Evaluation and Communication rules."
+     }
+    ],
+    "sentences": [
+     "Statement reworded (1 word removed, 1 word added)."
+    ],
+    "grade": "minor",
+    "fedramp_notes": []
+   },
+   {
+    "id": "IR-06-01",
+    "kind": "Control parameter/guidance",
+    "family": "CTL IR",
+    "name": "",
+    "path_before": "CTL/IR",
+    "path": "CTL/IR",
+    "text_before": "Follow the FedRAMP Incident Evaluation and Reporting rules.",
+    "text_after": "Follow the FedRAMP Incident Evaluation and Communication rules.",
+    "fields": [
+     {
+      "field": "guidance",
+      "label": "Guidance",
+      "type": "text",
+      "before": [
+       "Follow the FedRAMP Incident Evaluation and Reporting rules."
+      ],
+      "after": "Follow the FedRAMP Incident Evaluation and Communication rules."
+     }
+    ],
+    "sentences": [
+     "Statement reworded (1 word removed, 1 word added)."
+    ],
+    "grade": "minor",
+    "fedramp_notes": []
+   },
+   {
+    "id": "IR-06-03",
+    "kind": "Control parameter/guidance",
+    "family": "CTL IR",
+    "name": "",
+    "path_before": "CTL/IR",
+    "path": "CTL/IR",
+    "text_before": "Follow the FedRAMP Incident Evaluation and Reporting rules.",
+    "text_after": "Follow the FedRAMP Incident Evaluation and Communication rules.",
+    "fields": [
+     {
+      "field": "guidance",
+      "label": "Guidance",
+      "type": "text",
+      "before": [
+       "Follow the FedRAMP Incident Evaluation and Reporting rules."
+      ],
+      "after": "Follow the FedRAMP Incident Evaluation and Communication rules."
+     }
+    ],
+    "sentences": [
+     "Statement reworded (1 word removed, 1 word added)."
+    ],
+    "grade": "minor",
+    "fedramp_notes": []
+   },
+   {
+    "id": "IR-07",
+    "kind": "Control parameter/guidance",
+    "family": "CTL IR",
+    "name": "",
+    "path_before": "CTL/IR",
+    "path": "CTL/IR",
+    "text_before": "Follow the FedRAMP Incident Evaluation and Reporting rules.",
+    "text_after": "Follow the FedRAMP Incident Evaluation and Communication rules.",
+    "fields": [
+     {
+      "field": "guidance",
+      "label": "Guidance",
+      "type": "text",
+      "before": [
+       "Follow the FedRAMP Incident Evaluation and Reporting rules."
+      ],
+      "after": "Follow the FedRAMP Incident Evaluation and Communication rules."
+     }
+    ],
+    "sentences": [
+     "Statement reworded (1 word removed, 1 word added)."
+    ],
+    "grade": "minor",
+    "fedramp_notes": []
+   },
+   {
+    "id": "IR-07-01",
+    "kind": "Control parameter/guidance",
+    "family": "CTL IR",
+    "name": "",
+    "path_before": "CTL/IR",
+    "path": "CTL/IR",
+    "text_before": "Follow the FedRAMP Incident Evaluation and Reporting rules.",
+    "text_after": "Follow the FedRAMP Incident Evaluation and Communication rules.",
+    "fields": [
+     {
+      "field": "guidance",
+      "label": "Guidance",
+      "type": "text",
+      "before": [
+       "Follow the FedRAMP Incident Evaluation and Reporting rules."
+      ],
+      "after": "Follow the FedRAMP Incident Evaluation and Communication rules."
+     }
+    ],
+    "sentences": [
+     "Statement reworded (1 word removed, 1 word added)."
+    ],
+    "grade": "minor",
+    "fedramp_notes": []
+   },
+   {
+    "id": "IR-08",
+    "kind": "Control parameter/guidance",
+    "family": "CTL IR",
+    "name": "",
+    "path_before": "CTL/IR",
+    "path": "CTL/IR",
+    "text_before": "Follow the FedRAMP Incident Evaluation and Reporting rules.",
+    "text_after": "Follow the FedRAMP Incident Evaluation and Communication rules.",
+    "fields": [
+     {
+      "field": "guidance",
+      "label": "Guidance",
+      "type": "text",
+      "before": [
+       "Follow the FedRAMP Incident Evaluation and Reporting rules."
+      ],
+      "after": "Follow the FedRAMP Incident Evaluation and Communication rules."
+     }
+    ],
+    "sentences": [
+     "Statement reworded (1 word removed, 1 word added)."
+    ],
+    "grade": "minor",
+    "fedramp_notes": []
+   },
+   {
+    "id": "IR-09",
+    "kind": "Control parameter/guidance",
+    "family": "CTL IR",
+    "name": "",
+    "path_before": "CTL/IR",
+    "path": "CTL/IR",
+    "text_before": "Follow the FedRAMP Incident Evaluation and Reporting rules.",
+    "text_after": "Follow the FedRAMP Incident Evaluation and Communication rules.",
+    "fields": [
+     {
+      "field": "guidance",
+      "label": "Guidance",
+      "type": "text",
+      "before": [
+       "Follow the FedRAMP Incident Evaluation and Reporting rules."
+      ],
+      "after": "Follow the FedRAMP Incident Evaluation and Communication rules."
+     }
+    ],
+    "sentences": [
+     "Statement reworded (1 word removed, 1 word added)."
+    ],
+    "grade": "minor",
+    "fedramp_notes": []
+   },
+   {
+    "id": "IR-09-02",
+    "kind": "Control parameter/guidance",
+    "family": "CTL IR",
+    "name": "",
+    "path_before": "CTL/IR",
+    "path": "CTL/IR",
+    "text_before": "Follow the FedRAMP Incident Evaluation and Reporting rules.",
+    "text_after": "Follow the FedRAMP Incident Evaluation and Communication rules.",
+    "fields": [
+     {
+      "field": "guidance",
+      "label": "Guidance",
+      "type": "text",
+      "before": [
+       "Follow the FedRAMP Incident Evaluation and Reporting rules."
+      ],
+      "after": "Follow the FedRAMP Incident Evaluation and Communication rules."
+     }
+    ],
+    "sentences": [
+     "Statement reworded (1 word removed, 1 word added)."
+    ],
+    "grade": "minor",
+    "fedramp_notes": []
+   },
+   {
+    "id": "IR-09-03",
+    "kind": "Control parameter/guidance",
+    "family": "CTL IR",
+    "name": "",
+    "path_before": "CTL/IR",
+    "path": "CTL/IR",
+    "text_before": "Follow the FedRAMP Incident Evaluation and Reporting rules.",
+    "text_after": "Follow the FedRAMP Incident Evaluation and Communication rules.",
+    "fields": [
+     {
+      "field": "guidance",
+      "label": "Guidance",
+      "type": "text",
+      "before": [
+       "Follow the FedRAMP Incident Evaluation and Reporting rules."
+      ],
+      "after": "Follow the FedRAMP Incident Evaluation and Communication rules."
+     }
+    ],
+    "sentences": [
+     "Statement reworded (1 word removed, 1 word added)."
+    ],
+    "grade": "minor",
+    "fedramp_notes": []
+   },
+   {
+    "id": "IR-09-04",
+    "kind": "Control parameter/guidance",
+    "family": "CTL IR",
+    "name": "",
+    "path_before": "CTL/IR",
+    "path": "CTL/IR",
+    "text_before": "Follow the FedRAMP Incident Evaluation and Reporting rules.",
+    "text_after": "Follow the FedRAMP Incident Evaluation and Communication rules.",
+    "fields": [
+     {
+      "field": "guidance",
+      "label": "Guidance",
+      "type": "text",
+      "before": [
+       "Follow the FedRAMP Incident Evaluation and Reporting rules."
+      ],
+      "after": "Follow the FedRAMP Incident Evaluation and Communication rules."
+     }
+    ],
+    "sentences": [
+     "Statement reworded (1 word removed, 1 word added)."
+    ],
+    "grade": "minor",
+    "fedramp_notes": []
+   },
+   {
+    "id": "VDR-TFR-PVR",
+    "kind": "Rule",
+    "family": "VDR",
+    "name": "Mitigation and Remediation Expectations",
+    "path_before": "FRR/VDR/data/all/TFR",
+    "path": "FRR/VDR/data/all/TFR",
+    "text_before": "Class A: Providers with Class A Certifications SHOULD partially mitigate vulnerabilities, fully mitigate vulnerabilities, or remediate vulnerabilities to a lower potential agency impact within the timeframes from evaluation shown below, factoring for the current Potential Agency Impact N-rating, internet reachability, and likely exploitability.\nClass B: Providers with Class B Certifications SHOULD partially mitigate vulnerabilities, fully mitigate vulnerabilities, or remediate vulnerabilities to a lower potential agency impact within the timeframes from evaluation shown below, factoring for the current Potential Agency Impact N-rating, internet reachability, and likely exploitability:\nClass C: Providers with Class C Certifications SHOULD partially mitigate vulnerabilities, fully mitigate vulnerabilities, or remediate vulnerabilities to a lower Potential Agency Impact N-rating within the timeframes from evaluation shown below, factoring for the current Potential Agency Impact N-rating, internet reachability, and likely exploitability:\nClass D: Providers with Class D Certifications SHOULD partially mitigate vulnerabilities, fully mitigate vulnerabilities, or remediate vulnerabilities to a lower Potential Agency Impact N-rating within the maximum timeframes from evaluation shown below, factoring for the current Potential Agency Impact N-rating, internet reachability, and likely exploitability:",
+    "text_after": "Class A: Providers with Class A Certifications SHOULD partially mitigate vulnerabilities, fully mitigate vulnerabilities, or remediate vulnerabilities to a lower potential agency impact within the timeframes from evaluation shown below, factoring for the current Potential Agency Impact N-rating as defined in VER-EVA-EPA (Estimate Potential Agency Impact), internet reachability, and likely exploitability.\nClass B: Providers with Class B Certifications SHOULD partially mitigate vulnerabilities, fully mitigate vulnerabilities, or remediate vulnerabilities to a lower potential agency impact within the timeframes from evaluation shown below, factoring for the current Potential Agency Impact N-rating as defined in VER-EVA-EPA (Estimate Potential Agency Impact), internet reachability, and likely exploitability:\nClass C: Providers with Class C Certifications SHOULD partially mitigate vulnerabilities, fully mitigate vulnerabilities, or remediate vulnerabilities to a lower Potential Agency Impact N-rating within the timeframes from evaluation shown below, factoring for the current Potential Agency Impact N-rating as defined in VER-EVA-EPA (Estimate Potential Agency Impact), internet reachability, and likely exploitability:\nClass D: Providers with Class D Certifications SHOULD partially mitigate vulnerabilities, fully mitigate vulnerabilities, or remediate vulnerabilities to a lower Potential Agency Impact N-rating within the maximum timeframes from evaluation shown below, factoring for the current Potential Agency Impact N-rating as defined in VER-EVA-EPA (Estimate Potential Agency Impact), internet reachability, and likely exploitability:",
+    "fields": [
+     {
+      "field": "related",
+      "label": "Related rules",
+      "type": "set",
+      "before": null,
+      "after": [
+       "VER-EVA-EPA"
+      ]
+     },
+     {
+      "field": "varies_by_class.a.statement",
+      "label": "Class A statement",
+      "type": "text",
+      "before": "Providers with Class A Certifications SHOULD partially mitigate vulnerabilities, fully mitigate vulnerabilities, or remediate vulnerabilities to a lower potential agency impact within the timeframes from evaluation shown below, factoring for the current Potential Agency Impact N-rating, internet reachability, and likely exploitability.",
+      "after": "Providers with Class A Certifications SHOULD partially mitigate vulnerabilities, fully mitigate vulnerabilities, or remediate vulnerabilities to a lower potential agency impact within the timeframes from evaluation shown below, factoring for the current Potential Agency Impact N-rating as defined in VER-EVA-EPA (Estimate Potential Agency Impact), internet reachability, and likely exploitability.",
+      "editorial": false
+     },
+     {
+      "field": "varies_by_class.b.statement",
+      "label": "Class B statement",
+      "type": "text",
+      "before": "Providers with Class B Certifications SHOULD partially mitigate vulnerabilities, fully mitigate vulnerabilities, or remediate vulnerabilities to a lower potential agency impact within the timeframes from evaluation shown below, factoring for the current Potential Agency Impact N-rating, internet reachability, and likely exploitability:",
+      "after": "Providers with Class B Certifications SHOULD partially mitigate vulnerabilities, fully mitigate vulnerabilities, or remediate vulnerabilities to a lower potential agency impact within the timeframes from evaluation shown below, factoring for the current Potential Agency Impact N-rating as defined in VER-EVA-EPA (Estimate Potential Agency Impact), internet reachability, and likely exploitability:",
+      "editorial": false
+     },
+     {
+      "field": "varies_by_class.c.statement",
+      "label": "Class C statement",
+      "type": "text",
+      "before": "Providers with Class C Certifications SHOULD partially mitigate vulnerabilities, fully mitigate vulnerabilities, or remediate vulnerabilities to a lower Potential Agency Impact N-rating within the timeframes from evaluation shown below, factoring for the current Potential Agency Impact N-rating, internet reachability, and likely exploitability:",
+      "after": "Providers with Class C Certifications SHOULD partially mitigate vulnerabilities, fully mitigate vulnerabilities, or remediate vulnerabilities to a lower Potential Agency Impact N-rating within the timeframes from evaluation shown below, factoring for the current Potential Agency Impact N-rating as defined in VER-EVA-EPA (Estimate Potential Agency Impact), internet reachability, and likely exploitability:",
+      "editorial": false
+     },
+     {
+      "field": "varies_by_class.d.statement",
+      "label": "Class D statement",
+      "type": "text",
+      "before": "Providers with Class D Certifications SHOULD partially mitigate vulnerabilities, fully mitigate vulnerabilities, or remediate vulnerabilities to a lower Potential Agency Impact N-rating within the maximum timeframes from evaluation shown below, factoring for the current Potential Agency Impact N-rating, internet reachability, and likely exploitability:",
+      "after": "Providers with Class D Certifications SHOULD partially mitigate vulnerabilities, fully mitigate vulnerabilities, or remediate vulnerabilities to a lower Potential Agency Impact N-rating within the maximum timeframes from evaluation shown below, factoring for the current Potential Agency Impact N-rating as defined in VER-EVA-EPA (Estimate Potential Agency Impact), internet reachability, and likely exploitability:",
+      "editorial": false
+     }
+    ],
+    "sentences": [
+     "Statement reworded (4 words removed, 36 words added).",
+     "Related rules added: `VER-EVA-EPA`."
+    ],
+    "grade": "substantive",
+    "fedramp_notes": [
+     "2026-07-01: Added relevent terms and related controls. No change to the requirement."
+    ]
+   }
+  ],
+  "meta": [
+   {
+    "family": "IEC",
+    "name": "Incident Evaluation and Communication",
+    "status": "changed",
+    "fields": [
+     {
+      "field": "flows[0].nodes.Incident Evaluation and Communication are complete",
+      "label": "Flow 1 nodes incident evaluation and communication are complete",
+      "type": "text",
+      "before": null,
+      "after": "end"
+     },
+     {
+      "field": "flows[0].nodes.Incident Evaluation and Reporting are complete",
+      "label": "Flow 1 nodes incident evaluation and reporting are complete",
+      "type": "text",
+      "before": "end",
+      "after": null
+     },
+     {
+      "field": "flows[0].steps[1].to",
+      "label": "Flow 1 step 2 to",
+      "type": "text",
+      "before": "Incident Evaluation and Reporting is complete.",
+      "after": "Incident Evaluation and Communication is complete.",
+      "editorial": false
+     },
+     {
+      "field": "flows[0].steps[8].to",
+      "label": "Flow 1 step 9 to",
+      "type": "text",
+      "before": "Incident Evaluation and Reporting are complete.",
+      "after": "Incident Evaluation and Communication are complete.",
+      "editorial": false
+     }
+    ]
+   }
+  ]
+ }
+}

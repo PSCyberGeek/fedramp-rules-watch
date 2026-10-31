@@ -1,0 +1,62 @@
+name: FedRAMP rules watch
+
+on:
+  schedule:
+    - cron: "17 11 * * *"     # daily, 6:17 a.m. Central (CDT) / 5:17 a.m. (CST)
+  workflow_dispatch:
+    inputs:
+      open_issue:
+        description: "Open a GitHub issue if a change is found"
+        type: boolean
+        default: true
+
+permissions:
+  contents: write   # commit reports, feed and state back to the repo
+  issues: write     # the issue doubles as the newsletter (watchers get an email)
+
+concurrency:
+  group: fedramp-rules-watch
+  cancel-in-progress: false
+
+jobs:
+  watch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check out this repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Clone FedRAMP/rules with full history
+        run: git clone --quiet --filter=blob:none https://github.com/FedRAMP/rules.git "$RUNNER_TEMP/upstream"
+
+      - name: Compare with last processed version
+        id: check
+        env:
+          SITE_URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}
+        run: python scripts/fedwatch.py check --upstream "$RUNNER_TEMP/upstream" --issue-file "$RUNNER_TEMP/issue.md"
+
+      - name: Commit report, feed and state
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs state
+          if git diff --cached --quiet; then
+            echo "Nothing to commit."
+          else
+            git commit -m "FedRAMP rules: ${{ steps.check.outputs.title || 'baseline/state update' }}"
+            git push
+          fi
+
+      - name: Open newsletter issue
+        if: steps.check.outputs.changed == 'true' && (github.event_name == 'schedule' || inputs.open_issue)
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TITLE: ${{ steps.check.outputs.title }}
+        run: |
+          gh label create rules-change --color B60205 --description "FedRAMP rules changed upstream" --force
+          gh issue create --title "$TITLE" --body-file "$RUNNER_TEMP/issue.md" --label rules-change

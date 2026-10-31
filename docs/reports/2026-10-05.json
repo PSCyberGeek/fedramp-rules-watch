@@ -1,0 +1,336 @@
+{
+ "slug": "2026-10-05",
+ "date": "2026-10-05",
+ "from": {
+  "sha": "58487bda77d76d9ce334304ec2e779ece7cc7d54",
+  "short": "58487bd",
+  "date": "2026-09-13T18:17:09-04:00",
+  "version": "2026.09.13.02"
+ },
+ "to": {
+  "sha": "1c33385a06acf4faf50da2b9b4dc31cd826e5b91",
+  "short": "1c33385",
+  "date": "2026-10-05T13:22:05-04:00",
+  "version": "2026.10.05.01"
+ },
+ "commits": [
+  {
+   "sha": "1c33385a06acf4faf50da2b9b4dc31cd826e5b91",
+   "short": "1c33385",
+   "date": "2026-10-05T13:22:05-04:00",
+   "subject": "Pwx 1005 (#36)",
+   "url": "https://github.com/FedRAMP/rules/commit/1c33385a06acf4faf50da2b9b4dc31cd826e5b91"
+  }
+ ],
+ "summary": {
+  "headline": "7 changed",
+  "glance": [
+   "This update has **7 changed** (1 substantive, 6 minor, 0 editorial, 0 mapping-only).",
+   "Defined-term links changed on 2 entries.",
+   "`FRC-CSO-JSN` FedRAMP JSON Schemas: Normative keywords changed: MUST → MUST×2."
+  ]
+ },
+ "diff": {
+  "added": [],
+  "removed": [],
+  "renamed": [],
+  "changed": [
+   {
+    "id": "CDS-CSO-PUB",
+    "kind": "Rule",
+    "family": "CDS",
+    "name": "Public Information",
+    "path_before": "FRR/CDS/data/all/CSO",
+    "path": "FRR/CDS/data/all/CSO",
+    "text_before": "Providers MUST publicly share up-to-date information about the cloud service offering in both human-readable and JSON formats, including at least the following information that is available and applicable:",
+    "text_after": "Providers MUST publicly share up-to-date information about the cloud service offering in both human-readable and JSON formats, including at least the following information that is available and applicable:",
+    "fields": [
+     {
+      "field": "following_information",
+      "label": "Required information",
+      "type": "text",
+      "before": "FedRAMP ID\nService Model\nDeployment Model\nBusiness Category\nUEI Number\nSales Contact Information\nSecurity Contact Information\nProduct Website Link\nLink to Product Logo\nOverall Service Description\nDetailed list of specific services and their security categories (see CDS-CSO-SVC (Public Service List) (Service List))\nLink to Secure Configuration Guidance\nOverview of documentation supplied by the provider for the cloud service offering\nLink to Trust Center landing page that includes instructions on accessing information in the trust center\nNext Ongoing Certification Report date (see CCM-OCR-NRD (Next Report Date))\nCurrent FedRAMP Recognized independent assessment service",
+      "after": "FedRAMP ID\nService Model\nDeployment Model\nBusiness Category\nUEI Number\nSales Contact Information\nSecurity Contact Information\nProduct Website Link\nLink to Product Logo (must be a valid image link, properly named, that will display in a browser without processing - transparent PNG preferred)\nOverall Service Description\nDetailed list of specific services and their security categories (see CDS-CSO-SVC (Public Service List) (Service List))\nLink to Secure Configuration Guidance\nOverview of documentation supplied by the provider for the cloud service offering\nLink to Trust Center landing page that includes instructions on accessing information in the trust center\nNext Ongoing Certification Report date (see CCM-OCR-NRD (Next Report Date))\nCurrent FedRAMP Recognized independent assessment service",
+      "editorial": false
+     },
+     {
+      "field": "note",
+      "label": "Note",
+      "type": "text",
+      "before": "Generally, this information should be available on a public webpage or publicly shared in a FedRAMP-compatible trust center.",
+      "after": null
+     },
+     {
+      "field": "notes",
+      "label": "Notes",
+      "type": "text",
+      "before": null,
+      "after": "Generally, this information should be available on a public webpage or publicly shared in a FedRAMP-compatible trust center.\nThe JSON data for this rule will be consumed by FedRAMP and agency GRC tools using automation with web-based tools. Do not expect FedRAMP or your customers to download this data directly, it should be accessible for common web frameworks. FedRAMP strongly recommends that application engineering experts be involved in making public JSON data and the related information available in a way that can work with web-based applications."
+     }
+    ],
+    "sentences": [
+     "Required information reworded (0 words removed, 20 words added).",
+     "Note removed.",
+     "Notes added."
+    ],
+    "grade": "minor",
+    "fedramp_notes": [
+     "2026-10-05: Clarified that logo link must be a viewable web image. Added note recommending the involvement of web-based application engineers."
+    ]
+   },
+   {
+    "id": "CMU-CSO-UVM",
+    "kind": "Rule",
+    "family": "CMU",
+    "name": "Using Validated Cryptographic Modules",
+    "path_before": "FRR/CMU/data/all/CSO",
+    "path": "FRR/CMU/data/all/CSO",
+    "text_before": "Class A: Providers with Class A Certifications MAY use cryptographic modules or update streams of cryptographic modules with active validations under the NIST Cryptographic Module Validation Program when using cryptographic services to protect federal customer data.\nClass B: Providers with Class B Certifications MAY use cryptographic modules or update streams of cryptographic modules with active validations under the NIST Cryptographic Module Validation Program when using cryptographic services to protect federal customer data.\nClass C: Providers with Class C Certifications SHOULD use cryptographic modules or update streams of cryptographic modules with active validations under the NIST Cryptographic Module Validation Program when using cryptographic services to protect federal customer data.\nClass D: Providers with Class D Certifications MUST use cryptographic modules or update streams of cryptographic modules with active validations under the NIST Cryptographic Module Validation Program when using cryptographic services to protect federal customer data.",
+    "text_after": "Class A: Providers with Class A Certifications MAY use cryptographic modules or update streams of cryptographic modules with active validations under the NIST Cryptographic Module Validation Program when using cryptographic services to protect federal customer data.\nClass B: Providers with Class B Certifications MAY use cryptographic modules or update streams of cryptographic modules with active validations under the NIST Cryptographic Module Validation Program when using cryptographic services to protect federal customer data.\nClass C: Providers with Class C Certifications SHOULD use cryptographic modules or update streams of cryptographic modules with active validations under the NIST Cryptographic Module Validation Program when using cryptographic services to protect federal customer data.\nClass D: Providers with Class D Certifications MUST use cryptographic modules or update streams of cryptographic modules with active validations under the NIST Cryptographic Module Validation Program when using cryptographic services to protect federal customer data.",
+    "fields": [
+     {
+      "field": "note",
+      "label": "Note",
+      "type": "text",
+      "before": null,
+      "after": "Cryptographic modules include specific algorithms by definition; if an update stream of a cryptographic module adds new algorithms that were not previously validated then those algorithms can not be considered within the scope of update stream usage under these rules as they are new algorithms within the module that have never been validated."
+     }
+    ],
+    "sentences": [
+     "Note added."
+    ],
+    "grade": "minor",
+    "fedramp_notes": [
+     "2026-10-10: Added a note clarifying that new algorithms in update streams of modules are not included in the scope of updates to  validated cryptographic modules."
+    ]
+   },
+   {
+    "id": "FRC-CSF-RDY",
+    "kind": "Rule",
+    "family": "FRC",
+    "name": "FedRAMP Ready Conversion",
+    "path_before": "FRR/FRC/data/rev5/CSF",
+    "path": "FRR/FRC/data/rev5/CSF",
+    "text_before": "Providers with FedRAMP Rev5 Ready status MUST convert to a FedRAMP Certification by whichever of the follow dates is later: the expiration of their annual assessment or November 17, 2026 (the legacy FedRAMP Ready status will be entirely removed on December 31, 2027).",
+    "text_after": "Providers with FedRAMP Rev5 Ready status MUST convert to a FedRAMP Certification by whichever of the following dates is later: the expiration of their annual assessment or November 17, 2026 (the legacy FedRAMP Ready status will be entirely removed on December 31, 2027).",
+    "fields": [
+     {
+      "field": "statement",
+      "label": "Statement",
+      "type": "text",
+      "before": "Providers with FedRAMP Rev5 Ready status MUST convert to a FedRAMP Certification by whichever of the follow dates is later: the expiration of their annual assessment or November 17, 2026 (the legacy FedRAMP Ready status will be entirely removed on December 31, 2027).",
+      "after": "Providers with FedRAMP Rev5 Ready status MUST convert to a FedRAMP Certification by whichever of the following dates is later: the expiration of their annual assessment or November 17, 2026 (the legacy FedRAMP Ready status will be entirely removed on December 31, 2027).",
+      "editorial": false
+     }
+    ],
+    "sentences": [
+     "Statement reworded (1 word removed, 1 word added)."
+    ],
+    "grade": "minor",
+    "fedramp_notes": [
+     "2026-10-05: Adding a missing ing (follow -> following)."
+    ]
+   },
+   {
+    "id": "FRC-CSO-JSN",
+    "kind": "Rule",
+    "family": "FRC",
+    "name": "FedRAMP JSON Schemas",
+    "path_before": "FRR/FRC/data/all/CSO",
+    "path": "FRR/FRC/data/all/CSO",
+    "text_before": "Providers MUST supply machine-readable information in JSON documents that are valid against the corresponding JSON schema when a rule contains a FedRAMP JSON schema, UNLESS otherwise specified in the rule.",
+    "text_after": "Providers MUST supply machine-readable information in JSON documents that are valid against the corresponding JSON schema when a rule contains a FedRAMP JSON schema, UNLESS otherwise specified in the rule; public JSON data MUST be supplied in a manner compatible with modern web frameworks, including:",
+    "fields": [
+     {
+      "field": "following_information",
+      "label": "Required information",
+      "type": "text",
+      "before": null,
+      "after": "Cross-Origin Resource Sharing (CORS) should allow web applications running on a different domain to access the public JSON data directly.\nProper web application headers should be supplied for public JSON data, including at least setting Content-Type to application/json and X-Content-Type-Options: nosniff."
+     },
+     {
+      "field": "note",
+      "label": "Note",
+      "type": "text",
+      "before": "FedRAMP JSON schemas are designed to be lightweight and flexible to establish a minimum set of structured information while allowing providers to improve on the format and structure of the information as needed to meet their needs and the needs of their customers.",
+      "after": null
+     },
+     {
+      "field": "notes",
+      "label": "Notes",
+      "type": "text",
+      "before": null,
+      "after": "FedRAMP JSON schemas are designed to be lightweight and flexible to establish a minimum set of structured information while allowing providers to improve on the format and structure of the information as needed to meet their needs and the needs of their customers.\nPublic JSON data is intended to be consumed by FedRAMP, agency GRC tools, and more - it should be available in a way that enables standard web-application use following standard web frameworks. Generally, if you can't write a web app to parse this data without configuring a browser to bypass security defaults then there has likely been a problem.\nThe Schema Validator available at fedramp.gov will not work properly if Cross-Origin Resource Sharing is not properly configured."
+     },
+     {
+      "field": "statement",
+      "label": "Statement",
+      "type": "text",
+      "before": "Providers MUST supply machine-readable information in JSON documents that are valid against the corresponding JSON schema when a rule contains a FedRAMP JSON schema, UNLESS otherwise specified in the rule.",
+      "after": "Providers MUST supply machine-readable information in JSON documents that are valid against the corresponding JSON schema when a rule contains a FedRAMP JSON schema, UNLESS otherwise specified in the rule; public JSON data MUST be supplied in a manner compatible with modern web frameworks, including:",
+      "editorial": false
+     },
+     {
+      "field": "terms",
+      "label": "Linked defined terms",
+      "type": "set",
+      "before": [
+       "Machine-Readable"
+      ],
+      "after": [
+       "Likely",
+       "Machine-Readable"
+      ],
+      "added_items": [
+       "Likely"
+      ],
+      "removed_items": []
+     }
+    ],
+    "sentences": [
+     "Statement reworded (1 word removed, 16 words added).",
+     "Normative keywords changed: MUST → MUST×2.",
+     "Required information added.",
+     "Note removed.",
+     "Notes added.",
+     "Linked defined terms: added `Likely`."
+    ],
+    "grade": "substantive",
+    "fedramp_notes": [
+     "2026-10-05: Clarified expectations for public JSON data to be compatible with standard web frameworks."
+    ]
+   },
+   {
+    "id": "MKT-CAS-LRQ",
+    "kind": "Rule",
+    "family": "MKT",
+    "name": "Listing Requests for Advisors",
+    "path_before": "FRR/MKT/data/all/CAS",
+    "path": "FRR/MKT/data/all/CAS",
+    "text_before": "Advisors MUST complete the Advisor Listing Request Form to request listing in the FedRAMP Marketplace.",
+    "text_after": "Advisors MUST complete the Advisor Listing Request Form to request listing in the FedRAMP Marketplace.",
+    "fields": [
+     {
+      "field": "notification[0].name",
+      "label": "Notification method 1 name",
+      "type": "text",
+      "before": "[For Assessors/Advisors] Marketplace Listing Form",
+      "after": "[For Advisors] Marketplace Listing Request Form",
+      "editorial": false
+     }
+    ],
+    "sentences": [
+     "Notification method 1 name changed from “[For Assessors/Advisors] Marketplace Listing Form” to “[For Advisors] Marketplace Listing Request Form”."
+    ],
+    "grade": "minor",
+    "fedramp_notes": [
+     "2026-10-05: Updated form name."
+    ]
+   },
+   {
+    "id": "MKT-IAS-LRQ",
+    "kind": "Rule",
+    "family": "MKT",
+    "name": "Listing Requests for Assessors",
+    "path_before": "FRR/MKT/data/all/IAS",
+    "path": "FRR/MKT/data/all/IAS",
+    "text_before": "Assessors MUST complete the Assessor Listing Request Form to request listing in the FedRAMP Marketplace.",
+    "text_after": "Assessors MUST complete the Assessor Listing Request Form to request listing in the FedRAMP Marketplace.",
+    "fields": [
+     {
+      "field": "notification[0].name",
+      "label": "Notification method 1 name",
+      "type": "text",
+      "before": "[For Assessors/Advisors] Marketplace Listing Form",
+      "after": "[For Assessors] Marketplace Listing Request Form",
+      "editorial": false
+     },
+     {
+      "field": "notification[0].target",
+      "label": "Notification method 1 target",
+      "type": "text",
+      "before": "https://help.fedramp.gov/hc/en-us/requests/new?ticket_form_id=52060327520795",
+      "after": "https://help.fedramp.gov/hc/en-us/requests/new?ticket_form_id=54220455254427",
+      "editorial": false
+     }
+    ],
+    "sentences": [
+     "Notification method 1 name changed from “[For Assessors/Advisors] Marketplace Listing Form” to “[For Assessors] Marketplace Listing Request Form”.",
+     "Notification method 1 target changed from “https://help.fedramp.gov/hc/en-us/requests/new?ticket_form_id=52060327520795” to “https://help.fedramp.gov/hc/en-us/requests/new?ticket_form_id=54220455254427”."
+    ],
+    "grade": "minor",
+    "fedramp_notes": [
+     "2026-10-10: Updated form name and URL."
+    ]
+   },
+   {
+    "id": "VER-EVA-EPA",
+    "kind": "Rule",
+    "family": "VER",
+    "name": "Estimate Potential Agency Impact",
+    "path_before": "FRR/VER/data/all/EVA",
+    "path": "FRR/VER/data/all/EVA",
+    "text_before": "Providers MUST evaluate detected vulnerabilities, considering the context of the cloud service offering, to estimate the potential agency impact of exploitation on government customers AND assign one of the following Potential Agency Impact N-ratings (PAIN):",
+    "text_after": "Providers MUST evaluate detected vulnerabilities, considering the context of the cloud service offering, to estimate the likely potential agency impact of exploitation on government customers AND assign one of the following Potential Agency Impact N-ratings (PAIN):",
+    "fields": [
+     {
+      "field": "following_information_bullets",
+      "label": "Following information bullets",
+      "type": "text",
+      "before": "**N1**: Exploitation could be expected to have minimal customer effects on one or more agencies that use the cloud service offering.\n**N2**: Exploitation could be expected to have narrow customer effects on one or more agencies that use the cloud service offering.\n**N3**: Exploitation could be expected to have a disruptive customer effect on one agency that uses the cloud service offering.\n**N4**: Exploitation could be expected to have a debilitating customer effect on one agency that uses the cloud service offering OR a disruptive customer effect on more than one federal agency that uses the cloud service offering.\n**N5**: Exploitation could be expected to have a debilitating customer effect on more than one agency that uses the cloud service offering.",
+      "after": "**N0**: Exploitation is extremely unlikely to have any adverse effects on agencies that use the cloud service offering.\n**N1**: Exploitation could be expected to have minimal customer effects on one or more agencies that use the cloud service offering.\n**N2**: Exploitation could be expected to have narrow customer effects on one or more agencies that use the cloud service offering.\n**N3**: Exploitation could be expected to have a disruptive customer effect on one agency that uses the cloud service offering.\n**N4**: Exploitation could be expected to have a debilitating customer effect on one agency that uses the cloud service offering OR a disruptive customer effect on more than one federal agency that uses the cloud service offering.\n**N5**: Exploitation could be expected to have a debilitating customer effect on more than one agency that uses the cloud service offering.",
+      "editorial": false
+     },
+     {
+      "field": "statement",
+      "label": "Statement",
+      "type": "text",
+      "before": "Providers MUST evaluate detected vulnerabilities, considering the context of the cloud service offering, to estimate the potential agency impact of exploitation on government customers AND assign one of the following Potential Agency Impact N-ratings (PAIN):",
+      "after": "Providers MUST evaluate detected vulnerabilities, considering the context of the cloud service offering, to estimate the likely potential agency impact of exploitation on government customers AND assign one of the following Potential Agency Impact N-ratings (PAIN):",
+      "editorial": false
+     },
+     {
+      "field": "terms",
+      "label": "Linked defined terms",
+      "type": "set",
+      "before": [
+       "Cloud Service Offering",
+       "Debilitating Customer Effect",
+       "Disruptive Customer Effect",
+       "Minimal Customer Effect",
+       "Narrow Customer Effect",
+       "Potential Agency Impact",
+       "Vulnerability",
+       "Vulnerability Detection"
+      ],
+      "after": [
+       "Cloud Service Offering",
+       "Debilitating Customer Effect",
+       "Disruptive Customer Effect",
+       "Likely",
+       "Minimal Customer Effect",
+       "Narrow Customer Effect",
+       "Potential Agency Impact",
+       "Vulnerability",
+       "Vulnerability Detection"
+      ],
+      "added_items": [
+       "Likely"
+      ],
+      "removed_items": []
+     }
+    ],
+    "sentences": [
+     "Statement reworded (0 words removed, 1 word added).",
+     "Following information bullets reworded (0 words removed, 18 words added).",
+     "Linked defined terms: added `Likely`."
+    ],
+    "grade": "minor",
+    "fedramp_notes": [
+     "2026-10-05: Clarified that likely potential agency impact should be calculated; added PAIN0 to clarify that likely potential agency impact can be entirely mitigated/remediated."
+    ]
+   }
+  ],
+  "meta": []
+ }
+}

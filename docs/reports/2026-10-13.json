@@ -1,0 +1,3411 @@
+{
+ "slug": "2026-10-13",
+ "date": "2026-10-13",
+ "from": {
+  "sha": "6eb376782a7ca9950d2f852b68fa05e8cdeb6e12",
+  "short": "6eb3767",
+  "date": "2026-10-08T13:52:29-04:00",
+  "version": "2026.10.08.01"
+ },
+ "to": {
+  "sha": "a89d78477ddea98dc57eca24f5007794c2b4eeb6",
+  "short": "a89d784",
+  "date": "2026-10-13T14:01:01-04:00",
+  "version": "2026.10.13.01"
+ },
+ "commits": [
+  {
+   "sha": "a89d78477ddea98dc57eca24f5007794c2b4eeb6",
+   "short": "a89d784",
+   "date": "2026-10-13T14:01:01-04:00",
+   "subject": "Update control mappings in consolidated rules (#37)",
+   "url": "https://github.com/FedRAMP/rules/commit/a89d78477ddea98dc57eca24f5007794c2b4eeb6"
+  }
+ ],
+ "summary": {
+  "headline": "76 changed",
+  "glance": [
+   "This update has **76 changed** (0 substantive, 0 minor, 1 editorial, 75 mapping-only).",
+   "NIST control mappings changed on 76 entries."
+  ]
+ },
+ "diff": {
+  "added": [],
+  "removed": [],
+  "renamed": [],
+  "changed": [
+   {
+    "id": "AFC-CSO-INB",
+    "kind": "Rule",
+    "family": "AFC",
+    "name": "Maintain a FedRAMP Security Inbox",
+    "path_before": "FRR/AFC/data/all/CSO",
+    "path": "FRR/AFC/data/all/CSO",
+    "text_before": "Providers MUST establish and maintain an email address to receive messages from FedRAMP; this inbox is a FedRAMP Security Inbox (FSI).",
+    "text_after": "Providers MUST establish and maintain an email address to receive messages from FedRAMP; this inbox is a FedRAMP Security Inbox (FSI).",
+    "fields": [
+     {
+      "field": "controls",
+      "label": "Mapped NIST controls",
+      "type": "set",
+      "before": null,
+      "after": [
+       "si-5"
+      ]
+     }
+    ],
+    "sentences": [
+     "Mapped NIST controls added: `si-5`."
+    ],
+    "grade": "mapping",
+    "fedramp_notes": [
+     "2026-10-13: Updated control mappings: added si-5."
+    ]
+   },
+   {
+    "id": "AGU-USE-RSG",
+    "kind": "Rule",
+    "family": "AGU",
+    "name": "Review Secure Configuration Guides",
+    "path_before": "FRR/AGU/data/all/USE",
+    "path": "FRR/AGU/data/all/USE",
+    "text_before": "Agencies MUST review the Secure Configuration Guides supplied by Providers and configure relevant security settings.",
+    "text_after": "Agencies MUST review the Secure Configuration Guides supplied by Providers and configure relevant security settings.",
+    "fields": [
+     {
+      "field": "controls",
+      "label": "Mapped NIST controls",
+      "type": "set",
+      "before": null,
+      "after": [
+       "cm-10",
+       "cm-5",
+       "cm-6",
+       "ia-11"
+      ]
+     }
+    ],
+    "sentences": [
+     "Mapped NIST controls added: `cm-10`, `cm-5`, `cm-6`, `ia-11`."
+    ],
+    "grade": "mapping",
+    "fedramp_notes": [
+     "2026-10-13: Updated control mappings: added cm-10, cm-5, cm-6, ia-11."
+    ]
+   },
+   {
+    "id": "CCM-OCR-AVL",
+    "kind": "Rule",
+    "family": "CCM",
+    "name": "Report Availability",
+    "path_before": "FRR/CCM/data/all/OCR",
+    "path": "FRR/CCM/data/all/OCR",
+    "text_before": "Providers MUST supply an Ongoing Certification Report to all necessary parties every 3 months, covering the entire period since the previous summary, in a consistent format that is human readable; this report MUST include high-level summaries of at least the following information (if applicable):",
+    "text_after": "Providers MUST supply an Ongoing Certification Report to all necessary parties every 3 months, covering the entire period since the previous summary, in a consistent format that is human readable; this report MUST include high-level summaries of at least the following information (if applicable):",
+    "fields": [
+     {
+      "field": "controls",
+      "label": "Mapped NIST controls",
+      "type": "set",
+      "before": null,
+      "after": [
+       "ca-7"
+      ]
+     }
+    ],
+    "sentences": [
+     "Mapped NIST controls added: `ca-7`."
+    ],
+    "grade": "mapping",
+    "fedramp_notes": [
+     "2026-10-13: Updated control mappings: added ca-7."
+    ]
+   },
+   {
+    "id": "CCM-QTR-ACT",
+    "kind": "Rule",
+    "family": "CCM",
+    "name": "Additional Content",
+    "path_before": "FRR/CCM/data/all/QTR",
+    "path": "FRR/CCM/data/all/QTR",
+    "text_before": "Providers SHOULD supply additional information in Quarterly Reviews that the provider determines is of interest, use, or otherwise relevant to agencies.",
+    "text_after": "Providers SHOULD supply additional information in Quarterly Reviews that the provider determines is of interest, use, or otherwise relevant to agencies.",
+    "fields": [
+     {
+      "field": "controls",
+      "label": "Mapped NIST controls",
+      "type": "set",
+      "before": null,
+      "after": [
+       "ca-7"
+      ]
+     }
+    ],
+    "sentences": [
+     "Mapped NIST controls added: `ca-7`."
+    ],
+    "grade": "mapping",
+    "fedramp_notes": [
+     "2026-10-13: Updated control mappings: added ca-7."
+    ]
+   },
+   {
+    "id": "CCM-QTR-MTG",
+    "kind": "Rule",
+    "family": "CCM",
+    "name": "Quarterly Review Meeting",
+    "path_before": "FRR/CCM/data/all/QTR",
+    "path": "FRR/CCM/data/all/QTR",
+    "text_before": "Class A: Providers with Class A Certifications MAY host a synchronous Quarterly Review every 3 months, open to all necessary parties, to review aspects of the most recent Ongoing Certification Reports that the provider determines are of the most relevance to agencies.\nClass B: Providers with Class B Certifications SHOULD host a synchronous Quarterly Review every 3 months, open to all necessary parties, to review aspects of the most recent Ongoing Certification Reports that the provider determines are of the most relevance to agencies.\nClass C: Providers with Class C Certifications MUST host a synchronous Quarterly Review every 3 months, open to all necessary parties, to review aspects of the most recent Ongoing Certification Reports that the provider determines are of the most relevance to agencies.\nClass D: Providers with Class D Certifications MUST host a synchronous Quarterly Review every 3 months, open to all necessary parties, to review aspects of the most recent Ongoing Certification Reports that the provider determines are of the most relevance to agencies.",
+    "text_after": "Class A: Providers with Class A Certifications MAY host a synchronous Quarterly Review every 3 months, open to all necessary parties, to review aspects of the most recent Ongoing Certification Reports that the provider determines are of the most relevance to agencies.\nClass B: Providers with Class B Certifications SHOULD host a synchronous Quarterly Review every 3 months, open to all necessary parties, to review aspects of the most recent Ongoing Certification Reports that the provider determines are of the most relevance to agencies.\nClass C: Providers with Class C Certifications MUST host a synchronous Quarterly Review every 3 months, open to all necessary parties, to review aspects of the most recent Ongoing Certification Reports that the provider determines are of the most relevance to agencies.\nClass D: Providers with Class D Certifications MUST host a synchronous Quarterly Review every 3 months, open to all necessary parties, to review aspects of the most recent Ongoing Certification Reports that the provider determines are of the most relevance to agencies.",
+    "fields": [
+     {
+      "field": "controls",
+      "label": "Mapped NIST controls",
+      "type": "set",
+      "before": null,
+      "after": [
+       "ca-7"
+      ]
+     }
+    ],
+    "sentences": [
+     "Mapped NIST controls added: `ca-7`."
+    ],
+    "grade": "mapping",
+    "fedramp_notes": [
+     "2026-10-13: Updated control mappings: added ca-7."
+    ]
+   },
+   {
+    "id": "CMU-CSO-CMD",
+    "kind": "Rule",
+    "family": "CMU",
+    "name": "Cryptographic Module Documentation",
+    "path_before": "FRR/CMU/data/all/CSO",
+    "path": "FRR/CMU/data/all/CSO",
+    "text_before": "Providers MUST document the cryptographic modules used in each service (or groups of services that use the same modules) where cryptographic services are used to protect federal customer data, including whether these modules are validated under the NIST Cryptographic Module Validation Program or are update streams of such modules.",
+    "text_after": "Providers MUST document the cryptographic modules used in each service (or groups of services that use the same modules) where cryptographic services are used to protect federal customer data, including whether these modules are validated under the NIST Cryptographic Module Validation Program or are update streams of such modules.",
+    "fields": [
+     {
+      "field": "controls",
+      "label": "Mapped NIST controls",
+      "type": "set",
+      "before": null,
+      "after": [
+       "au-9.3",
+       "cm-3.6",
+       "ia-7",
+       "sc-28.1",
+       "sc-8.1"
+      ]
+     }
+    ],
+    "sentences": [
+     "Mapped NIST controls added: `au-9.3`, `cm-3.6`, `ia-7`, `sc-28.1`, `sc-8.1`."
+    ],
+    "grade": "mapping",
+    "fedramp_notes": [
+     "2026-10-13: Updated control mappings: added au-9.3, cm-3.6, ia-7, sc-28.1, sc-8.1."
+    ]
+   },
+   {
+    "id": "CMU-CSO-UVM",
+    "kind": "Rule",
+    "family": "CMU",
+    "name": "Using Validated Cryptographic Modules",
+    "path_before": "FRR/CMU/data/all/CSO",
+    "path": "FRR/CMU/data/all/CSO",
+    "text_before": "Class A: Providers with Class A Certifications MAY use cryptographic modules or update streams of cryptographic modules with active validations under the NIST Cryptographic Module Validation Program when using cryptographic services to protect federal customer data.\nClass B: Providers with Class B Certifications MAY use cryptographic modules or update streams of cryptographic modules with active validations under the NIST Cryptographic Module Validation Program when using cryptographic services to protect federal customer data.\nClass C: Providers with Class C Certifications SHOULD use cryptographic modules or update streams of cryptographic modules with active validations under the NIST Cryptographic Module Validation Program when using cryptographic services to protect federal customer data.\nClass D: Providers with Class D Certifications MUST use cryptographic modules or update streams of cryptographic modules with active validations under the NIST Cryptographic Module Validation Program when using cryptographic services to protect federal customer data.",
+    "text_after": "Class A: Providers with Class A Certifications MAY use cryptographic modules or update streams of cryptographic modules with active validations under the NIST Cryptographic Module Validation Program when using cryptographic services to protect federal customer data.\nClass B: Providers with Class B Certifications MAY use cryptographic modules or update streams of cryptographic modules with active validations under the NIST Cryptographic Module Validation Program when using cryptographic services to protect federal customer data.\nClass C: Providers with Class C Certifications SHOULD use cryptographic modules or update streams of cryptographic modules with active validations under the NIST Cryptographic Module Validation Program when using cryptographic services to protect federal customer data.\nClass D: Providers with Class D Certifications MUST use cryptographic modules or update streams of cryptographic modules with active validations under the NIST Cryptographic Module Validation Program when using cryptographic services to protect federal customer data.",
+    "fields": [
+     {
+      "field": "controls",
+      "label": "Mapped NIST controls",
+      "type": "set",
+      "before": null,
+      "after": [
+       "ac-18",
+       "au-9.3",
+       "ia-7",
+       "sc-28.1",
+       "sc-8.1"
+      ]
+     }
+    ],
+    "sentences": [
+     "Mapped NIST controls added: `ac-18`, `au-9.3`, `ia-7`, `sc-28.1`, `sc-8.1`."
+    ],
+    "grade": "mapping",
+    "fedramp_notes": [
+     "2026-10-13: Updated control mappings: added ac-18, au-9.3, ia-7, sc-28.1, sc-8.1."
+    ]
+   },
+   {
+    "id": "CPO-CSO-OSA",
+    "kind": "Rule",
+    "family": "CPO",
+    "name": "Overall Summary of Assessment in Certification Package",
+    "path_before": "FRR/CPO/data/all/CSO",
+    "path": "FRR/CPO/data/all/CSO",
+    "text_before": "Class A: Providers seeking Class A Certification MAY also include an overall summary of their FedRAMP independent assessment in their Certification Package Overview.\nClass B: Providers seeking Class B Certification MUST also include the overall summary of their FedRAMP independent assessment, supplied by the assessor per IVV-IAS-OSA (Overall Summary of Assessment), in their Certification Package Overview.\nClass C: Providers seeking Class C Certification MUST also include the overall summary of their FedRAMP independent assessment, supplied by the assessor per IVV-IAS-OSA (Overall Summary of Assessment), in their Certification Package Overview.\nClass D: Providers seeking Class D Certification MUST also include the overall summary of their FedRAMP independent assessment, supplied by the assessor per IVV-IAS-OSA (Overall Summary of Assessment), in their Certification Package Overview.",
+    "text_after": "Class A: Providers seeking Class A Certification MAY also include an overall summary of their FedRAMP independent assessment in their Certification Package Overview.\nClass B: Providers seeking Class B Certification MUST also include the overall summary of their FedRAMP independent assessment, supplied by the assessor per IVV-IAS-OSA (Overall Summary of Assessment), in their Certification Package Overview.\nClass C: Providers seeking Class C Certification MUST also include the overall summary of their FedRAMP independent assessment, supplied by the assessor per IVV-IAS-OSA (Overall Summary of Assessment), in their Certification Package Overview.\nClass D: Providers seeking Class D Certification MUST also include the overall summary of their FedRAMP independent assessment, supplied by the assessor per IVV-IAS-OSA (Overall Summary of Assessment), in their Certification Package Overview.",
+    "fields": [
+     {
+      "field": "controls",
+      "label": "Mapped NIST controls",
+      "type": "set",
+      "before": null,
+      "after": [
+       "ca-2",
+       "ca-2.1",
+       "ca-2.2",
+       "ca-7.1"
+      ]
+     }
+    ],
+    "sentences": [
+     "Mapped NIST controls added: `ca-2`, `ca-2.1`, `ca-2.2`, `ca-7.1`."
+    ],
+    "grade": "mapping",
+    "fedramp_notes": [
+     "2026-10-13: Updated control mappings: added ca-2, ca-2.1, ca-2.2, ca-7.1."
+    ]
+   },
+   {
+    "id": "FRC-CSX-VVK",
+    "kind": "Rule",
+    "family": "FRC",
+    "name": "Automated Verification and Validation of Key Security Indicators",
+    "path_before": "FRR/FRC/data/20x/CSX",
+    "path": "FRR/FRC/data/20x/CSX",
+    "text_before": "Class A: Providers seeking 20x Class A Certification MAY implement automated methods to persistently verify and validate the accuracy and completeness of Key Security Indicators.\nClass B: Providers seeking 20x Class B Certification SHOULD implement automated methods to persistently verify and validate the accuracy and completeness of Key Security Indicators with at least 1 automated method for each Key Security Indicator.\nClass C: Providers seeking 20x Class C Certification MUST implement automated methods to persistently verify and validate the accuracy and completeness of Key Security Indicators with at least 2 automated methods for each Key Security Indicator.\nClass D: Providers seeking 20x Class D Certification MUST implement automated methods to persistently verify and validate the accuracy and completeness of Key Security Indicators with at least 4 automated methods for each Key Security Indicator.",
+    "text_after": "Class A: Providers seeking 20x Class A Certification MAY implement automated methods to persistently verify and validate the accuracy and completeness of Key Security Indicators.\nClass B: Providers seeking 20x Class B Certification SHOULD implement automated methods to persistently verify and validate the accuracy and completeness of Key Security Indicators with at least 1 automated method for each Key Security Indicator.\nClass C: Providers seeking 20x Class C Certification MUST implement automated methods to persistently verify and validate the accuracy and completeness of Key Security Indicators with at least 2 automated methods for each Key Security Indicator.\nClass D: Providers seeking 20x Class D Certification MUST implement automated methods to persistently verify and validate the accuracy and completeness of Key Security Indicators with at least 4 automated methods for each Key Security Indicator.",
+    "fields": [
+     {
+      "field": "controls",
+      "label": "Mapped NIST controls",
+      "type": "set",
+      "before": null,
+      "after": [
+       "cm-2.2",
+       "si-6"
+      ]
+     }
+    ],
+    "sentences": [
+     "Mapped NIST controls added: `cm-2.2`, `si-6`."
+    ],
+    "grade": "mapping",
+    "fedramp_notes": [
+     "2026-10-13: Updated control mappings: added cm-2.2, si-6."
+    ]
+   },
+   {
+    "id": "FRC-CSX-VVR",
+    "kind": "Rule",
+    "family": "FRC",
+    "name": "Automated Verification and Validation of FedRAMP Rules",
+    "path_before": "FRR/FRC/data/20x/CSX",
+    "path": "FRR/FRC/data/20x/CSX",
+    "text_before": "Class A: Providers seeking 20x Class A Certification MAY implement automated methods to persistently verify and validate the accuracy and completeness of the Security Decision Record for FedRAMP rules when applicable.\nClass B: Providers seeking 20x Class B Certification SHOULD implement automated methods to persistently verify and validate the accuracy and completeness of the Security Decision Record for FedRAMP rules when applicable.\nClass C: Providers seeking 20x Class C Certification SHOULD implement automated methods to persistently verify and validate the accuracy and completeness of the Security Decision Record for FedRAMP rules when applicable.\nClass D: Providers seeking 20x Class D Certification SHOULD implement automated methods to persistently verify and validate the accuracy and completeness of the Security Decision Record for FedRAMP rules when applicable.",
+    "text_after": "Class A: Providers seeking 20x Class A Certification MAY implement automated methods to persistently verify and validate the accuracy and completeness of the Security Decision Record for FedRAMP rules when applicable.\nClass B: Providers seeking 20x Class B Certification SHOULD implement automated methods to persistently verify and validate the accuracy and completeness of the Security Decision Record for FedRAMP rules when applicable.\nClass C: Providers seeking 20x Class C Certification SHOULD implement automated methods to persistently verify and validate the accuracy and completeness of the Security Decision Record for FedRAMP rules when applicable.\nClass D: Providers seeking 20x Class D Certification SHOULD implement automated methods to persistently verify and validate the accuracy and completeness of the Security Decision Record for FedRAMP rules when applicable.",
+    "fields": [
+     {
+      "field": "controls",
+      "label": "Mapped NIST controls",
+      "type": "set",
+      "before": null,
+      "after": [
+       "si-6"
+      ]
+     }
+    ],
+    "sentences": [
+     "Mapped NIST controls added: `si-6`."
+    ],
+    "grade": "mapping",
+    "fedramp_notes": [
+     "2026-10-13: Updated control mappings: added si-6."
+    ]
+   },
+   {
+    "id": "IEC-CSO-EFR",
+    "kind": "Rule",
+    "family": "IEC",
+    "name": "Evaluate FedRAMP Reportability",
+    "path_before": "FRR/IEC/data/all/CSO",
+    "path": "FRR/IEC/data/all/CSO",
+    "text_before": "Providers MUST promptly evaluate incidents to determine if they affect confidentiality or integrity of federal customer data or are likely to affect confidentiality or integrity of federal customer data; such incidents are FedRAMP Reportable Incidents and must be reported following the FedRAMP Incident Evaluation and Communication rules.",
+    "text_after": "Providers MUST promptly evaluate incidents to determine if they affect confidentiality or integrity of federal customer data or are likely to affect confidentiality or integrity of federal customer data; such incidents are FedRAMP Reportable Incidents and must be reported following the FedRAMP Incident Evaluation and Communication rules.",
+    "fields": [
+     {
+      "field": "controls",
+      "label": "Mapped NIST controls",
+      "type": "set",
+      "before": null,
+      "after": [
+       "au-5.2",
+       "ir-4.11"
+      ]
+     }
+    ],
+    "sentences": [
+     "Mapped NIST controls added: `au-5.2`, `ir-4.11`."
+    ],
+    "grade": "mapping",
+    "fedramp_notes": [
+     "2026-10-13: Updated control mappings: added au-5.2, ir-4.11."
+    ]
+   },
+   {
+    "id": "IEC-CSO-FIR",
+    "kind": "Rule",
+    "family": "IEC",
+    "name": "Final Incident Report",
+    "path_before": "FRR/IEC/data/all/CSO",
+    "path": "FRR/IEC/data/all/CSO",
+    "text_before": "Class A: Providers with Class A Certifications MUST responsibly notify all affected parties by providing a Final Incident Report once the incident has been resolved and recovery is complete, including final updates to all previously reported information.\nClass B: Providers with Class B Certifications MUST responsibly notify all affected parties by providing a Final Incident Report once the incident has been resolved and recovery is complete, including final updates to all previously reported information.\nClass C: Providers with Class C Certifications MUST responsibly notify all affected parties by providing a Final Incident Report once the incident has been resolved and recovery is complete, including final updates to all previously reported information.\nClass D: Providers with Class D Certifications MUST responsibly notify all affected parties by providing a Final Incident Report once the incident has been resolved and recovery is complete, including final updates to all previously reported information.",
+    "text_after": "Class A: Providers with Class A Certifications MUST responsibly notify all affected parties by providing a Final Incident Report once the incident has been resolved and recovery is complete, including final updates to all previously reported information.\nClass B: Providers with Class B Certifications MUST responsibly notify all affected parties by providing a Final Incident Report once the incident has been resolved and recovery is complete, including final updates to all previously reported information.\nClass C: Providers with Class C Certifications MUST responsibly notify all affected parties by providing a Final Incident Report once the incident has been resolved and recovery is complete, including final updates to all previously reported information.\nClass D: Providers with Class D Certifications MUST responsibly notify all affected parties by providing a Final Incident Report once the incident has been resolved and recovery is complete, including final updates to all previously reported information.",
+    "fields": [
+     {
+      "field": "controls",
+      "label": "Mapped NIST controls",
+      "type": "set",
+      "before": null,
+      "after": [
+       "ir-5"
+      ]
+     }
+    ],
+    "sentences": [
+     "Mapped NIST controls added: `ir-5`."
+    ],
+    "grade": "mapping",
+    "fedramp_notes": [
+     "2026-10-13: Updated control mappings: added ir-5."
+    ]
+   },
+   {
+    "id": "IEC-CSO-IIR",
+    "kind": "Rule",
+    "family": "IEC",
+    "name": "Initial Incident Report",
+    "path_before": "FRR/IEC/data/all/CSO",
+    "path": "FRR/IEC/data/all/CSO",
+    "text_before": "Class A: Providers with Class A Certifications SHOULD responsibly notify all affected parties after identifying FedRAMP Reportable Incidents by providing an Initial Incident Report with as much of the following information that is available at the time of reporting and/or the current relevant status for each item:\nClass B: Providers with Class B Certifications MUST responsibly notify all affected parties after identifying FedRAMP Reportable Incidents by providing an Initial Incident Report with as much of the following information that is available at the time of reporting and/or the current relevant status for each item:\nClass C: Providers with Class C Certifications MUST responsibly notify all affected parties after identifying FedRAMP Reportable Incidents by providing an Initial Incident Report with as much of the following information that is available at the time of reporting and/or the current relevant status for each item:\nClass D: Providers with Class D Certifications MUST responsibly notify all affected parties after identifying FedRAMP Reportable Incidents by providing an Initial Incident Report with as much of the following information that is available at the time of reporting and/or the current relevant status for each item:",
+    "text_after": "Class A: Providers with Class A Certifications SHOULD responsibly notify all affected parties after identifying FedRAMP Reportable Incidents by providing an Initial Incident Report with as much of the following information that is available at the time of reporting and/or the current relevant status for each item:\nClass B: Providers with Class B Certifications MUST responsibly notify all affected parties after identifying FedRAMP Reportable Incidents by providing an Initial Incident Report with as much of the following information that is available at the time of reporting and/or the current relevant status for each item:\nClass C: Providers with Class C Certifications MUST responsibly notify all affected parties after identifying FedRAMP Reportable Incidents by providing an Initial Incident Report with as much of the following information that is available at the time of reporting and/or the current relevant status for each item:\nClass D: Providers with Class D Certifications MUST responsibly notify all affected parties after identifying FedRAMP Reportable Incidents by providing an Initial Incident Report with as much of the following information that is available at the time of reporting and/or the current relevant status for each item:",
+    "fields": [
+     {
+      "field": "controls",
+      "label": "Mapped NIST controls",
+      "type": "set",
+      "before": null,
+      "after": [
+       "au-5.2",
+       "ir-5"
+      ]
+     }
+    ],
+    "sentences": [
+     "Mapped NIST controls added: `au-5.2`, `ir-5`."
+    ],
+    "grade": "mapping",
+    "fedramp_notes": [
+     "2026-10-13: Updated control mappings: added au-5.2, ir-5."
+    ]
+   },
+   {
+    "id": "IEC-CSO-OIR",
+    "kind": "Rule",
+    "family": "IEC",
+    "name": "Ongoing Incident Reports",
+    "path_before": "FRR/IEC/data/all/CSO",
+    "path": "FRR/IEC/data/all/CSO",
+    "text_before": "Class A: Providers with Class A Certifications SHOULD responsibly notify all affected parties of ongoing activity as new information becomes available during incident response for FedRAMP Reportable Incidents, including updates (or lack of updates) to all previously reported information and as much of the following additional information that is available and/or the current relevant status for each item:\nClass B: Providers with Class B Certifications MUST responsibly notify all affected parties of ongoing activity as new information becomes available during incident response for FedRAMP Reportable Incidents, including updates (or lack of updates) to all previously reported information and as much of the following additional information that is available and/or the current relevant status for each item:\nClass C: Providers with Class C Certifications MUST responsibly notify all affected parties of ongoing activity as new information becomes available during incident response for FedRAMP Reportable Incidents, including updates (or lack of updates) to all previously reported information and as much of the following additional information that is available and/or the current relevant status for each item:\nClass D: Providers with Class D Certifications MUST responsibly notify all affected parties of ongoing activity as new information becomes available during incident response for FedRAMP Reportable Incidents, including updates (or lack of updates) to all previously reported information and as much of the following additional information that is available and/or the current relevant status for each item:",
+    "text_after": "Class A: Providers with Class A Certifications SHOULD responsibly notify all affected parties of ongoing activity as new information becomes available during incident response for FedRAMP Reportable Incidents, including updates (or lack of updates) to all previously reported information and as much of the following additional information that is available and/or the current relevant status for each item:\nClass B: Providers with Class B Certifications MUST responsibly notify all affected parties of ongoing activity as new information becomes available during incident response for FedRAMP Reportable Incidents, including updates (or lack of updates) to all previously reported information and as much of the following additional information that is available and/or the current relevant status for each item:\nClass C: Providers with Class C Certifications MUST responsibly notify all affected parties of ongoing activity as new information becomes available during incident response for FedRAMP Reportable Incidents, including updates (or lack of updates) to all previously reported information and as much of the following additional information that is available and/or the current relevant status for each item:\nClass D: Providers with Class D Certifications MUST responsibly notify all affected parties of ongoing activity as new information becomes available during incident response for FedRAMP Reportable Incidents, including updates (or lack of updates) to all previously reported information and as much of the following additional information that is available and/or the current relevant status for each item:",
+    "fields": [
+     {
+      "field": "controls",
+      "label": "Mapped NIST controls",
+      "type": "set",
+      "before": null,
+      "after": [
+       "ir-5"
+      ]
+     }
+    ],
+    "sentences": [
+     "Mapped NIST controls added: `ir-5`."
+    ],
+    "grade": "mapping",
+    "fedramp_notes": [
+     "2026-10-13: Updated control mappings: added ir-5."
+    ]
+   },
+   {
+    "id": "IVV-CSO-FIA",
+    "kind": "Rule",
+    "family": "IVV",
+    "name": "FedRAMP Independent Assessments",
+    "path_before": "FRR/IVV/data/all/CSO",
+    "path": "FRR/IVV/data/all/CSO",
+    "text_before": "Class A: Providers with Class A Certifications MAY persistently complete an independent verification and validation assessment of all applicable FedRAMP rules with a FedRAMP Recognized independent assessment service OR FedRAMP at least once per year; this is a FedRAMP independent assessment.\nClass B: Providers with Class B Certifications MUST persistently complete an independent verification and validation assessment of all applicable FedRAMP rules with a FedRAMP Recognized independent assessment service OR FedRAMP at least once per year; this is a FedRAMP independent assessment.\nClass C: Providers with Class C Certifications MUST persistently complete an independent verification and validation assessment of all applicable FedRAMP rules with a FedRAMP Recognized independent assessment service OR FedRAMP at least once per year; this is a FedRAMP independent assessment.\nClass D: Providers with Class D Certifications MUST persistently complete an independent verification and validation assessment of all applicable FedRAMP rules with a FedRAMP Recognized independent assessment service OR FedRAMP at least once per year; this is a FedRAMP independent assessment.",
+    "text_after": "Class A: Providers with Class A Certifications MAY persistently complete an independent verification and validation assessment of all applicable FedRAMP rules with a FedRAMP Recognized independent assessment service OR FedRAMP at least once per year; this is a FedRAMP independent assessment.\nClass B: Providers with Class B Certifications MUST persistently complete an independent verification and validation assessment of all applicable FedRAMP rules with a FedRAMP Recognized independent assessment service OR FedRAMP at least once per year; this is a FedRAMP independent assessment.\nClass C: Providers with Class C Certifications MUST persistently complete an independent verification and validation assessment of all applicable FedRAMP rules with a FedRAMP Recognized independent assessment service OR FedRAMP at least once per year; this is a FedRAMP independent assessment.\nClass D: Providers with Class D Certifications MUST persistently complete an independent verification and validation assessment of all applicable FedRAMP rules with a FedRAMP Recognized independent assessment service OR FedRAMP at least once per year; this is a FedRAMP independent assessment.",
+    "fields": [
+     {
+      "field": "controls",
+      "label": "Mapped NIST controls",
+      "type": "set",
+      "before": null,
+      "after": [
+       "ca-2",
+       "ca-2.1",
+       "ca-2.2",
+       "ca-7.1",
+       "ca-7.4"
+      ]
+     }
+    ],
+    "sentences": [
+     "Mapped NIST controls added: `ca-2`, `ca-2.1`, `ca-2.2`, `ca-7.1`, `ca-7.4`."
+    ],
+    "grade": "mapping",
+    "fedramp_notes": [
+     "2026-10-13: Updated control mappings: added ca-2, ca-2.1, ca-2.2, ca-7.1, ca-7.4."
+    ]
+   },
+   {
+    "id": "IVV-IAS-VEF",
+    "kind": "Rule",
+    "family": "IVV",
+    "name": "Validate Effectiveness",
+    "path_before": "FRR/IVV/data/all/IAS",
+    "path": "FRR/IVV/data/all/IAS",
+    "text_before": "Assessors MUST validate the effectiveness of the implemented measures to ensure they have the intended outcome for meeting FedRAMP Practices.",
+    "text_after": "Assessors MUST validate the effectiveness of the implemented measures to ensure they have the intended outcome for meeting FedRAMP Practices.",
+    "fields": [
+     {
+      "field": "controls",
+      "label": "Mapped NIST controls",
+      "type": "set",
+      "before": null,
+      "after": []
+     }
+    ],
+    "sentences": [
+     "Structural change with no effect on wording."
+    ],
+    "grade": "editorial",
+    "fedramp_notes": []
+   },
+   {
+    "id": "KSI-CED-RAT",
+    "kind": "Key Security Indicator",
+    "family": "CED",
+    "name": "Reviewing All Training",
+    "path_before": "KSI/CED/indicators",
+    "path": "KSI/CED/indicators",
+    "text_before": "The effectiveness of relevant cybersecurity education and training is persistently reviewed, including at least general training for all employees, role-specific training for employees in high risk roles, training for development and engineering staff on secure software delivery, and training for staff involved with incident response or disaster recovery.",
+    "text_after": "The effectiveness of relevant cybersecurity education and training is persistently reviewed, including at least general training for all employees, role-specific training for employees in high risk roles, training for development and engineering staff on secure software delivery, and training for staff involved with incident response or disaster recovery.",
+    "fields": [
+     {
+      "field": "controls",
+      "label": "Mapped NIST controls",
+      "type": "set",
+      "before": [
+       "at-2",
+       "at-2.2",
+       "at-2.3",
+       "at-3",
+       "at-3.5",
+       "at-4",
+       "cp-3",
+       "ir-2",
+       "ir-2.3",
+       "ps-6",
+       "sr-11.1"
+      ],
+      "after": [
+       "at-2",
+       "at-2.2",
+       "at-2.3",
+       "at-3",
+       "at-3.5",
+       "at-4",
+       "cm-11",
+       "cp-3",
+       "cp-3.1",
+       "ir-2",
+       "ir-2.1",
+       "ir-2.2",
+       "ir-2.3",
+       "ir-9.2",
+       "ir-9.4",
+       "pl-4",
+       "pl-4.1",
+       "ps-6",
+       "sr-11.1"
+      ],
+      "added_items": [
+       "cm-11",
+       "cp-3.1",
+       "ir-2.1",
+       "ir-2.2",
+       "ir-9.2",
+       "ir-9.4",
+       "pl-4",
+       "pl-4.1"
+      ],
+      "removed_items": []
+     }
+    ],
+    "sentences": [
+     "Mapped NIST controls: added `cm-11`, `cp-3.1`, `ir-2.1`, `ir-2.2`, `ir-9.2`, `ir-9.4`, `pl-4`, `pl-4.1`."
+    ],
+    "grade": "mapping",
+    "fedramp_notes": [
+     "2026-10-13: Updated control mappings: added cm-11, cp-3.1, ir-2.1, ir-2.2, ir-9.2, ir-9.4, pl-4, pl-4.1."
+    ]
+   },
+   {
+    "id": "KSI-CMT-LMC",
+    "kind": "Key Security Indicator",
+    "family": "CMT",
+    "name": "Logging Changes",
+    "path_before": "KSI/CMT/indicators",
+    "path": "KSI/CMT/indicators",
+    "text_before": "Modifications to the cloud service offering are logged and monitored.",
+    "text_after": "Modifications to the cloud service offering are logged and monitored.",
+    "fields": [
+     {
+      "field": "controls",
+      "label": "Mapped NIST controls",
+      "type": "set",
+      "before": [
+       "au-2",
+       "cm-3",
+       "cm-3.2",
+       "cm-4.2",
+       "cm-6",
+       "cm-8.3",
+       "ma-2"
+      ],
+      "after": [
+       "au-2",
+       "ca-7.4",
+       "cm-3",
+       "cm-3.1",
+       "cm-3.2",
+       "cm-3.6",
+       "cm-4.2",
+       "cm-6",
+       "cm-8.3"
+      ],
+      "added_items": [
+       "ca-7.4",
+       "cm-3.1",
+       "cm-3.6"
+      ],
+      "removed_items": [
+       "ma-2"
+      ]
+     }
+    ],
+    "sentences": [
+     "Mapped NIST controls: added `ca-7.4`, `cm-3.1`, `cm-3.6`; removed `ma-2`."
+    ],
+    "grade": "mapping",
+    "fedramp_notes": [
+     "2026-10-13: Updated control mappings: added ca-7.4, cm-3.1, cm-3.6; removed ma-2."
+    ]
+   },
+   {
+    "id": "KSI-CMT-VTD",
+    "kind": "Key Security Indicator",
+    "family": "CMT",
+    "name": "Validating Throughout Deployment",
+    "path_before": "KSI/CMT/indicators",
+    "path": "KSI/CMT/indicators",
+    "text_before": "Persistent testing and validation of changes throughout deployment is automated.",
+    "text_after": "Persistent testing and validation of changes throughout deployment is automated.",
+    "fields": [
+     {
+      "field": "controls",
+      "label": "Mapped NIST controls",
+      "type": "set",
+      "before": [
+       "cm-3",
+       "cm-3.2",
+       "cm-4.2",
+       "si-2"
+      ],
+      "after": [
+       "cm-3",
+       "cm-3.2",
+       "cm-4.2",
+       "cm-6.2",
+       "ir-9.4",
+       "si-2"
+      ],
+      "added_items": [
+       "cm-6.2",
+       "ir-9.4"
+      ],
+      "removed_items": []
+     }
+    ],
+    "sentences": [
+     "Mapped NIST controls: added `cm-6.2`, `ir-9.4`."
+    ],
+    "grade": "mapping",
+    "fedramp_notes": [
+     "2026-10-13: Updated control mappings: added cm-6.2, ir-9.4."
+    ]
+   },
+   {
+    "id": "KSI-CNA-DFP",
+    "kind": "Key Security Indicator",
+    "family": "CNA",
+    "name": "Defining Functionality and Privileges",
+    "path_before": "KSI/CNA/indicators",
+    "path": "KSI/CNA/indicators",
+    "text_before": "The functionality and privileges for infrastructure and services are strictly defined.",
+    "text_after": "The functionality and privileges for infrastructure and services are strictly defined.",
+    "fields": [
+     {
+      "field": "controls",
+      "label": "Mapped NIST controls",
+      "type": "set",
+      "before": [
+       "cm-2",
+       "si-3"
+      ],
+      "after": [
+       "cm-2",
+       "cm-8.4",
+       "cp-10.4",
+       "ir-9.4",
+       "si-3"
+      ],
+      "added_items": [
+       "cm-8.4",
+       "cp-10.4",
+       "ir-9.4"
+      ],
+      "removed_items": []
+     }
+    ],
+    "sentences": [
+     "Mapped NIST controls: added `cm-8.4`, `cp-10.4`, `ir-9.4`."
+    ],
+    "grade": "mapping",
+    "fedramp_notes": [
+     "2026-10-13: Updated control mappings: added cm-8.4, cp-10.4, ir-9.4."
+    ]
+   },
+   {
+    "id": "KSI-CNA-EIS",
+    "kind": "Key Security Indicator",
+    "family": "CNA",
+    "name": "Enforcing Intended State",
+    "path_before": "KSI/CNA/indicators",
+    "path": "KSI/CNA/indicators",
+    "text_before": "Class B: **Optional:** Automated services are used to persistently assess the security of all machine-based information resources and automatically enforce their intended operational state.\nClass C: Automated services are used to persistently assess the security of all machine-based information resources and automatically enforce their intended operational state.",
+    "text_after": "Class B: **Optional:** Automated services are used to persistently assess the security of all machine-based information resources and automatically enforce their intended operational state.\nClass C: Automated services are used to persistently assess the security of all machine-based information resources and automatically enforce their intended operational state.",
+    "fields": [
+     {
+      "field": "controls",
+      "label": "Mapped NIST controls",
+      "type": "set",
+      "before": [
+       "ca-2.1",
+       "ca-7.1"
+      ],
+      "after": [
+       "ca-2.1",
+       "cm-11",
+       "cm-6.2",
+       "cp-10.4",
+       "ir-9.4",
+       "sc-24",
+       "sc-7.18",
+       "si-4.22",
+       "si-7",
+       "si-7.1",
+       "si-7.5",
+       "si-7.7"
+      ],
+      "added_items": [
+       "cm-11",
+       "cm-6.2",
+       "cp-10.4",
+       "ir-9.4",
+       "sc-24",
+       "sc-7.18",
+       "si-4.22",
+       "si-7",
+       "si-7.1",
+       "si-7.5",
+       "si-7.7"
+      ],
+      "removed_items": [
+       "ca-7.1"
+      ]
+     }
+    ],
+    "sentences": [
+     "Mapped NIST controls: added `cm-11`, `cm-6.2`, `cp-10.4`, `ir-9.4`, `sc-24`, `sc-7.18`, `si-4.22`, `si-7`, `si-7.1`, `si-7.5`, `si-7.7`; removed `ca-7.1`."
+    ],
+    "grade": "mapping",
+    "fedramp_notes": [
+     "2026-10-13: Updated control mappings: added cm-11, cm-6.2, cp-10.4, ir-9.4, sc-24, sc-7.18, si-4.22, si-7, si-7.1, si-7.5, si-7.7; removed ca-7.1."
+    ]
+   },
+   {
+    "id": "KSI-CNA-IBP",
+    "kind": "Key Security Indicator",
+    "family": "CNA",
+    "name": "Implementing Best Practices",
+    "path_before": "KSI/CNA/indicators",
+    "path": "KSI/CNA/indicators",
+    "text_before": "The use and configuration of third-party machine-based information resources is persistently compared against the original provider's best practices and guidance.",
+    "text_after": "The use and configuration of third-party machine-based information resources is persistently compared against the original provider's best practices and guidance.",
+    "fields": [
+     {
+      "field": "controls",
+      "label": "Mapped NIST controls",
+      "type": "set",
+      "before": [
+       "ac-17.3",
+       "cm-2",
+       "pl-10"
+      ],
+      "after": [
+       "ac-17.3",
+       "cm-2",
+       "pl-10",
+       "sc-7.18"
+      ],
+      "added_items": [
+       "sc-7.18"
+      ],
+      "removed_items": []
+     }
+    ],
+    "sentences": [
+     "Mapped NIST controls: added `sc-7.18`."
+    ],
+    "grade": "mapping",
+    "fedramp_notes": [
+     "2026-10-13: Updated control mappings: added sc-7.18."
+    ]
+   },
+   {
+    "id": "KSI-CNA-MAT",
+    "kind": "Key Security Indicator",
+    "family": "CNA",
+    "name": "Minimizing Attack Surface",
+    "path_before": "KSI/CNA/indicators",
+    "path": "KSI/CNA/indicators",
+    "text_before": "Machine-based information resources are persistently reviewed to ensure they have a minimal attack surface and that lateral movement is minimized if compromised.",
+    "text_after": "Machine-based information resources are persistently reviewed to ensure they have a minimal attack surface and that lateral movement is minimized if compromised.",
+    "fields": [
+     {
+      "field": "controls",
+      "label": "Mapped NIST controls",
+      "type": "set",
+      "before": [
+       "ac-17.3",
+       "ac-18.1",
+       "ac-18.3",
+       "ac-20.1",
+       "ca-9",
+       "sc-10",
+       "sc-7.3",
+       "sc-7.4",
+       "sc-7.5",
+       "sc-7.8",
+       "sc-8",
+       "si-10",
+       "si-11",
+       "si-16"
+      ],
+      "after": [
+       "ac-17.3",
+       "ac-18.1",
+       "ac-18.3",
+       "ac-20.1",
+       "ca-9",
+       "sc-10",
+       "sc-7.18",
+       "sc-7.3",
+       "sc-7.4",
+       "sc-7.5",
+       "sc-7.8",
+       "sc-8",
+       "si-10",
+       "si-11",
+       "si-16"
+      ],
+      "added_items": [
+       "sc-7.18"
+      ],
+      "removed_items": []
+     }
+    ],
+    "sentences": [
+     "Mapped NIST controls: added `sc-7.18`."
+    ],
+    "grade": "mapping",
+    "fedramp_notes": [
+     "2026-10-13: Updated control mappings: added sc-7.18."
+    ]
+   },
+   {
+    "id": "KSI-CNA-OFA",
+    "kind": "Key Security Indicator",
+    "family": "CNA",
+    "name": "Optimizing for Availability",
+    "path_before": "KSI/CNA/indicators",
+    "path": "KSI/CNA/indicators",
+    "text_before": "Machine-based information resources are persistently reviewed to ensure they are appropriately optimized for high availability and rapid recovery.",
+    "text_after": "Machine-based information resources are persistently reviewed to ensure they are appropriately optimized for high availability and rapid recovery.",
+    "fields": [
+     {
+      "field": "controls",
+      "label": "Mapped NIST controls",
+      "type": "set",
+      "before": [],
+      "after": [
+       "cp-2.5",
+       "sc-12.1"
+      ],
+      "added_items": [
+       "cp-2.5",
+       "sc-12.1"
+      ],
+      "removed_items": []
+     }
+    ],
+    "sentences": [
+     "Mapped NIST controls: added `cp-2.5`, `sc-12.1`."
+    ],
+    "grade": "mapping",
+    "fedramp_notes": [
+     "2026-10-13: Updated control mappings: added cp-2.5, sc-12.1."
+    ]
+   },
+   {
+    "id": "KSI-CNA-RNT",
+    "kind": "Key Security Indicator",
+    "family": "CNA",
+    "name": "Restricting Network Traffic",
+    "path_before": "KSI/CNA/indicators",
+    "path": "KSI/CNA/indicators",
+    "text_before": "Machine-based information resources are persistently reviewed to ensure they are appropriately configured to limit inbound and outbound network traffic.",
+    "text_after": "Machine-based information resources are persistently reviewed to ensure they are appropriately configured to limit inbound and outbound network traffic.",
+    "fields": [
+     {
+      "field": "controls",
+      "label": "Mapped NIST controls",
+      "type": "set",
+      "before": [
+       "ac-17.3",
+       "ca-9",
+       "cm-7.1",
+       "sc-7.5",
+       "si-8"
+      ],
+      "after": [
+       "ac-17.3",
+       "ca-9",
+       "cm-7.1",
+       "sc-7.10",
+       "sc-7.18",
+       "sc-7.20",
+       "sc-7.21",
+       "sc-7.5",
+       "si-10",
+       "si-4.11",
+       "si-4.18",
+       "si-4.4",
+       "si-8"
+      ],
+      "added_items": [
+       "sc-7.10",
+       "sc-7.18",
+       "sc-7.20",
+       "sc-7.21",
+       "si-10",
+       "si-4.11",
+       "si-4.18",
+       "si-4.4"
+      ],
+      "removed_items": []
+     }
+    ],
+    "sentences": [
+     "Mapped NIST controls: added `sc-7.10`, `sc-7.18`, `sc-7.20`, `sc-7.21`, `si-10`, `si-4.11`, `si-4.18`, `si-4.4`."
+    ],
+    "grade": "mapping",
+    "fedramp_notes": [
+     "2026-10-13: Updated control mappings: added sc-7.10, sc-7.18, sc-7.20, sc-7.21, si-10, si-4.11, si-4.18, si-4.4."
+    ]
+   },
+   {
+    "id": "KSI-CNA-RVP",
+    "kind": "Key Security Indicator",
+    "family": "CNA",
+    "name": "Reviewing Protections",
+    "path_before": "KSI/CNA/indicators",
+    "path": "KSI/CNA/indicators",
+    "text_before": "The effectiveness of protection against denial of service attacks and other unwanted activity for machine-based information resources is persistently reviewed.",
+    "text_after": "The effectiveness of protection against denial of service attacks and other unwanted activity for machine-based information resources is persistently reviewed.",
+    "fields": [
+     {
+      "field": "controls",
+      "label": "Mapped NIST controls",
+      "type": "set",
+      "before": [
+       "sc-5",
+       "si-8",
+       "si-8.2"
+      ],
+      "after": [
+       "ir-4.2",
+       "sc-5",
+       "sc-7.18",
+       "si-8",
+       "si-8.2"
+      ],
+      "added_items": [
+       "ir-4.2",
+       "sc-7.18"
+      ],
+      "removed_items": []
+     }
+    ],
+    "sentences": [
+     "Mapped NIST controls: added `ir-4.2`, `sc-7.18`."
+    ],
+    "grade": "mapping",
+    "fedramp_notes": [
+     "2026-10-13: Updated control mappings: added ir-4.2, sc-7.18."
+    ]
+   },
+   {
+    "id": "KSI-CNA-ULN",
+    "kind": "Key Security Indicator",
+    "family": "CNA",
+    "name": "Using Logical Networking",
+    "path_before": "KSI/CNA/indicators",
+    "path": "KSI/CNA/indicators",
+    "text_before": "Logical networking and related capabilities are used and persistently reviewed to enforce traffic flow controls.",
+    "text_after": "Logical networking and related capabilities are used and persistently reviewed to enforce traffic flow controls.",
+    "fields": [
+     {
+      "field": "controls",
+      "label": "Mapped NIST controls",
+      "type": "set",
+      "before": [
+       "ac-12",
+       "ac-17.3",
+       "ca-9",
+       "sc-10",
+       "sc-4",
+       "sc-7",
+       "sc-7.7",
+       "sc-8"
+      ],
+      "after": [
+       "ac-12",
+       "ac-17.3",
+       "ac-4.21",
+       "ca-9",
+       "cm-11",
+       "sc-10",
+       "sc-4",
+       "sc-7",
+       "sc-7.20",
+       "sc-7.21",
+       "sc-7.7",
+       "sc-8"
+      ],
+      "added_items": [
+       "ac-4.21",
+       "cm-11",
+       "sc-7.20",
+       "sc-7.21"
+      ],
+      "removed_items": []
+     }
+    ],
+    "sentences": [
+     "Mapped NIST controls: added `ac-4.21`, `cm-11`, `sc-7.20`, `sc-7.21`."
+    ],
+    "grade": "mapping",
+    "fedramp_notes": [
+     "2026-10-13: Updated control mappings: added ac-4.21, cm-11, sc-7.20, sc-7.21."
+    ]
+   },
+   {
+    "id": "KSI-IAM-AAM",
+    "kind": "Key Security Indicator",
+    "family": "IAM",
+    "name": "Automating Account Management",
+    "path_before": "KSI/IAM/indicators",
+    "path": "KSI/IAM/indicators",
+    "text_before": "The lifecycle and privileges of all accounts, roles, and groups are securely managed using automation.",
+    "text_after": "The lifecycle and privileges of all accounts, roles, and groups are securely managed using automation.",
+    "fields": [
+     {
+      "field": "controls",
+      "label": "Mapped NIST controls",
+      "type": "set",
+      "before": [
+       "ac-2.13",
+       "ac-2.2",
+       "ac-2.3",
+       "ac-6.7",
+       "ia-12",
+       "ia-12.2",
+       "ia-12.3",
+       "ia-12.5",
+       "ia-4.4"
+      ],
+      "after": [
+       "ac-2.13",
+       "ac-2.2",
+       "ac-2.3",
+       "ac-6.7",
+       "ia-12",
+       "ia-12.2",
+       "ia-12.3",
+       "ia-12.5",
+       "ia-4.4",
+       "ia-8.4"
+      ],
+      "added_items": [
+       "ia-8.4"
+      ],
+      "removed_items": []
+     }
+    ],
+    "sentences": [
+     "Mapped NIST controls: added `ia-8.4`."
+    ],
+    "grade": "mapping",
+    "fedramp_notes": [
+     "2026-10-13: Updated control mappings: added ia-8.4."
+    ]
+   },
+   {
+    "id": "KSI-IAM-APM",
+    "kind": "Key Security Indicator",
+    "family": "IAM",
+    "name": "Adopting Passwordless Methods",
+    "path_before": "KSI/IAM/indicators",
+    "path": "KSI/IAM/indicators",
+    "text_before": "Secure passwordless methods are used for user authentication and authorization when feasible, otherwise strong passwords with phishing-resistant MFA is used.",
+    "text_after": "Secure passwordless methods are used for user authentication and authorization when feasible, otherwise strong passwords with phishing-resistant MFA is used.",
+    "fields": [
+     {
+      "field": "controls",
+      "label": "Mapped NIST controls",
+      "type": "set",
+      "before": [
+       "ac-2",
+       "ac-3",
+       "ia-2",
+       "ia-2.1",
+       "ia-2.2",
+       "ia-2.8",
+       "ia-5",
+       "ia-5.1",
+       "ia-5.2",
+       "ia-5.6",
+       "ia-6",
+       "ia-8",
+       "sc-23"
+      ],
+      "after": [
+       "ac-2",
+       "ac-3",
+       "ia-2",
+       "ia-2.1",
+       "ia-2.2",
+       "ia-2.6",
+       "ia-2.8",
+       "ia-5",
+       "ia-5.1",
+       "ia-5.2",
+       "ia-5.6",
+       "ia-5.8",
+       "ia-6",
+       "ia-8",
+       "ia-8.2",
+       "ia-8.4",
+       "sc-23"
+      ],
+      "added_items": [
+       "ia-2.6",
+       "ia-5.8",
+       "ia-8.2",
+       "ia-8.4"
+      ],
+      "removed_items": []
+     }
+    ],
+    "sentences": [
+     "Mapped NIST controls: added `ia-2.6`, `ia-5.8`, `ia-8.2`, `ia-8.4`."
+    ],
+    "grade": "mapping",
+    "fedramp_notes": [
+     "2026-10-13: Updated control mappings: added ia-2.6, ia-5.8, ia-8.2, ia-8.4."
+    ]
+   },
+   {
+    "id": "KSI-IAM-ELP",
+    "kind": "Key Security Indicator",
+    "family": "IAM",
+    "name": "Ensuring Least Privilege",
+    "path_before": "KSI/IAM/indicators",
+    "path": "KSI/IAM/indicators",
+    "text_before": "Identity and access management measures are used and persistently reviewed to ensure each user or device can only access the resources they need.",
+    "text_after": "Identity and access management measures are used and persistently reviewed to ensure each user or device can only access the resources they need.",
+    "fields": [
+     {
+      "field": "controls",
+      "label": "Mapped NIST controls",
+      "type": "set",
+      "before": [
+       "ac-12",
+       "ac-14",
+       "ac-17",
+       "ac-17.1",
+       "ac-17.2",
+       "ac-17.3",
+       "ac-2.5",
+       "ac-2.6",
+       "ac-20",
+       "ac-20.1",
+       "ac-3",
+       "ac-4",
+       "ac-6",
+       "cm-2.7",
+       "cm-9",
+       "ia-11",
+       "ia-2",
+       "ia-3",
+       "ia-4",
+       "ia-4.4",
+       "ia-5.2",
+       "ia-5.6",
+       "ps-2",
+       "ps-3",
+       "ps-4",
+       "ps-5",
+       "ps-6",
+       "sc-20",
+       "sc-21",
+       "sc-22",
+       "sc-23",
+       "sc-39",
+       "sc-4",
+       "si-3"
+      ],
+      "after": [
+       "ac-12",
+       "ac-14",
+       "ac-17",
+       "ac-17.1",
+       "ac-17.2",
+       "ac-17.3",
+       "ac-18.4",
+       "ac-2.11",
+       "ac-2.5",
+       "ac-2.6",
+       "ac-2.7",
+       "ac-2.9",
+       "ac-20",
+       "ac-20.1",
+       "ac-21",
+       "ac-3",
+       "ac-4",
+       "ac-6",
+       "ac-6.3",
+       "ac-6.8",
+       "au-12.3",
+       "au-6.7",
+       "cm-2.7",
+       "cm-5.1",
+       "cm-5.5",
+       "cm-7.2",
+       "cm-9",
+       "ia-11",
+       "ia-2",
+       "ia-3",
+       "ia-4",
+       "ia-4.4",
+       "ia-5.2",
+       "ia-5.6",
+       "ir-4.6",
+       "ir-9.4",
+       "ps-2",
+       "ps-3",
+       "ps-4",
+       "ps-5",
+       "ps-6",
+       "ra-5.5",
+       "sc-2",
+       "sc-20",
+       "sc-21",
+       "sc-22",
+       "sc-23",
+       "sc-3",
+       "sc-39",
+       "sc-4",
+       "si-3",
+       "si-4.19"
+      ],
+      "added_items": [
+       "ac-18.4",
+       "ac-2.11",
+       "ac-2.7",
+       "ac-2.9",
+       "ac-21",
+       "ac-6.3",
+       "ac-6.8",
+       "au-12.3",
+       "au-6.7",
+       "cm-5.1",
+       "cm-5.5",
+       "cm-7.2",
+       "ir-4.6",
+       "ir-9.4",
+       "ra-5.5",
+       "sc-2",
+       "sc-3",
+       "si-4.19"
+      ],
+      "removed_items": []
+     }
+    ],
+    "sentences": [
+     "Mapped NIST controls: added `ac-18.4`, `ac-2.11`, `ac-2.7`, `ac-2.9`, `ac-21`, `ac-6.3`, `ac-6.8`, `au-12.3`, `au-6.7`, `cm-5.1`, `cm-5.5`, `cm-7.2`, `ir-4.6`, `ir-9.4`, `ra-5.5`, `sc-2`, `sc-3`, `si-4.19`."
+    ],
+    "grade": "mapping",
+    "fedramp_notes": [
+     "2026-10-13: Updated control mappings: added ac-18.4, ac-2.11, ac-2.7, ac-2.9, ac-21, ac-6.3, ac-6.8, au-12.3, au-6.7, cm-5.1, cm-5.5, cm-7.2, ir-4.6, ir-9.4, ra-5.5, sc-2, sc-3, si-4.19."
+    ]
+   },
+   {
+    "id": "KSI-IAM-JIT",
+    "kind": "Key Security Indicator",
+    "family": "IAM",
+    "name": "Authorizing Just-in-Time",
+    "path_before": "KSI/IAM/indicators",
+    "path": "KSI/IAM/indicators",
+    "text_before": "A least-privileged, role and attribute-based, and just-in-time security authorization model is used and persistently reviewed for all user and non-user accounts and services.",
+    "text_after": "A least-privileged, role and attribute-based, and just-in-time security authorization model is used and persistently reviewed for all user and non-user accounts and services.",
+    "fields": [
+     {
+      "field": "controls",
+      "label": "Mapped NIST controls",
+      "type": "set",
+      "before": [
+       "ac-17",
+       "ac-2",
+       "ac-2.1",
+       "ac-2.2",
+       "ac-2.3",
+       "ac-2.4",
+       "ac-2.6",
+       "ac-20.1",
+       "ac-3",
+       "ac-4",
+       "ac-5",
+       "ac-6",
+       "ac-6.1",
+       "ac-6.10",
+       "ac-6.2",
+       "ac-6.5",
+       "ac-6.7",
+       "ac-6.9",
+       "ac-7",
+       "au-9.4",
+       "cm-5",
+       "cm-7",
+       "cm-7.2",
+       "cm-7.5",
+       "cm-9",
+       "ia-4",
+       "ia-4.4",
+       "ia-7",
+       "ps-2",
+       "ps-3",
+       "ps-4",
+       "ps-5",
+       "ps-6",
+       "ps-9",
+       "ra-5.5",
+       "sc-2",
+       "sc-23",
+       "sc-39"
+      ],
+      "after": [
+       "ac-17",
+       "ac-17.4",
+       "ac-2",
+       "ac-2.1",
+       "ac-2.11",
+       "ac-2.2",
+       "ac-2.3",
+       "ac-2.4",
+       "ac-2.6",
+       "ac-2.7",
+       "ac-20.1",
+       "ac-21",
+       "ac-3",
+       "ac-4",
+       "ac-5",
+       "ac-6",
+       "ac-6.1",
+       "ac-6.10",
+       "ac-6.2",
+       "ac-6.3",
+       "ac-6.5",
+       "ac-6.7",
+       "ac-6.8",
+       "ac-6.9",
+       "ac-7",
+       "au-10",
+       "au-12.3",
+       "au-9.4",
+       "ca-3.6",
+       "cm-5",
+       "cm-5.1",
+       "cm-5.5",
+       "cm-7",
+       "cm-7.2",
+       "cm-7.5",
+       "cm-9",
+       "ia-4",
+       "ia-4.4",
+       "ia-7",
+       "ir-4.6",
+       "ps-2",
+       "ps-3",
+       "ps-4",
+       "ps-5",
+       "ps-6",
+       "ps-9",
+       "ra-5.5",
+       "sc-2",
+       "sc-23",
+       "sc-3",
+       "sc-39"
+      ],
+      "added_items": [
+       "ac-17.4",
+       "ac-2.11",
+       "ac-2.7",
+       "ac-21",
+       "ac-6.3",
+       "ac-6.8",
+       "au-10",
+       "au-12.3",
+       "ca-3.6",
+       "cm-5.1",
+       "cm-5.5",
+       "ir-4.6",
+       "sc-3"
+      ],
+      "removed_items": []
+     }
+    ],
+    "sentences": [
+     "Mapped NIST controls: added `ac-17.4`, `ac-2.11`, `ac-2.7`, `ac-21`, `ac-6.3`, `ac-6.8`, `au-10`, `au-12.3`, `ca-3.6`, `cm-5.1`, `cm-5.5`, `ir-4.6`, `sc-3`."
+    ],
+    "grade": "mapping",
+    "fedramp_notes": [
+     "2026-10-13: Updated control mappings: added ac-17.4, ac-2.11, ac-2.7, ac-21, ac-6.3, ac-6.8, au-10, au-12.3, ca-3.6, cm-5.1, cm-5.5, ir-4.6, sc-3."
+    ]
+   },
+   {
+    "id": "KSI-IAM-SNU",
+    "kind": "Key Security Indicator",
+    "family": "IAM",
+    "name": "Securing Non-User Authentication",
+    "path_before": "KSI/IAM/indicators",
+    "path": "KSI/IAM/indicators",
+    "text_before": "Appropriately secure authentication methods are used and persistently reviewed for non-user accounts and services.",
+    "text_after": "Appropriately secure authentication methods are used and persistently reviewed for non-user accounts and services.",
+    "fields": [
+     {
+      "field": "controls",
+      "label": "Mapped NIST controls",
+      "type": "set",
+      "before": [
+       "ac-2",
+       "ac-2.2",
+       "ac-4",
+       "ac-6.5",
+       "ia-3",
+       "ia-5.2",
+       "ra-5.5"
+      ],
+      "after": [
+       "ac-2",
+       "ac-2.2",
+       "ac-2.9",
+       "ac-4",
+       "ac-6.5",
+       "au-10",
+       "ia-2.5",
+       "ia-3",
+       "ia-5.2",
+       "ra-5.5"
+      ],
+      "added_items": [
+       "ac-2.9",
+       "au-10",
+       "ia-2.5"
+      ],
+      "removed_items": []
+     }
+    ],
+    "sentences": [
+     "Mapped NIST controls: added `ac-2.9`, `au-10`, `ia-2.5`."
+    ],
+    "grade": "mapping",
+    "fedramp_notes": [
+     "2026-10-13: Updated control mappings: added ac-2.9, au-10, ia-2.5."
+    ]
+   },
+   {
+    "id": "KSI-IAM-SUS",
+    "kind": "Key Security Indicator",
+    "family": "IAM",
+    "name": "Responding to Suspicious Activity",
+    "path_before": "KSI/IAM/indicators",
+    "path": "KSI/IAM/indicators",
+    "text_before": "Accounts with privileged access are disabled or otherwise secured in response to suspicious activity.",
+    "text_after": "Accounts with privileged access are disabled or otherwise secured in response to suspicious activity.",
+    "fields": [
+     {
+      "field": "controls",
+      "label": "Mapped NIST controls",
+      "type": "set",
+      "before": [
+       "ac-2",
+       "ac-2.1",
+       "ac-2.13",
+       "ac-2.3",
+       "ac-7",
+       "ps-4",
+       "ps-8"
+      ],
+      "after": [
+       "ac-2",
+       "ac-2.1",
+       "ac-2.11",
+       "ac-2.12",
+       "ac-2.13",
+       "ac-2.3",
+       "ac-7",
+       "au-6.5",
+       "cm-5.1",
+       "cm-6.2",
+       "ir-4.2",
+       "ir-4.6",
+       "ps-4",
+       "ps-8",
+       "si-4",
+       "si-4.1",
+       "si-4.19",
+       "si-4.20",
+       "si-4.22",
+       "si-4.4"
+      ],
+      "added_items": [
+       "ac-2.11",
+       "ac-2.12",
+       "au-6.5",
+       "cm-5.1",
+       "cm-6.2",
+       "ir-4.2",
+       "ir-4.6",
+       "si-4",
+       "si-4.1",
+       "si-4.19",
+       "si-4.20",
+       "si-4.22",
+       "si-4.4"
+      ],
+      "removed_items": []
+     }
+    ],
+    "sentences": [
+     "Mapped NIST controls: added `ac-2.11`, `ac-2.12`, `au-6.5`, `cm-5.1`, `cm-6.2`, `ir-4.2`, `ir-4.6`, `si-4`, `si-4.1`, `si-4.19`, `si-4.20`, `si-4.22`, `si-4.4`."
+    ],
+    "grade": "mapping",
+    "fedramp_notes": [
+     "2026-10-13: Updated control mappings: added ac-2.11, ac-2.12, au-6.5, cm-5.1, cm-6.2, ir-4.2, ir-4.6, si-4, si-4.1, si-4.19, si-4.20, si-4.22, si-4.4."
+    ]
+   },
+   {
+    "id": "KSI-INR-AAR",
+    "kind": "Key Security Indicator",
+    "family": "INR",
+    "name": "Generating After Action Reports",
+    "path_before": "KSI/INR/indicators",
+    "path": "KSI/INR/indicators",
+    "text_before": "Incident after action reports are generated and lessons learned are persistently incorporated.",
+    "text_after": "Incident after action reports are generated and lessons learned are persistently incorporated.",
+    "fields": [
+     {
+      "field": "controls",
+      "label": "Mapped NIST controls",
+      "type": "set",
+      "before": [
+       "ir-3",
+       "ir-4",
+       "ir-4.1",
+       "ir-8"
+      ],
+      "after": [
+       "ir-3",
+       "ir-4",
+       "ir-4.1",
+       "ir-5.1",
+       "ir-8",
+       "ir-9.3"
+      ],
+      "added_items": [
+       "ir-5.1",
+       "ir-9.3"
+      ],
+      "removed_items": []
+     }
+    ],
+    "sentences": [
+     "Mapped NIST controls: added `ir-5.1`, `ir-9.3`."
+    ],
+    "grade": "mapping",
+    "fedramp_notes": [
+     "2026-10-13: Updated control mappings: added ir-5.1, ir-9.3."
+    ]
+   },
+   {
+    "id": "KSI-INR-RIR",
+    "kind": "Key Security Indicator",
+    "family": "INR",
+    "name": "Reviewing Incident Response Procedures",
+    "path_before": "KSI/INR/indicators",
+    "path": "KSI/INR/indicators",
+    "text_before": "The effectiveness of documented incident response procedures is persistently reviewed.",
+    "text_after": "The effectiveness of documented incident response procedures is persistently reviewed.",
+    "fields": [
+     {
+      "field": "controls",
+      "label": "Mapped NIST controls",
+      "type": "set",
+      "before": [
+       "ir-4",
+       "ir-4.1",
+       "ir-6",
+       "ir-6.1",
+       "ir-6.3",
+       "ir-7",
+       "ir-7.1",
+       "ir-8",
+       "ir-8.1",
+       "si-4.5"
+      ],
+      "after": [
+       "ir-4",
+       "ir-4.1",
+       "ir-4.11",
+       "ir-6",
+       "ir-6.1",
+       "ir-6.3",
+       "ir-7",
+       "ir-7.1",
+       "ir-8",
+       "ir-8.1",
+       "ir-9.3",
+       "si-4.5"
+      ],
+      "added_items": [
+       "ir-4.11",
+       "ir-9.3"
+      ],
+      "removed_items": []
+     }
+    ],
+    "sentences": [
+     "Mapped NIST controls: added `ir-4.11`, `ir-9.3`."
+    ],
+    "grade": "mapping",
+    "fedramp_notes": [
+     "2026-10-13: Updated control mappings: added ir-4.11, ir-9.3."
+    ]
+   },
+   {
+    "id": "KSI-INR-RPI",
+    "kind": "Key Security Indicator",
+    "family": "INR",
+    "name": "Reviewing Past Incidents",
+    "path_before": "KSI/INR/indicators",
+    "path": "KSI/INR/indicators",
+    "text_before": "Past incidents are persistently reviewed for patterns or vulnerabilities that were not previously apparent or identified.",
+    "text_after": "Past incidents are persistently reviewed for patterns or vulnerabilities that were not previously apparent or identified.",
+    "fields": [
+     {
+      "field": "controls",
+      "label": "Mapped NIST controls",
+      "type": "set",
+      "before": [
+       "ir-3",
+       "ir-4",
+       "ir-4.1",
+       "ir-5",
+       "ir-8"
+      ],
+      "after": [
+       "ir-3",
+       "ir-4",
+       "ir-4.1",
+       "ir-4.11",
+       "ir-4.4",
+       "ir-5",
+       "ir-5.1",
+       "ir-8",
+       "ra-5.8"
+      ],
+      "added_items": [
+       "ir-4.11",
+       "ir-4.4",
+       "ir-5.1",
+       "ra-5.8"
+      ],
+      "removed_items": []
+     }
+    ],
+    "sentences": [
+     "Mapped NIST controls: added `ir-4.11`, `ir-4.4`, `ir-5.1`, `ra-5.8`."
+    ],
+    "grade": "mapping",
+    "fedramp_notes": [
+     "2026-10-13: Updated control mappings: added ir-4.11, ir-4.4, ir-5.1, ra-5.8."
+    ]
+   },
+   {
+    "id": "KSI-MLA-ALA",
+    "kind": "Key Security Indicator",
+    "family": "MLA",
+    "name": "Authorizing Log Access",
+    "path_before": "KSI/MLA/indicators",
+    "path": "KSI/MLA/indicators",
+    "text_before": "Class B: **Optional:** A least-privileged, role and attribute-based, and just-in-time access authorization model is used and persistently reviewed for access to log data based on organizationally defined data sensitivity.\nClass C: A least-privileged, role and attribute-based, and just-in-time access authorization model is used and persistently reviewed for access to log data based on organizationally defined data sensitivity.",
+    "text_after": "Class B: **Optional:** A least-privileged, role and attribute-based, and just-in-time access authorization model is used and persistently reviewed for access to log data based on organizationally defined data sensitivity.\nClass C: A least-privileged, role and attribute-based, and just-in-time access authorization model is used and persistently reviewed for access to log data based on organizationally defined data sensitivity.",
+    "fields": [
+     {
+      "field": "controls",
+      "label": "Mapped NIST controls",
+      "type": "set",
+      "before": [
+       "si-11"
+      ],
+      "after": [
+       "au-12.3",
+       "au-6.7",
+       "si-11"
+      ],
+      "added_items": [
+       "au-12.3",
+       "au-6.7"
+      ],
+      "removed_items": []
+     }
+    ],
+    "sentences": [
+     "Mapped NIST controls: added `au-12.3`, `au-6.7`."
+    ],
+    "grade": "mapping",
+    "fedramp_notes": [
+     "2026-10-13: Updated control mappings: added au-12.3, au-6.7."
+    ]
+   },
+   {
+    "id": "KSI-MLA-EVC",
+    "kind": "Key Security Indicator",
+    "family": "MLA",
+    "name": "Evaluating Configurations",
+    "path_before": "KSI/MLA/indicators",
+    "path": "KSI/MLA/indicators",
+    "text_before": "The configuration of machine-based information resources, especially infrastructure as code, is persistently evaluated and tested.",
+    "text_after": "The configuration of machine-based information resources, especially infrastructure as code, is persistently evaluated and tested.",
+    "fields": [
+     {
+      "field": "controls",
+      "label": "Mapped NIST controls",
+      "type": "set",
+      "before": [
+       "ca-7",
+       "cm-2",
+       "cm-6",
+       "si-7.7"
+      ],
+      "after": [
+       "ac-19",
+       "ca-7",
+       "cm-2",
+       "cm-6",
+       "cm-6.1",
+       "ra-3",
+       "si-7.7"
+      ],
+      "added_items": [
+       "ac-19",
+       "cm-6.1",
+       "ra-3"
+      ],
+      "removed_items": []
+     }
+    ],
+    "sentences": [
+     "Mapped NIST controls: added `ac-19`, `cm-6.1`, `ra-3`."
+    ],
+    "grade": "mapping",
+    "fedramp_notes": [
+     "2026-10-13: Updated control mappings: added ac-19, cm-6.1, ra-3."
+    ]
+   },
+   {
+    "id": "KSI-MLA-LET",
+    "kind": "Key Security Indicator",
+    "family": "MLA",
+    "name": "Logging Event Types",
+    "path_before": "KSI/MLA/indicators",
+    "path": "KSI/MLA/indicators",
+    "text_before": "A list of information resources and event types that will be logged, monitored, and audited is maintained and persistently reviewed to ensure these activities occur.",
+    "text_after": "A list of information resources and event types that will be logged, monitored, and audited is maintained and persistently reviewed to ensure these activities occur.",
+    "fields": [
+     {
+      "field": "controls",
+      "label": "Mapped NIST controls",
+      "type": "set",
+      "before": [
+       "ac-17.1",
+       "ac-2.4",
+       "ac-20.1",
+       "ac-6.9",
+       "au-12",
+       "au-2",
+       "au-7.1",
+       "si-4.4",
+       "si-4.5",
+       "si-7.7"
+      ],
+      "after": [
+       "ac-17.1",
+       "ac-2.4",
+       "ac-20.1",
+       "ac-6.9",
+       "au-10",
+       "au-12",
+       "au-2",
+       "au-7",
+       "au-7.1",
+       "cm-5.1",
+       "ir-9.4",
+       "si-4.19",
+       "si-4.20",
+       "si-4.4",
+       "si-4.5",
+       "si-7.7"
+      ],
+      "added_items": [
+       "au-10",
+       "au-7",
+       "cm-5.1",
+       "ir-9.4",
+       "si-4.19",
+       "si-4.20"
+      ],
+      "removed_items": []
+     }
+    ],
+    "sentences": [
+     "Mapped NIST controls: added `au-10`, `au-7`, `cm-5.1`, `ir-9.4`, `si-4.19`, `si-4.20`."
+    ],
+    "grade": "mapping",
+    "fedramp_notes": [
+     "2026-10-13: Updated control mappings: added au-10, au-7, cm-5.1, ir-9.4, si-4.19, si-4.20."
+    ]
+   },
+   {
+    "id": "KSI-MLA-OSM",
+    "kind": "Key Security Indicator",
+    "family": "MLA",
+    "name": "Operating SIEM Capability",
+    "path_before": "KSI/MLA/indicators",
+    "path": "KSI/MLA/indicators",
+    "text_before": "A Security Information and Event Management (SIEM) or similar system(s) is used and persistently reviewed for centralized, tamper-resistant logging of events, activities, and changes.",
+    "text_after": "A Security Information and Event Management (SIEM) or similar system(s) is used and persistently reviewed for centralized, tamper-resistant logging of events, activities, and changes.",
+    "fields": [
+     {
+      "field": "controls",
+      "label": "Mapped NIST controls",
+      "type": "set",
+      "before": [
+       "ac-17.1",
+       "ac-20.1",
+       "au-11",
+       "au-2",
+       "au-3",
+       "au-3.1",
+       "au-4",
+       "au-5",
+       "au-6.1",
+       "au-6.3",
+       "au-7",
+       "au-7.1",
+       "au-8",
+       "au-9",
+       "ir-4.1",
+       "si-4.2",
+       "si-4.4",
+       "si-7.7"
+      ],
+      "after": [
+       "ac-17.1",
+       "ac-20.1",
+       "au-11",
+       "au-12.1",
+       "au-2",
+       "au-3",
+       "au-3.1",
+       "au-4",
+       "au-5",
+       "au-5.1",
+       "au-6.1",
+       "au-6.3",
+       "au-6.4",
+       "au-6.5",
+       "au-7",
+       "au-7.1",
+       "au-8",
+       "au-9",
+       "ir-4.1",
+       "si-4.16",
+       "si-4.2",
+       "si-4.4"
+      ],
+      "added_items": [
+       "au-12.1",
+       "au-5.1",
+       "au-6.4",
+       "au-6.5",
+       "si-4.16"
+      ],
+      "removed_items": [
+       "si-7.7"
+      ]
+     }
+    ],
+    "sentences": [
+     "Mapped NIST controls: added `au-12.1`, `au-5.1`, `au-6.4`, `au-6.5`, `si-4.16`; removed `si-7.7`."
+    ],
+    "grade": "mapping",
+    "fedramp_notes": [
+     "2026-10-13: Updated control mappings: added au-12.1, au-5.1, au-6.4, au-6.5, si-4.16; removed si-7.7."
+    ]
+   },
+   {
+    "id": "KSI-MLA-RVL",
+    "kind": "Key Security Indicator",
+    "family": "MLA",
+    "name": "Reviewing Logs",
+    "path_before": "KSI/MLA/indicators",
+    "path": "KSI/MLA/indicators",
+    "text_before": "Logs are persistently reviewed and audited.",
+    "text_after": "Logs are persistently reviewed and audited.",
+    "fields": [
+     {
+      "field": "controls",
+      "label": "Mapped NIST controls",
+      "type": "set",
+      "before": [
+       "ac-2.4",
+       "ac-6.9",
+       "au-2",
+       "au-6",
+       "au-6.1",
+       "si-4",
+       "si-4.4"
+      ],
+      "after": [
+       "ac-2.4",
+       "ac-6.9",
+       "au-2",
+       "au-6",
+       "au-6.1",
+       "au-7",
+       "ra-5.8",
+       "si-4",
+       "si-4.19",
+       "si-4.4"
+      ],
+      "added_items": [
+       "au-7",
+       "ra-5.8",
+       "si-4.19"
+      ],
+      "removed_items": []
+     }
+    ],
+    "sentences": [
+     "Mapped NIST controls: added `au-7`, `ra-5.8`, `si-4.19`."
+    ],
+    "grade": "mapping",
+    "fedramp_notes": [
+     "2026-10-13: Updated control mappings: added au-7, ra-5.8, si-4.19."
+    ]
+   },
+   {
+    "id": "KSI-PIY-GIV",
+    "kind": "Key Security Indicator",
+    "family": "PIY",
+    "name": "Generating Inventories",
+    "path_before": "KSI/PIY/indicators",
+    "path": "KSI/PIY/indicators",
+    "text_before": "Authoritative sources are used to automatically generate real-time inventories of all information resources when needed.",
+    "text_after": "Authoritative sources are used to automatically generate real-time inventories of all information resources when needed.",
+    "fields": [
+     {
+      "field": "controls",
+      "label": "Mapped NIST controls",
+      "type": "set",
+      "before": [
+       "cm-12",
+       "cm-12.1",
+       "cm-2.2",
+       "cm-7.5",
+       "cm-8",
+       "cm-8.1",
+       "cp-2.8"
+      ],
+      "after": [
+       "cm-12",
+       "cm-12.1",
+       "cm-2.2",
+       "cm-7.5",
+       "cm-8",
+       "cm-8.1",
+       "cm-8.2",
+       "cm-8.4",
+       "cp-2.8"
+      ],
+      "added_items": [
+       "cm-8.2",
+       "cm-8.4"
+      ],
+      "removed_items": []
+     }
+    ],
+    "sentences": [
+     "Mapped NIST controls: added `cm-8.2`, `cm-8.4`."
+    ],
+    "grade": "mapping",
+    "fedramp_notes": [
+     "2026-10-13: Updated control mappings: added cm-8.2, cm-8.4."
+    ]
+   },
+   {
+    "id": "KSI-PIY-RIS",
+    "kind": "Key Security Indicator",
+    "family": "PIY",
+    "name": "Reviewing Investments in Security",
+    "path_before": "KSI/PIY/indicators",
+    "path": "KSI/PIY/indicators",
+    "text_before": "The effectiveness of the provider's investments in achieving security goals is persistently reviewed.",
+    "text_after": "The effectiveness of the provider's investments in achieving security goals is persistently reviewed.",
+    "fields": [
+     {
+      "field": "controls",
+      "label": "Mapped NIST controls",
+      "type": "set",
+      "before": [
+       "ac-5",
+       "ca-2",
+       "cp-2.1",
+       "cp-4.1",
+       "ir-3.2",
+       "pm-3",
+       "sa-2",
+       "sa-3",
+       "sr-2.1"
+      ],
+      "after": [
+       "ac-5",
+       "ca-2",
+       "ca-2.2",
+       "cp-2.1",
+       "cp-4.1",
+       "ir-3.2",
+       "ir-4.11",
+       "pm-3",
+       "sa-2",
+       "sa-3",
+       "sr-2.1"
+      ],
+      "added_items": [
+       "ca-2.2",
+       "ir-4.11"
+      ],
+      "removed_items": []
+     }
+    ],
+    "sentences": [
+     "Mapped NIST controls: added `ca-2.2`, `ir-4.11`."
+    ],
+    "grade": "mapping",
+    "fedramp_notes": [
+     "2026-10-13: Updated control mappings: added ca-2.2, ir-4.11."
+    ]
+   },
+   {
+    "id": "KSI-PIY-RSD",
+    "kind": "Key Security Indicator",
+    "family": "PIY",
+    "name": "Reviewing Security in the SDLC",
+    "path_before": "KSI/PIY/indicators",
+    "path": "KSI/PIY/indicators",
+    "text_before": "The effectiveness of building security and privacy considerations into the Software Development Lifecycle and aligning with CISA Secure By Design principles is persistently reviewed.",
+    "text_after": "The effectiveness of building security and privacy considerations into the Software Development Lifecycle and aligning with CISA Secure By Design principles is persistently reviewed.",
+    "fields": [
+     {
+      "field": "controls",
+      "label": "Mapped NIST controls",
+      "type": "set",
+      "before": [
+       "ac-5",
+       "au-3.3",
+       "cm-3.4",
+       "pl-8",
+       "pm-7",
+       "sa-3",
+       "sa-8",
+       "sc-18",
+       "sc-4",
+       "si-10",
+       "si-11",
+       "si-16"
+      ],
+      "after": [
+       "ac-5",
+       "au-3.3",
+       "cm-3.4",
+       "ia-5.7",
+       "pl-8",
+       "pm-7",
+       "ra-9",
+       "sa-3",
+       "sa-8",
+       "sc-18",
+       "sc-4",
+       "si-10",
+       "si-11",
+       "si-16"
+      ],
+      "added_items": [
+       "ia-5.7",
+       "ra-9"
+      ],
+      "removed_items": []
+     }
+    ],
+    "sentences": [
+     "Mapped NIST controls: added `ia-5.7`, `ra-9`."
+    ],
+    "grade": "mapping",
+    "fedramp_notes": [
+     "2026-10-13: Updated control mappings: added ia-5.7, ra-9."
+    ]
+   },
+   {
+    "id": "KSI-RPL-ABO",
+    "kind": "Key Security Indicator",
+    "family": "RPL",
+    "name": "Aligning Backups with Objectives",
+    "path_before": "KSI/RPL/indicators",
+    "path": "KSI/RPL/indicators",
+    "text_before": "The alignment of machine-based information resource backups with defined recovery objectives is persistently reviewed.",
+    "text_after": "The alignment of machine-based information resource backups with defined recovery objectives is persistently reviewed.",
+    "fields": [
+     {
+      "field": "controls",
+      "label": "Mapped NIST controls",
+      "type": "set",
+      "before": [
+       "cm-2.3",
+       "cp-10",
+       "cp-10.2",
+       "cp-6",
+       "cp-9",
+       "si-12"
+      ],
+      "after": [
+       "cm-2.3",
+       "cp-10",
+       "cp-10.2",
+       "cp-6",
+       "cp-9"
+      ],
+      "added_items": [],
+      "removed_items": [
+       "si-12"
+      ]
+     }
+    ],
+    "sentences": [
+     "Mapped NIST controls: removed `si-12`."
+    ],
+    "grade": "mapping",
+    "fedramp_notes": [
+     "2026-10-13: Updated control mappings: removed si-12."
+    ]
+   },
+   {
+    "id": "KSI-RPL-TRC",
+    "kind": "Key Security Indicator",
+    "family": "RPL",
+    "name": "Testing Recovery Capabilities",
+    "path_before": "KSI/RPL/indicators",
+    "path": "KSI/RPL/indicators",
+    "text_before": "The capability to recover from incidents and contingencies aligned with defined recovery objectives is persistently tested.",
+    "text_after": "The capability to recover from incidents and contingencies aligned with defined recovery objectives is persistently tested.",
+    "fields": [
+     {
+      "field": "controls",
+      "label": "Mapped NIST controls",
+      "type": "set",
+      "before": [
+       "cp-10",
+       "cp-2.1",
+       "cp-2.3",
+       "cp-4",
+       "cp-4.1",
+       "cp-6",
+       "cp-6.1",
+       "cp-9.1",
+       "ir-3",
+       "ir-3.2"
+      ],
+      "after": [
+       "cp-10",
+       "cp-2.1",
+       "cp-2.3",
+       "cp-4",
+       "cp-4.1",
+       "cp-6",
+       "cp-6.1",
+       "cp-9.1",
+       "ir-3",
+       "ir-3.2",
+       "ir-9.3",
+       "sc-12.1"
+      ],
+      "added_items": [
+       "ir-9.3",
+       "sc-12.1"
+      ],
+      "removed_items": []
+     }
+    ],
+    "sentences": [
+     "Mapped NIST controls: added `ir-9.3`, `sc-12.1`."
+    ],
+    "grade": "mapping",
+    "fedramp_notes": [
+     "2026-10-13: Updated control mappings: added ir-9.3, sc-12.1."
+    ]
+   },
+   {
+    "id": "KSI-SCR-MIT",
+    "kind": "Key Security Indicator",
+    "family": "SCR",
+    "name": "Mitigating Supply Chain Risk",
+    "path_before": "KSI/SCR/indicators",
+    "path": "KSI/SCR/indicators",
+    "text_before": "Persistently identify, review, and mitigate potential supply chain risks.",
+    "text_after": "Persistently identify, review, and mitigate potential supply chain risks.",
+    "fields": [
+     {
+      "field": "controls",
+      "label": "Mapped NIST controls",
+      "type": "set",
+      "before": [
+       "ac-20",
+       "ca-7.4",
+       "ra-3.1",
+       "sa-10",
+       "sa-11",
+       "sa-15.3",
+       "sa-22",
+       "sa-9",
+       "sc-18",
+       "si-7.1",
+       "sr-5",
+       "sr-6"
+      ],
+      "after": [
+       "ac-19",
+       "ac-20",
+       "ca-7.4",
+       "ra-3",
+       "ra-3.1",
+       "sa-10",
+       "sa-11",
+       "sa-11.1",
+       "sa-11.2",
+       "sa-15",
+       "sa-15.3",
+       "sa-16",
+       "sa-17",
+       "sa-21",
+       "sa-22",
+       "sa-4",
+       "sa-4.1",
+       "sa-4.2",
+       "sa-4.5",
+       "sa-4.9",
+       "sa-9",
+       "sa-9.1",
+       "sa-9.2",
+       "sa-9.5",
+       "sc-18",
+       "si-7.1",
+       "si-7.15",
+       "sr-2",
+       "sr-3",
+       "sr-5",
+       "sr-6"
+      ],
+      "added_items": [
+       "ac-19",
+       "ra-3",
+       "sa-11.1",
+       "sa-11.2",
+       "sa-15",
+       "sa-16",
+       "sa-17",
+       "sa-21",
+       "sa-4",
+       "sa-4.1",
+       "sa-4.2",
+       "sa-4.5",
+       "sa-4.9",
+       "sa-9.1",
+       "sa-9.2",
+       "sa-9.5",
+       "si-7.15",
+       "sr-2",
+       "sr-3"
+      ],
+      "removed_items": []
+     }
+    ],
+    "sentences": [
+     "Mapped NIST controls: added `ac-19`, `ra-3`, `sa-11.1`, `sa-11.2`, `sa-15`, `sa-16`, `sa-17`, `sa-21`, `sa-4`, `sa-4.1`, `sa-4.2`, `sa-4.5`, `sa-4.9`, `sa-9.1`, `sa-9.2`, `sa-9.5`, `si-7.15`, `sr-2`, `sr-3`."
+    ],
+    "grade": "mapping",
+    "fedramp_notes": [
+     "2026-10-13: Updated control mappings: added ac-19, ra-3, sa-11.1, sa-11.2, sa-15, sa-16, sa-17, sa-21, sa-4, sa-4.1, sa-4.2, sa-4.5, sa-4.9, sa-9.1, sa-9.2, sa-9.5, si-7.15, sr-2, sr-3."
+    ]
+   },
+   {
+    "id": "KSI-SCR-MON",
+    "kind": "Key Security Indicator",
+    "family": "SCR",
+    "name": "Monitoring Supply Chain Risk",
+    "path_before": "KSI/SCR/indicators",
+    "path": "KSI/SCR/indicators",
+    "text_before": "Third party software information resources are automatically monitored for upstream vulnerabilities using mechanisms that may include contractual notification requirements or active monitoring services.",
+    "text_after": "Third party software information resources are automatically monitored for upstream vulnerabilities using mechanisms that may include contractual notification requirements or active monitoring services.",
+    "fields": [
+     {
+      "field": "controls",
+      "label": "Mapped NIST controls",
+      "type": "set",
+      "before": [
+       "ac-20",
+       "ca-3",
+       "ir-6.3",
+       "ps-7",
+       "ra-5",
+       "sa-9",
+       "si-5",
+       "sr-5",
+       "sr-6",
+       "sr-8"
+      ],
+      "after": [
+       "ac-19",
+       "ac-20",
+       "ca-2.3",
+       "ca-3",
+       "ir-6.3",
+       "ps-7",
+       "ra-3",
+       "ra-5",
+       "sa-9",
+       "si-5",
+       "sr-3",
+       "sr-5",
+       "sr-6",
+       "sr-8"
+      ],
+      "added_items": [
+       "ac-19",
+       "ca-2.3",
+       "ra-3",
+       "sr-3"
+      ],
+      "removed_items": []
+     }
+    ],
+    "sentences": [
+     "Mapped NIST controls: added `ac-19`, `ca-2.3`, `ra-3`, `sr-3`."
+    ],
+    "grade": "mapping",
+    "fedramp_notes": [
+     "2026-10-13: Updated control mappings: added ac-19, ca-2.3, ra-3, sr-3."
+    ]
+   },
+   {
+    "id": "KSI-SVC-ACM",
+    "kind": "Key Security Indicator",
+    "family": "SVC",
+    "name": "Automating Configuration Management",
+    "path_before": "KSI/SVC/indicators",
+    "path": "KSI/SVC/indicators",
+    "text_before": "The configuration of machine-based information resources is managed using automation and persistently reviewed for drift.",
+    "text_after": "The configuration of machine-based information resources is managed using automation and persistently reviewed for drift.",
+    "fields": [
+     {
+      "field": "controls",
+      "label": "Mapped NIST controls",
+      "type": "set",
+      "before": [
+       "ac-2.4",
+       "cm-2",
+       "cm-2.2",
+       "cm-2.3",
+       "cm-6",
+       "cm-7.1",
+       "pl-10",
+       "pl-9",
+       "sa-5",
+       "si-5",
+       "sr-10"
+      ],
+      "after": [
+       "ac-2.4",
+       "ac-6.8",
+       "cm-2",
+       "cm-2.2",
+       "cm-2.3",
+       "cm-6",
+       "cm-7.1",
+       "pl-10",
+       "pl-9",
+       "sa-5",
+       "sc-45",
+       "sc-45.1",
+       "sc-7.18",
+       "si-5",
+       "sr-10"
+      ],
+      "added_items": [
+       "ac-6.8",
+       "sc-45",
+       "sc-45.1",
+       "sc-7.18"
+      ],
+      "removed_items": []
+     }
+    ],
+    "sentences": [
+     "Mapped NIST controls: added `ac-6.8`, `sc-45`, `sc-45.1`, `sc-7.18`."
+    ],
+    "grade": "mapping",
+    "fedramp_notes": [
+     "2026-10-13: Updated control mappings: added ac-6.8, sc-45, sc-45.1, sc-7.18."
+    ]
+   },
+   {
+    "id": "KSI-SVC-ASM",
+    "kind": "Key Security Indicator",
+    "family": "SVC",
+    "name": "Automating Secret Management",
+    "path_before": "KSI/SVC/indicators",
+    "path": "KSI/SVC/indicators",
+    "text_before": "Management, protection, and regular rotation of digital keys, certificates, and other secrets is automated and persistently reviewed.",
+    "text_after": "Management, protection, and regular rotation of digital keys, certificates, and other secrets is automated and persistently reviewed.",
+    "fields": [
+     {
+      "field": "controls",
+      "label": "Mapped NIST controls",
+      "type": "set",
+      "before": [
+       "ac-17.2",
+       "ia-5.2",
+       "ia-5.6",
+       "sc-12",
+       "sc-17"
+      ],
+      "after": [
+       "ac-17.2",
+       "ia-5.2",
+       "ia-5.6",
+       "sc-12",
+       "sc-12.1",
+       "sc-17"
+      ],
+      "added_items": [
+       "sc-12.1"
+      ],
+      "removed_items": []
+     }
+    ],
+    "sentences": [
+     "Mapped NIST controls: added `sc-12.1`."
+    ],
+    "grade": "mapping",
+    "fedramp_notes": [
+     "2026-10-13: Updated control mappings: added sc-12.1."
+    ]
+   },
+   {
+    "id": "KSI-SVC-EIS",
+    "kind": "Key Security Indicator",
+    "family": "SVC",
+    "name": "Evaluating and Improving Security",
+    "path_before": "KSI/SVC/indicators",
+    "path": "KSI/SVC/indicators",
+    "text_before": "Information resources are persistently evaluated for opportunities to improve security and those improvements are persistently made.",
+    "text_after": "Information resources are persistently evaluated for opportunities to improve security and those improvements are persistently made.",
+    "fields": [
+     {
+      "field": "controls",
+      "label": "Mapped NIST controls",
+      "type": "set",
+      "before": [
+       "cm-12.1",
+       "cm-7.1",
+       "ma-2",
+       "pl-8",
+       "sc-39",
+       "sc-7",
+       "si-2.2",
+       "si-4",
+       "sr-10"
+      ],
+      "after": [
+       "ca-7.4",
+       "cm-12.1",
+       "cm-5.5",
+       "cm-7.1",
+       "ir-9.4",
+       "pl-8",
+       "ra-3",
+       "sc-39",
+       "sc-7",
+       "si-2.2",
+       "si-4",
+       "sr-10"
+      ],
+      "added_items": [
+       "ca-7.4",
+       "cm-5.5",
+       "ir-9.4",
+       "ra-3"
+      ],
+      "removed_items": [
+       "ma-2"
+      ]
+     }
+    ],
+    "sentences": [
+     "Mapped NIST controls: added `ca-7.4`, `cm-5.5`, `ir-9.4`, `ra-3`; removed `ma-2`."
+    ],
+    "grade": "mapping",
+    "fedramp_notes": [
+     "2026-10-13: Updated control mappings: added ca-7.4, cm-5.5, ir-9.4, ra-3; removed ma-2."
+    ]
+   },
+   {
+    "id": "KSI-SVC-PRR",
+    "kind": "Key Security Indicator",
+    "family": "SVC",
+    "name": "Preventing Residual Risk",
+    "path_before": "KSI/SVC/indicators",
+    "path": "KSI/SVC/indicators",
+    "text_before": "Class B: **Optional:** Plans, procedures, and the state of information resources are persistently reviewed after making changes to limit and remove unwanted residual elements that would likely negatively affect the confidentiality, integrity, or availability of federal customer data.\nClass C: Plans, procedures, and the state of information resources are persistently reviewed after making changes to limit and remove unwanted residual elements that would likely negatively affect the confidentiality, integrity, or availability of federal customer data.",
+    "text_after": "Class B: **Optional:** Plans, procedures, and the state of information resources are persistently reviewed after making changes to limit and remove unwanted residual elements that would likely negatively affect the confidentiality, integrity, or availability of federal customer data.\nClass C: Plans, procedures, and the state of information resources are persistently reviewed after making changes to limit and remove unwanted residual elements that would likely negatively affect the confidentiality, integrity, or availability of federal customer data.",
+    "fields": [
+     {
+      "field": "controls",
+      "label": "Mapped NIST controls",
+      "type": "set",
+      "before": [
+       "sc-4"
+      ],
+      "after": [
+       "ac-19",
+       "ir-9.4",
+       "sc-12.1",
+       "sc-4",
+       "sc-7.18"
+      ],
+      "added_items": [
+       "ac-19",
+       "ir-9.4",
+       "sc-12.1",
+       "sc-7.18"
+      ],
+      "removed_items": []
+     }
+    ],
+    "sentences": [
+     "Mapped NIST controls: added `ac-19`, `ir-9.4`, `sc-12.1`, `sc-7.18`."
+    ],
+    "grade": "mapping",
+    "fedramp_notes": [
+     "2026-10-13: Updated control mappings: added ac-19, ir-9.4, sc-12.1, sc-7.18."
+    ]
+   },
+   {
+    "id": "KSI-SVC-RUD",
+    "kind": "Key Security Indicator",
+    "family": "SVC",
+    "name": "Removing Unwanted Data",
+    "path_before": "KSI/SVC/indicators",
+    "path": "KSI/SVC/indicators",
+    "text_before": "Class B: **Optional:** Unwanted federal customer data is removed promptly when requested by an agency in alignment with customer agreements, including from backups if appropriate; this typically applies when a customer spills information or when a customer seeks to remove information from a service due to a change in usage.\nClass C: Unwanted federal customer data is removed promptly when requested by an agency in alignment with customer agreements, including from backups if appropriate; this typically applies when a customer spills information or when a customer seeks to remove information from a service due to a change in usage.",
+    "text_after": "Class B: **Optional:** Unwanted federal customer data is removed promptly when requested by an agency in alignment with customer agreements, including from backups if appropriate; this typically applies when a customer spills information or when a customer seeks to remove information from a service due to a change in usage.\nClass C: Unwanted federal customer data is removed promptly when requested by an agency in alignment with customer agreements, including from backups if appropriate; this typically applies when a customer spills information or when a customer seeks to remove information from a service due to a change in usage.",
+    "fields": [
+     {
+      "field": "controls",
+      "label": "Mapped NIST controls",
+      "type": "set",
+      "before": [
+       "si-12.3",
+       "si-18.4"
+      ],
+      "after": [
+       "ir-9",
+       "si-12.3",
+       "si-18.4",
+       "si-8",
+       "si-8.2"
+      ],
+      "added_items": [
+       "ir-9",
+       "si-8",
+       "si-8.2"
+      ],
+      "removed_items": []
+     }
+    ],
+    "sentences": [
+     "Mapped NIST controls: added `ir-9`, `si-8`, `si-8.2`."
+    ],
+    "grade": "mapping",
+    "fedramp_notes": [
+     "2026-10-13: Updated control mappings: added ir-9, si-8, si-8.2."
+    ]
+   },
+   {
+    "id": "KSI-SVC-SIN",
+    "kind": "Key Security Indicator",
+    "family": "SVC",
+    "name": "Securing Information",
+    "path_before": "KSI/SVC/indicators",
+    "path": "KSI/SVC/indicators",
+    "text_before": "Information is encrypted or otherwise secured from unwanted access or modification.",
+    "text_after": "Information is encrypted or otherwise secured from unwanted access or modification.",
+    "fields": [
+     {
+      "field": "controls",
+      "label": "Mapped NIST controls",
+      "type": "set",
+      "before": [
+       "ac-1",
+       "ac-17.2",
+       "cp-9.8",
+       "sc-13",
+       "sc-20",
+       "sc-21",
+       "sc-22",
+       "sc-23",
+       "sc-28",
+       "sc-28.1",
+       "sc-8",
+       "sc-8.1"
+      ],
+      "after": [
+       "ac-11",
+       "ac-11.1",
+       "ac-17.2",
+       "ac-19.5",
+       "ac-21",
+       "cp-9.8",
+       "ir-9.4",
+       "sc-13",
+       "sc-20",
+       "sc-21",
+       "sc-22",
+       "sc-23",
+       "sc-28",
+       "sc-28.1",
+       "sc-4",
+       "sc-7.18",
+       "sc-8",
+       "sc-8.1",
+       "si-4.18"
+      ],
+      "added_items": [
+       "ac-11",
+       "ac-11.1",
+       "ac-19.5",
+       "ac-21",
+       "ir-9.4",
+       "sc-4",
+       "sc-7.18",
+       "si-4.18"
+      ],
+      "removed_items": [
+       "ac-1"
+      ]
+     }
+    ],
+    "sentences": [
+     "Mapped NIST controls: added `ac-11`, `ac-11.1`, `ac-19.5`, `ac-21`, `ir-9.4`, `sc-4`, `sc-7.18`, `si-4.18`; removed `ac-1`."
+    ],
+    "grade": "mapping",
+    "fedramp_notes": [
+     "2026-10-13: Updated control mappings: added ac-11, ac-11.1, ac-19.5, ac-21, ir-9.4, sc-4, sc-7.18, si-4.18; removed ac-1."
+    ]
+   },
+   {
+    "id": "KSI-SVC-VCM",
+    "kind": "Key Security Indicator",
+    "family": "SVC",
+    "name": "Validating Communications",
+    "path_before": "KSI/SVC/indicators",
+    "path": "KSI/SVC/indicators",
+    "text_before": "Class B: **Optional:** The authenticity and integrity of communications between machine-based information resources is persistently validated using automation.\nClass C: The authenticity and integrity of communications between machine-based information resources is persistently validated using automation.",
+    "text_after": "Class B: **Optional:** The authenticity and integrity of communications between machine-based information resources is persistently validated using automation.\nClass C: The authenticity and integrity of communications between machine-based information resources is persistently validated using automation.",
+    "fields": [
+     {
+      "field": "controls",
+      "label": "Mapped NIST controls",
+      "type": "set",
+      "before": [
+       "sc-23",
+       "si-7.1"
+      ],
+      "after": [
+       "ac-10",
+       "ac-17.4",
+       "ac-18",
+       "ac-19",
+       "sc-23",
+       "si-4.22",
+       "si-7.1"
+      ],
+      "added_items": [
+       "ac-10",
+       "ac-17.4",
+       "ac-18",
+       "ac-19",
+       "si-4.22"
+      ],
+      "removed_items": []
+     }
+    ],
+    "sentences": [
+     "Mapped NIST controls: added `ac-10`, `ac-17.4`, `ac-18`, `ac-19`, `si-4.22`."
+    ],
+    "grade": "mapping",
+    "fedramp_notes": [
+     "2026-10-13: Updated control mappings: added ac-10, ac-17.4, ac-18, ac-19, si-4.22."
+    ]
+   },
+   {
+    "id": "KSI-SVC-VRI",
+    "kind": "Key Security Indicator",
+    "family": "SVC",
+    "name": "Validating Resource Integrity",
+    "path_before": "KSI/SVC/indicators",
+    "path": "KSI/SVC/indicators",
+    "text_before": "Use cryptographic methods to validate the integrity of machine-based information resources.",
+    "text_after": "Use cryptographic methods to validate the integrity of machine-based information resources.",
+    "fields": [
+     {
+      "field": "controls",
+      "label": "Mapped NIST controls",
+      "type": "set",
+      "before": [
+       "cm-2.2",
+       "cm-8.3",
+       "sc-13",
+       "sc-23",
+       "si-7",
+       "si-7.1",
+       "sr-10"
+      ],
+      "after": [
+       "ac-17.4",
+       "ac-18",
+       "ac-19",
+       "au-9.3",
+       "cm-14",
+       "cm-2.2",
+       "cm-8.3",
+       "sc-13",
+       "sc-23",
+       "si-7",
+       "si-7.1",
+       "si-7.15",
+       "sr-10",
+       "sr-11"
+      ],
+      "added_items": [
+       "ac-17.4",
+       "ac-18",
+       "ac-19",
+       "au-9.3",
+       "cm-14",
+       "si-7.15",
+       "sr-11"
+      ],
+      "removed_items": []
+     }
+    ],
+    "sentences": [
+     "Mapped NIST controls: added `ac-17.4`, `ac-18`, `ac-19`, `au-9.3`, `cm-14`, `si-7.15`, `sr-11`."
+    ],
+    "grade": "mapping",
+    "fedramp_notes": [
+     "2026-10-13: Updated control mappings: added ac-17.4, ac-18, ac-19, au-9.3, cm-14, si-7.15, sr-11."
+    ]
+   },
+   {
+    "id": "MAS-CSO-FLO",
+    "kind": "Rule",
+    "family": "MAS",
+    "name": "Information Flows and Security Categories",
+    "path_before": "FRR/MAS/data/all/CSO",
+    "path": "FRR/MAS/data/all/CSO",
+    "text_before": "Providers MUST clearly identify, document, and explain information flows and security categories for ALL information resources or sets of information resources in the cloud service offering.",
+    "text_after": "Providers MUST clearly identify, document, and explain information flows and security categories for ALL information resources or sets of information resources in the cloud service offering.",
+    "fields": [
+     {
+      "field": "controls",
+      "label": "Mapped NIST controls",
+      "type": "set",
+      "before": null,
+      "after": [
+       "ac-4",
+       "cm-12",
+       "cm-12.1",
+       "ra-3",
+       "si-4.19"
+      ]
+     }
+    ],
+    "sentences": [
+     "Mapped NIST controls added: `ac-4`, `cm-12`, `cm-12.1`, `ra-3`, `si-4.19`."
+    ],
+    "grade": "mapping",
+    "fedramp_notes": [
+     "2026-10-13: Updated control mappings: added ac-4, cm-12, cm-12.1, ra-3, si-4.19."
+    ]
+   },
+   {
+    "id": "MAS-CSO-IIR",
+    "kind": "Rule",
+    "family": "MAS",
+    "name": "Identify Information Resources",
+    "path_before": "FRR/MAS/data/all/CSO",
+    "path": "FRR/MAS/data/all/CSO",
+    "text_before": "Providers MUST identify a set of information resources to assess for FedRAMP Certification that includes all information resources that are likely to handle federal customer data or likely to impact the confidentiality, integrity, or availability of federal customer data handled by the cloud service offering; this set of information resources is the cloud service offering.",
+    "text_after": "Providers MUST identify a set of information resources to assess for FedRAMP Certification that includes all information resources that are likely to handle federal customer data or likely to impact the confidentiality, integrity, or availability of federal customer data handled by the cloud service offering; this set of information resources is the cloud service offering.",
+    "fields": [
+     {
+      "field": "controls",
+      "label": "Mapped NIST controls",
+      "type": "set",
+      "before": null,
+      "after": [
+       "cm-8.4",
+       "ra-3",
+       "si-4.19"
+      ]
+     }
+    ],
+    "sentences": [
+     "Mapped NIST controls added: `cm-8.4`, `ra-3`, `si-4.19`."
+    ],
+    "grade": "mapping",
+    "fedramp_notes": [
+     "2026-10-13: Updated control mappings: added cm-8.4, ra-3, si-4.19."
+    ]
+   },
+   {
+    "id": "MAS-CSO-TPR",
+    "kind": "Rule",
+    "family": "MAS",
+    "name": "Third-Party Information Resources",
+    "path_before": "FRR/MAS/data/all/CSO",
+    "path": "FRR/MAS/data/all/CSO",
+    "text_before": "Providers MUST address the potential impact to federal customer data from third-party information resources used by the cloud service offering, ONLY IF MAS-CSO-IIR (Identify Information Resources) APPLIES, by documenting the following information about each applicable third-party information resource:",
+    "text_after": "Providers MUST address the potential impact to federal customer data from third-party information resources used by the cloud service offering, ONLY IF MAS-CSO-IIR (Identify Information Resources) APPLIES, by documenting the following information about each applicable third-party information resource:",
+    "fields": [
+     {
+      "field": "controls",
+      "label": "Mapped NIST controls",
+      "type": "set",
+      "before": null,
+      "after": [
+       "ra-3"
+      ]
+     }
+    ],
+    "sentences": [
+     "Mapped NIST controls added: `ra-3`."
+    ],
+    "grade": "mapping",
+    "fedramp_notes": [
+     "2026-10-13: Updated control mappings: added ra-3."
+    ]
+   },
+   {
+    "id": "SCG-CSO-RSC",
+    "kind": "Rule",
+    "family": "SCG",
+    "name": "Recommended Secure Configuration",
+    "path_before": "FRR/SCG/data/all/CSO",
+    "path": "FRR/SCG/data/all/CSO",
+    "text_before": "Providers MUST create, maintain, and make available recommendations for securely configuring their cloud services (the Secure Configuration Guide) that includes at least the following information:",
+    "text_after": "Providers MUST create, maintain, and make available recommendations for securely configuring their cloud services (the Secure Configuration Guide) that includes at least the following information:",
+    "fields": [
+     {
+      "field": "controls",
+      "label": "Mapped NIST controls",
+      "type": "set",
+      "before": null,
+      "after": [
+       "cm-7"
+      ]
+     }
+    ],
+    "sentences": [
+     "Mapped NIST controls added: `cm-7`."
+    ],
+    "grade": "mapping",
+    "fedramp_notes": [
+     "2026-10-13: Updated control mappings: added cm-7."
+    ]
+   },
+   {
+    "id": "SCN-CSO-EMG",
+    "kind": "Rule",
+    "family": "SCN",
+    "name": "Emergency Changes",
+    "path_before": "FRR/SCN/data/all/CSO",
+    "path": "FRR/SCN/data/all/CSO",
+    "text_before": "Providers MAY execute significant changes (including transformative changes) during an emergency or incident without following the Significant Change Notification rules in advance. In such emergencies, providers MUST follow all relevant procedures, notify all necessary parties, retroactively provide all Significant Change Notification materials, and complete appropriate assessment after the incident.",
+    "text_after": "Providers MAY execute significant changes (including transformative changes) during an emergency or incident without following the Significant Change Notification rules in advance. In such emergencies, providers MUST follow all relevant procedures, notify all necessary parties, retroactively provide all Significant Change Notification materials, and complete appropriate assessment after the incident.",
+    "fields": [
+     {
+      "field": "controls",
+      "label": "Mapped NIST controls",
+      "type": "set",
+      "before": null,
+      "after": [
+       "ir-4.2"
+      ]
+     }
+    ],
+    "sentences": [
+     "Mapped NIST controls added: `ir-4.2`."
+    ],
+    "grade": "mapping",
+    "fedramp_notes": [
+     "2026-10-13: Updated control mappings: added ir-4.2."
+    ]
+   },
+   {
+    "id": "SCN-CSO-EVA",
+    "kind": "Rule",
+    "family": "SCN",
+    "name": "Evaluate Changes",
+    "path_before": "FRR/SCN/data/all/CSO",
+    "path": "FRR/SCN/data/all/CSO",
+    "text_before": "Providers MUST evaluate all potential significant changes to determine the type of significant change and follow the appropriate Significant Change Notification rules.",
+    "text_after": "Providers MUST evaluate all potential significant changes to determine the type of significant change and follow the appropriate Significant Change Notification rules.",
+    "fields": [
+     {
+      "field": "controls",
+      "label": "Mapped NIST controls",
+      "type": "set",
+      "before": null,
+      "after": [
+       "cm-4"
+      ]
+     }
+    ],
+    "sentences": [
+     "Mapped NIST controls added: `cm-4`."
+    ],
+    "grade": "mapping",
+    "fedramp_notes": [
+     "2026-10-13: Updated control mappings: added cm-4."
+    ]
+   },
+   {
+    "id": "VDR-CSO-ADT",
+    "kind": "Rule",
+    "family": "VDR",
+    "name": "Automate Detection",
+    "path_before": "FRR/VDR/data/all/CSO",
+    "path": "FRR/VDR/data/all/CSO",
+    "text_before": "Providers SHOULD use automated services to improve and streamline vulnerability detection and response.",
+    "text_after": "Providers SHOULD use automated services to improve and streamline vulnerability detection and response.",
+    "fields": [
+     {
+      "field": "controls",
+      "label": "Mapped NIST controls",
+      "type": "set",
+      "before": null,
+      "after": [
+       "ra-5",
+       "si-2.2",
+       "si-3",
+       "si-4.2",
+       "si-4.5"
+      ]
+     }
+    ],
+    "sentences": [
+     "Mapped NIST controls added: `ra-5`, `si-2.2`, `si-3`, `si-4.2`, `si-4.5`."
+    ],
+    "grade": "mapping",
+    "fedramp_notes": [
+     "2026-10-13: Updated control mappings: added ra-5, si-2.2, si-3, si-4.2, si-4.5."
+    ]
+   },
+   {
+    "id": "VDR-CSO-AKE",
+    "kind": "Rule",
+    "family": "VDR",
+    "name": "Avoid KEVs",
+    "path_before": "FRR/VDR/data/all/CSO",
+    "path": "FRR/VDR/data/all/CSO",
+    "text_before": "Providers SHOULD NOT deploy or otherwise activate new machine-based information resources with Known Exploited Vulnerabilities.",
+    "text_after": "Providers SHOULD NOT deploy or otherwise activate new machine-based information resources with Known Exploited Vulnerabilities.",
+    "fields": [
+     {
+      "field": "controls",
+      "label": "Mapped NIST controls",
+      "type": "set",
+      "before": null,
+      "after": [
+       "ra-5",
+       "si-5"
+      ]
+     }
+    ],
+    "sentences": [
+     "Mapped NIST controls added: `ra-5`, `si-5`."
+    ],
+    "grade": "mapping",
+    "fedramp_notes": [
+     "2026-10-13: Updated control mappings: added ra-5, si-5."
+    ]
+   },
+   {
+    "id": "VDR-CSO-DAC",
+    "kind": "Rule",
+    "family": "VDR",
+    "name": "Detect After Changes",
+    "path_before": "FRR/VDR/data/all/CSO",
+    "path": "FRR/VDR/data/all/CSO",
+    "text_before": "Providers SHOULD automatically perform vulnerability detection on representative samples of new or significantly changed information resources.",
+    "text_after": "Providers SHOULD automatically perform vulnerability detection on representative samples of new or significantly changed information resources.",
+    "fields": [
+     {
+      "field": "controls",
+      "label": "Mapped NIST controls",
+      "type": "set",
+      "before": null,
+      "after": [
+       "ra-5"
+      ]
+     }
+    ],
+    "sentences": [
+     "Mapped NIST controls added: `ra-5`."
+    ],
+    "grade": "mapping",
+    "fedramp_notes": [
+     "2026-10-13: Updated control mappings: added ra-5."
+    ]
+   },
+   {
+    "id": "VDR-CSO-DET",
+    "kind": "Rule",
+    "family": "VDR",
+    "name": "Vulnerability Detection",
+    "path_before": "FRR/VDR/data/all/CSO",
+    "path": "FRR/VDR/data/all/CSO",
+    "text_before": "Providers MUST systematically, persistently, and promptly discover and identify vulnerabilities within their cloud service offering using appropriate techniques such as assessment, scanning, threat intelligence, vulnerability disclosure mechanisms, bug bounties, penetration testing, incident response, automated control testing, supply chain monitoring, and other relevant capabilities; this process is called vulnerability detection. Vulnerability detection includes persistently verifying and validating that information resources and processes are operating as intended and documented for FedRAMP Practices.",
+    "text_after": "Providers MUST systematically, persistently, and promptly discover and identify vulnerabilities within their cloud service offering using appropriate techniques such as assessment, scanning, threat intelligence, vulnerability disclosure mechanisms, bug bounties, penetration testing, incident response, automated control testing, supply chain monitoring, and other relevant capabilities; this process is called vulnerability detection. Vulnerability detection includes persistently verifying and validating that information resources and processes are operating as intended and documented for FedRAMP Practices.",
+    "fields": [
+     {
+      "field": "controls",
+      "label": "Mapped NIST controls",
+      "type": "set",
+      "before": null,
+      "after": [
+       "au-5.2",
+       "au-6",
+       "ca-8",
+       "ca-8.1",
+       "ca-8.2",
+       "ra-5",
+       "ra-5.2",
+       "ra-5.3",
+       "ra-5.4",
+       "si-2",
+       "si-3",
+       "si-4.1",
+       "si-4.12",
+       "si-4.18",
+       "si-4.22",
+       "si-5.1"
+      ]
+     }
+    ],
+    "sentences": [
+     "Mapped NIST controls added: `au-5.2`, `au-6`, `ca-8`, `ca-8.1`, `ca-8.2`, `ra-5`, `ra-5.2`, `ra-5.3`, `ra-5.4`, `si-2`, `si-3`, `si-4.1`, `si-4.12`, `si-4.18`, `si-4.22`, `si-5.1`."
+    ],
+    "grade": "mapping",
+    "fedramp_notes": [
+     "2026-10-13: Updated control mappings: added au-5.2, au-6, ca-8, ca-8.1, ca-8.2, ra-5, ra-5.2, ra-5.3, ra-5.4, si-2, si-3, si-4.1, si-4.12, si-4.18, si-4.22, si-5.1."
+    ]
+   },
+   {
+    "id": "VDR-CSO-FAV",
+    "kind": "Rule",
+    "family": "VDR",
+    "name": "Failures Are Vulnerabilities",
+    "path_before": "FRR/VDR/data/all/CSO",
+    "path": "FRR/VDR/data/all/CSO",
+    "text_before": "Providers MUST treat problems or failures with their vulnerability detection and response processes as vulnerabilities.",
+    "text_after": "Providers MUST treat problems or failures with their vulnerability detection and response processes as vulnerabilities.",
+    "fields": [
+     {
+      "field": "controls",
+      "label": "Mapped NIST controls",
+      "type": "set",
+      "before": null,
+      "after": [
+       "au-5.2",
+       "si-4",
+       "si-4.1",
+       "si-7.7"
+      ]
+     }
+    ],
+    "sentences": [
+     "Mapped NIST controls added: `au-5.2`, `si-4`, `si-4.1`, `si-7.7`."
+    ],
+    "grade": "mapping",
+    "fedramp_notes": [
+     "2026-10-13: Updated control mappings: added au-5.2, si-4, si-4.1, si-7.7."
+    ]
+   },
+   {
+    "id": "VDR-CSO-MSP",
+    "kind": "Rule",
+    "family": "VDR",
+    "name": "Maintain Security",
+    "path_before": "FRR/VDR/data/all/CSO",
+    "path": "FRR/VDR/data/all/CSO",
+    "text_before": "Providers SHOULD NOT weaken the security of information resources to facilitate vulnerability scanning, detection, or assessment activities.",
+    "text_after": "Providers SHOULD NOT weaken the security of information resources to facilitate vulnerability scanning, detection, or assessment activities.",
+    "fields": [
+     {
+      "field": "controls",
+      "label": "Mapped NIST controls",
+      "type": "set",
+      "before": null,
+      "after": [
+       "ra-5.5",
+       "si-2"
+      ]
+     }
+    ],
+    "sentences": [
+     "Mapped NIST controls added: `ra-5.5`, `si-2`."
+    ],
+    "grade": "mapping",
+    "fedramp_notes": [
+     "2026-10-13: Updated control mappings: added ra-5.5, si-2."
+    ]
+   },
+   {
+    "id": "VDR-CSO-RES",
+    "kind": "Rule",
+    "family": "VDR",
+    "name": "Vulnerability Response",
+    "path_before": "FRR/VDR/data/all/CSO",
+    "path": "FRR/VDR/data/all/CSO",
+    "text_before": "Providers MUST systematically, persistently, and promptly track, evaluate, monitor, mitigate, remediate, assess exploitation of, report, and otherwise manage all detected vulnerabilities within their cloud service offering; this process is called vulnerability response.",
+    "text_after": "Providers MUST systematically, persistently, and promptly track, evaluate, monitor, mitigate, remediate, assess exploitation of, report, and otherwise manage all detected vulnerabilities within their cloud service offering; this process is called vulnerability response.",
+    "fields": [
+     {
+      "field": "controls",
+      "label": "Mapped NIST controls",
+      "type": "set",
+      "before": null,
+      "after": [
+       "au-5.2",
+       "ir-4.11",
+       "ir-9.3",
+       "ra-7",
+       "si-2",
+       "si-3"
+      ]
+     }
+    ],
+    "sentences": [
+     "Mapped NIST controls added: `au-5.2`, `ir-4.11`, `ir-9.3`, `ra-7`, `si-2`, `si-3`."
+    ],
+    "grade": "mapping",
+    "fedramp_notes": [
+     "2026-10-13: Updated control mappings: added au-5.2, ir-4.11, ir-9.3, ra-7, si-2, si-3."
+    ]
+   },
+   {
+    "id": "VDR-CSO-SIR",
+    "kind": "Rule",
+    "family": "VDR",
+    "name": "Sampling",
+    "path_before": "FRR/VDR/data/all/CSO",
+    "path": "FRR/VDR/data/all/CSO",
+    "text_before": "Providers MAY sample effectively identical information resources, especially machine-based information resources, when performing vulnerability detection UNLESS doing so would decrease the efficiency or effectiveness of vulnerability detection.",
+    "text_after": "Providers MAY sample effectively identical information resources, especially machine-based information resources, when performing vulnerability detection UNLESS doing so would decrease the efficiency or effectiveness of vulnerability detection.",
+    "fields": [
+     {
+      "field": "controls",
+      "label": "Mapped NIST controls",
+      "type": "set",
+      "before": null,
+      "after": [
+       "ra-5.3",
+       "ra-5.5"
+      ]
+     }
+    ],
+    "sentences": [
+     "Mapped NIST controls added: `ra-5.3`, `ra-5.5`."
+    ],
+    "grade": "mapping",
+    "fedramp_notes": [
+     "2026-10-13: Updated control mappings: added ra-5.3, ra-5.5."
+    ]
+   },
+   {
+    "id": "VDR-TFR-PDD",
+    "kind": "Rule",
+    "family": "VDR",
+    "name": "Persistent Drift Detection",
+    "path_before": "FRR/VDR/data/all/TFR",
+    "path": "FRR/VDR/data/all/TFR",
+    "text_before": "Class A: Providers with Class A Certifications SHOULD persistently perform vulnerability detection on all information resources that are likely to drift, at least once every 3 months.\nClass B: Providers with Class B Certifications SHOULD persistently perform vulnerability detection on all information resources that are likely to drift, at least once every month.\nClass C: Providers with Class C Certifications SHOULD persistently perform vulnerability detection on all information resources that are likely to drift, at least once every 14 days.\nClass D: Providers with Class D Certifications SHOULD persistently perform vulnerability detection on all information resources that are likely to drift, at least once every 7 days.",
+    "text_after": "Class A: Providers with Class A Certifications SHOULD persistently perform vulnerability detection on all information resources that are likely to drift, at least once every 3 months.\nClass B: Providers with Class B Certifications SHOULD persistently perform vulnerability detection on all information resources that are likely to drift, at least once every month.\nClass C: Providers with Class C Certifications SHOULD persistently perform vulnerability detection on all information resources that are likely to drift, at least once every 14 days.\nClass D: Providers with Class D Certifications SHOULD persistently perform vulnerability detection on all information resources that are likely to drift, at least once every 7 days.",
+    "fields": [
+     {
+      "field": "controls",
+      "label": "Mapped NIST controls",
+      "type": "set",
+      "before": null,
+      "after": [
+       "si-4.22",
+       "si-7",
+       "si-7.1"
+      ]
+     }
+    ],
+    "sentences": [
+     "Mapped NIST controls added: `si-4.22`, `si-7`, `si-7.1`."
+    ],
+    "grade": "mapping",
+    "fedramp_notes": [
+     "2026-10-13: Updated control mappings: added si-4.22, si-7, si-7.1."
+    ]
+   },
+   {
+    "id": "VDR-TFR-PVR",
+    "kind": "Rule",
+    "family": "VDR",
+    "name": "Mitigation and Remediation Expectations",
+    "path_before": "FRR/VDR/data/all/TFR",
+    "path": "FRR/VDR/data/all/TFR",
+    "text_before": "Class A: Providers with Class A Certifications SHOULD partially mitigate vulnerabilities, fully mitigate vulnerabilities, or remediate vulnerabilities to a lower potential agency impact within the timeframes from evaluation shown below, factoring for the current Potential Agency Impact N-rating as defined in VER-EVA-EPA (Estimate Potential Agency Impact), internet reachability, and likely exploitability.\nClass B: Providers with Class B Certifications SHOULD partially mitigate vulnerabilities, fully mitigate vulnerabilities, or remediate vulnerabilities to a lower potential agency impact within the timeframes from evaluation shown below, factoring for the current Potential Agency Impact N-rating as defined in VER-EVA-EPA (Estimate Potential Agency Impact), internet reachability, and likely exploitability:\nClass C: Providers with Class C Certifications SHOULD partially mitigate vulnerabilities, fully mitigate vulnerabilities, or remediate vulnerabilities to a lower Potential Agency Impact N-rating within the timeframes from evaluation shown below, factoring for the current Potential Agency Impact N-rating as defined in VER-EVA-EPA (Estimate Potential Agency Impact), internet reachability, and likely exploitability:\nClass D: Providers with Class D Certifications SHOULD partially mitigate vulnerabilities, fully mitigate vulnerabilities, or remediate vulnerabilities to a lower Potential Agency Impact N-rating within the maximum timeframes from evaluation shown below, factoring for the current Potential Agency Impact N-rating as defined in VER-EVA-EPA (Estimate Potential Agency Impact), internet reachability, and likely exploitability:",
+    "text_after": "Class A: Providers with Class A Certifications SHOULD partially mitigate vulnerabilities, fully mitigate vulnerabilities, or remediate vulnerabilities to a lower potential agency impact within the timeframes from evaluation shown below, factoring for the current Potential Agency Impact N-rating as defined in VER-EVA-EPA (Estimate Potential Agency Impact), internet reachability, and likely exploitability.\nClass B: Providers with Class B Certifications SHOULD partially mitigate vulnerabilities, fully mitigate vulnerabilities, or remediate vulnerabilities to a lower potential agency impact within the timeframes from evaluation shown below, factoring for the current Potential Agency Impact N-rating as defined in VER-EVA-EPA (Estimate Potential Agency Impact), internet reachability, and likely exploitability:\nClass C: Providers with Class C Certifications SHOULD partially mitigate vulnerabilities, fully mitigate vulnerabilities, or remediate vulnerabilities to a lower Potential Agency Impact N-rating within the timeframes from evaluation shown below, factoring for the current Potential Agency Impact N-rating as defined in VER-EVA-EPA (Estimate Potential Agency Impact), internet reachability, and likely exploitability:\nClass D: Providers with Class D Certifications SHOULD partially mitigate vulnerabilities, fully mitigate vulnerabilities, or remediate vulnerabilities to a lower Potential Agency Impact N-rating within the maximum timeframes from evaluation shown below, factoring for the current Potential Agency Impact N-rating as defined in VER-EVA-EPA (Estimate Potential Agency Impact), internet reachability, and likely exploitability:",
+    "fields": [
+     {
+      "field": "controls",
+      "label": "Mapped NIST controls",
+      "type": "set",
+      "before": null,
+      "after": [
+       "si-2.3"
+      ]
+     }
+    ],
+    "sentences": [
+     "Mapped NIST controls added: `si-2.3`."
+    ],
+    "grade": "mapping",
+    "fedramp_notes": [
+     "2026-10-13: Updated control mappings: added si-2.3."
+    ]
+   },
+   {
+    "id": "VER-EVA-EFA",
+    "kind": "Rule",
+    "family": "VER",
+    "name": "Evaluation Factors",
+    "path_before": "FRR/VER/data/all/EVA",
+    "path": "FRR/VER/data/all/EVA",
+    "text_before": "Providers SHOULD consider at least the following factors when considering the context of the cloud service offering to evaluate detected vulnerabilities:",
+    "text_after": "Providers SHOULD consider at least the following factors when considering the context of the cloud service offering to evaluate detected vulnerabilities:",
+    "fields": [
+     {
+      "field": "controls",
+      "label": "Mapped NIST controls",
+      "type": "set",
+      "before": null,
+      "after": [
+       "ra-9"
+      ]
+     }
+    ],
+    "sentences": [
+     "Mapped NIST controls added: `ra-9`."
+    ],
+    "grade": "mapping",
+    "fedramp_notes": [
+     "2026-10-13: Updated control mappings: added ra-9."
+    ]
+   },
+   {
+    "id": "VER-EVA-EPA",
+    "kind": "Rule",
+    "family": "VER",
+    "name": "Estimate Potential Agency Impact",
+    "path_before": "FRR/VER/data/all/EVA",
+    "path": "FRR/VER/data/all/EVA",
+    "text_before": "Providers MUST evaluate detected vulnerabilities, considering the context of the cloud service offering, to estimate the likely potential agency impact of exploitation on government customers AND assign one of the following Potential Agency Impact N-ratings (PAIN):",
+    "text_after": "Providers MUST evaluate detected vulnerabilities, considering the context of the cloud service offering, to estimate the likely potential agency impact of exploitation on government customers AND assign one of the following Potential Agency Impact N-ratings (PAIN):",
+    "fields": [
+     {
+      "field": "controls",
+      "label": "Mapped NIST controls",
+      "type": "set",
+      "before": null,
+      "after": [
+       "ra-3"
+      ]
+     }
+    ],
+    "sentences": [
+     "Mapped NIST controls added: `ra-3`."
+    ],
+    "grade": "mapping",
+    "fedramp_notes": [
+     "2026-10-13: Updated control mappings: added ra-3."
+    ]
+   },
+   {
+    "id": "VER-RPT-PER",
+    "kind": "Rule",
+    "family": "VER",
+    "name": "Persistent Reporting",
+    "path_before": "FRR/VER/data/all/RPT",
+    "path": "FRR/VER/data/all/RPT",
+    "text_before": "Providers MUST report vulnerability detection and response activity (including persistent verification and validation) to all necessary parties persistently, summarizing ALL activity since the previous report; these reports are FedRAMP Certification Data and are subject to FedRAMP Certification Data Sharing rules.",
+    "text_after": "Providers MUST report vulnerability detection and response activity (including persistent verification and validation) to all necessary parties persistently, summarizing ALL activity since the previous report; these reports are FedRAMP Certification Data and are subject to FedRAMP Certification Data Sharing rules.",
+    "fields": [
+     {
+      "field": "controls",
+      "label": "Mapped NIST controls",
+      "type": "set",
+      "before": null,
+      "after": [
+       "si-7.2"
+      ]
+     }
+    ],
+    "sentences": [
+     "Mapped NIST controls added: `si-7.2`."
+    ],
+    "grade": "mapping",
+    "fedramp_notes": [
+     "2026-10-13: Updated control mappings: added si-7.2."
+    ]
+   },
+   {
+    "id": "VER-RPT-VDT",
+    "kind": "Rule",
+    "family": "VER",
+    "name": "Vulnerability Details",
+    "path_before": "FRR/VER/data/all/RPT",
+    "path": "FRR/VER/data/all/RPT",
+    "text_before": "Providers MUST include the following information (if applicable) on detected vulnerabilities when reporting on vulnerability detection and response activity, UNLESS it is an accepted vulnerability:",
+    "text_after": "Providers MUST include the following information (if applicable) on detected vulnerabilities when reporting on vulnerability detection and response activity, UNLESS it is an accepted vulnerability:",
+    "fields": [
+     {
+      "field": "controls",
+      "label": "Mapped NIST controls",
+      "type": "set",
+      "before": null,
+      "after": [
+       "si-2.3"
+      ]
+     }
+    ],
+    "sentences": [
+     "Mapped NIST controls added: `si-2.3`."
+    ],
+    "grade": "mapping",
+    "fedramp_notes": [
+     "2026-10-13: Updated control mappings: added si-2.3."
+    ]
+   }
+  ],
+  "meta": []
+ }
+}

@@ -1,0 +1,57 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>1 removed, 2 changed — 2026-10-08 · FedRAMP Rules Watch</title>
+<link rel="alternate" type="application/atom+xml" title="FedRAMP Rules Watch" href="../feed.xml">
+<style>
+:root{--bg:#fbfaf7;--fg:#1d1f21;--muted:#62666d;--line:#e3e0d8;--card:#fff;--accent:#0b5cad;
+--add:#0f7a3d;--addbg:#e3f4ea;--del:#b42318;--delbg:#fde8e6;--warn:#8a5a00;--warnbg:#fff3d6;--code:#f1efe9}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#121416;--fg:#e7e7e4;--muted:#9ca1a8;--line:#2a2e33;
+--card:#1a1d20;--accent:#6aa8ff;--add:#5fd38d;--addbg:#123322;--del:#ff8a80;--delbg:#3a1714;--warn:#f0c060;--warnbg:#33290f;--code:#23272b}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif}
+main{max-width:860px;margin:0 auto;padding:32px 16px 80px}a{color:var(--accent)}
+h1{font-size:1.9rem;line-height:1.2;margin:.2em 0 .3em;letter-spacing:-.01em}h2{font-size:1.15rem;margin:2.2em 0 .8em;padding-bottom:.4em;border-bottom:1px solid var(--line)}
+h3{font-size:1rem;margin:0 0 .3em}.muted{color:var(--muted)}.small{font-size:.86rem}
+code,.id,blockquote,.diff,td,li{overflow-wrap:anywhere}
+code,.id{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.88em;background:var(--code);padding:.08em .35em;border-radius:4px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px 18px;margin:12px 0}
+.glance{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:8px;padding:12px 18px}
+.glance li{margin:.25em 0}
+.pill{display:inline-block;font-size:.72rem;font-weight:600;letter-spacing:.03em;text-transform:uppercase;padding:.15em .55em;border-radius:99px;margin-left:.4em;vertical-align:.1em}
+.substantive{background:var(--warnbg);color:var(--warn)}.minor{background:var(--code);color:var(--muted)}.editorial{background:var(--code);color:var(--muted)}
+.added{background:var(--addbg);color:var(--add)}.removed{background:var(--delbg);color:var(--del)}
+blockquote{margin:.6em 0;padding:.5em .9em;border-left:3px solid var(--line);white-space:pre-wrap}
+blockquote.before{border-color:var(--del)}blockquote.after{border-color:var(--add)}
+.lbl{font-size:.75rem;font-weight:600;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);margin-top:.8em}
+del{background:var(--delbg);color:var(--del);text-decoration:line-through}ins{background:var(--addbg);color:var(--add);text-decoration:none}
+.diff{white-space:pre-wrap}table{border-collapse:collapse;width:100%;font-size:.9rem}td,th{text-align:left;padding:8px 6px;border-bottom:1px solid var(--line);vertical-align:top}
+.list a.row{display:block;text-decoration:none;color:inherit}.list .row:hover{border-color:var(--accent)}
+.tbl{overflow-x:auto}header.top{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:baseline;margin-bottom:24px}
+.brand{font-weight:700;text-decoration:none;color:var(--fg)}
+details summary{cursor:pointer;color:var(--muted);font-size:.9rem}
+</style></head><body><main>
+<header class="top"><a class="brand" href="../index.html">FedRAMP Rules Watch</a>
+<span class="small"><a href="../feed.xml">Atom feed</a> · <a href="https://github.com/FedRAMP/rules">Source rules</a></span></header>
+<p class='muted small'>2026-10-08</p><h1>1 removed, 2 changed</h1>
+<p class='muted'>Version <code>2026.10.05.01</code> → <code>2026.10.08.01</code> · <a href='https://github.com/FedRAMP/rules/compare/1c33385a06acf4faf50da2b9b4dc31cd826e5b91...6eb376782a7ca9950d2f852b68fa05e8cdeb6e12'>upstream diff</a> · <a href='2026-10-08.md'>Markdown</a> · <a href='2026-10-08.json'>JSON</a></p>
+<h2>At a glance</h2><ul class='glance'><li>This update has <strong>1 removed</strong>, <strong>2 changed</strong> (1 substantive, 1 minor, 0 editorial, 0 mapping-only).</li><li>Defined-term links changed on 1 entry.</li><li><code>SDR-CSX-KMT</code> Key Security Indicator Metrics: Normative keywords changed: MAY, MUST×3 → MAY, MUST×2, SHOULD.</li><li><code>SDR-CSX-KMT</code> Key Security Indicator Metrics: Class B obligation level changed from <strong>MUST</strong> to <strong>SHOULD</strong> (weaker requirement).</li><li>Removed rule <code>FRC-CSX-MOT</code> Metrics Over Time for Key Security Indicators.</li></ul>
+<h2>Removed</h2>
+<div class='card'><h3><span class='id'>FRC-CSX-MOT</span> Metrics Over Time for Key Security Indicators<span class='pill removed'>removed</span></h3><div class='small muted'>Rule · was at FRR/FRC/data/20x/CSX</div><div class='lbl'>Last statement</div><blockquote class='before'>Class A: Providers seeking 20x Class A Certification MAY supply historical metrics for Key Security Indicators.
+Class B: Providers seeking 20x Class B Certification SHOULD supply historical metrics for Key Security Indicators.
+Class C: Providers seeking 20x Class C Certification MUST supply historical metrics including status from persistent validation over at least the past 6 months for all Key Security Indicators.
+Class D: Providers seeking 20x Class D Certification MUST provide historical metrics including status from persistent validation over at least the past 18 months for all Key Security Indicators.</blockquote></div>
+<h2>Changed</h2>
+<div class='card'><h3><span class='id'>SDR-CSX-KMT</span> Key Security Indicator Metrics<span class='pill substantive'>substantive</span></h3><div class='small muted'>Rule · FRR/SDR/data/20x/CSX</div><ul><li>Statement reworded (1 word removed, 1 word added).</li><li>Normative keywords changed: MAY, MUST×3 → MAY, MUST×2, SHOULD.</li><li>Note added.</li><li>Linked defined terms: added <code>Initial Certification</code>.</li><li>Class B obligation level changed from <strong>MUST</strong> to <strong>SHOULD</strong> (weaker requirement).</li><li>Class C required information reworded (15 words removed, 20 words added).</li><li class='muted'>FedRAMP's changelog: 2026-10-08: Changed MUST to SHOULD for Class B, added note, clarified persistent validation status should be included.</li></ul>
+<div class='lbl'>Before</div><blockquote class='before'>Class A: Providers with 20x Class A Certifications MAY also include historical metrics in their Security Decision Record.
+Class B: Providers with 20x Class B Certifications MUST also include historical metrics in their Security Decision Record, supplying at least the following information for each applicable Key Security Indicator:
+Class C: Providers with 20x Class C Certifications MUST also include historical metrics in their Security Decision Record, supplying at least the following information for each applicable Key Security Indicator:
+Class D: Providers with 20x Class D Certifications MUST significantly supersede the minimum requirements for lower Classes, with specifics to be set during the 20x Phase 4 Pilot.</blockquote><div class='lbl'>After</div><blockquote class='after'>Class A: Providers with 20x Class A Certifications MAY also include historical metrics in their Security Decision Record.
+Class B: Providers with 20x Class B Certifications SHOULD also include historical metrics in their Security Decision Record, supplying at least the following information for each applicable Key Security Indicator:
+Class C: Providers with 20x Class C Certifications MUST also include historical metrics in their Security Decision Record, supplying at least the following information for each applicable Key Security Indicator:
+Class D: Providers with 20x Class D Certifications MUST significantly supersede the minimum requirements for lower Classes, with specifics to be set during the 20x Phase 4 Pilot.</blockquote><details><summary>Word-level changes</summary><div class='diff'>Class A: Providers with 20x Class A Certifications MAY also include historical metrics in their Security Decision Record. Class B: Providers with 20x Class B Certifications <del>MUST</del> <ins>SHOULD</ins> also include historical metrics in their Security Decision Record, supplying at least the following information for each applicable Key Security Indicator: Class C: Providers with 20x Class C Certifications MUST also include historical metrics in their Security Decision Record, supplying at least the following information for each applicable Key Security Indicator: Class D: Providers with 20x Class D Certifications MUST significantly supersede the minimum requirements for lower Classes, with specifics to be set during the 20x Phase 4 Pilot.</div></details>
+</div>
+<div class='card'><h3><span class='id'>FRD-SNT</span> SHOULD NOT<span class='pill minor'>minor</span></h3><div class='small muted'>Definition · FRD/data/all</div><ul><li>Statement reworded (1 word removed, 1 word added).</li><li class='muted'>FedRAMP's changelog: 2026-10-08: Fixed a typo - understood instead of understand.</li></ul>
+<div class='lbl'>Before</div><blockquote class='before'>There may exist valid reasons in particular circumstances when the particular action is acceptable or even useful, but the full implications must be understand and carefully weighed. Parties MUST address such rules in their security documentation by explaining their decisions about how they handle such rules.</blockquote><div class='lbl'>After</div><blockquote class='after'>There may exist valid reasons in particular circumstances when the particular action is acceptable or even useful, but the full implications must be understood and carefully weighed. Parties MUST address such rules in their security documentation by explaining their decisions about how they handle such rules.</blockquote><details><summary>Word-level changes</summary><div class='diff'>There may exist valid reasons in particular circumstances when the particular action is acceptable or even useful, but the full implications must be <del>understand</del> <ins>understood</ins> and carefully weighed. Parties MUST address such rules in their security documentation by explaining their decisions about how they handle such rules.</div></details>
+</div>
+<h2>Upstream commits</h2><ul class='small'><li><a href='https://github.com/FedRAMP/rules/commit/2285dea99dd9344e11300bbe0a717ac12fb6acb3'><code>2285dea</code></a> 2026-10-08 — travel back from the future</li><li><a href='https://github.com/FedRAMP/rules/commit/6eb376782a7ca9950d2f852b68fa05e8cdeb6e12'><code>6eb3767</code></a> 2026-10-08 — October 8 fixes (#40)</li></ul>
+<p class="small muted" style="margin-top:48px">Unofficial summaries generated automatically from
+<a href="https://github.com/FedRAMP/rules">FedRAMP/rules</a>. FedRAMP's published rules are authoritative.</p>
+</main></body></html>

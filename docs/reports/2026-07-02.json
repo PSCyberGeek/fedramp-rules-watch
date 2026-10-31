@@ -1,0 +1,597 @@
+{
+ "slug": "2026-07-02",
+ "date": "2026-07-02",
+ "from": {
+  "sha": "cb3b2ff7eed075a6a565b0a5d62f28c2a47043d6",
+  "short": "cb3b2ff",
+  "date": "2026-07-01T17:18:54-04:00",
+  "version": "2026.07.01.01"
+ },
+ "to": {
+  "sha": "9b8a8c428ce285930f6ce31718cacd1f7b6b4fd5",
+  "short": "9b8a8c4",
+  "date": "2026-07-02T17:03:29-04:00",
+  "version": "2026.07.02.02"
+ },
+ "commits": [
+  {
+   "sha": "42cb197925ed9d653aae2053fb696a9bbd85ca18",
+   "short": "42cb197",
+   "date": "2026-07-02T12:37:50-04:00",
+   "subject": "Update terminology from \"Response\" to \"Communication\" in FedRAMP Incident Evaluation rules across multiple definitions and statements.",
+   "url": "https://github.com/FedRAMP/rules/commit/42cb197925ed9d653aae2053fb696a9bbd85ca18"
+  },
+  {
+   "sha": "bac79a3dd51d98484200de47305ad71592ff5b3f",
+   "short": "bac79a3",
+   "date": "2026-07-02T14:21:49-04:00",
+   "subject": "Fix typo in \"significant change evaluation\" description in FedRAMP consolidated rules.",
+   "url": "https://github.com/FedRAMP/rules/commit/bac79a3dd51d98484200de47305ad71592ff5b3f"
+  },
+  {
+   "sha": "a27eac89e9d54d1e9211ca2e5be86af7540da59e",
+   "short": "a27eac8",
+   "date": "2026-07-02T14:57:19-04:00",
+   "subject": "Update metadata version and last_updated field in FedRAMP consolidated rules.",
+   "url": "https://github.com/FedRAMP/rules/commit/a27eac89e9d54d1e9211ca2e5be86af7540da59e"
+  },
+  {
+   "sha": "abce31fa60deaa8a96368808fddc61e0d3e353d8",
+   "short": "abce31f",
+   "date": "2026-07-02T16:02:56-04:00",
+   "subject": "Update schema URL in FedRAMP consolidated rules for FRC-CSO-PKG definitions",
+   "url": "https://github.com/FedRAMP/rules/commit/abce31fa60deaa8a96368808fddc61e0d3e353d8"
+  },
+  {
+   "sha": "6d3b28984714ec7546feeafd2a81215180ca5770",
+   "short": "6d3b289",
+   "date": "2026-07-02T16:13:11-04:00",
+   "subject": "Update schema URLs in FedRAMP consolidated rules to latest version (2026-06-24)",
+   "url": "https://github.com/FedRAMP/rules/commit/6d3b28984714ec7546feeafd2a81215180ca5770"
+  },
+  {
+   "sha": "8148790a3e0fdfe1a2b2c27f1fb3f5ddb1e1758a",
+   "short": "8148790",
+   "date": "2026-07-02T16:37:04-04:00",
+   "subject": "Fix typo in schema URL for FedRAMP Significant Change Notifications",
+   "url": "https://github.com/FedRAMP/rules/commit/8148790a3e0fdfe1a2b2c27f1fb3f5ddb1e1758a"
+  },
+  {
+   "sha": "9b8a8c428ce285930f6ce31718cacd1f7b6b4fd5",
+   "short": "9b8a8c4",
+   "date": "2026-07-02T17:03:29-04:00",
+   "subject": "Add schema URL validation test and update documentation",
+   "url": "https://github.com/FedRAMP/rules/commit/9b8a8c428ce285930f6ce31718cacd1f7b6b4fd5"
+  }
+ ],
+ "summary": {
+  "headline": "18 changed",
+  "glance": [
+   "This update has **18 changed** (0 substantive, 18 minor, 0 editorial, 0 mapping-only).",
+   "Defined-term links changed on 2 entries."
+  ]
+ },
+ "diff": {
+  "added": [],
+  "removed": [],
+  "renamed": [],
+  "changed": [
+   {
+    "id": "CDS-CSO-PUB",
+    "kind": "Rule",
+    "family": "CDS",
+    "name": "Public Information",
+    "path_before": "FRR/CDS/data/all/CSO",
+    "path": "FRR/CDS/data/all/CSO",
+    "text_before": "Providers MUST publicly share up-to-date information about the cloud service offering in both human-readable and JSON formats, including at least the following information that is available and applicable:",
+    "text_after": "Providers MUST publicly share up-to-date information about the cloud service offering in both human-readable and JSON formats, including at least the following information that is available and applicable:",
+    "fields": [
+     {
+      "field": "schema.url",
+      "label": "Schema url",
+      "type": "text",
+      "before": "https://fedramp.gov/schemas/fedramp-certification-overview-package-schema-2026-06-24.json",
+      "after": "https://fedramp.gov/schemas/fedramp-certification-package-overview-schema-2026-06-24.json",
+      "editorial": false
+     }
+    ],
+    "sentences": [
+     "Schema url reworded (1 word removed, 1 word added)."
+    ],
+    "grade": "minor",
+    "fedramp_notes": []
+   },
+   {
+    "id": "CDS-CSO-SVC",
+    "kind": "Rule",
+    "family": "CDS",
+    "name": "Public Service List",
+    "path_before": "FRR/CDS/data/all/CSO",
+    "path": "FRR/CDS/data/all/CSO",
+    "text_before": "Providers MUST publicly share a detailed list of specific services and their security categories that are included in the cloud service offering using clear feature or service names that align with standard public marketing materials; this list MUST be complete enough for a potential customer to determine which services are and are not included in the FedRAMP Minimum Assessment Scope without requesting access to underlying FedRAMP Certification Data.",
+    "text_after": "Providers MUST publicly share a detailed list of specific services and their security categories that are included in the cloud service offering using clear feature or service names that align with standard public marketing materials; this list MUST be complete enough for a potential customer to determine which services are and are not included in the FedRAMP Minimum Assessment Scope without requesting access to underlying FedRAMP Certification Data.",
+    "fields": [
+     {
+      "field": "schema.url",
+      "label": "Schema url",
+      "type": "text",
+      "before": "https://fedramp.gov/schemas/fedramp-certification-overview-package-schema-2026-06-24.json",
+      "after": "https://fedramp.gov/schemas/fedramp-certification-package-overview-schema-2026-06-24.json",
+      "editorial": false
+     }
+    ],
+    "sentences": [
+     "Schema url reworded (1 word removed, 1 word added)."
+    ],
+    "grade": "minor",
+    "fedramp_notes": []
+   },
+   {
+    "id": "CDS-CSO-UTC",
+    "kind": "Rule",
+    "family": "CDS",
+    "name": "Use Trust Centers",
+    "path_before": "FRR/CDS/data/all/CSO",
+    "path": "FRR/CDS/data/all/CSO",
+    "text_before": "Providers MUST use a FedRAMP-compatible trust center to store and share FedRAMP Certification Data with all necessary parties.",
+    "text_after": "Providers MUST use a FedRAMP-compatible trust center to store and share FedRAMP Certification Data with all necessary parties.",
+    "fields": [
+     {
+      "field": "schema.url",
+      "label": "Schema url",
+      "type": "text",
+      "before": "https://fedramp.gov/schemas/fedramp-certification-overview-package-schema-2026-06-24.json",
+      "after": "https://fedramp.gov/schemas/fedramp-certification-package-overview-schema-2026-06-24.json",
+      "editorial": false
+     }
+    ],
+    "sentences": [
+     "Schema url reworded (1 word removed, 1 word added)."
+    ],
+    "grade": "minor",
+    "fedramp_notes": []
+   },
+   {
+    "id": "CPO-CSO-OVR",
+    "kind": "Rule",
+    "family": "CPO",
+    "name": "Overview of the Cloud Service Offering",
+    "path_before": "FRR/CPO/data/all/CSO",
+    "path": "FRR/CPO/data/all/CSO",
+    "text_before": "Providers MUST supply a Certification Package Overview within their FedRAMP Certification Package, in both human-readable and JSON formats, that includes at least all of the information required by the following rules:",
+    "text_after": "Providers MUST supply a Certification Package Overview within their FedRAMP Certification Package, in both human-readable and JSON formats, that includes at least all of the information required by the following rules:",
+    "fields": [
+     {
+      "field": "schema.url",
+      "label": "Schema url",
+      "type": "text",
+      "before": "https://fedramp.gov/schemas/fedramp-certification-overview-package-schema-2026-06-24.json",
+      "after": "https://fedramp.gov/schemas/fedramp-certification-package-overview-schema-2026-06-24.json",
+      "editorial": false
+     }
+    ],
+    "sentences": [
+     "Schema url reworded (1 word removed, 1 word added)."
+    ],
+    "grade": "minor",
+    "fedramp_notes": []
+   },
+   {
+    "id": "FRC-CSO-PKG",
+    "kind": "Rule",
+    "family": "FRC",
+    "name": "FedRAMP Certification Package",
+    "path_before": "FRR/FRC/data/all/CSO",
+    "path": "FRR/FRC/data/all/CSO",
+    "text_before": "Providers seeking a Certification MUST supply a complete FedRAMP Certification Package to FedRAMP for initial certification; the FedRAMP Certification Package MUST include at least the following information:",
+    "text_after": "Providers seeking a Certification MUST supply a complete FedRAMP Certification Package to FedRAMP for initial certification; the FedRAMP Certification Package MUST include at least the following information:",
+    "fields": [
+     {
+      "field": "schema.url",
+      "label": "Schema url",
+      "type": "text",
+      "before": "https://fedramp.gov/schemas/fedramp-certification-overview-package-schema-2026-06-24.json",
+      "after": "https://fedramp.gov/schemas/fedramp-certification-package-overview-schema-2026-06-24.json",
+      "editorial": false
+     }
+    ],
+    "sentences": [
+     "Schema url reworded (1 word removed, 1 word added)."
+    ],
+    "grade": "minor",
+    "fedramp_notes": []
+   },
+   {
+    "id": "FRD-FIR",
+    "kind": "Definition",
+    "family": "FRD",
+    "name": "Final Incident Report (FIR)",
+    "path_before": "FRD/data/all",
+    "path": "FRD/data/all",
+    "text_before": "A final report after recovery from an incident that is supplied by FedRAMP Certified cloud service providers to FedRAMP and agency customers, following FedRAMP Incident Evaluation and Response rules.",
+    "text_after": "A final report after recovery from an incident that is supplied by FedRAMP Certified cloud service providers to FedRAMP and agency customers, following FedRAMP Incident Evaluation and Communication rules.",
+    "fields": [
+     {
+      "field": "definition",
+      "label": "Definition",
+      "type": "text",
+      "before": "A final report after recovery from an incident that is supplied by FedRAMP Certified cloud service providers to FedRAMP and agency customers, following FedRAMP Incident Evaluation and Response rules.",
+      "after": "A final report after recovery from an incident that is supplied by FedRAMP Certified cloud service providers to FedRAMP and agency customers, following FedRAMP Incident Evaluation and Communication rules.",
+      "editorial": false
+     }
+    ],
+    "sentences": [
+     "Statement reworded (1 word removed, 1 word added)."
+    ],
+    "grade": "minor",
+    "fedramp_notes": [
+     "2026-07-02: Update terminology from \"Response\" to \"Communication\" in FedRAMP Incident Evaluation rules."
+    ]
+   },
+   {
+    "id": "FRD-IIR",
+    "kind": "Definition",
+    "family": "FRD",
+    "name": "Initial Incident Report (IIR)",
+    "path_before": "FRD/data/all",
+    "path": "FRD/data/all",
+    "text_before": "An initial report about an incident that is supplied by FedRAMP Certified cloud service providers to FedRAMP and agency customers, following FedRAMP FedRAMP Incident Evaluation and Response rules.",
+    "text_after": "An initial report about an incident that is supplied by FedRAMP Certified cloud service providers to FedRAMP and agency customers, following FedRAMP FedRAMP Incident Evaluation and Communication rules.",
+    "fields": [
+     {
+      "field": "definition",
+      "label": "Definition",
+      "type": "text",
+      "before": "An initial report about an incident that is supplied by FedRAMP Certified cloud service providers to FedRAMP and agency customers, following FedRAMP FedRAMP Incident Evaluation and Response rules.",
+      "after": "An initial report about an incident that is supplied by FedRAMP Certified cloud service providers to FedRAMP and agency customers, following FedRAMP FedRAMP Incident Evaluation and Communication rules.",
+      "editorial": false
+     }
+    ],
+    "sentences": [
+     "Statement reworded (1 word removed, 1 word added)."
+    ],
+    "grade": "minor",
+    "fedramp_notes": [
+     "2026-07-02: Update terminology from \"Response\" to \"Communication\" in FedRAMP Incident Evaluation rules."
+    ]
+   },
+   {
+    "id": "FRD-OIR",
+    "kind": "Definition",
+    "family": "FRD",
+    "name": "Ongoing Incident Report (OIR)",
+    "path_before": "FRD/data/all",
+    "path": "FRD/data/all",
+    "text_before": "A recurring report about an ongoing incident that is supplied by FedRAMP Certified cloud service providers to FedRAMP and agency customers, following the FedRAMP Incident Evaluation and Response rules.",
+    "text_after": "A recurring report about an ongoing incident that is supplied by FedRAMP Certified cloud service providers to FedRAMP and agency customers, following the FedRAMP Incident Evaluation and Communication rules.",
+    "fields": [
+     {
+      "field": "definition",
+      "label": "Definition",
+      "type": "text",
+      "before": "A recurring report about an ongoing incident that is supplied by FedRAMP Certified cloud service providers to FedRAMP and agency customers, following the FedRAMP Incident Evaluation and Response rules.",
+      "after": "A recurring report about an ongoing incident that is supplied by FedRAMP Certified cloud service providers to FedRAMP and agency customers, following the FedRAMP Incident Evaluation and Communication rules.",
+      "editorial": false
+     }
+    ],
+    "sentences": [
+     "Statement reworded (1 word removed, 1 word added)."
+    ],
+    "grade": "minor",
+    "fedramp_notes": [
+     "2026-07-02: Update terminology from \"Response\" to \"Communication\" in FedRAMP Incident Evaluation rules."
+    ]
+   },
+   {
+    "id": "IEC-CSO-EFR",
+    "kind": "Rule",
+    "family": "IEC",
+    "name": "Evaluate FedRAMP Reportability",
+    "path_before": "FRR/IEC/data/all/CSO",
+    "path": "FRR/IEC/data/all/CSO",
+    "text_before": "Providers MUST promptly evaluate incidents to determine if they affect confidentiality or integrity of federal customer data or are likely to affect confidentiality or integrity of federal customer data; such incidents are FedRAMP Reportable Incidents and must be reported following the FedRAMP Incident Evaluation and Response rules.",
+    "text_after": "Providers MUST promptly evaluate incidents to determine if they affect confidentiality or integrity of federal customer data or are likely to affect confidentiality or integrity of federal customer data; such incidents are FedRAMP Reportable Incidents and must be reported following the FedRAMP Incident Evaluation and Communication rules.",
+    "fields": [
+     {
+      "field": "statement",
+      "label": "Statement",
+      "type": "text",
+      "before": "Providers MUST promptly evaluate incidents to determine if they affect confidentiality or integrity of federal customer data or are likely to affect confidentiality or integrity of federal customer data; such incidents are FedRAMP Reportable Incidents and must be reported following the FedRAMP Incident Evaluation and Response rules.",
+      "after": "Providers MUST promptly evaluate incidents to determine if they affect confidentiality or integrity of federal customer data or are likely to affect confidentiality or integrity of federal customer data; such incidents are FedRAMP Reportable Incidents and must be reported following the FedRAMP Incident Evaluation and Communication rules.",
+      "editorial": false
+     },
+     {
+      "field": "terms",
+      "label": "Linked defined terms",
+      "type": "set",
+      "before": [
+       "FedRAMP Reportable Incident",
+       "Federal Customer Data",
+       "Incident",
+       "Likely",
+       "Promptly",
+       "Provider",
+       "Vulnerability Response"
+      ],
+      "after": [
+       "FedRAMP Reportable Incident",
+       "Federal Customer Data",
+       "Incident",
+       "Likely",
+       "Promptly",
+       "Provider"
+      ],
+      "added_items": [],
+      "removed_items": [
+       "Vulnerability Response"
+      ]
+     }
+    ],
+    "sentences": [
+     "Statement reworded (1 word removed, 1 word added).",
+     "Linked defined terms: removed `Vulnerability Response`."
+    ],
+    "grade": "minor",
+    "fedramp_notes": [
+     "2026-07-02: Update terminology from \"Response\" to \"Communication\" in FedRAMP Incident Evaluation rules."
+    ]
+   },
+   {
+    "id": "IEC-FRP-ORV",
+    "kind": "Rule",
+    "family": "IEC",
+    "name": "Ongoing Review",
+    "path_before": "FRR/IEC/data/all/FRP",
+    "path": "FRR/IEC/data/all/FRP",
+    "text_before": "FedRAMP MUST periodically review FedRAMP Incident Evaluation and Response implementation with providers based on lack of reporting or other information.",
+    "text_after": "FedRAMP MUST periodically review FedRAMP Incident Evaluation and Communication implementation with providers based on lack of reporting or other information.",
+    "fields": [
+     {
+      "field": "statement",
+      "label": "Statement",
+      "type": "text",
+      "before": "FedRAMP MUST periodically review FedRAMP Incident Evaluation and Response implementation with providers based on lack of reporting or other information.",
+      "after": "FedRAMP MUST periodically review FedRAMP Incident Evaluation and Communication implementation with providers based on lack of reporting or other information.",
+      "editorial": false
+     },
+     {
+      "field": "terms",
+      "label": "Linked defined terms",
+      "type": "set",
+      "before": [
+       "Incident",
+       "Provider",
+       "Vulnerability Response"
+      ],
+      "after": [
+       "Incident",
+       "Provider"
+      ],
+      "added_items": [],
+      "removed_items": [
+       "Vulnerability Response"
+      ]
+     }
+    ],
+    "sentences": [
+     "Statement reworded (1 word removed, 1 word added).",
+     "Linked defined terms: removed `Vulnerability Response`."
+    ],
+    "grade": "minor",
+    "fedramp_notes": [
+     "2026-07-02: Update terminology from \"Response\" to \"Communication\" in FedRAMP Incident Evaluation rules."
+    ]
+   },
+   {
+    "id": "MAS-CSO-TPR",
+    "kind": "Rule",
+    "family": "MAS",
+    "name": "Third-Party Information Resources",
+    "path_before": "FRR/MAS/data/all/CSO",
+    "path": "FRR/MAS/data/all/CSO",
+    "text_before": "Providers MUST address the potential impact to federal customer data from third-party information resources used by the cloud service offering, ONLY IF MAS-CSO-IIR (Identify Information Resources) APPLIES, by documenting the following information about each applicable third-party information resource:",
+    "text_after": "Providers MUST address the potential impact to federal customer data from third-party information resources used by the cloud service offering, ONLY IF MAS-CSO-IIR (Identify Information Resources) APPLIES, by documenting the following information about each applicable third-party information resource:",
+    "fields": [
+     {
+      "field": "schema.url",
+      "label": "Schema url",
+      "type": "text",
+      "before": "https://fedramp.gov/schemas/fedramp-certification-overview-package-schema-2026-06-24.json",
+      "after": "https://fedramp.gov/schemas/fedramp-certification-package-overview-schema-2026-06-24.json",
+      "editorial": false
+     }
+    ],
+    "sentences": [
+     "Schema url reworded (1 word removed, 1 word added)."
+    ],
+    "grade": "minor",
+    "fedramp_notes": []
+   },
+   {
+    "id": "MKT-CAS-WEB",
+    "kind": "Rule",
+    "family": "MKT",
+    "name": "Website Requirements for Advisors",
+    "path_before": "FRR/MKT/data/all/CAS",
+    "path": "FRR/MKT/data/all/CAS",
+    "text_before": "Advisors MUST have an appropriate web site that publicly supplies at least the following information in consistent machine-readable and human-readable formats:",
+    "text_after": "Advisors MUST have an appropriate web site that publicly supplies at least the following information in consistent machine-readable and human-readable formats:",
+    "fields": [
+     {
+      "field": "schema.url",
+      "label": "Schema url",
+      "type": "text",
+      "before": "https://fedramp.gov/schemas/fedramp-advisor-information-schema-v2026.06.06.01.json",
+      "after": "https://fedramp.gov/schemas/fedramp-advisor-information-schema-2026-06-24.json",
+      "editorial": false
+     }
+    ],
+    "sentences": [
+     "Schema url reworded (1 word removed, 1 word added)."
+    ],
+    "grade": "minor",
+    "fedramp_notes": []
+   },
+   {
+    "id": "MKT-IAS-WEB",
+    "kind": "Rule",
+    "family": "MKT",
+    "name": "Website Requirements for Assessors",
+    "path_before": "FRR/MKT/data/all/IAS",
+    "path": "FRR/MKT/data/all/IAS",
+    "text_before": "Assessors MUST have an appropriate web site that publicly supplies at least the following information in human-readable and JSON formats:",
+    "text_after": "Assessors MUST have an appropriate web site that publicly supplies at least the following information in human-readable and JSON formats:",
+    "fields": [
+     {
+      "field": "schema.url",
+      "label": "Schema url",
+      "type": "text",
+      "before": "https://fedramp.gov/schemas/fedramp-assessor-information-schema-v2026.06.06.01.json",
+      "after": "https://fedramp.gov/schemas/fedramp-assessor-information-schema-2026-06-24.json",
+      "editorial": false
+     }
+    ],
+    "sentences": [
+     "Schema url reworded (1 word removed, 1 word added)."
+    ],
+    "grade": "minor",
+    "fedramp_notes": []
+   },
+   {
+    "id": "SCG-CSO-RSC",
+    "kind": "Rule",
+    "family": "SCG",
+    "name": "Recommended Secure Configuration",
+    "path_before": "FRR/SCG/data/all/CSO",
+    "path": "FRR/SCG/data/all/CSO",
+    "text_before": "Providers MUST create, maintain, and make available recommendations for securely configuring their cloud services (the Secure Configuration Guide) that includes at least the following information:",
+    "text_after": "Providers MUST create, maintain, and make available recommendations for securely configuring their cloud services (the Secure Configuration Guide) that includes at least the following information:",
+    "fields": [
+     {
+      "field": "schema.url",
+      "label": "Schema url",
+      "type": "text",
+      "before": "https://fedramp.gov/schemas/fedramp-certification-overview-package-schema-2026-06-24.json",
+      "after": "https://fedramp.gov/schemas/fedramp-certification-package-overview-schema-2026-06-24.json",
+      "editorial": false
+     }
+    ],
+    "sentences": [
+     "Schema url reworded (1 word removed, 1 word added)."
+    ],
+    "grade": "minor",
+    "fedramp_notes": []
+   },
+   {
+    "id": "SCN-CSO-EVA",
+    "kind": "Rule",
+    "family": "SCN",
+    "name": "Evaluate Changes",
+    "path_before": "FRR/SCN/data/all/CSO",
+    "path": "FRR/SCN/data/all/CSO",
+    "text_before": "Providers MUST evaluate all potential significant changes to determine the type of significant change and follow the appropriate Significant Change Notification rules.",
+    "text_after": "Providers MUST evaluate all potential significant changes to determine the type of significant change and follow the appropriate Significant Change Notification rules.",
+    "fields": [
+     {
+      "field": "artifacts.all",
+      "label": "Artifacts all",
+      "type": "text",
+      "before": "Evidence of signifincat change evaluation including a description fo the change, the determined type, and an explanation for the decision. At least one example must be provided for each type of change. Real examples are prefered but the provider may use fictitious examples as long as the example provides evidence of the decision making process.",
+      "after": "Evidence of significant change evaluation including a description fo the change, the determined type, and an explanation for the decision. At least one example must be provided for each type of change. Real examples are prefered but the provider may use fictitious examples as long as the example provides evidence of the decision making process.",
+      "editorial": false
+     },
+     {
+      "field": "schema.url",
+      "label": "Schema url",
+      "type": "text",
+      "before": "https://fedramp.gov/schemas/fedramp-significant-change-notification-schema-2026-06-24.json",
+      "after": "https://fedramp.gov/schemas/fedramp-significant-change-notifications-schema-2026-06-24.json",
+      "editorial": false
+     }
+    ],
+    "sentences": [
+     "Artifacts all reworded (1 word removed, 1 word added).",
+     "Schema url reworded (1 word removed, 1 word added)."
+    ],
+    "grade": "minor",
+    "fedramp_notes": []
+   },
+   {
+    "id": "SCN-CSO-INF",
+    "kind": "Rule",
+    "family": "SCN",
+    "name": "Required Information",
+    "path_before": "FRR/SCN/data/all/CSO",
+    "path": "FRR/SCN/data/all/CSO",
+    "text_before": "Providers MUST include at least the following information in Significant Change Notifications:",
+    "text_after": "Providers MUST include at least the following information in Significant Change Notifications:",
+    "fields": [
+     {
+      "field": "schema.url",
+      "label": "Schema url",
+      "type": "text",
+      "before": "https://fedramp.gov/schemas/fedramp-significant-change-notification-schema-2026-06-24.json",
+      "after": "https://fedramp.gov/schemas/fedramp-significant-change-notifications-schema-2026-06-24.json",
+      "editorial": false
+     }
+    ],
+    "sentences": [
+     "Schema url reworded (1 word removed, 1 word added)."
+    ],
+    "grade": "minor",
+    "fedramp_notes": []
+   },
+   {
+    "id": "SDR-CSX-KMT",
+    "kind": "Rule",
+    "family": "SDR",
+    "name": "Key Security Indicator Metrics",
+    "path_before": "FRR/SDR/data/20x/CSX",
+    "path": "FRR/SDR/data/20x/CSX",
+    "text_before": "Class A: Providers with 20x Class A Certifications MAY also include historical metrics in their Security Decision Record.\nClass B: Providers with 20x Class B Certifications MUST also include historical metrics in their Security Decision Record, supplying at least the following information for each applicable Key Security Indicator:\nClass C: Providers with 20x Class C Certifications MUST also include historical metrics in their Security Decision Record, supplying at least the following information for each applicable Key Security Indicator:\nClass D: Providers with 20x Class D Certifications MUST significantly supersede the minimum requirements for lower Classes, with specifics to be set during the 20x Phase 4 Pilot.",
+    "text_after": "Class A: Providers with 20x Class A Certifications MAY also include historical metrics in their Security Decision Record.\nClass B: Providers with 20x Class B Certifications MUST also include historical metrics in their Security Decision Record, supplying at least the following information for each applicable Key Security Indicator:\nClass C: Providers with 20x Class C Certifications MUST also include historical metrics in their Security Decision Record, supplying at least the following information for each applicable Key Security Indicator:\nClass D: Providers with 20x Class D Certifications MUST significantly supersede the minimum requirements for lower Classes, with specifics to be set during the 20x Phase 4 Pilot.",
+    "fields": [
+     {
+      "field": "schema.url",
+      "label": "Schema url",
+      "type": "text",
+      "before": "https://fedramp.gov/schemas/fedramp-security-decision-record-schema-v2026.06.06.01.json",
+      "after": "https://fedramp.gov/schemas/fedramp-security-decision-record-schema-2026-06-24.json",
+      "editorial": false
+     }
+    ],
+    "sentences": [
+     "Schema url reworded (1 word removed, 1 word added)."
+    ],
+    "grade": "minor",
+    "fedramp_notes": []
+   },
+   {
+    "id": "SDR-CSX-KSI",
+    "kind": "Rule",
+    "family": "SDR",
+    "name": "Key Security Indicators",
+    "path_before": "FRR/SDR/data/20x/CSX",
+    "path": "FRR/SDR/data/20x/CSX",
+    "text_before": "Providers MUST also include short and simple high-level summaries of at least the following for each applicable Key Security Indicator:",
+    "text_after": "Providers MUST also include short and simple high-level summaries of at least the following for each applicable Key Security Indicator:",
+    "fields": [
+     {
+      "field": "schema.url",
+      "label": "Schema url",
+      "type": "text",
+      "before": "https://fedramp.gov/schemas/fedramp-security-decision-record-schema-v2026.06.06.01.json",
+      "after": "https://fedramp.gov/schemas/fedramp-security-decision-record-schema-2026-06-24.json",
+      "editorial": false
+     }
+    ],
+    "sentences": [
+     "Schema url reworded (1 word removed, 1 word added)."
+    ],
+    "grade": "minor",
+    "fedramp_notes": []
+   }
+  ],
+  "meta": []
+ }
+}
