@@ -897,7 +897,8 @@ def send_email(rep: dict) -> None:
     import smtplib
     import ssl
     from email.message import EmailMessage
-    user, password = os.environ.get("SMTP_USERNAME"), os.environ.get("SMTP_PASSWORD")
+    user = (os.environ.get("SMTP_USERNAME") or "").strip()
+    password = re.sub(r"\s+", "", os.environ.get("SMTP_PASSWORD") or "")   # Google shows app passwords in groups of four
     recipients = [a.strip() for a in os.environ.get("MAIL_TO", "").replace(";", ",").split(",") if a.strip()]
     if not (user and password and recipients):
         print("Email skipped: set SMTP_USERNAME, SMTP_PASSWORD and MAIL_TO secrets to enable it.")
@@ -911,7 +912,11 @@ def send_email(rep: dict) -> None:
     msg.add_alternative(f"<!doctype html><html><body style='margin:0'>{html_body}</body></html>", subtype="html")
     host, port = os.environ.get("SMTP_HOST") or "smtp.gmail.com", int(os.environ.get("SMTP_PORT") or 465)
     with smtplib.SMTP_SSL(host, port, context=ssl.create_default_context(), timeout=30) as smtp:
-        smtp.login(user, password)
+        try:
+            smtp.login(user, password)
+        except (smtplib.SMTPAuthenticationError, smtplib.SMTPServerDisconnected) as err:
+            raise SystemExit(f"Email login to {host} failed ({err}). Check that the sending address secret is the same "
+                             "account that created the app password, and that the app password is current.")
         smtp.send_message(msg, to_addrs=recipients)
     print(f"Emailed {len(recipients)} recipient(s): {subject}")
 
