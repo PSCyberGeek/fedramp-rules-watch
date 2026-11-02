@@ -13,6 +13,10 @@ on:
         description: "Email the latest report now, even if nothing changed (checks your email setup)"
         type: boolean
         default: false
+      send_to:
+        description: "Send the latest report ONLY to these addresses (comma-separated), e.g. to welcome a new subscriber"
+        type: string
+        default: ""
 
 permissions:
   contents: write   # commit reports, feed and state back to the repo
@@ -66,7 +70,7 @@ jobs:
           gh issue create --title "$TITLE" --body-file "$RUNNER_TEMP/issue.md" --label rules-change
 
       - name: Email newsletter
-        if: steps.check.outputs.changed == 'true' || inputs.send_test_email
+        if: steps.check.outputs.changed == 'true' || inputs.send_test_email || inputs.send_to != ''
         env:
           SITE_URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}
           # Secrets: MAILBOX = sending Gmail address, SMTP = its Google app password.
@@ -74,7 +78,7 @@ jobs:
           # can be read and appended to; the MAILTO secret is only a fallback.
           SMTP_USERNAME: ${{ secrets.MAILBOX }}
           SMTP_PASSWORD: ${{ secrets.SMTP }}
-          MAIL_TO: ${{ vars.MAIL_TO || secrets.MAILTO }}
+          MAIL_TO: ${{ inputs.send_to || vars.MAIL_TO || secrets.MAILTO }}
           SMTP_HOST: ${{ vars.SMTP_HOST }}
           SMTP_PORT: ${{ vars.SMTP_PORT }}
         run: python scripts/fedwatch.py send-email ${{ steps.check.outputs.slug && format('--slug {0}', steps.check.outputs.slug) || '' }}
