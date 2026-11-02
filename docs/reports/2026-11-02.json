@@ -1,0 +1,801 @@
+{
+ "slug": "2026-11-02",
+ "date": "2026-11-02",
+ "from": {
+  "sha": "a89d78477ddea98dc57eca24f5007794c2b4eeb6",
+  "short": "a89d784",
+  "date": "2026-10-13T14:01:01-04:00",
+  "version": "2026.10.13.01"
+ },
+ "to": {
+  "sha": "64fa769510416fa75fd00a4689466094265b8083",
+  "short": "64fa769",
+  "date": "2026-11-02T13:31:30-05:00",
+  "version": "2026.11.02.01"
+ },
+ "commits": [
+  {
+   "sha": "0735135dbfe5d97ab00716c80a9306438ceeb6fe",
+   "short": "0735135",
+   "date": "2026-11-01T14:36:18-05:00",
+   "subject": "Update control mappings in consolidated rules (#37)",
+   "url": "https://github.com/FedRAMP/rules/commit/0735135dbfe5d97ab00716c80a9306438ceeb6fe"
+  },
+  {
+   "sha": "64fa769510416fa75fd00a4689466094265b8083",
+   "short": "64fa769",
+   "date": "2026-11-02T13:31:30-05:00",
+   "subject": "2026.11.02.01 / minor adjustments & release strategy (#51)",
+   "url": "https://github.com/FedRAMP/rules/commit/64fa769510416fa75fd00a4689466094265b8083"
+  }
+ ],
+ "summary": {
+  "headline": "1 added, 19 changed",
+  "glance": [
+   "This update has **1 new entry**, **19 changed** (2 substantive, 12 minor, 0 editorial, 5 mapping-only).",
+   "Defined-term links changed on 6 entries.",
+   "New definition `FRD-MAS` Minimum Assessment Scope."
+  ]
+ },
+ "diff": {
+  "added": [
+   {
+    "id": "FRD-MAS",
+    "kind": "Definition",
+    "family": "FRD",
+    "name": "Minimum Assessment Scope",
+    "path": "FRD/data/all",
+    "text": "The boundary of the assessment and FedRAMP Certification for the cloud service offering, which effectively defines the cloud service offering itself for the purposes of a FedRAMP Certification Package; anything that is not entirely included in the Minimum Assessment Scope is a third-party information resource.",
+    "force": null,
+    "fedramp_notes": [
+     "2026-10-31: Added to support the explanation in the rule."
+    ]
+   }
+  ],
+  "removed": [],
+  "renamed": [],
+  "changed": [
+   {
+    "id": "CDS-CSO-SVC",
+    "kind": "Rule",
+    "family": "CDS",
+    "name": "Public Service List",
+    "path_before": "FRR/CDS/data/all/CSO",
+    "path": "FRR/CDS/data/all/CSO",
+    "text_before": "Providers MUST publicly share a detailed list of specific services and their security categories that are included in the cloud service offering using clear feature or service names that align with standard public marketing materials; this list MUST be complete enough for a potential customer to determine which services are and are not included in the FedRAMP Minimum Assessment Scope without requesting access to underlying FedRAMP Certification Data.",
+    "text_after": "Providers MUST publicly share a detailed list of specific services and their security categories that are included in the cloud service offering using clear feature or service names that align with standard public marketing materials; this list MUST be complete enough for a potential customer to determine which services are and are not included in the FedRAMP Minimum Assessment Scope without requesting access to underlying FedRAMP Certification Data.",
+    "fields": [
+     {
+      "field": "terms",
+      "label": "Linked defined terms",
+      "type": "set",
+      "before": [
+       "Certification Data",
+       "Cloud Service Offering",
+       "Security Category"
+      ],
+      "after": [
+       "Certification Data",
+       "Cloud Service Offering",
+       "Minimum Assessment Scope",
+       "Security Category"
+      ],
+      "added_items": [
+       "Minimum Assessment Scope"
+      ],
+      "removed_items": []
+     }
+    ],
+    "sentences": [
+     "Linked defined terms: added `Minimum Assessment Scope`."
+    ],
+    "grade": "mapping",
+    "fedramp_notes": []
+   },
+   {
+    "id": "CPO-CSO-OVR",
+    "kind": "Rule",
+    "family": "CPO",
+    "name": "Overview of the Cloud Service Offering",
+    "path_before": "FRR/CPO/data/all/CSO",
+    "path": "FRR/CPO/data/all/CSO",
+    "text_before": "Providers MUST supply a Certification Package Overview within their FedRAMP Certification Package, in both human-readable and JSON formats, that includes at least all of the information required by the following rules:",
+    "text_after": "Providers MUST supply a Certification Package Overview within their FedRAMP Certification Package, in both human-readable and JSON formats, that includes at least all of the information required by the following rules:",
+    "fields": [
+     {
+      "field": "terms",
+      "label": "Linked defined terms",
+      "type": "set",
+      "before": [
+       "Certification Class",
+       "Certification Data",
+       "Certification Package",
+       "Information Resource",
+       "Initial Incident Report (IIR)",
+       "Security Category",
+       "Third-Party Information Resource",
+       "Validation",
+       "Verification"
+      ],
+      "after": [
+       "Certification Class",
+       "Certification Data",
+       "Certification Package",
+       "Information Resource",
+       "Initial Incident Report (IIR)",
+       "Minimum Assessment Scope",
+       "Security Category",
+       "Third-Party Information Resource",
+       "Validation",
+       "Verification"
+      ],
+      "added_items": [
+       "Minimum Assessment Scope"
+      ],
+      "removed_items": []
+     }
+    ],
+    "sentences": [
+     "Linked defined terms: added `Minimum Assessment Scope`."
+    ],
+    "grade": "mapping",
+    "fedramp_notes": []
+   },
+   {
+    "id": "FRC-CCL-DCC",
+    "kind": "Rule",
+    "family": "FRC",
+    "name": "Downgrading Certification Class",
+    "path_before": "FRR/FRC/data/all/CCL",
+    "path": "FRR/FRC/data/all/CCL",
+    "text_before": "Providers MUST apply for a new FedRAMP Certification to downgrade their Certification Class.",
+    "text_after": "Providers MUST apply for a new FedRAMP Certification to downgrade their Certification Class.",
+    "fields": [
+     {
+      "field": "notes",
+      "label": "Notes",
+      "type": "text",
+      "before": "Downgrade paths include moving from D to C, B, or A; C to B or A; or B to A.\nFRC-CCL-DNP (Downgrade Notification Period) applies - please DO NOT downgrade Certification Class with providing advance notification to all necessary parties!",
+      "after": "Downgrade paths include moving from D to C, B, or A; C to B or A; or B to A.\nFRC-CCL-DNP (Downgrade Notification Period) applies - please DO NOT downgrade Certification Class without providing advance notification to all necessary parties!",
+      "editorial": false
+     }
+    ],
+    "sentences": [
+     "Notes reworded (1 word removed, 1 word added)."
+    ],
+    "grade": "minor",
+    "fedramp_notes": [
+     "2026-11-02: Fixed a typo in the note to clarify that downgrade should not happen WITHOUT providing advance notification."
+    ]
+   },
+   {
+    "id": "FRC-CCL-UCC",
+    "kind": "Rule",
+    "family": "FRC",
+    "name": "Upgrading Certification Class",
+    "path_before": "FRR/FRC/data/all/CCL",
+    "path": "FRR/FRC/data/all/CCL",
+    "text_before": "Providers MUST apply for a new FedRAMP Certification to upgrade their Certification Class; all applicable requirements MUST be met in advance.",
+    "text_after": "Providers MUST apply for a new FedRAMP Certification to upgrade their Certification Class; all applicable requirements to obtain the new FedRAMP Certification MUST be met in advance.",
+    "fields": [
+     {
+      "field": "notes",
+      "label": "Notes",
+      "type": "text",
+      "before": "Upgrade paths include moving from A to B, C, or D; B to C or D; and C to D.\nThe preferred path is to incrementally update the implementation and assurance commitments within the current Certification Class until the provider has met all requirements for the target Certification Class, then apply for the new Certification Class.",
+      "after": "Upgrade paths include moving from A to B, C, or D; B to C or D; and C to D.\nThe preferred path is to incrementally update the implementation and assurance commitments within the current Certification Class until the provider has met all requirements for the target Certification Class, then apply for the new Certification Class.\nAll applicable CR26 requirements are based on the obtain deadlines in each CR26 ruleset when applying to obtain a new FedRAMP Certification, even if it is an upgrade. FedRAMP may make case-by-case exceptions based on individual circumstances and critical government need, however, so please contact FedRAMP for guidance when planning an upgrade in 2027.",
+      "editorial": false
+     },
+     {
+      "field": "statement",
+      "label": "Statement",
+      "type": "text",
+      "before": "Providers MUST apply for a new FedRAMP Certification to upgrade their Certification Class; all applicable requirements MUST be met in advance.",
+      "after": "Providers MUST apply for a new FedRAMP Certification to upgrade their Certification Class; all applicable requirements to obtain the new FedRAMP Certification MUST be met in advance.",
+      "editorial": false
+     }
+    ],
+    "sentences": [
+     "Statement reworded (0 words removed, 6 words added).",
+     "Notes reworded (0 words removed, 54 words added)."
+    ],
+    "grade": "substantive",
+    "fedramp_notes": [
+     "2026-10-31: Updated wording and added a note to more explicitly clarify that upgrading is obtaining a new FedRAMP Certification."
+    ]
+   },
+   {
+    "id": "FRC-CLA-MFR",
+    "kind": "Rule",
+    "family": "FRC",
+    "name": "Mandatory FedRAMP Rules for Class A",
+    "path_before": "FRR/FRC/data/all/CLA",
+    "path": "FRR/FRC/data/all/CLA",
+    "text_before": "Providers seeking a Class A FedRAMP Certification MUST address all rules in this FedRAMP Class A Certification subset (FRC-CLA) AND the following additional FedRAMP Class A rules; the appropriate artifacts or information mapping for all rules MUST be supplied in the FedRAMP Certification Package.",
+    "text_after": "Providers seeking a Class A FedRAMP Certification MUST address all rules in this FedRAMP Class A Certification subset (FRC-CLA) AND the following additional FedRAMP Class A rules; the appropriate artifacts or information mapping for all rules MUST be supplied in the FedRAMP Certification Package.",
+    "fields": [
+     {
+      "field": "following_information",
+      "label": "Required information",
+      "type": "text",
+      "before": "FedRAMP Certification: FRC-CSO-PKG (FedRAMP Certification Package)\nFedRAMP Certification: FRC-CSO-JSN (FedRAMP JSON Schemas)\nFedRAMP Certification: FRC-CSO-POP (Pick One Program Certification Type)\nMinimum Assessment Scope: MAS-CSO-IIR (Identify Information Resources)\nCertification Data Sharing: CDS-CSO-PUB (Public Information)\nCertification Data Sharing: CDS-CSO-UTC (Use Trust Centers)\nCertification Data Sharing: CDS-UTC-AAD (Agency Access Denial)\nAddressing FedRAMP Communication: AFC-CSO-INB (Maintain a FedRAMP Security Inbox)\nAddressing FedRAMP Communication: AFC-CSO-RCV (Receive Email Without Disruption)\nAddressing FedRAMP Communication: AFC-CSO-CRA (Complete Required Actions)\nIncident Evaluation and Communication: IEC-CSO-EFR (Evaluate FedRAMP Reportability)\nIncident Evaluation and Communication: IEC-CSO-FIR (Final Incident Report)\nVulnerability Detection and Response: VDR-CSO-DET (Vulnerability Detection)\nCollaborative Continuous Monitoring: CCM-OCR-AVL (Report Availability)\nCollaborative Continuous Monitoring: CCM-OCR-NRD (Next Report Date)\nIndependent Verification and Validation: IVV-CSX-AIA (Annual Independent Assessments for 20x)\nKey Security Indicators: KSI-CMT-LMC (Logging Changes)\nKey Security Indicators: KSI-CNA-RNT (Restricting Network Traffic)\nKey Security Indicators: KSI-CED-RAT (Reviewing All Training)\nKey Security Indicators: KSI-IAM-AAM (Automating Account Management)\nKey Security Indicators: KSI-IAM-APM (Adopting Passwordless Methods)\nKey Security Indicators: KSI-INR-RIR (Reviewing Incident Response Procedures)\nKey Security Indicators: KSI-SVC-SIN (Securing Information)",
+      "after": "FedRAMP Certification: FRC-CSO-PKG (FedRAMP Certification Package)\nFedRAMP Certification: FRC-CSO-JSN (FedRAMP JSON Schemas)\nFedRAMP Certification: FRC-CSO-POP (Pick One Program Certification Type)\nMinimum Assessment Scope: MAS-CSO-IIR (Identify Information Resources)\nCertification Data Sharing: CDS-CSO-PUB (Public Information)\nCertification Data Sharing: CDS-CSO-UTC (Use Trust Centers)\nCertification Data Sharing: CDS-UTC-AAD (Agency Access Denial)\nAddressing FedRAMP Communication: AFC-CSO-INB (Maintain a FedRAMP Security Inbox)\nAddressing FedRAMP Communication: AFC-CSO-RCV (Receive Email Without Disruption)\nAddressing FedRAMP Communication: AFC-CSO-CRA (Complete Required Actions)\nIncident Evaluation and Communication: IEC-CSO-EFR (Evaluate FedRAMP Reportability)\nIncident Evaluation and Communication: IEC-CSO-FIR (Final Incident Report)\nVulnerability Detection and Response: VDR-CSO-DET (Vulnerability Detection)\nCollaborative Continuous Monitoring: CCM-OCR-AVL (Report Availability)\nCollaborative Continuous Monitoring: CCM-OCR-NRD (Next Report Date)\nIndependent Verification and Validation: IVV-CSX-AIA (Annual Independent Assessments for 20x)\nSecurity Decision Record: SDR-CSX-KSI (Key Security Indicators)\nKey Security Indicators: KSI-CMT-LMC (Logging Changes)\nKey Security Indicators: KSI-CNA-RNT (Restricting Network Traffic)\nKey Security Indicators: KSI-CED-RAT (Reviewing All Training)\nKey Security Indicators: KSI-IAM-AAM (Automating Account Management)\nKey Security Indicators: KSI-IAM-APM (Adopting Passwordless Methods)\nKey Security Indicators: KSI-INR-RIR (Reviewing Incident Response Procedures)\nKey Security Indicators: KSI-SVC-SIN (Securing Information)",
+      "editorial": false
+     },
+     {
+      "field": "related",
+      "label": "Related rules",
+      "type": "set",
+      "before": [
+       "AFC-CSO-CRA",
+       "AFC-CSO-INB",
+       "AFC-CSO-RCV",
+       "CCM-OCR-AVL",
+       "CCM-OCR-NRD",
+       "CDS-CSO-PUB",
+       "CDS-CSO-UTC",
+       "CDS-UTC-AAD",
+       "FRC-CSO-JSN",
+       "FRC-CSO-PKG",
+       "FRC-CSO-POP",
+       "IEC-CSO-EFR",
+       "IEC-CSO-FIR",
+       "IVV-CSX-AIA",
+       "KSI-CED-RAT",
+       "KSI-CMT-LMC",
+       "KSI-CNA-RNT",
+       "KSI-IAM-AAM",
+       "KSI-IAM-APM",
+       "KSI-INR-RIR",
+       "KSI-SVC-SIN",
+       "MAS-CSO-IIR",
+       "VDR-CSO-DET"
+      ],
+      "after": [
+       "AFC-CSO-CRA",
+       "AFC-CSO-INB",
+       "AFC-CSO-RCV",
+       "CCM-OCR-AVL",
+       "CCM-OCR-NRD",
+       "CDS-CSO-PUB",
+       "CDS-CSO-UTC",
+       "CDS-UTC-AAD",
+       "FRC-CSO-JSN",
+       "FRC-CSO-PKG",
+       "FRC-CSO-POP",
+       "IEC-CSO-EFR",
+       "IEC-CSO-FIR",
+       "IVV-CSX-AIA",
+       "KSI-CED-RAT",
+       "KSI-CMT-LMC",
+       "KSI-CNA-RNT",
+       "KSI-IAM-AAM",
+       "KSI-IAM-APM",
+       "KSI-INR-RIR",
+       "KSI-SVC-SIN",
+       "MAS-CSO-IIR",
+       "SDR-CSX-KSI",
+       "VDR-CSO-DET"
+      ],
+      "added_items": [
+       "SDR-CSX-KSI"
+      ],
+      "removed_items": []
+     },
+     {
+      "field": "terms",
+      "label": "Linked defined terms",
+      "type": "set",
+      "before": [
+       "Artifacts",
+       "Certification Data",
+       "Certification Package",
+       "Certification Path",
+       "Certification Type",
+       "FedRAMP Security Inbox",
+       "Final Incident Report (FIR)",
+       "Incident",
+       "Information Resource",
+       "Initial Incident Report (IIR)",
+       "Ongoing Certification Report (OCR)",
+       "Trust Center",
+       "Validation",
+       "Verification",
+       "Vulnerability",
+       "Vulnerability Detection",
+       "Vulnerability Response"
+      ],
+      "after": [
+       "Artifacts",
+       "Certification Data",
+       "Certification Package",
+       "Certification Path",
+       "Certification Type",
+       "FedRAMP Security Inbox",
+       "Final Incident Report (FIR)",
+       "Incident",
+       "Information Resource",
+       "Initial Incident Report (IIR)",
+       "Minimum Assessment Scope",
+       "Ongoing Certification Report (OCR)",
+       "Security Decision Record (SDR)",
+       "Trust Center",
+       "Validation",
+       "Verification",
+       "Vulnerability",
+       "Vulnerability Detection",
+       "Vulnerability Response"
+      ],
+      "added_items": [
+       "Minimum Assessment Scope",
+       "Security Decision Record (SDR)"
+      ],
+      "removed_items": []
+     }
+    ],
+    "sentences": [
+     "Required information reworded (0 words removed, 7 words added).",
+     "Related rules: added `SDR-CSX-KSI`.",
+     "Linked defined terms: added `Minimum Assessment Scope`, `Security Decision Record (SDR)`."
+    ],
+    "grade": "minor",
+    "fedramp_notes": [
+     "2026-10-31: Added SDR-CSX-KSI to list of requirements because folks need a rule that explains how to document the key security indicators!"
+    ]
+   },
+   {
+    "id": "FRC-CLA-RFR",
+    "kind": "Rule",
+    "family": "FRC",
+    "name": "Recommended FedRAMP Rules for Class A",
+    "path_before": "FRR/FRC/data/all/CLA",
+    "path": "FRR/FRC/data/all/CLA",
+    "text_before": "Providers seeking a Class A FedRAMP Certification SHOULD address the following additional recommended FedRAMP Class A rules (if applicable):",
+    "text_after": "Providers seeking a Class A FedRAMP Certification SHOULD address the following additional recommended FedRAMP Class A rules (if applicable):",
+    "fields": [
+     {
+      "field": "following_information",
+      "label": "Required information",
+      "type": "text",
+      "before": "Certification Data Sharing: CDS-CSO-AVR (Availability Reporting)\nCertification Package Overview: CPO-CSF-CPM (Certification Package Maintenance for Rev5)\nCertification Package Overview: CPO-CSX-CPM (Certification Package Maintenance for 20x)\nIncident Evaluation and Communication: IEC-CSO-IIR (Initial Incident Report)\nIncident Evaluation and Communication: IEC-CSO-OIR (Ongoing Incident Reports)\nVulnerability Detection and Response: VDR-TFR-MVX (Persistent Machine Verification and Validation for 20x)\nVulnerability Detection and Response: VDR-TFR-PCD (Persistently Complete Detection)\nVulnerability Detection and Response: VDR-TFR-PDD (Persistent Drift Detection)\nVulnerability Detection and Response: VDR-TFR-PSD (Persistent Sample Detection)\nVulnerability Detection and Response: VDR-TFR-PVR (Mitigation and Remediation Expectations)\nVulnerability Evaluation and Reporting: VER-TFR-EVU (Evaluate Vulnerabilities Quickly)",
+      "after": "Certification Data Sharing: CDS-CSO-AVR (Availability Reporting)\nCertification Package Overview: CPO-CSX-CPM (Certification Package Maintenance for 20x)\nIncident Evaluation and Communication: IEC-CSO-IIR (Initial Incident Report)\nIncident Evaluation and Communication: IEC-CSO-OIR (Ongoing Incident Reports)\nVulnerability Detection and Response: VDR-TFR-MVX (Persistent Machine Verification and Validation for 20x)\nVulnerability Detection and Response: VDR-TFR-PCD (Persistently Complete Detection)\nVulnerability Detection and Response: VDR-TFR-PDD (Persistent Drift Detection)\nVulnerability Detection and Response: VDR-TFR-PSD (Persistent Sample Detection)\nVulnerability Detection and Response: VDR-TFR-PVR (Mitigation and Remediation Expectations)\nVulnerability Evaluation and Reporting: VER-TFR-EVU (Evaluate Vulnerabilities Quickly)",
+      "editorial": false
+     },
+     {
+      "field": "related",
+      "label": "Related rules",
+      "type": "set",
+      "before": [
+       "CDS-CSO-AVR",
+       "CPO-CSF-CPM",
+       "CPO-CSX-CPM",
+       "IEC-CSO-IIR",
+       "IEC-CSO-OIR",
+       "VDR-TFR-MVX",
+       "VDR-TFR-PCD",
+       "VDR-TFR-PDD",
+       "VDR-TFR-PSD",
+       "VDR-TFR-PVR",
+       "VER-TFR-EVU"
+      ],
+      "after": [
+       "CDS-CSO-AVR",
+       "CPO-CSX-CPM",
+       "IEC-CSO-IIR",
+       "IEC-CSO-OIR",
+       "VDR-TFR-MVX",
+       "VDR-TFR-PCD",
+       "VDR-TFR-PDD",
+       "VDR-TFR-PSD",
+       "VDR-TFR-PVR",
+       "VER-TFR-EVU"
+      ],
+      "added_items": [],
+      "removed_items": [
+       "CPO-CSF-CPM"
+      ]
+     }
+    ],
+    "sentences": [
+     "Required information reworded (9 words removed, 0 words added).",
+     "Related rules: removed `CPO-CSF-CPM`."
+    ],
+    "grade": "minor",
+    "fedramp_notes": [
+     "2026-10-31: CPO-CSF-CPM (Certification Package Maintenance for Rev5) was removed."
+    ]
+   },
+   {
+    "id": "FRC-CSX-MAS",
+    "kind": "Rule",
+    "family": "FRC",
+    "name": "Application within MAS",
+    "path_before": "FRR/FRC/data/20x/CSX",
+    "path": "FRR/FRC/data/20x/CSX",
+    "text_before": "Providers SHOULD apply ALL Key Security Indicators to ALL aspects of their cloud service offering that are within the FedRAMP Minimum Assessment Scope.",
+    "text_after": "Providers SHOULD apply ALL Key Security Indicators to ALL aspects of their cloud service offering that are within the FedRAMP Minimum Assessment Scope.",
+    "fields": [
+     {
+      "field": "terms",
+      "label": "Linked defined terms",
+      "type": "set",
+      "before": [
+       "Cloud Service Offering"
+      ],
+      "after": [
+       "Cloud Service Offering",
+       "Minimum Assessment Scope"
+      ],
+      "added_items": [
+       "Minimum Assessment Scope"
+      ],
+      "removed_items": []
+     }
+    ],
+    "sentences": [
+     "Linked defined terms: added `Minimum Assessment Scope`."
+    ],
+    "grade": "mapping",
+    "fedramp_notes": []
+   },
+   {
+    "id": "FRD-CRP",
+    "kind": "Definition",
+    "family": "FRD",
+    "name": "Certification Package",
+    "path_before": "FRD/data/all",
+    "path": "FRD/data/all",
+    "text_before": "Has meaning from 44 USC § 3607 (b)(8) given to \"authorization package\", which is \"the essential information that can be used by an agency to determine whether to authorize the operation of an information system or the use of a designated set of common controls for all cloud computing products and services [certified] by FedRAMP.\"",
+    "text_after": "Has meaning from 44 USC § 3607 (b)(8) given to \"authorization package\", which is \"the essential information that can be used by an agency to determine whether to authorize the operation of an information system or the use of a designated set of common controls for all cloud computing products and services [certified] by FedRAMP.\"",
+    "fields": [
+     {
+      "field": "reference_url",
+      "label": "Reference url",
+      "type": "text",
+      "before": "https://fedramp.gov/docs/authority/law/#b-additional-definitions",
+      "after": "https://fedramp.gov/2026/authority/law/#b-additional-definitions",
+      "editorial": false
+     }
+    ],
+    "sentences": [
+     "Reference url changed from “https://fedramp.gov/docs/authority/law/#b-additional-definitions” to “https://fedramp.gov/2026/authority/law/#b-additional-definitions”."
+    ],
+    "grade": "minor",
+    "fedramp_notes": []
+   },
+   {
+    "id": "FRD-FCR",
+    "kind": "Definition",
+    "family": "FRD",
+    "name": "FedRAMP Certification Report",
+    "path_before": "FRD/data/all",
+    "path": "FRD/data/all",
+    "text_before": "A report that is produced by FedRAMP documenting the results of a FedRAMP Certification assessment. This report is typically produced after the initial FedRAMP Certification assessment on the Program Certification Path and updated as necessary during ongoing FedRAMP Certification, but may be produced at any time by FedRAMP as part of ongoing FedRAMP Certification activities for any cloud service offering (such as corrective action). Cloud service offerings must include these reports in their FedRAMP Certification Package.",
+    "text_after": "A report that is produced by FedRAMP documenting the results of a FedRAMP Certification assessment. This report is typically produced after the initial FedRAMP Certification assessment on the Program Certification Path and updated as necessary during ongoing FedRAMP Certification, but may be produced at any time by FedRAMP as part of ongoing FedRAMP Certification activities for any cloud service offering (such as corrective action). Cloud service offerings must include these reports in their FedRAMP Certification Package.",
+    "fields": [
+     {
+      "field": "reference",
+      "label": "Reference",
+      "type": "text",
+      "before": "FedRAMP Certification Act (44 USC § 3608)",
+      "after": null
+     },
+     {
+      "field": "reference_url",
+      "label": "Reference url",
+      "type": "text",
+      "before": "https://www.fedramp.gov/docs/authority/law/#sec-3608-federal-risk-and-authorization-management-program",
+      "after": null
+     }
+    ],
+    "sentences": [
+     "Reference removed.",
+     "Reference url removed."
+    ],
+    "grade": "minor",
+    "fedramp_notes": []
+   },
+   {
+    "id": "FRD-FCT",
+    "kind": "Definition",
+    "family": "FRD",
+    "name": "FedRAMP Certified",
+    "path_before": "FRD/data/all",
+    "path": "FRD/data/all",
+    "text_before": "The status of a cloud service offering that has received FedRAMP Certification and meets the legal requirement to be FedRAMP authorized.",
+    "text_after": "The status of a cloud service offering that has received FedRAMP Certification and meets the legal requirement to be FedRAMP authorized.",
+    "fields": [
+     {
+      "field": "reference",
+      "label": "Reference",
+      "type": "text",
+      "before": "FedRAMP Certification Act (44 USC § 3608)",
+      "after": null
+     },
+     {
+      "field": "reference_url",
+      "label": "Reference url",
+      "type": "text",
+      "before": "https://www.fedramp.gov/docs/authority/law/#sec-3608-federal-risk-and-authorization-management-program",
+      "after": null
+     }
+    ],
+    "sentences": [
+     "Reference removed.",
+     "Reference url removed."
+    ],
+    "grade": "minor",
+    "fedramp_notes": []
+   },
+   {
+    "id": "FRD-VLN",
+    "kind": "Definition",
+    "family": "FRD",
+    "name": "Validation",
+    "path_before": "FRD/data/all",
+    "path": "FRD/data/all",
+    "text_before": "Confirmation through objective evidence that implemented security capabilities and related certification data are suitable for their intended FedRAMP Certification use and support the expected security outcomes for a cloud service offering.",
+    "text_after": "Confirmation through objective evidence that implemented security capabilities and related certification data are suitable for their intended FedRAMP Certification use and support the expected security outcomes for a cloud service offering.",
+    "fields": [
+     {
+      "field": "reference",
+      "label": "Reference",
+      "type": "text",
+      "before": "ISO/IEC 27001:2022",
+      "after": null
+     },
+     {
+      "field": "reference_url",
+      "label": "Reference url",
+      "type": "text",
+      "before": "https://www.iso.org/standard/27001",
+      "after": null
+     }
+    ],
+    "sentences": [
+     "Reference removed.",
+     "Reference url removed."
+    ],
+    "grade": "minor",
+    "fedramp_notes": []
+   },
+   {
+    "id": "FRD-VRF",
+    "kind": "Definition",
+    "family": "FRD",
+    "name": "Verification",
+    "path_before": "FRD/data/all",
+    "path": "FRD/data/all",
+    "text_before": "Confirmation through objective evidence that specified FedRAMP Practices have been fulfilled for a cloud service offering.",
+    "text_after": "Confirmation through objective evidence that specified FedRAMP Practices have been fulfilled for a cloud service offering.",
+    "fields": [
+     {
+      "field": "reference",
+      "label": "Reference",
+      "type": "text",
+      "before": "ISO/IEC 27001:2022",
+      "after": null
+     },
+     {
+      "field": "reference_url",
+      "label": "Reference url",
+      "type": "text",
+      "before": "https://www.iso.org/standard/27001",
+      "after": null
+     }
+    ],
+    "sentences": [
+     "Reference removed.",
+     "Reference url removed."
+    ],
+    "grade": "minor",
+    "fedramp_notes": []
+   },
+   {
+    "id": "IEC-CSO-FIR",
+    "kind": "Rule",
+    "family": "IEC",
+    "name": "Final Incident Report",
+    "path_before": "FRR/IEC/data/all/CSO",
+    "path": "FRR/IEC/data/all/CSO",
+    "text_before": "Class A: Providers with Class A Certifications MUST responsibly notify all affected parties by providing a Final Incident Report once the incident has been resolved and recovery is complete, including final updates to all previously reported information.\nClass B: Providers with Class B Certifications MUST responsibly notify all affected parties by providing a Final Incident Report once the incident has been resolved and recovery is complete, including final updates to all previously reported information.\nClass C: Providers with Class C Certifications MUST responsibly notify all affected parties by providing a Final Incident Report once the incident has been resolved and recovery is complete, including final updates to all previously reported information.\nClass D: Providers with Class D Certifications MUST responsibly notify all affected parties by providing a Final Incident Report once the incident has been resolved and recovery is complete, including final updates to all previously reported information.",
+    "text_after": "Class A: Providers with Class A Certifications MUST responsibly notify all affected parties by providing a Final Incident Report once the incident has been resolved and recovery is complete, including final updates to all previously reported information.\nClass B: Providers with Class B Certifications MUST responsibly notify all affected parties by providing a Final Incident Report once the incident has been resolved and recovery is complete, including final updates to all previously reported information.\nClass C: Providers with Class C Certifications MUST responsibly notify all affected parties by providing a Final Incident Report once the incident has been resolved and recovery is complete, including final updates to all previously reported information.\nClass D: Providers with Class D Certifications MUST responsibly notify all affected parties by providing a Final Incident Report once the incident has been resolved and recovery is complete, including final updates to all previously reported information.",
+    "fields": [
+     {
+      "field": "notification[2].optional",
+      "label": "Notification method 3 optional",
+      "type": "scalar",
+      "before": null,
+      "after": true
+     }
+    ],
+    "sentences": [
+     "Notification method 3 optional added."
+    ],
+    "grade": "minor",
+    "fedramp_notes": []
+   },
+   {
+    "id": "IEC-CSO-IIR",
+    "kind": "Rule",
+    "family": "IEC",
+    "name": "Initial Incident Report",
+    "path_before": "FRR/IEC/data/all/CSO",
+    "path": "FRR/IEC/data/all/CSO",
+    "text_before": "Class A: Providers with Class A Certifications SHOULD responsibly notify all affected parties after identifying FedRAMP Reportable Incidents by providing an Initial Incident Report with as much of the following information that is available at the time of reporting and/or the current relevant status for each item:\nClass B: Providers with Class B Certifications MUST responsibly notify all affected parties after identifying FedRAMP Reportable Incidents by providing an Initial Incident Report with as much of the following information that is available at the time of reporting and/or the current relevant status for each item:\nClass C: Providers with Class C Certifications MUST responsibly notify all affected parties after identifying FedRAMP Reportable Incidents by providing an Initial Incident Report with as much of the following information that is available at the time of reporting and/or the current relevant status for each item:\nClass D: Providers with Class D Certifications MUST responsibly notify all affected parties after identifying FedRAMP Reportable Incidents by providing an Initial Incident Report with as much of the following information that is available at the time of reporting and/or the current relevant status for each item:",
+    "text_after": "Class A: Providers with Class A Certifications SHOULD responsibly notify all affected parties after identifying FedRAMP Reportable Incidents by providing an Initial Incident Report with as much of the following information that is available at the time of reporting and/or the current relevant status for each item:\nClass B: Providers with Class B Certifications MUST responsibly notify all affected parties after identifying FedRAMP Reportable Incidents by providing an Initial Incident Report with as much of the following information that is available at the time of reporting and/or the current relevant status for each item:\nClass C: Providers with Class C Certifications MUST responsibly notify all affected parties after identifying FedRAMP Reportable Incidents by providing an Initial Incident Report with as much of the following information that is available at the time of reporting and/or the current relevant status for each item:\nClass D: Providers with Class D Certifications MUST responsibly notify all affected parties after identifying FedRAMP Reportable Incidents by providing an Initial Incident Report with as much of the following information that is available at the time of reporting and/or the current relevant status for each item:",
+    "fields": [
+     {
+      "field": "notification[2].optional",
+      "label": "Notification method 3 optional",
+      "type": "scalar",
+      "before": null,
+      "after": true
+     }
+    ],
+    "sentences": [
+     "Notification method 3 optional added."
+    ],
+    "grade": "minor",
+    "fedramp_notes": []
+   },
+   {
+    "id": "IEC-CSO-OIR",
+    "kind": "Rule",
+    "family": "IEC",
+    "name": "Ongoing Incident Reports",
+    "path_before": "FRR/IEC/data/all/CSO",
+    "path": "FRR/IEC/data/all/CSO",
+    "text_before": "Class A: Providers with Class A Certifications SHOULD responsibly notify all affected parties of ongoing activity as new information becomes available during incident response for FedRAMP Reportable Incidents, including updates (or lack of updates) to all previously reported information and as much of the following additional information that is available and/or the current relevant status for each item:\nClass B: Providers with Class B Certifications MUST responsibly notify all affected parties of ongoing activity as new information becomes available during incident response for FedRAMP Reportable Incidents, including updates (or lack of updates) to all previously reported information and as much of the following additional information that is available and/or the current relevant status for each item:\nClass C: Providers with Class C Certifications MUST responsibly notify all affected parties of ongoing activity as new information becomes available during incident response for FedRAMP Reportable Incidents, including updates (or lack of updates) to all previously reported information and as much of the following additional information that is available and/or the current relevant status for each item:\nClass D: Providers with Class D Certifications MUST responsibly notify all affected parties of ongoing activity as new information becomes available during incident response for FedRAMP Reportable Incidents, including updates (or lack of updates) to all previously reported information and as much of the following additional information that is available and/or the current relevant status for each item:",
+    "text_after": "Class A: Providers with Class A Certifications SHOULD responsibly notify all affected parties of ongoing activity as new information becomes available during incident response for FedRAMP Reportable Incidents, including updates (or lack of updates) to all previously reported information and as much of the following additional information that is available and/or the current relevant status for each item:\nClass B: Providers with Class B Certifications MUST responsibly notify all affected parties of ongoing activity as new information becomes available during incident response for FedRAMP Reportable Incidents, including updates (or lack of updates) to all previously reported information and as much of the following additional information that is available and/or the current relevant status for each item:\nClass C: Providers with Class C Certifications MUST responsibly notify all affected parties of ongoing activity as new information becomes available during incident response for FedRAMP Reportable Incidents, including updates (or lack of updates) to all previously reported information and as much of the following additional information that is available and/or the current relevant status for each item:\nClass D: Providers with Class D Certifications MUST responsibly notify all affected parties of ongoing activity as new information becomes available during incident response for FedRAMP Reportable Incidents, including updates (or lack of updates) to all previously reported information and as much of the following additional information that is available and/or the current relevant status for each item:",
+    "fields": [
+     {
+      "field": "notification[2].optional",
+      "label": "Notification method 3 optional",
+      "type": "scalar",
+      "before": null,
+      "after": true
+     }
+    ],
+    "sentences": [
+     "Notification method 3 optional added."
+    ],
+    "grade": "minor",
+    "fedramp_notes": []
+   },
+   {
+    "id": "KSI-SCR-MIT",
+    "kind": "Key Security Indicator",
+    "family": "SCR",
+    "name": "Mitigating Supply Chain Risk",
+    "path_before": "KSI/SCR/indicators",
+    "path": "KSI/SCR/indicators",
+    "text_before": "Persistently identify, review, and mitigate potential supply chain risks.",
+    "text_after": "Potential supply chain risks are persistently identified, reviewed, and mitigated.",
+    "fields": [
+     {
+      "field": "statement",
+      "label": "Statement",
+      "type": "text",
+      "before": "Persistently identify, review, and mitigate potential supply chain risks.",
+      "after": "Potential supply chain risks are persistently identified, reviewed, and mitigated.",
+      "editorial": false
+     }
+    ],
+    "sentences": [
+     "Statement reworded (7 words removed, 8 words added)."
+    ],
+    "grade": "substantive",
+    "fedramp_notes": [
+     "2026-10-31: Changed wording order without any material impact to align with KSI standard language. Was: Persistently identify, review, and mitigate potential supply chain risks."
+    ]
+   },
+   {
+    "id": "MAS-CSO-MDI",
+    "kind": "Rule",
+    "family": "MAS",
+    "name": "Metadata Inclusion",
+    "path_before": "FRR/MAS/data/all/CSO",
+    "path": "FRR/MAS/data/all/CSO",
+    "text_before": "Providers MUST include metadata (including metadata about federal customer data) in the Minimum Assessment Scope ONLY IF MAS-CSO-IIR (Identify Information Resources) APPLIES.",
+    "text_after": "Providers MUST include metadata (including metadata about federal customer data) in the Minimum Assessment Scope ONLY IF MAS-CSO-IIR (Identify Information Resources) APPLIES.",
+    "fields": [
+     {
+      "field": "terms",
+      "label": "Linked defined terms",
+      "type": "set",
+      "before": [
+       "Federal Customer Data",
+       "Information Resource",
+       "Initial Incident Report (IIR)"
+      ],
+      "after": [
+       "Federal Customer Data",
+       "Information Resource",
+       "Initial Incident Report (IIR)",
+       "Minimum Assessment Scope"
+      ],
+      "added_items": [
+       "Minimum Assessment Scope"
+      ],
+      "removed_items": []
+     }
+    ],
+    "sentences": [
+     "Linked defined terms: added `Minimum Assessment Scope`."
+    ],
+    "grade": "mapping",
+    "fedramp_notes": []
+   },
+   {
+    "id": "MAS-CSO-TPR",
+    "kind": "Rule",
+    "family": "MAS",
+    "name": "Third-Party Information Resources",
+    "path_before": "FRR/MAS/data/all/CSO",
+    "path": "FRR/MAS/data/all/CSO",
+    "text_before": "Providers MUST address the potential impact to federal customer data from third-party information resources used by the cloud service offering, ONLY IF MAS-CSO-IIR (Identify Information Resources) APPLIES, by documenting the following information about each applicable third-party information resource:",
+    "text_after": "Providers MUST address the potential impact to federal customer data from third-party information resources used by the cloud service offering, ONLY IF MAS-CSO-IIR (Identify Information Resources) APPLIES, by documenting the following information about each applicable third-party information resource:",
+    "fields": [
+     {
+      "field": "terms",
+      "label": "Linked defined terms",
+      "type": "set",
+      "before": [
+       "Cloud Service Offering",
+       "Federal Customer Data",
+       "Information Resource",
+       "Initial Incident Report (IIR)",
+       "Third-Party Information Resource"
+      ],
+      "after": [
+       "Cloud Service Offering",
+       "Federal Customer Data",
+       "Information Resource",
+       "Initial Incident Report (IIR)",
+       "Minimum Assessment Scope",
+       "Third-Party Information Resource"
+      ],
+      "added_items": [
+       "Minimum Assessment Scope"
+      ],
+      "removed_items": []
+     }
+    ],
+    "sentences": [
+     "Linked defined terms: added `Minimum Assessment Scope`."
+    ],
+    "grade": "mapping",
+    "fedramp_notes": []
+   },
+   {
+    "id": "MKT-CSO-PML",
+    "kind": "Rule",
+    "family": "MKT",
+    "name": "Provider Marketplace Listing Requests",
+    "path_before": "FRR/MKT/data/all/CSO",
+    "path": "FRR/MKT/data/all/CSO",
+    "text_before": "Providers MUST notify FedRAMP using the FedRAMP Marketplace Providing Listing Request Form to request a listing in the FedRAMP Marketplace.",
+    "text_after": "Providers MUST notify FedRAMP using the FedRAMP Marketplace Provider Listing Request Form to request a listing in the FedRAMP Marketplace.",
+    "fields": [
+     {
+      "field": "statement",
+      "label": "Statement",
+      "type": "text",
+      "before": "Providers MUST notify FedRAMP using the FedRAMP Marketplace Providing Listing Request Form to request a listing in the FedRAMP Marketplace.",
+      "after": "Providers MUST notify FedRAMP using the FedRAMP Marketplace Provider Listing Request Form to request a listing in the FedRAMP Marketplace.",
+      "editorial": false
+     }
+    ],
+    "sentences": [
+     "Statement reworded (1 word removed, 1 word added)."
+    ],
+    "grade": "minor",
+    "fedramp_notes": [
+     "2026-10-31: Corrected the name of the form."
+    ]
+   }
+  ],
+  "meta": []
+ }
+}
