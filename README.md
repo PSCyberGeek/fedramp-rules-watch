@@ -75,14 +75,13 @@ can be read and appended to; a secret would have to be retyped in full each time
 To use another provider, set repository *variables* `SMTP_HOST` and `SMTP_PORT` (SSL). To confirm the setup,
 run the workflow manually with **Email the latest report now** checked.
 
-## Coming-soon previews (owner only)
+## Coming-soon previews
 
 FedRAMP edits the rules on work-in-progress branches and publishes them later as formal releases. The daily job also
 checks those branches. When one has unreleased edits that are newer than the current release, it emails a
 "Coming soon" preview: the same report format, marked **Not released yet**, comparing the branch with the current
-release, with the full report attached. It re-sends only when the branch changes again. Previews go only to the
-repository variable `PREVIEW_TO` (falling back to the `MAILTO` secret), never to the club list, and are not
-published to the site. Run it on demand with **Run workflow → Also check FedRAMP's work-in-progress branches**.
+release, with the full report attached. It re-sends only when the branch changes again. Previews go to the same
+newsletter list (`MAIL_TO`) unless a separate `PREVIEW_TO` variable is set, and are not published to the site. Run it on demand with **Run workflow → Also check FedRAMP's work-in-progress branches**.
 
 ## Set it up in your own account
 

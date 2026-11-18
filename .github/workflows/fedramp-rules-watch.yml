@@ -18,7 +18,7 @@ on:
         type: string
         default: ""
       preview:
-        description: "Also check FedRAMP's work-in-progress branches and email a coming-soon preview (owner only)"
+        description: "Also check FedRAMP's work-in-progress branches and email a coming-soon preview"
         type: boolean
         default: false
 
@@ -52,15 +52,15 @@ jobs:
           SITE_URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}
         run: python scripts/fedwatch.py check --upstream "$RUNNER_TEMP/upstream" --issue-file "$RUNNER_TEMP/issue.md"
 
-      - name: Coming-soon preview of unreleased changes (owner only)
+      - name: Coming-soon preview of unreleased changes
         if: github.event_name == 'schedule' || inputs.preview
         continue-on-error: true   # a preview problem must never block the real newsletter
         env:
           SITE_URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}
           SMTP_USERNAME: ${{ secrets.MAILBOX }}
           SMTP_PASSWORD: ${{ secrets.SMTP }}
-          # Previews go only to PREVIEW_TO (repository variable), falling back to the MAILTO secret (the owner).
-          MAIL_TO: ${{ vars.PREVIEW_TO || secrets.MAILTO }}
+          # Previews go to the newsletter list (MAIL_TO). Set the PREVIEW_TO variable to send them to a different list.
+          MAIL_TO: ${{ vars.PREVIEW_TO || vars.MAIL_TO || secrets.MAILTO }}
           SMTP_HOST: ${{ vars.SMTP_HOST }}
           SMTP_PORT: ${{ vars.SMTP_PORT }}
         run: python scripts/fedwatch.py preview --upstream "$RUNNER_TEMP/upstream"
