@@ -49,7 +49,18 @@ class DiffTests(unittest.TestCase):
         def m(d):
             d["FRR"]["VDR"]["data"]["all"]["TFR"]["VDR-TFR-NMV"]["timeframe_num"] = 1
         x = self.diff(m)["changed"][0]
-        self.assertIn("Deadline changed from **3 months** to **1 month**.", x["sentences"])
+        self.assertIn("Deadline changed: **3 months** → **1 month**.", x["sentences"])
+
+    def test_per_class_obligation_and_deadline(self):
+        def m(d):
+            r = d["FRR"]["VDR"]["data"]["all"]["TFR"]["VDR-TFR-NMV"]
+            del r["force"], r["timeframe_num"]          # unit stays on top, numbers move per class
+            r["varies_by_class"] = {"a": {"force": "MAY", "timeframe_num": 6},
+                                    "b": {"force": "SHOULD", "timeframe_num": 3}}
+        x = self.diff(m)["changed"][0]
+        self.assertIn("Obligation level changed: Class A **SHOULD** → **MAY** (weaker).", x["sentences"])
+        self.assertIn("Deadline changed: Class A **3 months** → **6 months**.", x["sentences"])
+        self.assertFalse(any("Class B" in s_ for s_ in x["sentences"]))   # B unchanged in effect
 
     def test_mapping_only(self):
         def m(d):

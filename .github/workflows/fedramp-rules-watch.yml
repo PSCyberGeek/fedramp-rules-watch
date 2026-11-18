@@ -17,6 +17,10 @@ on:
         description: "Send the latest report ONLY to these addresses (comma-separated), e.g. to welcome a new subscriber"
         type: string
         default: ""
+      preview:
+        description: "Also check FedRAMP's work-in-progress branches and email a coming-soon preview (owner only)"
+        type: boolean
+        default: false
 
 permissions:
   contents: write   # commit reports, feed and state back to the repo
@@ -47,6 +51,19 @@ jobs:
         env:
           SITE_URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}
         run: python scripts/fedwatch.py check --upstream "$RUNNER_TEMP/upstream" --issue-file "$RUNNER_TEMP/issue.md"
+
+      - name: Coming-soon preview of unreleased changes (owner only)
+        if: github.event_name == 'schedule' || inputs.preview
+        continue-on-error: true   # a preview problem must never block the real newsletter
+        env:
+          SITE_URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}
+          SMTP_USERNAME: ${{ secrets.MAILBOX }}
+          SMTP_PASSWORD: ${{ secrets.SMTP }}
+          # Previews go only to PREVIEW_TO (repository variable), falling back to the MAILTO secret (the owner).
+          MAIL_TO: ${{ vars.PREVIEW_TO || secrets.MAILTO }}
+          SMTP_HOST: ${{ vars.SMTP_HOST }}
+          SMTP_PORT: ${{ vars.SMTP_PORT }}
+        run: python scripts/fedwatch.py preview --upstream "$RUNNER_TEMP/upstream"
 
       - name: Commit report, feed and state
         run: |

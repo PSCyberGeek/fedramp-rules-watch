@@ -16,6 +16,7 @@ Commands
   diff      Compare any two upstream refs and print Markdown to stdout.
   site      Rebuild docs/index.html and docs/feed.xml from existing reports.
   send-email  Email a report as a newsletter (SMTP settings come from env).
+  preview   Email "coming soon" diffs of unreleased work on FedRAMP's branches.
 """
 from __future__ import annotations
 
@@ -139,6 +140,20 @@ def timeframe(d: dict) -> str:
     if unit and str(n) == "1":
         unit = unit.rstrip("s").replace("business day", "business day")
     return f"{n} {unit}".strip()
+
+
+def eff_force(d: dict, cls: str):
+    body = (d.get("varies_by_class") or {}).get(cls)
+    return (body.get("force") if isinstance(body, dict) else None) or d.get("force")
+
+
+def eff_deadline(d: dict, cls: str) -> str:
+    """A class's deadline; per-class values override the top level (e.g. unit on top, number per class)."""
+    body = (d.get("varies_by_class") or {}).get(cls)
+    merged = {k: d[k] for k in TIMEFRAME_FIELDS | {"timeframe_type"} if k in d}
+    if isinstance(body, dict):
+        merged.update({k: body[k] for k in TIMEFRAME_FIELDS | {"timeframe_type"} if k in body})
+    return timeframe(merged)
 
 
 def in_primary(field: str, d: dict) -> bool:
@@ -298,22 +313,48 @@ def explain(rec_a: dict, rec_b: dict, fields: list[dict], new_notes: list[str]) 
         c = by.get("name") or by.get("term")
         sentences.append(f"Renamed from “{c['before']}” to “{c['after']}”.")
         bump("minor")
-    if "force" in by:
-        c = by["force"]
-        ra, rb = FORCE_RANK.get(c["before"] or "", 0), FORCE_RANK.get(c["after"] or "", 0)
-        direction = "stronger" if rb > ra else "weaker" if rb < ra else "different"
-        sentences.append(f"Obligation level changed from **{c['before'] or 'unset'}** to **{c['after'] or 'unset'}** ({direction} requirement).")
-        bump("substantive")
-    if TIMEFRAME_FIELDS & set(by):
-        ta, tb = timeframe(rec_a["data"]), timeframe(rec_b["data"])
-        if ta and tb:
-            sentences.append(f"Deadline changed from **{ta}** to **{tb}**.")
+    da, db = rec_a["data"], rec_b["data"]
+    classes = sorted(set((da.get("varies_by_class") or {})) | set((db.get("varies_by_class") or {})))
+    force_changed = "force" in by or any(re.fullmatch(r"varies_by_class\.\w+\.force", f) for f in by)
+    tf_changed = bool(TIMEFRAME_FIELDS & set(by)) or any(
+        re.fullmatch(r"varies_by_class\.\w+\.(%s)" % "|".join(TIMEFRAME_FIELDS), f) for f in by)
+
+    if force_changed:
+        if not classes:
+            c = by["force"]
+            ra, rb = FORCE_RANK.get(c["before"] or "", 0), FORCE_RANK.get(c["after"] or "", 0)
+            direction = "stronger" if rb > ra else "weaker" if rb < ra else "different"
+            sentences.append(f"Obligation level changed from **{c['before'] or 'unset'}** to **{c['after'] or 'unset'}** ({direction} requirement).")
             bump("substantive")
-        elif tb:
-            sentences.append(f"Machine-readable deadline added: **{tb}**.")
-            bump("minor")
         else:
-            sentences.append(f"Machine-readable deadline removed (was **{ta}**).")
+            diffs = [(k, eff_force(da, k), eff_force(db, k)) for k in classes]
+            diffs = [x for x in diffs if x[1] != x[2]]
+            if not diffs:
+                sentences.append("Obligation level restructured per class, with no change in effect.")
+                bump("minor")
+            elif all(fa is None for _, fa, _ in diffs):
+                sentences.append("Obligation level assigned: " + ", ".join(f"Class {k.upper()} **{fb}**" for k, _, fb in diffs) + ".")
+                bump("substantive")
+            else:
+                parts = []
+                for k, fa, fb in diffs:
+                    ra, rb = FORCE_RANK.get(fa or "", 0), FORCE_RANK.get(fb or "", 0)
+                    how = "stronger" if rb > ra else "weaker" if rb < ra else "different"
+                    parts.append(f"Class {k.upper()} **{fa or 'none'}** → **{fb or 'none'}** ({how})")
+                sentences.append("Obligation level changed: " + "; ".join(parts) + ".")
+                bump("substantive")
+    if tf_changed:
+        if not classes:
+            ta, tb = timeframe(da), timeframe(db)
+            pairs = [("", ta, tb)]
+        else:
+            pairs = [(f"Class {k.upper()} ", eff_deadline(da, k), eff_deadline(db, k)) for k in classes]
+        pairs = [x for x in pairs if x[1] != x[2]]
+        if pairs and all(not ta for _, ta, _ in pairs):
+            sentences.append("Machine-readable deadline added: " + ", ".join(f"{k}**{tb}**" for k, _, tb in pairs) + ".")
+            bump("minor")
+        elif pairs:
+            sentences.append("Deadline changed: " + "; ".join(f"{k}**{ta or 'none'}** → **{tb or 'none'}**" for k, ta, tb in pairs) + ".")
             bump("substantive")
 
     text_a, text_b = rec_a["text"], rec_b["text"]
@@ -338,7 +379,8 @@ def explain(rec_a: dict, rec_b: dict, fields: list[dict], new_notes: list[str]) 
     for c in fields:
         f = c["field"]
         leaf = f.split(".")[0]
-        if f in ("name", "term", "force") or f in TIMEFRAME_FIELDS:
+        if f in ("name", "term", "force") or f in TIMEFRAME_FIELDS or re.fullmatch(
+                r"varies_by_class\.\w+\.(force|%s)" % "|".join(TIMEFRAME_FIELDS), f):
             continue
         if in_primary(f, rec_a["data"]) or in_primary(f, rec_b["data"]):
             continue  # already explained via the statement comparison above
@@ -507,20 +549,40 @@ def glance(d: dict) -> list[str]:
         n = sum(1 for x in d["changed"] if any(f["field"] == field for f in x["fields"]))
         if n:
             out.append(f"{what[0].upper() + what[1:]} changed on {plural(n, 'entry')}.".replace("entrys", "entries"))
+    assigned = [x for x in d["changed"] if any(s.startswith("Obligation level assigned") for s in x["sentences"])]
     for x in d["changed"]:
         for s in x["sentences"]:
-            if re.search(r"obligation level|^Deadline|normative keywords|deadline removed", s, re.I):
+            if s.startswith("Obligation level assigned") and len(assigned) > 10:
+                continue
+            if re.search(r"^Obligation level (changed|assigned)|^Deadline changed|normative keywords", s, re.I):
                 out.append(f"`{x['id']}` {x['name']}: {s}")
+    if len(assigned) > 10:
+        fams = Counter(x["family"] for x in assigned)
+        top = ", ".join(f"{f} ({n})" for f, n in fams.most_common(6))
+        out.append(f"Per-class obligation levels assigned to {len(assigned)} entries that had none: {top}"
+                   + (f", +{len(fams) - 6} more families." if len(fams) > 6 else "."))
     for m in d["meta"]:
         for f in m["fields"]:
             if "date" in f["field"] or f["field"].endswith(("current_status", ".is", "status")):
                 out.append(f"{m['family']} ({m['name']}): {f['label']} changed from “{f['before']}” to “{f['after']}”.")
         if m["status"] != "changed":
             out.append(f"Ruleset {m['family']} ({m['name']}) {m['status']}.")
-    for r in d["added"]:
-        out.append(f"New {r['kind'].lower()} `{r['id']}` {r['name']}" + (f" ({r['force']})" if r.get("force") else "") + ".")
-    for r in d["removed"]:
-        out.append(f"Removed {r['kind'].lower()} `{r['id']}` {r['name']}.")
+    def grouped(items, verb, fmt):
+        by_kind: dict[str, list] = {}
+        for r in items:
+            by_kind.setdefault(r["kind"], []).append(r)
+        for kind, rs in by_kind.items():
+            if len(rs) > 10:
+                fams = Counter(r["family"] for r in rs)
+                top = ", ".join(f"{f} ({n})" for f, n in fams.most_common(6))
+                more = f", +{len(fams) - 6} more families" if len(fams) > 6 else ""
+                out.append(f"{verb} {len(rs)} {kind.lower()} entries: {top}{more}.")
+            else:
+                out.extend(fmt(r) for r in rs)
+
+    grouped(d["removed"], "Removed", lambda r: f"Removed {r['kind'].lower()} `{r['id']}` {r['name']}.")
+    grouped(d["added"], "Added", lambda r: f"New {r['kind'].lower()} `{r['id']}` {r['name']}"
+            + (f" ({r['force']})" if r.get("force") else "") + ".")
     for r in d["renamed"]:
         out.append(f"`{r['from']}` now appears as `{r['to']}` ({r['name']}).")
     return out
@@ -819,8 +881,12 @@ def build_site() -> None:
 def render_email(rep: dict, max_items: int = 12) -> tuple[str, str, str]:
     """(subject, html, text). Inline styles only, because mail clients strip <style>."""
     d = rep["diff"]
-    url = f"{SITE_URL}/reports/{rep['slug']}.html"
-    subject = f"FedRAMP rules {rep['to']['version']}: {headline(d)}"
+    pv = rep.get("preview")
+    url = pv["url"] if pv else f"{SITE_URL}/reports/{rep['slug']}.html"
+    subject = (f"Coming soon: unreleased FedRAMP rules changes ({headline(d)})" if pv
+               else f"FedRAMP rules {rep['to']['version']}: {headline(d)}")
+    if pv:
+        max_items = max(max_items, 25)
     ink, muted, line, accent = "#1d1f21", "#62666d", "#e3e0d8", "#0b5cad"
     font = "font-family:-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;"
     code = "font-family:Menlo,Consolas,monospace;font-size:13px;background:#f1efe9;padding:1px 5px;border-radius:4px;"
@@ -846,17 +912,30 @@ def render_email(rep: dict, max_items: int = 12) -> tuple[str, str, str]:
          f"<div style='font-size:13px;color:{muted}'>FedRAMP Rules Watch · {e(rep['date'])}</div>"
          f"<h1 style='font-size:22px;margin:6px 0 4px'>{e(headline(d)).capitalize()}</h1>"
          f"<div style='font-size:13px;color:{muted}'>Version <span style='{code}'>{e(rep['from']['version'])}</span> → "
-         f"<span style='{code}'>{e(rep['to']['version'])}</span></div>",
+         f"<span style='{code}'>{e(rep['to']['version'])}</span></div>"
+         + (f"<div style='background:#fff3d6;color:#8a5a00;border:1px solid #f0d48a;border-radius:8px;padding:10px 14px;"
+            f"margin:14px 0 0;font-size:14px'><strong>Not released yet.</strong> This is work in progress on FedRAMP's "
+            f"<span style='{code}'>{e(pv['branch'])}</span> branch, compared with the current release. It can still change "
+            f"before FedRAMP publishes it. Last edited {e(pv['updated'][:10])}.</div>" if pv else ""),
          f"<h2 style='font-size:16px;margin:22px 0 8px'>At a glance</h2>"
          f"<ul style='margin:0;padding-left:20px;line-height:1.55;font-size:14px'>"
          + "".join(f"<li style='margin:4px 0'>{md(x)}</li>" for x in glance(d)[:20]) + "</ul>"]
-    T = [subject, f"Version {rep['from']['version']} -> {rep['to']['version']}", "", "AT A GLANCE"]
+    T = [subject, f"Version {rep['from']['version']} -> {rep['to']['version']}", ""]
+    if pv:
+        T += [f"NOT RELEASED YET: work in progress on FedRAMP's {pv['branch']} branch, compared with the current release. "
+              f"It can still change before FedRAMP publishes it. Last edited {pv['updated'][:10]}.", ""]
+    T += ["AT A GLANCE"]
     T += ["- " + re.sub(r"[*`]", "", x) for x in glance(d)[:20]]
 
     shown = 0
     full, mapping = sorted_changed(d)
-    items = ([("added", r) for r in d["added"]] + [("removed", r) for r in d["removed"]]
-             + [("changed", x) for x in full])
+    # Most important first: substantive changes, then removals, then additions (rules before bulk control
+    # entries), then the rest of the changes.
+    sub_ch = [("changed", x) for x in sorted((x for x in full if x["grade"] == "substantive"),
+                                             key=lambda x: (x["kind"] == "Control parameter/guidance", x["id"]))]
+    other_ch = [("changed", x) for x in full if x["grade"] != "substantive"]
+    adds = sorted(d["added"], key=lambda r: (r["kind"] == "Control parameter/guidance", r["id"]))
+    items = sub_ch + [("removed", r) for r in d["removed"]] + [("added", r) for r in adds] + other_ch
     if items:
         H.append("<h2 style='font-size:16px;margin:24px 0 4px'>Details</h2>")
         T += ["", "DETAILS"]
@@ -883,13 +962,15 @@ def render_email(rep: dict, max_items: int = 12) -> tuple[str, str, str]:
             if norm(x["text_before"]) != norm(x["text_after"]):
                 T += ["BEFORE: " + x["text_before"], "AFTER:  " + x["text_after"]]
     rest = len(items) - shown + len(mapping)
-    more = f"{plural(rest, 'more entry')} in the full report. ".replace("entrys", "entries") if rest else ""
+    more = (f"{plural(rest, 'more entry')} in the attached full report. " if pv else
+            f"{plural(rest, 'more entry')} in the full report. ").replace("entrys", "entries") if rest else ""
+    button = "See the raw changes on GitHub" if pv else "Read the full report"
     H.append(f"<p style='margin:24px 0;font-size:14px'>{e(more)}<a href='{e(url)}' style='display:inline-block;background:{accent};"
-             f"color:#fff;padding:9px 16px;border-radius:6px;text-decoration:none;font-weight:600'>Read the full report</a></p>"
+             f"color:#fff;padding:9px 16px;border-radius:6px;text-decoration:none;font-weight:600'>{button}</a></p>"
              f"<p style='font-size:12px;color:{muted};border-top:1px solid {line};padding-top:12px'>Unofficial summary generated from "
              f"<a href='{UPSTREAM_WEB}' style='color:{muted}'>FedRAMP/rules</a>. FedRAMP's published rules are authoritative. "
              f"Archive: <a href='{SITE_URL}/' style='color:{muted}'>{SITE_URL.split('//')[-1]}</a></p></div></div>")
-    T += ["", more + "Full report: " + url, "", "Unofficial summary. FedRAMP's published rules are authoritative."]
+    T += ["", more + ("Raw changes: " if pv else "Full report: ") + url, "", "Unofficial summary. FedRAMP's published rules are authoritative."]
     return subject, "".join(H), "\n".join(T)
 
 
@@ -910,6 +991,9 @@ def send_email(rep: dict) -> None:
     msg["To"] = msg["From"] if len(recipients) > 1 else recipients[0]   # multiple recipients go in Bcc
     msg.set_content(text_body)
     msg.add_alternative(f"<!doctype html><html><body style='margin:0'>{html_body}</body></html>", subtype="html")
+    if rep.get("preview"):
+        name = f"fedramp-rules-preview-{rep['date']}.md"
+        msg.add_attachment(render_md(rep).encode(), maintype="text", subtype="markdown", filename=name)
     host, port = os.environ.get("SMTP_HOST") or "smtp.gmail.com", int(os.environ.get("SMTP_PORT") or 465)
     with smtplib.SMTP_SSL(host, port, context=ssl.create_default_context(), timeout=30) as smtp:
         try:
@@ -934,6 +1018,77 @@ def cmd_send_email(args) -> int:
         print(f"Preview written to {args.preview}")
         return 0
     send_email(rep)
+    return 0
+
+
+
+# ───────────────────────────── coming-soon previews ─────────────────────────────
+
+PREVIEW_STATE = ROOT / "state" / "preview.json"
+
+
+def file_tip(repo: Path, ref: str) -> tuple[str, str]:
+    """(sha, ISO date) of the last commit on ref that touched the rules file."""
+    out = git(repo, "log", "-1", "--format=%H %cI", ref, "--", RULES_FILE).strip()
+    return tuple(out.split(" ", 1)) if out else ("", "")
+
+
+def preview_candidates(repo: Path, main_ref: str) -> list[dict]:
+    """Work-in-progress branches whose rules file differs from the release and is newer than it."""
+    main_sha, main_date = file_tip(repo, main_ref)
+    out = []
+    for line in git(repo, "for-each-ref", "--format=%(refname:short)", "refs/remotes/origin").split():
+        if line in ("origin/HEAD", "origin", main_ref) or line.endswith("/HEAD"):
+            continue
+        sha, date = file_tip(repo, line)
+        if not sha or sha == main_sha:
+            continue
+        if not git(repo, "log", "--format=%H", f"{main_ref}..{line}", "--", RULES_FILE).strip():
+            continue                       # nothing unreleased on this branch
+        if date <= main_date:
+            continue                       # stale branch, older than the current release
+        out.append({"branch": line.split("/", 1)[1], "ref": line, "sha": sha, "date": date})
+    return out
+
+
+def cmd_preview(args) -> int:
+    repo = Path(args.upstream)
+    main_ref = "origin/main" if git(repo, "rev-parse", "--verify", "-q", "origin/main").strip() else "HEAD"
+    main_sha, _ = file_tip(repo, main_ref)
+    state = json.loads(PREVIEW_STATE.read_text()) if PREVIEW_STATE.exists() else {}
+    new_state, sent = {}, 0
+    for c in preview_candidates(repo, main_ref):
+        key = {"sha": c["sha"], "main": main_sha}
+        new_state[c["branch"]] = key
+        if state.get(c["branch"]) == key and not args.force:
+            print(f"{c['branch']}: no new edits since last preview.")
+            continue
+        try:
+            rep = make_report(repo, main_sha, c["sha"])
+        except json.JSONDecodeError:
+            print(f"{c['branch']}: rules file does not parse at {c['sha'][:7]} (mid-edit), will retry tomorrow.")
+            new_state.pop(c["branch"])
+            continue
+        if not rep:
+            print(f"{c['branch']}: differs only in ignored fields.")
+            continue
+        rep["commits"] = commits_touching(repo, main_sha, c["sha"])
+        rep["preview"] = {"branch": c["branch"], "updated": c["date"],
+                          "url": f"{UPSTREAM_WEB}/compare/{main_sha}...{c['sha']}"}
+        print(f"{c['branch']}: {headline(rep['diff'])}")
+        if args.dry_run:
+            subject, html_body, _ = render_email(rep)
+            out = Path(args.dry_run) / f"preview-{c['branch'].replace('/', '_')}.html"
+            out.write_text(f"<!doctype html><html><head><meta charset='utf-8'><title>{e(subject)}</title></head>"
+                           f"<body style='margin:0'>{html_body}</body></html>")
+            print(f"  rendered {out}")
+        else:
+            send_email(rep)
+        sent += 1
+    if not args.dry_run:
+        PREVIEW_STATE.parent.mkdir(parents=True, exist_ok=True)
+        PREVIEW_STATE.write_text(json.dumps(new_state, indent=1) + "\n")
+    print(f"{sent} preview(s) {'rendered' if args.dry_run else 'sent'}; watching {len(new_state)} branch(es).")
     return 0
 
 
@@ -1080,11 +1235,14 @@ def main() -> int:
     sub.add_parser("site")
     m = sub.add_parser("send-email", help="email a report (latest by default); add --preview FILE to render without sending")
     m.add_argument("--slug"); m.add_argument("--preview")
+    pv = sub.add_parser("preview", help="email unreleased changes on FedRAMP's work-in-progress branches")
+    pv.add_argument("--upstream", required=True); pv.add_argument("--force", action="store_true")
+    pv.add_argument("--dry-run", metavar="DIR", help="render previews to DIR instead of sending")
     args = p.parse_args()
     if args.cmd == "site":
         build_site()
         return 0
-    return {"check": cmd_check, "send-email": cmd_send_email, "backfill": cmd_backfill, "diff": cmd_diff}[args.cmd](args)
+    return {"check": cmd_check, "send-email": cmd_send_email, "preview": cmd_preview, "backfill": cmd_backfill, "diff": cmd_diff}[args.cmd](args)
 
 
 if __name__ == "__main__":
